@@ -1,0 +1,421 @@
+{
+  "id": "mortgage-other-income-sources",
+  "title": "Conventional mortgage needs list: income other than employment (Fannie Mae)",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this, alongside the borrower's main income variant, for a conventional loan to be sold to Fannie Mae when income such as support payments, Social Security, retirement, disability, trust or investment income is used to qualify.",
+  "note": "Items follow Fannie Mae Selling Guide section B3-3.4, Other Sources of Income, as published on the retrieval date; they apply to loans sold to Fannie Mae. Evidence of current receipt must meet the Guide's document age limit, Desktop Underwriter findings may ask for different documents, and lender overlays add conditions.",
+  "sources": {
+    "alimony": {
+      "name": "Fannie Mae Selling Guide B3-3.4-02, Alimony, Child Support, Equalization Payments, or Separate Maintenance (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-02/alimony-child-support-equalization-payments-or-separate-maintenance",
+      "retrieved": "2026-11-11"
+    },
+    "retirement": {
+      "name": "Fannie Mae Selling Guide B3-3.4-03, Annuity, Pension, or Retirement Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-03/annuity-pension-or-retirement-income",
+      "retrieved": "2026-11-11"
+    },
+    "boarder": {
+      "name": "Fannie Mae Selling Guide B3-3.4-04, Boarder Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-04/boarder-income",
+      "retrieved": "2026-11-11"
+    },
+    "capital-gains": {
+      "name": "Fannie Mae Selling Guide B3-3.4-05, Capital Gains Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-05/capital-gains-income",
+      "retrieved": "2026-11-11"
+    },
+    "foster-care": {
+      "name": "Fannie Mae Selling Guide B3-3.4-07, Foster-Care Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-07/foster-care-income",
+      "retrieved": "2026-11-11"
+    },
+    "interest-dividends": {
+      "name": "Fannie Mae Selling Guide B3-3.4-08, Interest and Dividend Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-08/interest-and-dividend-income",
+      "retrieved": "2026-11-11"
+    },
+    "disability": {
+      "name": "Fannie Mae Selling Guide B3-3.4-09, Long-term Disability Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-09/long-term-disability-income",
+      "retrieved": "2026-11-11"
+    },
+    "notes": {
+      "name": "Fannie Mae Selling Guide B3-3.4-11, Notes Receivable Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-11/notes-receivable-income",
+      "retrieved": "2026-11-11"
+    },
+    "public-assistance": {
+      "name": "Fannie Mae Selling Guide B3-3.4-12, Public Assistance Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-12/public-assistance-income",
+      "retrieved": "2026-11-11"
+    },
+    "royalty": {
+      "name": "Fannie Mae Selling Guide B3-3.4-13, Royalty Payment Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-13/royalty-payment-income",
+      "retrieved": "2026-11-11"
+    },
+    "social-security": {
+      "name": "Fannie Mae Selling Guide B3-3.4-15, Social Security Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-15/social-security-income",
+      "retrieved": "2026-11-11"
+    },
+    "trust": {
+      "name": "Fannie Mae Selling Guide B3-3.4-16, Trust Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-16/trust-income",
+      "retrieved": "2026-11-11"
+    },
+    "unemployment": {
+      "name": "Fannie Mae Selling Guide B3-3.4-17, Unemployment Benefits Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-17/unemployment-benefits-income",
+      "retrieved": "2026-11-11"
+    },
+    "va-benefits": {
+      "name": "Fannie Mae Selling Guide B3-3.4-18, VA Benefits Income (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-18/va-benefits-income",
+      "retrieved": "2026-11-11"
+    },
+    "general-income": {
+      "name": "Fannie Mae Selling Guide B3-3.1-01, General Income Information (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.1-01/general-income-information",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "alimony-child-support": "Is alimony, child support, an equalization payment or separate maintenance being used as income?",
+    "retirement-pension": "Is annuity, pension or retirement account income being used?",
+    "pension-not-started": "Will annuity or pension payments begin after closing but on or before the first mortgage payment date?",
+    "boarder": "Is rent from a live-in personal assistant or other boarder being used as income?",
+    "capital-gains": "Is capital gains income being used?",
+    "foster-care": "Is foster-care income being used?",
+    "interest-dividends": "Is interest or dividend income being used?",
+    "disability": "Is long-term disability income from an insurer or employer (not Social Security) being used?",
+    "notes-receivable": "Is income from a note receivable being used?",
+    "public-assistance": "Is public assistance income, including adoption assistance, being used?",
+    "royalty": "Is royalty income being used?",
+    "royalty-not-on-return": "Is the royalty income missing from the most recent tax return?",
+    "social-security-own": "Does the borrower draw Social Security retirement or disability benefits on their own work record?",
+    "social-security-other": "Does the borrower draw Social Security retirement, disability or survivor benefits on another person's record, or for the benefit of another person?",
+    "ssi": "Does the borrower receive Supplemental Security Income?",
+    "trust": "Is trust income being used?",
+    "trust-variable": "Do the trust payments vary in amount?",
+    "unemployment": "Is unemployment benefit income tied to seasonal work being used?",
+    "va-benefits": "Is VA benefit income being used?",
+    "nontaxable": "Is any of the income being treated as nontaxable?"
+  },
+  "sections": [
+    {
+      "name": "Support payments",
+      "items": [
+        {
+          "id": "support-order",
+          "label": "Divorce decree, separation agreement or other written legal agreement or court decree showing the payment amount and terms",
+          "detail": "A separation agreement is used if the divorce is not final. Documentation of a state law that mandates the payments is the other option the Guide lists.",
+          "when": [
+            "alimony-child-support"
+          ],
+          "basis": "alimony"
+        },
+        {
+          "id": "support-receipt",
+          "label": "Proof the payments were received for the most recent six months",
+          "detail": "Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "alimony-child-support"
+          ],
+          "basis": "alimony"
+        }
+      ]
+    },
+    {
+      "name": "Retirement, pension and Social Security",
+      "items": [
+        {
+          "id": "retirement-proof",
+          "label": "Proof of the annuity, pension or retirement income currently received",
+          "detail": "At least one of: a statement from the organization paying the income, a retirement award letter or benefit statement, a financial or bank account statement, a signed federal income tax return, an IRS W-2, or an IRS 1099. Send through the secure portal, never by plain email.",
+          "when": [
+            "retirement-pension"
+          ],
+          "basis": "retirement"
+        },
+        {
+          "id": "pension-start",
+          "label": "Benefit statement from the organization that will pay the annuity or pension",
+          "detail": "Must state the income type, the amount and frequency of payment, and the start date.",
+          "when": [
+            "pension-not-started"
+          ],
+          "basis": "retirement"
+        },
+        {
+          "id": "ss-own",
+          "label": "Social Security award letter, SSA-1099, most recent signed federal tax return or proof of current receipt",
+          "detail": "Any one of these; an IRS tax transcript may replace the return. If a joint return includes income of someone not on the loan, add a document such as the SSA-1099 showing the borrower's amount. Send through the secure portal, never by plain email.",
+          "when": [
+            "social-security-own"
+          ],
+          "basis": "social-security"
+        },
+        {
+          "id": "ss-other-award",
+          "label": "Social Security award letter",
+          "detail": "",
+          "when": [
+            "social-security-other",
+            "ssi"
+          ],
+          "basis": "social-security"
+        },
+        {
+          "id": "ss-other-receipt",
+          "label": "Proof of current receipt of the Social Security payments",
+          "detail": "For benefits drawn on another person's record or for another person, the lender also has to document that they will continue for three years, which can rest on the beneficiary's age. Send through the secure portal, never by plain email.",
+          "when": [
+            "social-security-other",
+            "ssi"
+          ],
+          "basis": "social-security"
+        }
+      ]
+    },
+    {
+      "name": "Disability, VA and public benefits",
+      "items": [
+        {
+          "id": "disability-policy",
+          "label": "Disability policy or benefits statement from the insurer, employer or other payer",
+          "detail": "Must show current eligibility, the amount and frequency of payments, and any contractual end or change date.",
+          "when": [
+            "disability"
+          ],
+          "basis": "disability"
+        },
+        {
+          "id": "disability-payment",
+          "label": "Evidence that at least one disability payment will be received on or before the first mortgage payment due date",
+          "detail": "",
+          "when": [
+            "disability"
+          ],
+          "basis": "disability"
+        },
+        {
+          "id": "va-proof",
+          "label": "Proof of the VA benefit amount and terms",
+          "detail": "One or more of: a statement from VA, an award letter or benefit statement, a financial or bank account statement, a signed federal income tax return, or an IRS 1099. Send through the secure portal, never by plain email.",
+          "when": [
+            "va-benefits"
+          ],
+          "basis": "va-benefits"
+        },
+        {
+          "id": "va-payment",
+          "label": "Evidence that at least one VA payment will be received on or before the first mortgage payment due date",
+          "detail": "",
+          "when": [
+            "va-benefits"
+          ],
+          "basis": "va-benefits"
+        },
+        {
+          "id": "assistance-letter",
+          "label": "Letters or exhibits from the paying agency stating the amount, frequency and duration of the benefit",
+          "detail": "",
+          "when": [
+            "public-assistance"
+          ],
+          "basis": "public-assistance"
+        },
+        {
+          "id": "assistance-payment",
+          "label": "Evidence that at least one benefit payment will be received on or before the first mortgage payment due date",
+          "detail": "",
+          "when": [
+            "public-assistance"
+          ],
+          "basis": "public-assistance"
+        },
+        {
+          "id": "unemployment-returns",
+          "label": "Signed personal federal income tax returns for two years",
+          "detail": "",
+          "when": [
+            "unemployment"
+          ],
+          "basis": "unemployment"
+        },
+        {
+          "id": "foster-letter",
+          "label": "Verification letter from the state or county sponsored organization showing the foster-care payment amounts",
+          "detail": "",
+          "when": [
+            "foster-care"
+          ],
+          "basis": "foster-care"
+        },
+        {
+          "id": "foster-receipt",
+          "label": "Proof the foster-care payments were received for the most recent 12 or 24 months",
+          "detail": "Which period applies depends on how long the borrower has provided foster care. Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "foster-care"
+          ],
+          "basis": "foster-care"
+        }
+      ]
+    },
+    {
+      "name": "Investment, trust and contract income",
+      "items": [
+        {
+          "id": "interest-proof",
+          "label": "Signed personal federal tax returns for the most recent two years, or account statements covering the most recent 24 months",
+          "detail": "Either one. Send through the secure portal, never by plain email.",
+          "when": [
+            "interest-dividends"
+          ],
+          "basis": "interest-dividends"
+        },
+        {
+          "id": "interest-assets",
+          "label": "Documentation that you own the assets that produce the interest or dividends",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "interest-dividends"
+          ],
+          "basis": "interest-dividends"
+        },
+        {
+          "id": "gains-returns",
+          "label": "Signed personal federal tax returns for the most recent two years, including Schedule D",
+          "detail": "",
+          "when": [
+            "capital-gains"
+          ],
+          "basis": "capital-gains"
+        },
+        {
+          "id": "gains-assets",
+          "label": "Evidence that you own a portfolio of assets that could be sold",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "capital-gains"
+          ],
+          "basis": "capital-gains"
+        },
+        {
+          "id": "trust-docs",
+          "label": "Trust agreement, trustee's statement or the trust's federal tax returns",
+          "detail": "One or more, showing the amount, frequency and type of income and the date the trust was created. A trustee's statement is used only when the borrower is not the trustee. A letter from an accountant or attorney who reviewed the trust documents is used when these are unavailable or the borrower is the trustee.",
+          "when": [
+            "trust"
+          ],
+          "basis": "trust"
+        },
+        {
+          "id": "trust-receipt",
+          "label": "Proof that at least one month of trust income was received",
+          "detail": "Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "trust"
+          ],
+          "basis": "trust"
+        },
+        {
+          "id": "trust-history",
+          "label": "Signed personal federal tax returns, or the trust's federal tax returns, for the most recent two years",
+          "detail": "",
+          "when": [
+            "trust-variable"
+          ],
+          "basis": "trust"
+        },
+        {
+          "id": "note-copy",
+          "label": "Copy of the note showing the amount and length of the payments",
+          "detail": "",
+          "when": [
+            "notes-receivable"
+          ],
+          "basis": "notes"
+        },
+        {
+          "id": "note-receipt",
+          "label": "Proof the note payments were received for the most recent 12 months",
+          "detail": "Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "notes-receivable"
+          ],
+          "basis": "notes"
+        },
+        {
+          "id": "royalty-contract",
+          "label": "Royalty contract, agreement or statement showing the amount, frequency and duration of the income",
+          "detail": "",
+          "when": [
+            "royalty"
+          ],
+          "basis": "royalty"
+        },
+        {
+          "id": "royalty-return",
+          "label": "Most recent signed federal income tax return including Schedule E",
+          "detail": "",
+          "when": [
+            "royalty"
+          ],
+          "basis": "royalty"
+        },
+        {
+          "id": "royalty-receipt",
+          "label": "Proof the royalty payments were received for the most recent 12 months",
+          "detail": "Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "royalty-not-on-return"
+          ],
+          "basis": "royalty"
+        }
+      ]
+    },
+    {
+      "name": "Boarder income",
+      "items": [
+        {
+          "id": "boarder-residency",
+          "label": "Documents showing the boarder has lived at your address",
+          "detail": "Such as a copy of a driver's license, bills, bank statements or W-2 forms showing the boarder's address as the same as the borrower's. Send through the secure portal, never by plain email.",
+          "when": [
+            "boarder"
+          ],
+          "basis": "boarder"
+        },
+        {
+          "id": "boarder-receipt",
+          "label": "Proof the boarder's payments were received for the most recent 12 months",
+          "detail": "Bank statements, cancelled checks or other evidence of electronic receipt. Send through the secure portal, never by plain email.",
+          "when": [
+            "boarder"
+          ],
+          "basis": "boarder"
+        }
+      ]
+    },
+    {
+      "name": "Nontaxable income",
+      "items": [
+        {
+          "id": "nontaxable",
+          "label": "Document showing the income is not taxed",
+          "detail": "Such as an award letter, policy agreement, account statement or tax return. The Guide does not ask for this for 15% of Social Security income.",
+          "when": [
+            "nontaxable"
+          ],
+          "basis": "general-income"
+        }
+      ]
+    }
+  ]
+}

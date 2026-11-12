@@ -1,0 +1,221 @@
+{
+  "id": "tax-1040-rental-property",
+  "title": "Rental property owner tax return (Schedule E) document request",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-individual",
+  "use_when": "Pick this when the client owns residential rental real estate reported on Schedule E; add the basic individual list for personal items.",
+  "note": "Built from IRS rental income guidance (Topic 414, Publication 527 and the IRS rental real estate tips page). It covers the income and expense records the IRS describes; state returns and loss limitation forms are not covered.",
+  "sources": {
+    "rental-tips": {
+      "name": "IRS, Tips on rental real estate income, deductions and recordkeeping (web page, last reviewed or updated 04-Apr-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/tips-on-rental-real-estate-income-deductions-and-recordkeeping",
+      "retrieved": "2026-11-11"
+    },
+    "tc414": {
+      "name": "IRS, Topic no. 414, Rental income and expenses (web page, last reviewed or updated 09-Nov-2026)",
+      "url": "https://www.irs.gov/taxtopics/tc414",
+      "retrieved": "2026-11-11"
+    },
+    "p527": {
+      "name": "IRS, Publication 527 (2025), Residential Rental Property",
+      "url": "https://www.irs.gov/publications/p527",
+      "retrieved": "2026-11-11"
+    },
+    "p463": {
+      "name": "IRS, Publication 463 (2025), Travel, Gift, and Car Expenses, chapter 5 and Table 5-1",
+      "url": "https://www.irs.gov/publications/p463",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "advance-rent": "Received rent before the period it covers",
+    "security-deposit": "Holds or kept tenant security deposits",
+    "lease-cancel": "A tenant paid to cancel a lease",
+    "tenant-paid": "A tenant paid any of the owner's expenses",
+    "barter": "Received property or services instead of rent",
+    "part-owner": "Owns only part of the property",
+    "mortgage": "Has a mortgage on the rental property",
+    "improvements": "Made improvements or added furnishings",
+    "new-rental": "Property was bought or first rented recently, or is new to the firm",
+    "vehicle": "Used a personal vehicle for rental activities",
+    "travel": "Traveled away from home for the rental property"
+  },
+  "sections": [
+    {
+      "name": "Property details",
+      "items": [
+        {
+          "id": "address",
+          "label": "Street address of each rental property",
+          "detail": "",
+          "when": [],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "days",
+          "label": "Number of days rented at a fair rental price and number of personal-use days, for each property",
+          "detail": "",
+          "when": [],
+          "basis": "p527"
+        },
+        {
+          "id": "ownership-share",
+          "label": "Ownership percentage, and the client's part of the rental income and expenses",
+          "detail": "",
+          "when": [
+            "part-owner"
+          ],
+          "basis": "rental-tips"
+        }
+      ]
+    },
+    {
+      "name": "Rental income",
+      "items": [
+        {
+          "id": "rent",
+          "label": "Records of all rent received for each property",
+          "detail": "",
+          "when": [],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "advance-rent",
+          "label": "Advance rent received",
+          "detail": "Any amount received before the period it covers, in the year received.",
+          "when": [
+            "advance-rent"
+          ],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "deposits",
+          "label": "Security deposit records",
+          "detail": "Deposits used as a final payment of rent, and any part kept because the tenant broke the lease or damaged the property.",
+          "when": [
+            "security-deposit"
+          ],
+          "basis": "tc414"
+        },
+        {
+          "id": "lease-cancel",
+          "label": "Payments received from a tenant for canceling a lease",
+          "detail": "",
+          "when": [
+            "lease-cancel"
+          ],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "tenant-paid",
+          "label": "Owner's expenses paid by the tenant",
+          "detail": "For example a utility bill the tenant paid and deducted from the rent.",
+          "when": [
+            "tenant-paid"
+          ],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "barter",
+          "label": "Property or services received instead of rent, with fair market value",
+          "detail": "",
+          "when": [
+            "barter"
+          ],
+          "basis": "rental-tips"
+        }
+      ]
+    },
+    {
+      "name": "Rental expenses",
+      "items": [
+        {
+          "id": "expense-docs",
+          "label": "Receipts, canceled checks or bills for rental expenses",
+          "detail": "",
+          "when": [],
+          "basis": "rental-tips"
+        },
+        {
+          "id": "expense-types",
+          "label": "Expense amounts by type for each property",
+          "detail": "Publication 527 lists the most common: advertising, auto and travel, cleaning and maintenance, commissions, depreciation, insurance, interest (other), legal and other professional fees, local transportation, management fees, mortgage interest paid to banks, points, rental payments, repairs, taxes, utilities.",
+          "when": [],
+          "basis": "p527"
+        },
+        {
+          "id": "form-1098",
+          "label": "Form 1098, Mortgage Interest Statement, or similar statement",
+          "detail": "Publication 527 says one should be received if $600 or more of mortgage interest was paid to any one person. If someone else received the Form 1098, give that person's name and address.",
+          "when": [
+            "mortgage"
+          ],
+          "basis": "p527"
+        },
+        {
+          "id": "insurance-advance",
+          "label": "Insurance premiums paid for more than 1 year in advance, with the period covered",
+          "detail": "If any.",
+          "when": [],
+          "basis": "p527"
+        }
+      ]
+    },
+    {
+      "name": "Improvements and depreciation",
+      "items": [
+        {
+          "id": "improvements",
+          "label": "Cost of improvements, kept separate from repairs",
+          "detail": "Include the year of each improvement or added furnishings.",
+          "when": [
+            "improvements"
+          ],
+          "basis": "p527"
+        },
+        {
+          "id": "purchase-costs",
+          "label": "Purchase price and the settlement fees and closing costs paid when buying the property",
+          "detail": "Publication 527 lists abstract fees, charges for installing utility services, legal fees, recording fees, surveys, transfer taxes, title insurance, and amounts the seller owed that the buyer agreed to pay.",
+          "when": [
+            "new-rental"
+          ],
+          "basis": "p527"
+        },
+        {
+          "id": "placed-in-service",
+          "label": "Date the property was ready and available for rent",
+          "detail": "",
+          "when": [
+            "new-rental"
+          ],
+          "basis": "p527"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle and travel",
+      "items": [
+        {
+          "id": "car-records",
+          "label": "Car records for rental activities",
+          "detail": "Mileage for each use, total miles for the year, dates, destination and purpose, following chapter 5 of Publication 463.",
+          "when": [
+            "vehicle"
+          ],
+          "basis": "p463"
+        },
+        {
+          "id": "travel-records",
+          "label": "Travel records for trips to collect rent or to manage, conserve or maintain the property",
+          "detail": "Cost of each separate expense, dates left and returned, destination and purpose, following chapter 5 of Publication 463.",
+          "when": [
+            "travel"
+          ],
+          "basis": "p463"
+        }
+      ]
+    }
+  ]
+}

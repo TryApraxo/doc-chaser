@@ -1,0 +1,145 @@
+{
+  "id": "tax-credit-proof-education",
+  "title": "Proof for education credits (American Opportunity Credit)",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-credit-proof",
+  "use_when": "Pick this when the client is claiming or must back up an education credit for a student.",
+  "note": "Built from IRS Form 886-H-AOC (Rev. 5-2017), which the IRS sends in American Opportunity Credit audits, and the IRS education credits page. Collect these for each student; the form says insurance, medical expenses, room and board and similar personal expenses do not count.",
+  "sources": {
+    "f886-h-aoc": {
+      "name": "IRS, Form 886-H-AOC, Supporting Documents to Prove American Opportunity Credit (Rev. 5-2017)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f886haoc.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "edu-credits": {
+      "name": "IRS, Education credits: AOTC and LLC (web page, last reviewed or updated 12-Aug-2026)",
+      "url": "https://www.irs.gov/credits-deductions/individuals/education-credits-aotc-llc",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "no-1098-t": "A school did not provide Form 1098-T",
+    "books-supplies": "Paid course-related fees, books or supplies beyond tuition",
+    "assistance": "Student received employer, veteran's or other tax-free education assistance, or used education savings"
+  },
+  "sections": [
+    {
+      "name": "Enrollment",
+      "items": [
+        {
+          "id": "1098-t",
+          "label": "Form 1098-T, Tuition Statement, from each school the student attended",
+          "detail": "If provided by the institution.",
+          "when": [],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "enrollment-proof",
+          "label": "Transcripts or other enrollment forms that verify enrollment",
+          "detail": "Must include the institution's name, federal identification number, dates of enrollment and the student's enrollment status (more than half time, not a graduate student).",
+          "when": [
+            "no-1098-t"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "1098-t-request",
+          "label": "Record of asking the school for the missing Form 1098-T",
+          "detail": "",
+          "when": [
+            "no-1098-t"
+          ],
+          "basis": "edu-credits"
+        },
+        {
+          "id": "school-ein",
+          "label": "The school's employer identification number (EIN)",
+          "detail": "The IRS says it must be provided on Form 8863 for the American Opportunity Credit.",
+          "when": [],
+          "basis": "edu-credits"
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "items": [
+        {
+          "id": "tuition-payment",
+          "label": "Proof of payment of tuition and fees",
+          "detail": "Canceled checks, bank statements, credit card statements or receipts. Form 1098-T may serve as proof if payments received are recorded in Box 1.",
+          "when": [],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "other-expense-payment",
+          "label": "Proof of payment for course-related fees, books and supplies",
+          "detail": "Canceled checks, bank statements, credit card statements or receipts.",
+          "when": [
+            "books-supplies"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "course-need",
+          "label": "Documents showing the expenses were needed for a course of study",
+          "detail": "Such as course guides, course syllabuses, or letters from the school.",
+          "when": [
+            "books-supplies"
+          ],
+          "basis": "f886-h-aoc"
+        }
+      ]
+    },
+    {
+      "name": "Amounts that reduce qualified expenses",
+      "items": [
+        {
+          "id": "employer-assistance",
+          "label": "Documents showing employer provided educational assistance benefits received",
+          "detail": "",
+          "when": [
+            "assistance"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "edu-withdrawals",
+          "label": "Documents showing withdrawals from any educational retirement arrangements",
+          "detail": "",
+          "when": [
+            "assistance"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "savings-bond",
+          "label": "Documents showing U.S. Savings bond interest that is nontaxable because it paid qualified higher education expenses",
+          "detail": "",
+          "when": [
+            "assistance"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "veteran-benefits",
+          "label": "Documents showing veteran's educational assistance benefits received",
+          "detail": "",
+          "when": [
+            "assistance"
+          ],
+          "basis": "f886-h-aoc"
+        },
+        {
+          "id": "other-nontaxable",
+          "label": "Documents showing any other nontaxable payment received for education expenses",
+          "detail": "",
+          "when": [
+            "assistance"
+          ],
+          "basis": "f886-h-aoc"
+        }
+      ]
+    }
+  ]
+}

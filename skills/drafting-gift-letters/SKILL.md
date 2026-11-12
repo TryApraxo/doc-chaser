@@ -1,6 +1,6 @@
 ---
 name: drafting-gift-letters
-description: Drafts a mortgage gift letter for a donor to sign, containing the elements the Fannie Mae Selling Guide requires, flags gift-fund problems before underwriting does, and lists the transfer evidence to collect. Use when the user says "gift letter", "the borrower's parents are giving them the down payment", "down payment gift", "what does the donor need to sign", or asks whether a gift is allowed or how to document gift funds. Do NOT use for gifts of equity, down payment assistance programs, seller concessions, or gift tax questions.
+description: Drafts a mortgage gift letter for a donor to sign, using the template for the loan program (Fannie Mae, Freddie Mac, FHA or VA) or a Fannie Mae gift-of-equity letter, flags gift-fund problems before underwriting does, and lists the transfer evidence to collect. Use when the user says "gift letter", "the borrower's parents are giving them the down payment", "down payment gift", "FHA gift letter", "gift of equity", "what does the donor need to sign", or asks whether a gift is allowed or how to document gift funds. Do NOT use for down payment assistance programs, seller concessions, or gift tax questions.
 license: MIT
 ---
 
@@ -12,7 +12,17 @@ Produce a gift letter that is complete the first time, and catch the facts that 
 
 ## Workflow
 
-1. **Confirm the loan type.** The checks below follow Fannie Mae Selling Guide B3-4.3-04. For FHA, VA, USDA, Freddie Mac or portfolio loans, say that those programs have their own gift rules and letter requirements, draft the letter as a starting point, and tell the user to check the program's rules.
+1. **Confirm the loan program and pick the template.** Each program has its own letter contents, donor rules and transfer evidence. Ask if the user has not said.
+
+   | Program | Template in `assets/` | Rules |
+   |---|---|---|
+   | Fannie Mae (conventional) | `gift-letter-template.md` | The checks and contents in this file (B3-4.3-04) |
+   | Freddie Mac (conventional) | `gift-letter-freddie-mac.md` | Guide 5501.4, in the template's header |
+   | FHA | `gift-letter-fha.md` | HUD Handbook 4000.1, in the template's header |
+   | VA | `gift-letter-va.md` | VA Pamphlet 26-7, chapter 4, in the template's header |
+   | Gift of equity, Fannie Mae | `gift-of-equity-letter-fannie-mae.md` | B3-4.3-05, in the template's header |
+
+   For any program other than Fannie Mae personal gifts, read the chosen template's header and `references/program-differences.md`, and apply that program's rules in steps 3 to 5 in place of the Fannie Mae tables below. Do not carry a Fannie Mae rule into another program's letter. For USDA, portfolio or other loans there is no template: say so, draft from the Fannie Mae template as a starting point, and tell the user to check the program's rules.
 
 2. **Collect the facts.** Ask for whatever is missing, in one message:
    - Borrower name(s), property address, lender name
@@ -24,13 +34,13 @@ Produce a gift letter that is complete the first time, and catch the facts that 
 
 3. **Run the checks** in the table below. If one fails, stop and tell the user before drafting.
 
-4. **Fill the template** in `assets/gift-letter-template.md`. Use `[TO COMPLETE]` for anything unknown; never invent a donor detail. For `{{AMOUNT_WORDING}}` write the actual amount in figures and words, or "up to" the maximum. Delete the trust or estate line unless it applies; if it does, name the trust or estate account.
+4. **Fill the chosen template.** Use `[TO COMPLETE]` for anything unknown; never invent a donor detail. Leave out the template's header comment. In the Fannie Mae template: For `{{AMOUNT_WORDING}}` write the actual amount in figures and words, or "up to" the maximum. Delete the trust or estate line unless it applies; if it does, name the trust or estate account.
 
 5. **List the transfer evidence** to collect, matching how the money will move.
 
-6. **Hand over** the full text of the letter in the reply (even when it is also saved to a file), then the evidence list and anything the loan officer must confirm.
+6. **Hand over** the full text of the letter in the reply (even when it is also saved to a file), then the evidence list and anything the loan officer must confirm. Say in plain words that the letter is a draft for the loan officer to review before the donor signs.
 
-## Checks before drafting
+## Checks before drafting (Fannie Mae)
 
 | Check | Rule (Fannie Mae B3-4.3-04) | If it fails |
 |---|---|---|
@@ -40,7 +50,7 @@ Produce a gift letter that is complete the first time, and catch the facts that 
 | Borrower's own contribution | LTV, CLTV or HCLTV of 80% or less: none required. Above 80%: none for a one-unit principal residence; 5% from the borrower's own funds for a two- to four-unit principal residence or a second home | Tell the user the borrower needs 5% of their own funds before gift funds count |
 | Use of funds | Gift funds may fund all or part of the down payment, closing costs or financial reserves | Flag any other use |
 
-## Required letter contents
+## Required letter contents (Fannie Mae)
 
 The letter must be signed by the donor and must:
 
@@ -50,7 +60,7 @@ The letter must be signed by the donor and must:
 
 A gift from a trust or estate: the letter is signed by the donor and lists the name of the trust or estate account. The template's remaining lines (source of funds, borrower signature, interested-party statement) are common lender requests, not Fannie Mae requirements; keep them unless the user says the lender does not want them.
 
-## Transfer evidence
+## Transfer evidence (Fannie Mae)
 
 The lender must verify that the donor had the funds or that they were transferred. Acceptable evidence includes:
 
@@ -69,6 +79,7 @@ If the funds are not transferred before settlement, the lender must document tha
 - **Amount must match the money.** If the transfer differs from the letter's actual amount, a new letter is needed. Use "up to" wording when the final figure is not known.
 - **Do not put account numbers in the letter** unless the lender requires them, and never in chat. The template names the institution and account type only.
 - **A donor who has lived with the borrower for the last 12 months** and will share the home as a principal residence: the funds can count as the borrower's own. Flag this to the loan officer; it can remove the 5% problem.
-- **Gifts of equity** follow a different topic (B3-4.3-05) and cannot fund reserves. Out of scope: say so.
+- **Who signs differs by program.** FHA requires the letter to be signed and dated by the donor and the borrower. Check the template header; do not assume the donor alone signs.
+- **Gifts of equity** follow a different topic (B3-4.3-05) and cannot fund reserves. Use the gift-of-equity template, not the personal gift letter. Only the Fannie Mae version is bundled.
 - **Gift tax** is the donor's question for their own tax adviser. Do not estimate it or state thresholds.
-- **The Selling Guide changes.** The rules here were read from the topic dated 02/04/2026. Link the source and tell the user to confirm: https://selling-guide.fanniemae.com/sel/b3-4.3-04/personal-gifts
+- **Program guides change.** Each template header gives the edition and date its rules were read. The Fannie Mae rules here were read from the topic dated 02/04/2026. Link the source and tell the user to confirm: https://selling-guide.fanniemae.com/sel/b3-4.3-04/personal-gifts

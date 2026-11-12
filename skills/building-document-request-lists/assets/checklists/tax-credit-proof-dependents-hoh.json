@@ -1,0 +1,249 @@
+{
+  "id": "tax-credit-proof-dependents-hoh",
+  "title": "Proof for dependents and head of household filing status",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-credit-proof",
+  "use_when": "Pick this when the client must back up a claimed dependent or head of household filing status.",
+  "note": "Built from IRS Forms 886-H-DEP (Rev. 10-2022) and 886-H-HOH (Rev. 10-2019), which the IRS sends in audits and which name tax years 2022 and 2019; use the year being claimed. The IRS asks for photocopies and cannot accept documents signed by a relative.",
+  "sources": {
+    "f886-h-dep": {
+      "name": "IRS, Form 886-H-DEP, Supporting Documents for Dependents (Rev. 10-2022)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f886hdep.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "f886-h-hoh": {
+      "name": "IRS, Form 886-H-HOH, Supporting Documents to Prove Head of Household Filing Status (Rev. 10-2019)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f886hh.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "dependent-child": "Claiming a qualifying child as a dependent",
+    "not-own-child": "The child is not the client's natural or adopted child",
+    "dependent-relative": "Claiming a qualifying relative as a dependent",
+    "non-blood-relative": "Claiming a person who is not related by blood",
+    "divorced-separated-parents": "Divorced, legally separated or living apart from the child's other parent",
+    "support": "Need to show the client provided more than half of the dependent's support",
+    "hoh": "Filing as head of household",
+    "hoh-divorced": "Head of household filer is divorced or legally separated",
+    "hoh-spouse-apart": "Head of household filer is married but the spouse did not live in the home during the last 6 months of the year"
+  },
+  "sections": [
+    {
+      "name": "Parents who are divorced, separated or living apart",
+      "items": [
+        {
+          "id": "divorce-decree",
+          "label": "Entire divorce decree, separation agreement or decree of separate maintenance",
+          "detail": "",
+          "when": [
+            "divorced-separated-parents"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "living-apart",
+          "label": "Proof that you did not live with the child's other parent for the last six months of the year",
+          "detail": "If living apart but not divorced or legally separated.",
+          "when": [
+            "divorced-separated-parents"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "custody",
+          "label": "Current custody order, completed Form 8332, or a similar statement",
+          "detail": "More than one document may be needed.",
+          "when": [
+            "divorced-separated-parents"
+          ],
+          "basis": "f886-h-dep"
+        }
+      ]
+    },
+    {
+      "name": "Qualifying child",
+      "items": [
+        {
+          "id": "child-relationship",
+          "label": "Documents that verify your relationship to the child",
+          "detail": "Birth certificates or other official documents of birth, marriage certificates, letter from an authorized adoption agency, letter from the authorized placement agency, or applicable court document. The IRS asks for these only for a child who is not your natural or adopted child.",
+          "when": [
+            "not-own-child"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "child-residency-records",
+          "label": "School, medical, daycare or social service records showing you and the child lived at the same address for more than half of the year",
+          "detail": "More than one document may be needed.",
+          "when": [
+            "dependent-child"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "child-residency-letter",
+          "label": "Letter on official letterhead from a school, medical provider, social service agency or place of worship showing names, common address and dates",
+          "detail": "",
+          "when": [
+            "dependent-child"
+          ],
+          "basis": "f886-h-dep"
+        }
+      ]
+    },
+    {
+      "name": "Qualifying relative",
+      "items": [
+        {
+          "id": "relative-relationship",
+          "label": "Birth and marriage certificates that verify your relationship to the relative",
+          "detail": "",
+          "when": [
+            "dependent-relative"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "relative-residency",
+          "label": "Proof the person lived in your home for the entire 12 months of the year",
+          "detail": "School, medical, daycare or social service records, or a letter on official letterhead from a school, medical provider, social service agency or place of worship showing names, common address and dates.",
+          "when": [
+            "non-blood-relative"
+          ],
+          "basis": "f886-h-dep"
+        }
+      ]
+    },
+    {
+      "name": "Proof of support",
+      "items": [
+        {
+          "id": "support-child-support",
+          "label": "Statement of account from a child support agency",
+          "detail": "",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "support-benefits",
+          "label": "Statement from any government agency verifying the amount and type of benefits you or your dependent received for the year",
+          "detail": "",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "support-lodging",
+          "label": "Rental agreements or a statement showing the fair rental value of your residence",
+          "detail": "Proof of lodging cost.",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "support-household",
+          "label": "Utility and repair bills with canceled checks or receipts",
+          "detail": "Proof of household expenses.",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "support-child-costs",
+          "label": "Daycare, school, medical records or bills with canceled checks or receipts",
+          "detail": "Proof of the child's support.",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        },
+        {
+          "id": "support-clothing",
+          "label": "Clothing bills with canceled checks or receipts",
+          "detail": "",
+          "when": [
+            "support"
+          ],
+          "basis": "f886-h-dep"
+        }
+      ]
+    },
+    {
+      "name": "Head of household: marriage test",
+      "items": [
+        {
+          "id": "hoh-decree",
+          "label": "Entire divorce decree, separate maintenance decree or separation agreement",
+          "detail": "",
+          "when": [
+            "hoh-divorced"
+          ],
+          "basis": "f886-h-hoh"
+        },
+        {
+          "id": "hoh-spouse-apart",
+          "label": "Documents verifying your spouse did not live with you during the last 6 months of the year",
+          "detail": "Such as a lease agreement, utility bills, a letter from a clergy member, or a letter from social services.",
+          "when": [
+            "hoh-spouse-apart"
+          ],
+          "basis": "f886-h-hoh"
+        }
+      ]
+    },
+    {
+      "name": "Head of household: qualifying person test",
+      "items": [
+        {
+          "id": "hoh-relationship",
+          "label": "Documents that verify your relationship to the child",
+          "detail": "Birth certificates or other official documents of birth, marriage certificates, letter from an authorized adoption agency, letter from the authorized placement agency, or applicable court document. Only for a child who is not your natural or adopted child.",
+          "when": [
+            "hoh"
+          ],
+          "basis": "f886-h-hoh"
+        },
+        {
+          "id": "hoh-residency",
+          "label": "School, medical, daycare or social service records showing you and the child lived together for more than half of the year",
+          "detail": "Send as many documents as necessary.",
+          "when": [
+            "hoh"
+          ],
+          "basis": "f886-h-hoh"
+        },
+        {
+          "id": "hoh-residency-letter",
+          "label": "Letter on official letterhead from a school, medical provider, social service agency or place of worship showing names, common address and dates",
+          "detail": "If the letter is from a relative who provides daycare, at least one additional letter is required.",
+          "when": [
+            "hoh"
+          ],
+          "basis": "f886-h-hoh"
+        }
+      ]
+    },
+    {
+      "name": "Head of household: cost of keeping up a home",
+      "items": [
+        {
+          "id": "hoh-home-costs",
+          "label": "Rent receipts, utility bills, grocery receipts, property tax bills, mortgage interest statement, upkeep and repair bills, property insurance statement and other household bills",
+          "detail": "",
+          "when": [
+            "hoh"
+          ],
+          "basis": "f886-h-hoh"
+        }
+      ]
+    }
+  ]
+}

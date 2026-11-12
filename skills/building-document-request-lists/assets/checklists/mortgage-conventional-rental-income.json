@@ -1,0 +1,229 @@
+{
+  "id": "mortgage-conventional-rental-income",
+  "title": "Conventional mortgage needs list: borrower using rental income (Fannie Mae)",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this, alongside the borrower's main income variant, for a conventional loan to be sold to Fannie Mae when rental income from the subject property or another property is used to qualify.",
+  "note": "Items follow Fannie Mae Selling Guide section B3-3.8 as published on the retrieval date; they apply to loans sold to Fannie Mae. Appraisal forms are ordered by the lender, lenders using UAD 3.6 follow a separate policy supplement, and lender overlays add conditions.",
+  "sources": {
+    "rental-general": {
+      "name": "Fannie Mae Selling Guide B3-3.8-01, General Rental Income Information (09/02/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.8-01/general-rental-income-information",
+      "retrieved": "2026-11-11"
+    },
+    "subject": {
+      "name": "Fannie Mae Selling Guide B3-3.8-02, Rental Income from the Subject Property (09/02/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.8-02/rental-income-subject-property",
+      "retrieved": "2026-11-11"
+    },
+    "short-term": {
+      "name": "Fannie Mae Selling Guide B3-3.8-03, Rental Income from the Subject Property: Short-Term Rental (09/02/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.8-03/rental-income-subject-property-short-term-rental",
+      "retrieved": "2026-11-11"
+    },
+    "non-subject": {
+      "name": "Fannie Mae Selling Guide B3-3.8-04, Rental Income from Non-Subject Property (09/02/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.8-04/rental-income-non-subject-property",
+      "retrieved": "2026-11-11"
+    },
+    "departing": {
+      "name": "Fannie Mae Selling Guide B3-3.8-05, Rental Income from Non-Subject Property: Departing Residence (09/02/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.8-05/rental-income-non-subject-property-departing-residence",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "subject-purchase": "Is rental income from the property being purchased used to qualify?",
+    "subject-refinance": "Is rental income from the property being refinanced used to qualify?",
+    "lease-transfer": "On a purchase, is an existing lease being transferred to the borrower?",
+    "other-property": "Is rental income from a property other than the subject property used to qualify?",
+    "departing-residence": "Is the borrower converting the current home to a rental when buying the new one?",
+    "departing-multi-unit": "Is that departing residence a multi-unit property with tenant-occupied units?",
+    "short-term-purchase": "Is the property being purchased a one-unit investment property used as a short-term rental?",
+    "short-term-refinance": "Is the property being refinanced a one-unit investment property used as a short-term rental?",
+    "lease-used": "Is a lease agreement being used to work out the rental income (for example the property was bought after the last tax filing or placed in service this year)?",
+    "new-lease": "Was the lease signed within two months of the loan application?",
+    "property-manager": "Is the rental handled by a property management company unrelated to the borrower?",
+    "housing-payment-unverified": "Is the borrower's current housing payment missing from the credit report?",
+    "partial-year": "Has a property been owned at least a year while Schedule E shows fewer than 365 fair rental days?",
+    "form-8825": "Is the rental income reported through a partnership or S corporation on IRS Form 8825?"
+  },
+  "sections": [
+    {
+      "name": "Tax returns",
+      "items": [
+        {
+          "id": "return-subject",
+          "label": "Most recent personal federal income tax return (IRS Form 1040) with Schedules 1 and E",
+          "detail": "",
+          "when": [
+            "subject-refinance"
+          ],
+          "basis": "subject"
+        },
+        {
+          "id": "return-other",
+          "label": "Most recent personal federal income tax return (IRS Form 1040) with Schedules 1 and E",
+          "detail": "Asked whether or not the rental property is listed on the return.",
+          "when": [
+            "other-property"
+          ],
+          "basis": "non-subject"
+        },
+        {
+          "id": "return-short-term",
+          "label": "Most recent personal federal income tax return (IRS Form 1040) with Schedules 1 and E",
+          "detail": "Asked whether or not the property is listed on the return.",
+          "when": [
+            "short-term-refinance"
+          ],
+          "basis": "short-term"
+        },
+        {
+          "id": "return-departing",
+          "label": "Most recent year's personal federal income tax return (IRS Form 1040)",
+          "detail": "To support rent received from the tenant-occupied units.",
+          "when": [
+            "departing-multi-unit"
+          ],
+          "basis": "departing"
+        },
+        {
+          "id": "return-8825",
+          "label": "Most recent signed business federal tax return for the partnership or S corporation",
+          "detail": "Including Form 8825.",
+          "when": [
+            "form-8825"
+          ],
+          "basis": "non-subject"
+        },
+        {
+          "id": "experience",
+          "label": "Most recent signed lease(s) showing at least 12 months of rental income, or the two most recent years of personal federal tax returns showing rental income",
+          "detail": "Used to document 12 months of property management experience when the most recent return does not show 365 fair rental days.",
+          "when": [
+            "partial-year"
+          ],
+          "basis": "rental-general"
+        }
+      ]
+    },
+    {
+      "name": "Leases and rent receipts",
+      "items": [
+        {
+          "id": "lease-transferred",
+          "label": "Fully signed lease agreement(s) being transferred with the purchase",
+          "detail": "",
+          "when": [
+            "lease-transfer"
+          ],
+          "basis": "subject"
+        },
+        {
+          "id": "lease-current",
+          "label": "Current signed lease agreement(s)",
+          "detail": "The rent must be stated in U.S. dollars. For a property not on the most recent tax return the lease cannot be with a family member or interested party. A lease is not accepted for a departing residence.",
+          "when": [
+            "lease-used"
+          ],
+          "basis": "rental-general"
+        },
+        {
+          "id": "lease-new-terms",
+          "label": "Newly signed lease with a term of at least six months",
+          "detail": "For a property not reported on the tax return; the first rent payment must be due on or before the first payment date of the new mortgage.",
+          "when": [
+            "new-lease"
+          ],
+          "basis": "rental-general"
+        },
+        {
+          "id": "rent-receipts",
+          "label": "Two most recent consecutive months of bank statements or electronic transfer records showing the rent",
+          "detail": "For a property not on the most recent tax return; the rent amount must be identifiable and match the lease. Any difference from the lease has to be explained by the borrower or the property manager. Send through the secure portal, never by plain email.",
+          "when": [
+            "lease-used"
+          ],
+          "basis": "rental-general"
+        },
+        {
+          "id": "new-lease-receipts",
+          "label": "Copies of the security deposit and first full month's rent, with proof of deposit",
+          "detail": "Accepted for a newly signed lease in place of two months of rent receipts; check, money order or electronic transfer showing identifiable deposit and rent amounts. Send through the secure portal, never by plain email.",
+          "when": [
+            "new-lease"
+          ],
+          "basis": "rental-general"
+        },
+        {
+          "id": "management-agreement",
+          "label": "Property management agreement and proof of rents paid for the two most recent consecutive months",
+          "detail": "Accepted in place of two months of bank statements, whatever the age of the lease.",
+          "when": [
+            "property-manager"
+          ],
+          "basis": "rental-general"
+        },
+        {
+          "id": "ownership-date",
+          "label": "Settlement statement or other document showing the date the property was bought or transferred",
+          "detail": "Asked with the evidence that the lease terms are in effect.",
+          "when": [
+            "lease-used"
+          ],
+          "basis": "non-subject"
+        }
+      ]
+    },
+    {
+      "name": "Current housing payment",
+      "items": [
+        {
+          "id": "housing-payment",
+          "label": "Proof of your current housing payment",
+          "detail": "Examples: verification of rent from a management company, at least six months of bank statements or cancelled checks showing the payments, or evidence the latest property tax bill was paid. Send through the secure portal, never by plain email.",
+          "when": [
+            "housing-payment-unverified"
+          ],
+          "basis": "rental-general"
+        }
+      ]
+    },
+    {
+      "name": "Market rent support",
+      "items": [
+        {
+          "id": "form-1007",
+          "label": "Comparable rent schedule (Form 1007) or small residential income property appraisal (Form 1025)",
+          "detail": "Prepared by the appraiser and ordered by the lender, not supplied by the borrower.",
+          "when": [
+            "subject-purchase",
+            "subject-refinance"
+          ],
+          "basis": "subject"
+        },
+        {
+          "id": "departing-market-rent",
+          "label": "Market rent evidence for the home being vacated",
+          "detail": "An appraisal that includes market rents, a Form 1007 for the occupied unit, or market analysis printouts with at least three comparable rentals from the same market area where possible. Normally gathered by the lender.",
+          "when": [
+            "departing-residence"
+          ],
+          "basis": "departing"
+        },
+        {
+          "id": "short-term-data",
+          "label": "Form 1007 based on standard long-term rents, or short-term rental data for three comparable properties",
+          "detail": "The data must come from a Multiple Listing Service or property management companies and show daily, weekly or monthly rates and the number of days rented in the last calendar year. On a refinance this is asked only when the property is not yet on the most recent tax return.",
+          "when": [
+            "short-term-purchase",
+            "short-term-refinance"
+          ],
+          "basis": "short-term"
+        }
+      ]
+    }
+  ]
+}

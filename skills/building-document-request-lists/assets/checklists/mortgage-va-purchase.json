@@ -1,0 +1,180 @@
+{
+  "id": "mortgage-va-purchase",
+  "title": "VA home loan needs list: Certificate of Eligibility evidence",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this for a VA-backed purchase loan to collect what the borrower needs for the Certificate of Eligibility, alongside a general purchase list for income and assets.",
+  "note": "Items follow the VA.gov pages cited and cover only the evidence for a Certificate of Eligibility by service category. VA.gov states the borrower must also meet VA and lender standards for credit and income; those documents are not listed here.",
+  "sources": {
+    "va-coe": {
+      "name": "U.S. Department of Veterans Affairs, How to request a VA home loan Certificate of Eligibility (COE) (last updated September 22, 2026)",
+      "url": "https://www.va.gov/housing-assistance/home-loans/how-to-request-coe/",
+      "retrieved": "2026-11-11"
+    },
+    "va-spouse": {
+      "name": "U.S. Department of Veterans Affairs, Home loans for surviving spouses (last updated September 22, 2026)",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/housing-assistance/surviving-spouse-home-loan/",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "veteran": "Is the borrower a Veteran?",
+    "active-duty": "Is the borrower an active-duty service member?",
+    "guard-activated": "Is the borrower a current or former activated National Guard member?",
+    "guard-title-32": "Does that Guard member have at least 90 days of active-duty service including at least 30 consecutive days?",
+    "reserve-activated": "Is the borrower a current or former activated Reserve member?",
+    "guard-reserve-current": "Is the borrower a current National Guard or Reserve member who has never been activated?",
+    "guard-discharged": "Is the borrower a discharged National Guard member who was never activated?",
+    "reserve-discharged": "Is the borrower a discharged Reserve member who was never activated?",
+    "surviving-spouse": "Is the borrower a surviving spouse who qualifies for home loan benefits?",
+    "spouse-dic": "Is the surviving spouse receiving Dependency and Indemnity Compensation (DIC)?",
+    "spouse-no-dic": "Is the surviving spouse not receiving Dependency and Indemnity Compensation (DIC)?",
+    "coe-by-mail": "Will the COE be requested by mail rather than online or through the lender?"
+  },
+  "sections": [
+    {
+      "name": "Service evidence",
+      "items": [
+        {
+          "id": "dd214",
+          "label": "Copy of discharge or separation papers (DD214)",
+          "detail": "For an activated Guard or Reserve member, VA accepts the DD214 or other discharge documents. Send through the secure portal, never by plain email.",
+          "when": [
+            "veteran",
+            "guard-activated",
+            "reserve-activated"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "statement-of-service",
+          "label": "Statement of service",
+          "detail": "Signed by the commander, adjutant or personnel officer and showing: full name, Social Security number, date of birth, date of entry on duty, duration of any lost time, and the name of the command providing the information. Send through the secure portal, never by plain email.",
+          "when": [
+            "active-duty"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "statement-of-service-guard",
+          "label": "Statement of service including total creditable years of service",
+          "detail": "Signed by the commander, adjutant or personnel officer and showing: full name, Social Security number, date of birth, date of entry on duty, duration of any lost time, and the name of the command providing the information, plus the total number of creditable years of service. Send through the secure portal, never by plain email.",
+          "when": [
+            "guard-reserve-current"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "title-32",
+          "label": "Document showing the activation date",
+          "detail": "One of: a DD214 showing 32 USC section 316, 502, 503, 504 or 505 activation; an annual point statement; or a DD220 with accompanying orders. Send through the secure portal, never by plain email.",
+          "when": [
+            "guard-title-32"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "ngb-22",
+          "label": "Report of Separation and Record of Service (NGB Form 22) for each period of National Guard service",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "guard-discharged"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "ngb-23",
+          "label": "Retirement Points Statement (NGB Form 23) and proof of the character of service",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "guard-discharged"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "reserve-points",
+          "label": "Copy of the latest annual retirement points",
+          "detail": "",
+          "when": [
+            "reserve-discharged"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "reserve-honorable",
+          "label": "Proof of honorable service",
+          "detail": "",
+          "when": [
+            "reserve-discharged"
+          ],
+          "basis": "va-coe"
+        }
+      ]
+    },
+    {
+      "name": "Surviving spouse",
+      "items": [
+        {
+          "id": "spouse-dd214",
+          "label": "The Veteran's discharge documents (DD214), if available",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "surviving-spouse"
+          ],
+          "basis": "va-coe"
+        },
+        {
+          "id": "form-26-1817",
+          "label": "Completed VA Form 26-1817, Request for Determination of Loan Guaranty Eligibility - Unmarried Surviving Spouses",
+          "detail": "Given to the lender to process online, or mailed to the VA regional loan center for the state. Send through the secure portal, never by plain email.",
+          "when": [
+            "spouse-dic"
+          ],
+          "basis": "va-spouse"
+        },
+        {
+          "id": "form-21p-534ez",
+          "label": "Completed VA Form 21P-534EZ",
+          "detail": "The application for DIC, Survivors Pension and/or accrued benefits; it is sent with the documents below to the VA Pension Intake Center. Send through the secure portal, never by plain email.",
+          "when": [
+            "spouse-no-dic"
+          ],
+          "basis": "va-spouse"
+        },
+        {
+          "id": "marriage-license",
+          "label": "Copy of the marriage license",
+          "detail": "",
+          "when": [
+            "spouse-no-dic"
+          ],
+          "basis": "va-spouse"
+        },
+        {
+          "id": "death-certificate",
+          "label": "The Veteran's death certificate",
+          "detail": "",
+          "when": [
+            "spouse-no-dic"
+          ],
+          "basis": "va-spouse"
+        }
+      ]
+    },
+    {
+      "name": "Request form",
+      "items": [
+        {
+          "id": "form-26-1880",
+          "label": "Completed VA Form 26-1880, Request for a Certificate of Eligibility",
+          "detail": "Mailed to the regional loan center address on the last page of the form. VA says a mail request may take longer than an online request or one made through the lender. Send through the secure portal, never by plain email.",
+          "when": [
+            "coe-by-mail"
+          ],
+          "basis": "va-coe"
+        }
+      ]
+    }
+  ]
+}

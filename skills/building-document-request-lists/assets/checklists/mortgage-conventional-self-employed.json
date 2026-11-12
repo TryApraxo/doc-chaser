@@ -1,0 +1,172 @@
+{
+  "id": "mortgage-conventional-self-employed",
+  "title": "Conventional mortgage needs list: self-employed borrower (Fannie Mae)",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this for a conventional loan to be sold to Fannie Mae when the borrower owns 25% or more of a business and qualifies on that income, or receives Schedule K-1 income from a smaller ownership share.",
+  "note": "Items follow the Fannie Mae Selling Guide topics cited, as published on the retrieval date; they apply to loans sold to Fannie Mae. The lender decides which of the Guide's reduced-documentation options it will use, Desktop Underwriter findings may differ, and lender overlays add conditions.",
+  "sources": {
+    "self-employed": {
+      "name": "Fannie Mae Selling Guide B3-3.5-01, Underwriting Factors and Documentation for a Self-Employed Borrower (12/13/2023)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.5-01/underwriting-factors-and-documentation-self-employed-borrower",
+      "retrieved": "2026-11-11"
+    },
+    "profit-loss": {
+      "name": "Fannie Mae Selling Guide B3-3.7-04, Analyzing Profit and Loss Statements (04/01/2009)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.7-04/analyzing-profit-and-loss-statements",
+      "retrieved": "2026-11-11"
+    },
+    "tax-transcripts": {
+      "name": "Fannie Mae Selling Guide B3-3.1-02, Tax Return and Transcript Documentation Requirements (06/03/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.1-02/tax-return-and-transcript-documentation-requirements",
+      "retrieved": "2026-11-11"
+    },
+    "tax-age": {
+      "name": "Fannie Mae Selling Guide B1-1-03, Allowable Age of Credit Documents and Federal Income Tax Returns (04/02/2025)",
+      "url": "https://selling-guide.fanniemae.com/sel/b1-1-03/allowable-age-credit-documents-and-federal-income-tax-returns",
+      "retrieved": "2026-11-11"
+    },
+    "deposits": {
+      "name": "Fannie Mae Selling Guide B3-4.2-02, Depository Accounts (12/14/2022)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-4.2-02/depository-accounts",
+      "retrieved": "2026-11-11"
+    },
+    "k1": {
+      "name": "Fannie Mae Selling Guide B3-3.4-19, Schedule K-1 Income <25% Ownership (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-19/schedule-k-1-income",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "business-entity": "Is the business a partnership, S corporation or corporation that files its own return?",
+    "five-years": "Has the business existed, with the borrower owning 25% or more, for at least five years?",
+    "under-two-years": "Has the borrower been self-employed for less than two years?",
+    "profit-loss-requested": "Has the lender asked for a year-to-date profit and loss statement?",
+    "business-assets": "Will business account funds be used for the down payment, closing costs or reserves?",
+    "extension-filed": "Has the most recent year's tax return not been filed because of an extension?",
+    "k1-minority": "Does the borrower receive Schedule K-1 income from a business in which they own less than 25%?",
+    "k1-rental-only": "Is rental income the only income reported on that Schedule K-1?"
+  },
+  "sections": [
+    {
+      "name": "Tax returns",
+      "items": [
+        {
+          "id": "personal-returns",
+          "label": "Signed personal federal income tax returns for the past two years",
+          "detail": "Copies of the returns filed with the IRS, with all applicable schedules. The Guide lets the lender accept one year when the business has existed for five years and the borrower has held 25% or more for five consecutive years. A return need not be signed if there is proof of electronic filing, a signed Form 4506-C for that year, or IRS transcripts that validate it.",
+          "when": [],
+          "basis": "self-employed"
+        },
+        {
+          "id": "business-returns",
+          "label": "Signed business federal income tax returns for the past two years",
+          "detail": "With all applicable schedules. The Guide lets the lender waive business returns when two years of signed personal returns are provided, personal funds cover the down payment, closing costs and reserves, the borrower has been self-employed in the same business for at least five years, and the personal returns show self-employment income from that business rising over the two years.",
+          "when": [
+            "business-entity"
+          ],
+          "basis": "self-employed"
+        },
+        {
+          "id": "ownership-proof",
+          "label": "Document showing how long you have owned 25% or more of the business",
+          "detail": "From a reliable source and naming the business on the application, for example an IRS Employer Identification Number confirmation letter, business license, articles of incorporation or partnership agreement.",
+          "when": [
+            "five-years"
+          ],
+          "basis": "self-employed"
+        },
+        {
+          "id": "prior-income",
+          "label": "Records of earlier income in the same field",
+          "detail": "When self-employed for less than two years: the most recent signed personal and business returns must show a full 12 months of self-employment income from the current business, and the file must document earlier income at the same or a higher level in the same field or in a job with similar responsibilities.",
+          "when": [
+            "under-two-years"
+          ],
+          "basis": "self-employed"
+        },
+        {
+          "id": "extension",
+          "label": "Copy of the filed IRS Form 4868, proof it was e-filed, or confirmation of electronic payment of estimated tax",
+          "detail": "Asked when the most recent year's return has not been filed and the application and disbursement dates fall in the window where the Guide accepts the prior year's return; in other windows an extension is not accepted. Borrower-provided documents must show their source.",
+          "when": [
+            "extension-filed"
+          ],
+          "basis": "tax-age"
+        },
+        {
+          "id": "form-4506c",
+          "label": "Signed IRS Form 4506-C for personal returns, and a separate one for business returns",
+          "detail": "Only one tax form can be requested per Form 4506-C. Signed at or before closing; valid for 120 days after signing. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "tax-transcripts"
+        }
+      ]
+    },
+    {
+      "name": "Business financials",
+      "items": [
+        {
+          "id": "profit-loss",
+          "label": "Year-to-date profit and loss statement",
+          "detail": "Audited or unaudited. The Guide does not require it for most businesses; the lender may ask for it when the application is dated more than 120 days after the end of the business's tax year.",
+          "when": [
+            "profit-loss-requested"
+          ],
+          "basis": "profit-loss"
+        },
+        {
+          "id": "business-account",
+          "label": "Statements for the business account the funds will come from",
+          "detail": "The borrower must be listed as an owner of the account. Send through the secure portal, never by plain email.",
+          "when": [
+            "business-assets"
+          ],
+          "basis": "deposits"
+        },
+        {
+          "id": "business-cash-flow",
+          "label": "Several months of recent business account statements or a current balance sheet",
+          "detail": "The lender may ask for more than the tax returns so it can analyze the effect of the withdrawal on the business. Send through the secure portal, never by plain email.",
+          "when": [
+            "business-assets"
+          ],
+          "basis": "self-employed"
+        }
+      ]
+    },
+    {
+      "name": "Schedule K-1 income, under 25% ownership",
+      "items": [
+        {
+          "id": "k1-returns",
+          "label": "Signed personal federal income tax returns for the most recent two years",
+          "detail": "",
+          "when": [
+            "k1-minority"
+          ],
+          "basis": "k1"
+        },
+        {
+          "id": "k1-forms",
+          "label": "IRS Schedule K-1 for the most recent two years",
+          "detail": "",
+          "when": [
+            "k1-minority"
+          ],
+          "basis": "k1"
+        },
+        {
+          "id": "k1-rental-return",
+          "label": "Signed individual federal income tax return for one year, with the IRS Schedule K-1",
+          "detail": "Applies when only rental income is reported on the Schedule K-1.",
+          "when": [
+            "k1-rental-only"
+          ],
+          "basis": "k1"
+        }
+      ]
+    }
+  ]
+}

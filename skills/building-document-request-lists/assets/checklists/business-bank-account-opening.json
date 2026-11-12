@@ -1,0 +1,52 @@
+{
+  "id": "business-bank-account-opening",
+  "title": "Business bank account opening document request",
+  "industry": "bookkeeping",
+  "jurisdiction": "US federal",
+  "variant_of": "business-bank-account",
+  "use_when": "Use when a client is opening a business bank account and needs to gather the documents banks commonly ask for.",
+  "note": "Items are the SBA's list of the most common documents banks ask for; SBA says some banks may ask for more.",
+  "sources": {
+    "sba-bank": {
+      "name": "SBA, Launch your business: Open a business bank account (web page; no review date shown)",
+      "url": "https://www.sba.gov/counseling/launch-your-business/#bank-account",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {},
+  "sections": [
+    {
+      "name": "Documents banks commonly ask for",
+      "items": [
+        {
+          "id": "ein",
+          "label": "Employer Identification Number (EIN), or a Social Security number if the business is a sole proprietorship",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-bank"
+        },
+        {
+          "id": "formation",
+          "label": "The business's formation documents",
+          "detail": "",
+          "when": [],
+          "basis": "sba-bank"
+        },
+        {
+          "id": "ownership",
+          "label": "Ownership agreements",
+          "detail": "",
+          "when": [],
+          "basis": "sba-bank"
+        },
+        {
+          "id": "license",
+          "label": "Business license",
+          "detail": "",
+          "when": [],
+          "basis": "sba-bank"
+        }
+      ]
+    }
+  ]
+}

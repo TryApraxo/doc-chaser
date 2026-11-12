@@ -1,0 +1,281 @@
+{
+  "id": "payroll-new-hire-employee",
+  "title": "New employee paperwork request",
+  "industry": "payroll",
+  "jurisdiction": "US federal",
+  "variant_of": "payroll-onboarding",
+  "use_when": "Use when a business is adding a new employee (paid on Form W-2) to payroll; use the contractor list for independent contractors and the employer setup list for a new employer client.",
+  "note": "Items follow the IRS Hiring employees page and USCIS Form I-9 with its Lists of Acceptable Documents. The employee chooses which acceptable documents to present (one from List A, or one from List B plus one from List C); state new-hire and withholding forms are not covered. Form I-9 requires the employer or its authorized representative to physically examine the documents, or examine them under an alternative procedure authorized by DHS; if copies are kept, store them securely and never ask for them by plain email.",
+  "sources": {
+    "irs-hiring": {
+      "name": "IRS, Hiring employees (page last reviewed or updated 18-Feb-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/hiring-employees",
+      "retrieved": "2026-11-11"
+    },
+    "form-i9": {
+      "name": "USCIS Form I-9, Employment Eligibility Verification, including Lists of Acceptable Documents (Edition 01/20/25, expires 05/31/2027)",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-9.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "uscis-i9-docs": {
+      "name": "USCIS, Form I-9 Acceptable Documents (I-9 Central web page; no review date captured)",
+      "url": "https://www.uscis.gov/i-9-central/form-i-9-acceptable-documents",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "under-18": "Is the employee under age 18 and unable to present one of the other List B identity documents?"
+  },
+  "sections": [
+    {
+      "name": "Forms and information",
+      "items": [
+        {
+          "id": "w4",
+          "label": "Signed Form W-4, Employee's Withholding Certificate",
+          "detail": "The IRS says to ask all new employees for a signed Form W-4 when they start work.",
+          "when": [],
+          "basis": "irs-hiring"
+        },
+        {
+          "id": "name-ssn",
+          "label": "Employee's name and Social Security number",
+          "detail": "The IRS says not to accept an ITIN in place of an SSN. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "irs-hiring"
+        },
+        {
+          "id": "i9-section-1",
+          "label": "Form I-9, Section 1, completed and signed by the employee",
+          "detail": "No later than the first day of employment, but not before accepting a job offer. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "i9-documents",
+          "label": "Documents for Form I-9, Section 2: one selection from List A, or one selection from List B plus one selection from List C",
+          "detail": "The employer or its authorized representative must complete and sign Section 2 within three business days after the employee's first day of employment. All documents containing an expiration date must be unexpired. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "form-i9"
+        }
+      ]
+    },
+    {
+      "name": "List A: one document that establishes both identity and employment authorization",
+      "items": [
+        {
+          "id": "a1",
+          "label": "U.S. Passport or U.S. Passport Card",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a2",
+          "label": "Permanent Resident Card or Alien Registration Receipt Card (Form I-551)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a3",
+          "label": "Foreign passport that contains a temporary I-551 stamp or temporary I-551 printed notation on a machine-readable immigrant visa",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a4",
+          "label": "Employment Authorization Document that contains a photograph (Form I-766)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a5",
+          "label": "Foreign passport together with Form I-94 or Form I-94A, for an individual temporarily authorized to work for a specific employer because of his or her status or parole",
+          "detail": "The Form I-94 or I-94A must have the same name as the passport and an endorsement of the individual's status or parole, as long as that period of endorsement has not yet expired and the proposed employment is not in conflict with any restrictions or limitations identified on the form.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a6",
+          "label": "Passport from the Federated States of Micronesia (FSM) or the Republic of the Marshall Islands (RMI) with Form I-94 or Form I-94A",
+          "detail": "The Form I-94 or I-94A must indicate nonimmigrant admission under the Compact of Free Association Between the United States and the FSM or RMI.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "a-receipt",
+          "label": "Acceptable receipt in place of a List A document",
+          "detail": "Receipt for a replacement of a lost, stolen, or damaged List A document; Form I-94 issued to a lawful permanent resident that contains an I-551 stamp and a photograph of the individual; or Form I-94 with RE notation or refugee stamp issued to a refugee. May be presented for a temporary period.",
+          "when": [],
+          "basis": "form-i9"
+        }
+      ]
+    },
+    {
+      "name": "List B: one document that establishes identity (present together with a List C document)",
+      "items": [
+        {
+          "id": "b1",
+          "label": "Driver's license or ID card issued by a State or outlying possession of the United States",
+          "detail": "Provided it contains a photograph or information such as name, date of birth, sex, height, eye color, and address.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b2",
+          "label": "ID card issued by federal, state or local government agencies or entities",
+          "detail": "Provided it contains a photograph or information such as name, date of birth, sex, height, eye color, and address.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b3",
+          "label": "School ID card with a photograph",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b4",
+          "label": "Voter's registration card",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b5",
+          "label": "U.S. Military card or draft record",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b6",
+          "label": "Military dependent's ID card",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b7",
+          "label": "U.S. Coast Guard Merchant Mariner Card",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b8",
+          "label": "Native American tribal document",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b9",
+          "label": "Driver's license issued by a Canadian government authority",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b10",
+          "label": "School record or report card",
+          "detail": "",
+          "when": [
+            "under-18"
+          ],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b11",
+          "label": "Clinic, doctor, or hospital record",
+          "detail": "",
+          "when": [
+            "under-18"
+          ],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b12",
+          "label": "Day-care or nursery school record",
+          "detail": "",
+          "when": [
+            "under-18"
+          ],
+          "basis": "form-i9"
+        },
+        {
+          "id": "b-receipt",
+          "label": "Acceptable receipt in place of a List B document",
+          "detail": "Receipt for a replacement of a lost, stolen, or damaged List B document. May be presented for a temporary period.",
+          "when": [],
+          "basis": "form-i9"
+        }
+      ]
+    },
+    {
+      "name": "List C: one document that establishes employment authorization (present together with a List B document)",
+      "items": [
+        {
+          "id": "c1",
+          "label": "Social Security Account Number card",
+          "detail": "Not acceptable if the card includes one of these restrictions: NOT VALID FOR EMPLOYMENT; VALID FOR WORK ONLY WITH INS AUTHORIZATION; VALID FOR WORK ONLY WITH DHS AUTHORIZATION.",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c2",
+          "label": "Certification of report of birth issued by the Department of State (Forms DS-1350, FS-545, FS-240)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c3",
+          "label": "Original or certified copy of birth certificate issued by a State, county, municipal authority, or territory of the United States bearing an official seal",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c4",
+          "label": "Native American tribal document (as a List C document)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c5",
+          "label": "U.S. Citizen ID Card (Form I-197)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c6",
+          "label": "Identification Card for Use of Resident Citizen in the United States (Form I-179)",
+          "detail": "",
+          "when": [],
+          "basis": "form-i9"
+        },
+        {
+          "id": "c7",
+          "label": "Employment authorization document issued by the Department of Homeland Security",
+          "detail": "The USCIS page gives examples including Form I-94 issued to asylees or work-authorized nonimmigrants, Form I-571, an unexpired Form I-327, Form N-560 or N-561, and Form N-550 or N-570. Form I-766 is a List A document, not a List C document.",
+          "when": [],
+          "basis": "uscis-i9-docs"
+        },
+        {
+          "id": "c-receipt",
+          "label": "Acceptable receipt in place of a List C document",
+          "detail": "Receipt for a replacement of a lost, stolen, or damaged List C document. May be presented for a temporary period.",
+          "when": [],
+          "basis": "form-i9"
+        }
+      ]
+    }
+  ]
+}

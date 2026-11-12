@@ -1,0 +1,243 @@
+{
+  "id": "tax-1040-free-prep-basic",
+  "title": "Basic individual tax return: what to bring",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-individual",
+  "use_when": "Pick this for a simple wage-earner return with no business or rental income, where the short IRS free tax preparation (VITA) list is enough.",
+  "note": "Built from the IRS checklist for free tax return preparation and the Form 13614-C intake sheet. The IRS also says both spouses must be present to sign a joint return filed electronically. Business, rental and state-specific items are not covered.",
+  "sources": {
+    "vita": {
+      "name": "IRS, Checklist for free tax return preparation (web page, last reviewed or updated 24-Oct-2026)",
+      "url": "https://www.irs.gov/individuals/checklist-for-free-tax-return-preparation",
+      "retrieved": "2026-11-11"
+    },
+    "f13614c": {
+      "name": "IRS, Form 13614-C, Intake/Interview and Quality Review Sheet (Rev. 10-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f13614c.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "no-ssn": "Someone on the return has an ITIN instead of a Social Security number",
+    "itin-applying": "Someone on the return is applying for an ITIN",
+    "retirement": "Took money from a retirement account, pension or annuity",
+    "social-security": "Received Social Security or Railroad Retirement benefits",
+    "unemployment": "Received unemployment benefits",
+    "interest-dividends": "Earned interest or dividends",
+    "gambling": "Had gambling or lottery winnings",
+    "other-income": "Had other income reported on Form 1099-MISC",
+    "direct-deposit": "Wants the refund by direct deposit",
+    "childcare": "Paid a daycare provider",
+    "marketplace-insurance": "Bought health insurance through the Marketplace",
+    "student-loan": "Paid student loan interest",
+    "education": "Someone in the family took educational classes",
+    "estimated-payments": "Made estimated tax payments"
+  },
+  "sections": [
+    {
+      "name": "Identity",
+      "items": [
+        {
+          "id": "photo-id",
+          "label": "Original photo ID for you, and for your spouse if filing jointly",
+          "detail": "Examples the IRS lists: valid U.S. driver's license, employer ID, school ID, U.S. state ID, military ID, national ID, visa, passport. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "vita"
+        },
+        {
+          "id": "ss-cards",
+          "label": "Social Security cards for you, your spouse and dependents",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "vita"
+        },
+        {
+          "id": "itin-letters",
+          "label": "ITIN letters for anyone on the return who does not have a Social Security number",
+          "detail": "For you, your spouse and your dependents. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-ssn"
+          ],
+          "basis": "f13614c"
+        },
+        {
+          "id": "foreign-status",
+          "label": "Proof of foreign status",
+          "detail": "Only if applying for an ITIN. Send through the secure portal, never by plain email.",
+          "when": [
+            "itin-applying"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "birth-dates",
+          "label": "Birth dates for you, your spouse and dependents on the tax return",
+          "detail": "",
+          "when": [],
+          "basis": "vita"
+        }
+      ]
+    },
+    {
+      "name": "Income",
+      "items": [
+        {
+          "id": "w2",
+          "label": "Form W-2 wage and earning statements from all employers",
+          "detail": "",
+          "when": [],
+          "basis": "vita"
+        },
+        {
+          "id": "1099-r",
+          "label": "Form 1099-R for retirement account, pension or annuity payments",
+          "detail": "",
+          "when": [
+            "retirement"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "ssa-1099",
+          "label": "Social Security Benefit Statement (Form SSA-1099)",
+          "detail": "If applicable.",
+          "when": [
+            "social-security"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "rrb-1099",
+          "label": "Form RRB-1099 for Railroad Retirement benefits",
+          "detail": "",
+          "when": [
+            "social-security"
+          ],
+          "basis": "f13614c"
+        },
+        {
+          "id": "1099-g",
+          "label": "Form 1099-G for unemployment benefits",
+          "detail": "",
+          "when": [
+            "unemployment"
+          ],
+          "basis": "f13614c"
+        },
+        {
+          "id": "1099-int-div",
+          "label": "Interest and dividend statements from banks (Forms 1099)",
+          "detail": "",
+          "when": [
+            "interest-dividends"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "w2g",
+          "label": "Form W-2G for gambling winnings",
+          "detail": "",
+          "when": [
+            "gambling"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "1099-misc",
+          "label": "Form 1099-MISC",
+          "detail": "",
+          "when": [
+            "other-income"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "transcripts",
+          "label": "Copies of income transcripts from the IRS and state, if applicable",
+          "detail": "",
+          "when": [],
+          "basis": "vita"
+        }
+      ]
+    },
+    {
+      "name": "Prior return and refund",
+      "items": [
+        {
+          "id": "prior-return",
+          "label": "A copy of last year's federal and state returns, if available",
+          "detail": "",
+          "when": [],
+          "basis": "vita"
+        },
+        {
+          "id": "bank-proof",
+          "label": "Proof of bank account routing and account numbers for direct deposit, such as a blank check",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "direct-deposit"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "estimated-payments",
+          "label": "Estimated tax payments made, and any refund from last year applied to this year's tax",
+          "detail": "",
+          "when": [
+            "estimated-payments"
+          ],
+          "basis": "f13614c"
+        }
+      ]
+    },
+    {
+      "name": "Expenses and health coverage",
+      "items": [
+        {
+          "id": "daycare",
+          "label": "Total paid to the daycare provider and the provider's tax identifying number",
+          "detail": "The provider's SSN or business EIN. Send through the secure portal, never by plain email.",
+          "when": [
+            "childcare"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "1095-a",
+          "label": "Form 1095-A, Health Insurance Marketplace Statement",
+          "detail": "",
+          "when": [
+            "marketplace-insurance"
+          ],
+          "basis": "vita"
+        },
+        {
+          "id": "exemption-cert",
+          "label": "Health Insurance Exemption Certificate, if received",
+          "detail": "",
+          "when": [],
+          "basis": "vita"
+        },
+        {
+          "id": "1098-e",
+          "label": "Form 1098-E for student loan interest",
+          "detail": "",
+          "when": [
+            "student-loan"
+          ],
+          "basis": "f13614c"
+        },
+        {
+          "id": "1098-t",
+          "label": "Form 1098-T from the school",
+          "detail": "The intake sheet also mentions an itemized statement from the school or an invoice.",
+          "when": [
+            "education"
+          ],
+          "basis": "f13614c"
+        }
+      ]
+    }
+  ]
+}

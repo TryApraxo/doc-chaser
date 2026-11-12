@@ -1,0 +1,107 @@
+{
+  "id": "payroll-new-contractor",
+  "title": "New independent contractor paperwork request",
+  "industry": "payroll",
+  "jurisdiction": "US federal",
+  "variant_of": "payroll-onboarding",
+  "use_when": "Use when a business starts paying a worker it has already determined is an independent contractor; use the new-hire list for employees.",
+  "note": "Items follow the IRS pages on independent contractors and Form W-9 with its requester instructions. Whether the worker is a contractor or an employee is not decided by this list, and state requirements are not covered.",
+  "sources": {
+    "irs-contractors": {
+      "name": "IRS, Forms and associated taxes for independent contractors (page last reviewed or updated 11-Sep-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/forms-and-associated-taxes-for-independent-contractors",
+      "retrieved": "2026-11-11"
+    },
+    "irs-reporting": {
+      "name": "IRS, Reporting payments to independent contractors (page last reviewed or updated 22-May-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/reporting-payments-to-independent-contractors",
+      "retrieved": "2026-11-11"
+    },
+    "form-w9": {
+      "name": "IRS Form W-9, Request for Taxpayer Identification Number and Certification (Rev. March 2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/fw9.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "w9-requester": {
+      "name": "IRS Instructions for the Requester of Form W-9 (Rev. March 2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/iw9.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "foreign": "Is the contractor a foreign person?",
+    "tin-notice": "Has the IRS notified the payer that the contractor's taxpayer identification number is incorrect?"
+  },
+  "sections": [
+    {
+      "name": "From the contractor",
+      "items": [
+        {
+          "id": "w9",
+          "label": "Completed and signed Form W-9",
+          "detail": "The IRS says to keep the W-9 in your files for four years. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "irs-contractors"
+        },
+        {
+          "id": "w9-name",
+          "label": "Name as shown on the contractor's tax return, and business name if different",
+          "detail": "Form W-9 lines 1 and 2.",
+          "when": [],
+          "basis": "form-w9"
+        },
+        {
+          "id": "w9-class",
+          "label": "Federal tax classification (individual/sole proprietor, C corporation, S corporation, partnership, trust/estate, LLC or other)",
+          "detail": "Form W-9 line 3a.",
+          "when": [],
+          "basis": "form-w9"
+        },
+        {
+          "id": "w9-address",
+          "label": "Address",
+          "detail": "Form W-9 lines 5 and 6.",
+          "when": [],
+          "basis": "form-w9"
+        },
+        {
+          "id": "w9-tin",
+          "label": "Taxpayer identification number: Social Security number or employer identification number",
+          "detail": "Form W-9 Part I. The IRS page says the payer must withhold 24% (backup withholding) if the TIN is not provided in the manner required. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "form-w9"
+        },
+        {
+          "id": "w8",
+          "label": "Form W-8 or Form 8233 instead of Form W-9",
+          "detail": "The W-9 requester instructions say to advise foreign persons to use the appropriate Form W-8 or Form 8233. Send through the secure portal, never by plain email.",
+          "when": [
+            "foreign"
+          ],
+          "basis": "w9-requester"
+        },
+        {
+          "id": "tin-recert",
+          "label": "Certified taxpayer identification number as required in the IRS notice",
+          "detail": "The IRS page says backup withholding at 24% applies if the payee does not certify their TIN as required in the notice. Send through the secure portal, never by plain email.",
+          "when": [
+            "tin-notice"
+          ],
+          "basis": "irs-contractors"
+        }
+      ]
+    },
+    {
+      "name": "From the business paying the contractor",
+      "items": [
+        {
+          "id": "payments",
+          "label": "Payments made to the contractor for services during the tax year",
+          "detail": "Used for Form 1099-NEC, which reports payments totaling or exceeding the reportable payment threshold amount.",
+          "when": [],
+          "basis": "irs-reporting"
+        }
+      ]
+    }
+  ]
+}

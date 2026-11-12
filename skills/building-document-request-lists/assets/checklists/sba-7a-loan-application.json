@@ -1,0 +1,177 @@
+{
+  "id": "sba-7a-loan-application",
+  "title": "SBA 7(a) loan application document request",
+  "industry": "lending",
+  "jurisdiction": "US federal",
+  "variant_of": "sba-loan",
+  "use_when": "Use when a business is applying for an SBA 7(a) loan through a participating lender; use the disaster loan lists for SBA disaster loans.",
+  "note": "Items follow 13 CFR 120.191 and SBA Forms 1919 and 413. SBA says the contents of the application vary with the size of the loan and the lender's processing method, so the lender may ask for more.",
+  "sources": {
+    "cfr-120-191": {
+      "name": "13 CFR 120.191, The contents of a business loan application (Cornell LII; same text confirmed on ecfr.gov)",
+      "url": "https://www.law.cornell.edu/cfr/text/13/120.191",
+      "retrieved": "2026-11-11"
+    },
+    "sba-1919": {
+      "name": "SBA Form 1919, SBA 7(a) Borrower Information Form (02/2025; OMB expiration date 6/30/2027)",
+      "url": "https://legacy.sba.gov/sites/default/files/2025-03/2025.02.27%20Form%201919%20-%20Updates%20%28FINAL%29_03-12-2025%20%281%29.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "sba-413": {
+      "name": "SBA Form 413, Personal Financial Statement (05-24; OMB expiration date 08/31/2027)",
+      "url": "https://legacy.sba.gov/sites/default/files/2025-02/SBAForm413.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "other-businesses": "Does the applicant or any owner of the applicant own any other business?",
+    "yes-answers": "Was any question on Form 1919 answered Yes?",
+    "export-ewcp": "Is this an Export Working Capital Program (EWCP) loan?",
+    "paid-help": "Has the applicant paid or committed to pay a fee to the lender, a third party, a referral agent or a broker for help with the application?",
+    "legal-action": "Is the applicant, any owner, or any business they own presently involved in any legal action (including divorce)?"
+  },
+  "sections": [
+    {
+      "name": "SBA forms",
+      "items": [
+        {
+          "id": "form-1919",
+          "label": "Completed and signed SBA Form 1919, Borrower Information Form",
+          "detail": "Completed by the small business applying for a 7(a) loan and submitted to the SBA participating lender. Includes the business TIN (EIN or SSN). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "owners",
+          "label": "Each owner's legal name, title, ownership percentage, TIN (SSN/EIN) and home address",
+          "detail": "Form 1919 asks for all entities that own at least 20% of the applicant, including the natural persons who own those entities, and at least 51% of the beneficial owners. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "form-413",
+          "label": "Completed and signed SBA Form 413, Personal Financial Statement, for each required person",
+          "detail": "For 7(a) loans: each proprietor; general partner; managing member of a limited liability company (LLC); each owner of 20% or more of the equity of the applicant (including the assets of the owner's spouse and any minor children); and any person providing a guaranty on the loan. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-413"
+        }
+      ]
+    },
+    {
+      "name": "Business and loan information",
+      "items": [
+        {
+          "id": "history",
+          "label": "Description of the history and nature of the business",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "amount-purpose",
+          "label": "Amount and purpose of the loan",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "collateral",
+          "label": "Collateral offered for the loan",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "business-plan",
+          "label": "Business plan, when applicable",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "personal-histories",
+          "label": "Personal histories of the principals of the applicant (and the Operating Company, if applicable)",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        }
+      ]
+    },
+    {
+      "name": "Financial information",
+      "items": [
+        {
+          "id": "current-fs",
+          "label": "Current financial statements",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "historical-fs",
+          "label": "Historical financial statements (or tax returns if appropriate) for the past three years",
+          "detail": "",
+          "when": [],
+          "basis": "cfr-120-191"
+        },
+        {
+          "id": "tax-verification",
+          "label": "IRS tax verification",
+          "detail": "The lender will say which IRS authorization form it uses; the rule does not name one.",
+          "when": [],
+          "basis": "cfr-120-191"
+        }
+      ]
+    },
+    {
+      "name": "Attachments to Form 1919",
+      "items": [
+        {
+          "id": "addendum-a",
+          "label": "Addendum A: list of all other businesses owned (including their TINs), percentage of ownership, and a description of the relationship",
+          "detail": "Form 1919 question 3. Send through the secure portal, never by plain email.",
+          "when": [
+            "other-businesses"
+          ],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "yes-details",
+          "label": "Details for each Form 1919 question answered Yes, in a separate attachment",
+          "detail": "",
+          "when": [
+            "yes-answers"
+          ],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "ewcp-details",
+          "label": "Details of the underlying transaction(s) for which the loan is needed, countries where the buyers are located, and a description of products and/or services to be exported",
+          "detail": "Form 1919 question 5, for EWCP loans, in a separate attachment.",
+          "when": [
+            "export-ewcp"
+          ],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "fee-details",
+          "label": "Name of the third party and the amount of the fee",
+          "detail": "Form 1919 question 6.",
+          "when": [
+            "paid-help"
+          ],
+          "basis": "sba-1919"
+        },
+        {
+          "id": "legal-details",
+          "label": "Details of the legal action",
+          "detail": "Form 1919 question 13.",
+          "when": [
+            "legal-action"
+          ],
+          "basis": "sba-1919"
+        }
+      ]
+    }
+  ]
+}

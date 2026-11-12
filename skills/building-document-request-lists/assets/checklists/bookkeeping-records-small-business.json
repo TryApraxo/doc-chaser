@@ -1,0 +1,402 @@
+{
+  "id": "bookkeeping-records-small-business",
+  "title": "Business records request",
+  "industry": "bookkeeping",
+  "jurisdiction": "US federal",
+  "variant_of": "business-records",
+  "use_when": "Use for collecting the federal tax records of a small business, whether or not it has employees; the employee, inventory, asset, travel and corporation items are switched on by tags.",
+  "note": "Items follow the IRS lists of business records and employment tax records to keep. The IRS says to keep employment tax records for at least four years after filing the 4th quarter for the year; state requirements are not covered.",
+  "sources": {
+    "irs-records": {
+      "name": "IRS, What kind of records should I keep (page last reviewed or updated 03-Aug-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+      "retrieved": "2026-11-11"
+    },
+    "pub-583": {
+      "name": "IRS Publication 583, Starting a Business and Keeping Records (Rev. December 2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p583.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "irs-emp-records": {
+      "name": "IRS, Employment tax recordkeeping (page last reviewed or updated 12-Jun-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-recordkeeping",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "employees": "Does the business have employees?",
+    "inventory": "Does the business buy items to resell, or materials to make products?",
+    "assets": "Does the business own property such as machinery or furniture that it uses in the business?",
+    "travel": "Does the business deduct travel, gift or transportation expenses?",
+    "corporation": "Is the business a corporation?"
+  },
+  "sections": [
+    {
+      "name": "Books and accounts",
+      "items": [
+        {
+          "id": "books",
+          "label": "Business books: accounting journals and ledgers, or the accounting software file",
+          "detail": "The books must show gross income, deductions and credits.",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "checkbook",
+          "label": "Business checking account records: checkbook, copies of deposit slips and bank statements",
+          "detail": "Publication 583 calls the business checkbook the main source for entries in the business books. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "pub-583"
+        },
+        {
+          "id": "filed-returns",
+          "label": "Copies of filed tax returns",
+          "detail": "",
+          "when": [],
+          "basis": "pub-583"
+        },
+        {
+          "id": "board-minutes",
+          "label": "Minutes of board of directors' meetings",
+          "detail": "",
+          "when": [
+            "corporation"
+          ],
+          "basis": "pub-583"
+        }
+      ]
+    },
+    {
+      "name": "Gross receipts (income)",
+      "items": [
+        {
+          "id": "gr-register",
+          "label": "Cash register tapes",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "gr-deposits",
+          "label": "Deposit information (cash and credit sales), including bank deposit slips",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "gr-receipt-books",
+          "label": "Receipt books",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "gr-invoices",
+          "label": "Sales invoices",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "gr-card-slips",
+          "label": "Credit card charge slips",
+          "detail": "",
+          "when": [],
+          "basis": "pub-583"
+        },
+        {
+          "id": "gr-1099-misc",
+          "label": "Forms 1099-MISC received",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "gr-1099-nec",
+          "label": "Forms 1099-NEC received",
+          "detail": "",
+          "when": [],
+          "basis": "pub-583"
+        }
+      ]
+    },
+    {
+      "name": "Purchases and inventory",
+      "items": [
+        {
+          "id": "pu-proof",
+          "label": "Canceled checks or other documents showing proof of payment or electronic funds transferred",
+          "detail": "Documents should identify the payee, the amount paid, proof of payment, the date incurred, and a description of the item showing the amount was for purchases.",
+          "when": [
+            "inventory"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "pu-register",
+          "label": "Cash register tape receipts",
+          "detail": "",
+          "when": [
+            "inventory"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "pu-card",
+          "label": "Credit card receipts and statements",
+          "detail": "",
+          "when": [
+            "inventory"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "pu-invoices",
+          "label": "Purchase invoices",
+          "detail": "",
+          "when": [
+            "inventory"
+          ],
+          "basis": "irs-records"
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "items": [
+        {
+          "id": "ex-proof",
+          "label": "Canceled checks or other documents showing proof of payment or electronic funds transferred",
+          "detail": "Documents should identify the payee, the amount paid, proof of payment, the date incurred, and a description of the item purchased or service received.",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "ex-register",
+          "label": "Cash register tape receipts",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "ex-statements",
+          "label": "Account statements",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "ex-card",
+          "label": "Credit card receipts and statements",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "ex-invoices",
+          "label": "Expense invoices",
+          "detail": "",
+          "when": [],
+          "basis": "irs-records"
+        },
+        {
+          "id": "ex-petty-cash",
+          "label": "Petty cash slips for small cash payments",
+          "detail": "",
+          "when": [],
+          "basis": "pub-583"
+        },
+        {
+          "id": "ex-travel",
+          "label": "Records that prove travel, gift and transportation expenses",
+          "detail": "The IRS page refers to Publication 463 for the elements that must be proved.",
+          "when": [
+            "travel"
+          ],
+          "basis": "irs-records"
+        }
+      ]
+    },
+    {
+      "name": "Business assets",
+      "items": [
+        {
+          "id": "as-record",
+          "label": "For each asset: when and how it was acquired, purchase price, cost of any improvements, and how it was used",
+          "detail": "Also: Section 179 deduction taken, deductions taken for depreciation, and deductions taken for casualty losses.",
+          "when": [
+            "assets"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "as-disposal",
+          "label": "For each asset sold or disposed of: when and how, selling price and expenses of sale",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "as-invoices",
+          "label": "Purchase and sales invoices for assets",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "as-closing",
+          "label": "Real estate closing statements",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "irs-records"
+        },
+        {
+          "id": "as-proof",
+          "label": "Canceled checks or other documents that identify payee, amount and proof of payment",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "irs-records"
+        }
+      ]
+    },
+    {
+      "name": "Employment tax records",
+      "items": [
+        {
+          "id": "em-ein",
+          "label": "Employer identification number (EIN)",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-wages",
+          "label": "Amounts and dates of all wage, annuity and pension payments",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-tips",
+          "label": "Amounts of tips reported by employees, and the record of all allocated tips",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-in-kind",
+          "label": "Fair market value of in-kind wages paid",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-people",
+          "label": "Names, addresses, Social Security numbers and occupations of employees and recipients",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-w2-returned",
+          "label": "Any employee copies of Form W-2 and W-2c returned as undeliverable",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-dates",
+          "label": "Dates of employment for each employee",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-sick",
+          "label": "Periods for which employees and recipients were paid while absent due to sickness or injury",
+          "detail": "Include the amount and weekly rate of payments the employer or third-party payers made to them.",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-w4",
+          "label": "Copies of income tax withholding certificates (Forms W-4, W-4P, W-4S and W-4V)",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-deposits",
+          "label": "Dates and amounts of tax deposits made, and acknowledgment numbers for deposits made by EFTPS",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-returns",
+          "label": "Copies of employment tax returns filed and confirmation numbers",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-fringe",
+          "label": "Records of fringe benefits and expense reimbursements provided to employees, including substantiation",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-credits",
+          "label": "Documentation to substantiate any credits claimed",
+          "detail": "The IRS page says records for qualified sick and family leave wages for leave taken after March 31, 2021, and for employee retention credit qualified wages paid after June 30, 2021, should be kept for at least 6 years.",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "em-deferral",
+          "label": "Documentation of any employer or employee share of social security tax deferred and paid for 2020",
+          "detail": "",
+          "when": [
+            "employees"
+          ],
+          "basis": "irs-emp-records"
+        }
+      ]
+    }
+  ]
+}

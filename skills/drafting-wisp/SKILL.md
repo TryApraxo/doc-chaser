@@ -1,6 +1,6 @@
 ---
 name: drafting-wisp
-description: Drafts a Written Information Security Plan (WISP) for a small tax, accounting or bookkeeping practice, following the IRS Publication 5708 sample structure and the FTC Safeguards Rule, by interviewing the firm and filling a bundled template. Use when the user says "I need a WISP", "write our information security plan", "data security plan for my tax practice", "PTIN renewal asks about a security plan", "Safeguards Rule compliance", or asks to update an existing WISP. Also usable by mortgage brokers covered by the Safeguards Rule. Do NOT use for SOC 2, HIPAA, PCI or enterprise security policies, or to certify that a firm is compliant.
+description: Drafts a Written Information Security Plan (WISP) for a small tax, accounting or bookkeeping practice, following the IRS Publication 5708 sample structure and the FTC Safeguards Rule, by interviewing the firm and filling a bundled template (a shorter one for a sole practitioner). Also fills a data-theft response checklist and an IRS basic-safeguards checklist. Use when the user says "I need a WISP", "write our information security plan", "data security plan for my tax practice", "PTIN renewal asks about a security plan", "Safeguards Rule compliance", "we had a data breach, what do we do", "Security Six checklist", or asks to update an existing WISP. Also usable by mortgage brokers covered by the Safeguards Rule. Do NOT use for SOC 2, HIPAA, PCI or enterprise security policies, or to certify that a firm is compliant.
 license: MIT
 ---
 
@@ -29,13 +29,24 @@ Turn a short interview into a complete first draft of a firm's Written Informati
    - Cyber insurance carrier and legal counsel, if any
    - Effective date and annual review month
 
-3. **Fill the template.** Read `assets/wisp-template.md` and replace every `{{PLACEHOLDER}}`. Write the firm's real practice, in the firm's words. Build the risk table from the answers: at least three risks, each with the current safeguard and any gap.
+3. **Pick and fill the template.** For a one-person practice with no employees, use `assets/wisp-template-sole-practitioner.md` (placeholders in `[BRACKETS]`; sections the small-firm exemption makes optional are marked). For a firm with staff, use `assets/wisp-template.md` (placeholders in `{{BRACES}}`). If a sole practitioner holds information on 5,000 or more consumers, the exemption does not apply: use the full template. Replace every placeholder and leave out the template's header comment. Write the firm's real practice, in the firm's words. Build the risk table from the answers: at least three risks, each with the current safeguard and any gap.
 
 4. **Mark gaps honestly.** Where the firm has no answer or no safeguard, write `[TO COMPLETE: what is needed]`. Where the firm's practice falls short of a Safeguards Rule element (for example no multi-factor authentication), do not write that it complies. Record the gap in the risk table with an action and an owner.
 
 5. **Check coverage.** Run the checklist at the end of `references/safeguards-rule.md`.
 
 6. **Deliver.** Save the plan as a Markdown file (or the format the user asks for), then give a short summary: what is complete, the open `[TO COMPLETE]` items, and the gaps to fix first. Remind the user that the owner and the coordinator must review and sign it, staff must sign Attachment D, and it should be reviewed every year.
+
+## Companion checklists
+
+Two more files in `assets/` serve related requests. Fill them the same way: the firm's real answers, `[TO COMPLETE]` for gaps, sources kept on each line.
+
+| File | Use when |
+|---|---|
+| `data-breach-response-checklist.md` | The firm has, or suspects, a data theft, or wants its response steps written down in advance. Steps come from the IRS data-theft page, the FTC breach guide and 16 CFR 314.4(j) |
+| `security-six-checklist.md` | The firm wants a quick basic-safeguards check before, or instead of, a full plan. Items come from IRS Publication 4557 and the IRS "Security Six" release |
+
+In a live incident, give the checklist first and keep it short: who to contact and in what order. Do not delay it with interview questions.
 
 ## Gotchas
 

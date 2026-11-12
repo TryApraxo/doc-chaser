@@ -1,0 +1,148 @@
+{
+  "id": "legal-ssa-disability-child",
+  "title": "SSI disability application for a child under 18: information and documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-ssa",
+  "use_when": "The client is a parent or guardian applying for Supplemental Security Income (SSI) disability payments for a child under age 18.",
+  "note": "Based on the SSA Child Disability Starter Kit checklist (Publication 64-112, August 2024). The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "child-kit": {
+      "name": "Social Security Administration, Child Disability Starter Kit, Publication No. 64-112 (formerly SSA-1171), August 2024",
+      "url": "https://www.ssa.gov/pubs/EN-64-112.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "born-abroad": "Was the child born in another country?",
+    "has-iep": "Does the child have an IFSP or IEP?",
+    "child-worked": "Has the child ever had an employer?",
+    "social-services": "Do any social service programs or caseworkers have information about the child?",
+    "medical-assistance": "Does the child have a medical assistance number?"
+  },
+  "sections": [
+    {
+      "name": "Medical information",
+      "items": [
+        {
+          "id": "providers",
+          "label": "Name, address, and phone number of any doctor, therapist, hospital, and clinic that has seen or treated the child in the past 12 months",
+          "detail": "",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "records",
+          "label": "Records in the family's possession related to the child's medical conditions",
+          "detail": "There is no need to ask for or pay healthcare providers for any medical records the family does not have.",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "medicines",
+          "label": "List of medicines the child takes and why",
+          "detail": "For prescription medicines, include the names of the healthcare providers who prescribed them.",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "medical-assistance",
+          "label": "Child's medical assistance number",
+          "detail": "",
+          "when": [
+            "medical-assistance"
+          ],
+          "basis": "child-kit"
+        }
+      ]
+    },
+    {
+      "name": "School and other contacts",
+      "items": [
+        {
+          "id": "schools",
+          "label": "Names, addresses, and phone numbers of any schools the child attended in the past 12 months",
+          "detail": "Including the names of teachers, psychologists, counselors, and speech and other therapists who have seen or treated the child.",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "iep",
+          "label": "The child's Individualized Family Service Plan (IFSP) or Individualized Education Program (IEP)",
+          "detail": "And any other school records the family may have.",
+          "when": [
+            "has-iep"
+          ],
+          "basis": "child-kit"
+        },
+        {
+          "id": "social-programs",
+          "label": "Names, addresses, and phone numbers of any social service programs, and names of caseworkers, that have information about the child",
+          "detail": "",
+          "when": [
+            "social-services"
+          ],
+          "basis": "child-kit"
+        },
+        {
+          "id": "other-adult",
+          "label": "Name, address, and phone number of another adult who helps care for the child",
+          "detail": "",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "employers",
+          "label": "Names, addresses, and phone numbers of any employers the child has had",
+          "detail": "",
+          "when": [
+            "child-worked"
+          ],
+          "basis": "child-kit"
+        }
+      ]
+    },
+    {
+      "name": "Identity, income and resources",
+      "items": [
+        {
+          "id": "birth-cert",
+          "label": "An original or certified copy of the child's birth certificate",
+          "detail": "",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "citizenship",
+          "label": "Proof of the child's U.S. citizenship or legal residency",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "born-abroad"
+          ],
+          "basis": "child-kit"
+        },
+        {
+          "id": "household-ssn",
+          "label": "Names and Social Security numbers for all the children and adults who live in the household",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "income",
+          "label": "Proof of current income for the child and family members living in the household",
+          "detail": "For example, pay stubs, self-employment tax returns, unemployment or other program benefits, child support. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "child-kit"
+        },
+        {
+          "id": "resources",
+          "label": "Proof of resources for the child and parents living in the household",
+          "detail": "For example, bank account statements, life insurance policies, certificates of deposit, stocks or bonds. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "child-kit"
+        }
+      ]
+    }
+  ]
+}

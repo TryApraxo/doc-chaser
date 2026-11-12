@@ -1,0 +1,236 @@
+{
+  "id": "legal-immigration-i485-family",
+  "title": "Family-based green card application (Form I-485): documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "The client is in the United States applying to adjust status on Form I-485 as an immediate relative or family preference immigrant.",
+  "note": "Based on the USCIS Checklist of Required Initial Evidence for Form I-485 (page last reviewed 07/08/2025) and the Form I-485 Instructions (edition 09/18/26). The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "i485-checklist": {
+      "name": "USCIS, Checklist of Required Initial Evidence for Form I-485 (for informational purposes only), immediate relatives and family-based preference section, last reviewed/updated 07/08/2025",
+      "url": "https://www.uscis.gov/forms/filing-guidance/checklist-of-required-initial-evidence-for-form-i-485-for-informational-purposes-only",
+      "retrieved": "2026-11-11"
+    },
+    "i485-instr": {
+      "name": "USCIS, Instructions for Form I-485, Application to Register Permanent Residence or Adjust Status, edition 09/18/26",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-485instr.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "i130-filed-earlier": "Was the Form I-130 filed earlier rather than together with this application?",
+    "family-preference": "Is the applicant in a family preference category rather than an immediate relative (spouse, parent or unmarried child under 21 of a U.S. citizen)?",
+    "derivative": "Is the applicant the spouse or unmarried child under 21 of a family preference principal applicant?",
+    "prior-marriage": "Is the applicant a derivative spouse where either party to the marriage was married before?",
+    "k1-fiance": "Did the applicant enter the United States as the fiance(e) of a U.S. citizen (K nonimmigrant)?",
+    "arrests": "Has the applicant ever been arrested, detained, charged or convicted anywhere in the world?",
+    "j-visa": "Has the applicant ever held J-1 or J-2 exchange visitor status?",
+    "diplomatic-status": "Does the applicant hold A, G, E or NATO nonimmigrant status?",
+    "waiver-needed": "Does the applicant need a waiver of a ground of inadmissibility?",
+    "prior-removal": "Does the applicant need permission to reapply for admission after deportation or removal?",
+    "section-245i": "Is the applicant applying under section 245(i)?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Identity and birth",
+      "items": [
+        {
+          "id": "photos",
+          "label": "Two identical color passport-style photographs",
+          "detail": "Taken recently. 2 by 2 inches, full face, frontal view, white to off-white background, printed on thin paper with a glossy finish, unmounted and unretouched.",
+          "when": [],
+          "basis": "i485-instr"
+        },
+        {
+          "id": "photo-id",
+          "label": "Photocopy of a government-issued identity document with photograph",
+          "detail": "For example, passport (even if expired), driver's license, or military identification document. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i485-instr"
+        },
+        {
+          "id": "birth-cert",
+          "label": "Photocopy of the birth certificate",
+          "detail": "Issued by the appropriate civil authority from the country of birth; must list at least one parent. If unavailable or nonexistent, other acceptable evidence of birth such as church, school, or medical records, and proof of unavailability or nonexistence.",
+          "when": [],
+          "basis": "i485-instr"
+        }
+      ]
+    },
+    {
+      "name": "Entry and immigration status",
+      "items": [
+        {
+          "id": "admission",
+          "label": "Evidence of inspection and admission or parole for the most recent arrival",
+          "detail": "Copies, if available, of: passport page with admission or parole stamp (issued by a U.S. immigration officer); passport page with nonimmigrant visa; and Form I-94, Arrival/Departure Record. Not required for applicants under section 245(i). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i485-instr"
+        },
+        {
+          "id": "i797-i130",
+          "label": "Copy of the approval or receipt notice (Form I-797) for the Form I-130 filed for the applicant",
+          "detail": "Not needed when the Form I-485 is filed together with the Form I-130.",
+          "when": [
+            "i130-filed-earlier"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "lawful-status",
+          "label": "Evidence of continuously maintaining lawful status since arriving in the United States",
+          "detail": "Copies such as: Form I-797 for all extensions of stay and changes of nonimmigrant status; Form I-94, including printouts of paperless I-94 admissions; Form I-20 or Form DS-2019 including all pages with notations by authorized officials; or passport page with an admission or parole stamp. Include evidence for every entry and for the time periods spent in the United States.",
+          "when": [
+            "family-preference",
+            "derivative"
+          ],
+          "basis": "i485-instr"
+        },
+        {
+          "id": "j-docs",
+          "label": "Exchange visitor (J-1 or J-2) documents",
+          "detail": "Copies of all Forms IAP-66 and/or DS-2019 ever issued (if available), all available J-1 or J-2 visas, and all available Form I-94 records and passport pages with entry stamps showing admission in J status. If subject to the two-year foreign residence requirement: documentation of compliance, a granted waiver, or a favorable waiver recommendation letter from the Department of State.",
+          "when": [
+            "j-visa"
+          ],
+          "basis": "i485-instr"
+        }
+      ]
+    },
+    {
+      "name": "Medical and financial support",
+      "items": [
+        {
+          "id": "i693",
+          "label": "Form I-693, Report of Immigration Medical Examination and Vaccination Record",
+          "detail": "Signed by a civil surgeon. If required, it must be submitted with the Form I-485.",
+          "when": [],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "i864",
+          "label": "Form I-864 or I-864EZ, Affidavit of Support, from the sponsor",
+          "detail": "If required.",
+          "when": [],
+          "basis": "i485-checklist"
+        }
+      ]
+    },
+    {
+      "name": "Family relationship",
+      "items": [
+        {
+          "id": "k1-marriage",
+          "label": "Evidence of a bona fide marriage to the U.S. citizen petitioner within 90 days after admission as a K nonimmigrant",
+          "detail": "",
+          "when": [
+            "k1-fiance"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "deriv-relationship",
+          "label": "Copy of documentation showing the relationship to the principal applicant",
+          "detail": "Such as a marriage certificate, birth certificate, or adoption decree. If the marriage certificate is unavailable or does not exist, other acceptable evidence such as church records and proof of unavailability or nonexistence.",
+          "when": [
+            "derivative"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "deriv-i797",
+          "label": "Copy of the approval or receipt notice (Form I-797) for the principal applicant's Form I-130",
+          "detail": "Not needed when filing together with the principal applicant's Form I-485.",
+          "when": [
+            "derivative"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "prior-marriage-end",
+          "label": "Evidence that any prior marriages legally ended",
+          "detail": "Typically a divorce decree/certificate or death certificate.",
+          "when": [
+            "prior-marriage"
+          ],
+          "basis": "i485-instr"
+        }
+      ]
+    },
+    {
+      "name": "Criminal history",
+      "items": [
+        {
+          "id": "criminal-records",
+          "label": "Certified police and court records of all criminal charges, arrests, or convictions, regardless of final disposition",
+          "detail": "An original or certified copy of the complete arrest report, plus as applicable: an official statement or court order showing the final disposition where no charges were filed; certified copies of the charging document and final disposition of each charge; any plea agreement; the probation or parole record or proof of completing the program; and a certified copy of any court order vacating, setting aside, sealing or expunging the record.",
+          "when": [
+            "arrests"
+          ],
+          "basis": "i485-instr"
+        }
+      ]
+    },
+    {
+      "name": "Additional forms, if they apply",
+      "items": [
+        {
+          "id": "i601",
+          "label": "Form I-601, Application for Waiver of Grounds of Inadmissibility",
+          "detail": "If applicable.",
+          "when": [
+            "waiver-needed"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "i212",
+          "label": "Form I-212, Application for Permission to Reapply for Admission into the United States After Deportation or Removal",
+          "detail": "If applicable.",
+          "when": [
+            "prior-removal"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "i508",
+          "label": "Form I-508, Waiver of Diplomatic Rights, Privileges, Exemptions, and Immunities",
+          "detail": "If the applicant holds A, G, or E nonimmigrant status and has certain diplomatic privileges and immunities as a result of occupational status.",
+          "when": [
+            "diplomatic-status"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "i566",
+          "label": "Form I-566, Interagency Record of Request",
+          "detail": "Only if the applicant has A, G, or NATO nonimmigrant status.",
+          "when": [
+            "diplomatic-status"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "supp-a",
+          "label": "Form I-485 Supplement A, Adjustment of Status Under Section 245(i)",
+          "detail": "If applicable.",
+          "when": [
+            "section-245i"
+          ],
+          "basis": "i485-checklist"
+        },
+        {
+          "id": "translation",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "With a certification from the translator that the translation is complete and accurate and that they are competent to translate from the foreign language to English.",
+          "when": [
+            "foreign-language"
+          ],
+          "basis": "i485-checklist"
+        }
+      ]
+    }
+  ]
+}

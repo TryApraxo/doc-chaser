@@ -1,0 +1,261 @@
+{
+  "id": "tax-itin-w7",
+  "title": "ITIN application (Form W-7) supporting documents",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-itin",
+  "use_when": "Pick this when someone on the return needs a new ITIN or must renew an expired one with Form W-7.",
+  "note": "Built from the IRS ITIN supporting documents page and the Instructions for Form W-7 (Rev. 12/2024). The IRS requires original documents or copies certified by the issuing agency, current on the date of submission, and does not accept notarized copies except in limited military cases; exceptions to the tax return requirement are not covered here.",
+  "sources": {
+    "itin-docs": {
+      "name": "IRS, ITIN supporting documents (web page, last reviewed or updated 28-Oct-2026)",
+      "url": "https://www.irs.gov/tin/itin/itin-supporting-documents",
+      "retrieved": "2026-11-11"
+    },
+    "iw7": {
+      "name": "IRS, Instructions for Form W-7 (Revised 12/2024)",
+      "url": "https://www.irs.gov/instructions/iw7",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "has-passport": "Applicant has a valid passport",
+    "no-passport": "Applicant does not have a valid passport",
+    "dependent-residency": "Dependent applicant must prove U.S. residency",
+    "under-6": "Dependent applicant is under age 6",
+    "student-under-24": "Dependent applicant is a student under age 24",
+    "age-18-plus": "Dependent applicant is age 18 or older",
+    "ssn-denied": "The Social Security Administration found the applicant not eligible for an SSN",
+    "military-overseas": "Dependent or spouse of U.S. military personnel applying from overseas or an APO/FPO address"
+  },
+  "sections": [
+    {
+      "name": "Application package",
+      "items": [
+        {
+          "id": "w7",
+          "label": "Completed Form W-7",
+          "detail": "",
+          "when": [],
+          "basis": "iw7"
+        },
+        {
+          "id": "tax-return",
+          "label": "The original federal tax return the ITIN is needed for",
+          "detail": "Form W-7 is attached to the front of the return unless an exception applies.",
+          "when": [],
+          "basis": "iw7"
+        },
+        {
+          "id": "ssa-denial",
+          "label": "Letter of denial from the Social Security Administration",
+          "detail": "",
+          "when": [
+            "ssn-denied"
+          ],
+          "basis": "iw7"
+        }
+      ]
+    },
+    {
+      "name": "Passport (stand-alone document)",
+      "items": [
+        {
+          "id": "passport",
+          "label": "Original valid passport, or a copy certified by the issuing agency",
+          "detail": "A passport is the only stand-alone document; it proves both identity and foreign status. Current only if the expiration date has not passed before Form W-7 is submitted. Send through the secure portal, never by plain email.",
+          "when": [
+            "has-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "passport-visa-pages",
+          "label": "All U.S. visa pages with a certified copy of the passport",
+          "detail": "Needed if a visa is required for the Form W-7 application. Send through the secure portal, never by plain email.",
+          "when": [
+            "has-passport"
+          ],
+          "basis": "itin-docs"
+        }
+      ]
+    },
+    {
+      "name": "Two documents when there is no valid passport",
+      "items": [
+        {
+          "id": "two-docs-rule",
+          "label": "Two supporting documents: one to prove identity and another to prove foreign status",
+          "detail": "One document must show the applicant's photo, except for dependents under age 14 (or under age 18 if a student). Choose from the documents below. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "uscis-id",
+          "label": "U.S. Citizenship and Immigration Services (USCIS) photo identification",
+          "detail": "Proves identity or foreign status. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "visa",
+          "label": "Visa issued by the U.S. Department of State",
+          "detail": "Proves identity or foreign status. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "foreign-military-id",
+          "label": "Foreign military identification card",
+          "detail": "Proves identity or foreign status. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "national-id",
+          "label": "National identification card",
+          "detail": "Proves identity or foreign status. Must show name, photo, address, birthdate and expiration date, and not be expired. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "foreign-voter-card",
+          "label": "Foreign voter's registration card",
+          "detail": "Proves identity or foreign status. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "birth-certificate",
+          "label": "Civil birth certificate",
+          "detail": "An original is required for applicants under age 18 without a valid passport. Proves foreign status only if the certificate is foreign. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "medical-records",
+          "label": "Medical records (dependents under age 6 only)",
+          "detail": "Shot or immunization record, or a dated and signed letter from a medical provider on official letterhead; must show the child's name, birthdate and address, the doctor's name and medical facility's address, and a date of care no more than 12 months from the date the application is submitted. Proves foreign status only if foreign.",
+          "when": [
+            "under-6"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "school-records",
+          "label": "School records (dependents under age 24 if a student)",
+          "detail": "Report card, transcript, or a dated and signed letter from a school official on official letterhead showing attendance or coursework with grades; must show the student's name and address, the school's name and address, and term dates ending no more than 12 months from the date the application is submitted. Proves foreign status only if foreign.",
+          "when": [
+            "student-under-24"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "us-drivers-license",
+          "label": "U.S. driver's license",
+          "detail": "Proves identity only. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "us-military-id",
+          "label": "U.S. military identification card",
+          "detail": "Proves identity only. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "foreign-drivers-license",
+          "label": "Foreign driver's license",
+          "detail": "Proves identity only. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "us-state-id",
+          "label": "U.S. state identification card",
+          "detail": "Proves identity only. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-passport"
+          ],
+          "basis": "itin-docs"
+        }
+      ]
+    },
+    {
+      "name": "Proof of U.S. residency for dependents",
+      "items": [
+        {
+          "id": "residency-passport",
+          "label": "Passport showing a date of entry into the U.S.",
+          "detail": "Proves U.S. residency for a dependent. Without a date of entry, one more original document below is needed. Send through the secure portal, never by plain email.",
+          "when": [
+            "dependent-residency"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "residency-under-6",
+          "label": "Under age 6: U.S. medical record, U.S. school record, U.S. state identification card or U.S. visa",
+          "detail": "One original document; a medical or school record must show a U.S. address. Send through the secure portal, never by plain email.",
+          "when": [
+            "under-6"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "residency-6-17",
+          "label": "Age 6 to under 18: U.S. school record, U.S. state identification card, U.S. driver's license or U.S. visa",
+          "detail": "One original document. Send through the secure portal, never by plain email.",
+          "when": [
+            "dependent-residency"
+          ],
+          "basis": "itin-docs"
+        },
+        {
+          "id": "residency-18-plus",
+          "label": "Age 18 or older: U.S. school record (only if under age 24), U.S. state identification card, U.S. driver's license or U.S. visa; or a U.S. bank statement, U.S. rental statement or U.S. utility bill",
+          "detail": "The statement or bill must list the applicant's name and U.S. address. Send through the secure portal, never by plain email.",
+          "when": [
+            "age-18-plus"
+          ],
+          "basis": "itin-docs"
+        }
+      ]
+    },
+    {
+      "name": "Military families overseas",
+      "items": [
+        {
+          "id": "servicemember-id",
+          "label": "Copy of the servicemember's U.S. military ID",
+          "detail": "Required if notarized copies of identification documents are submitted. Send through the secure portal, never by plain email.",
+          "when": [
+            "military-overseas"
+          ],
+          "basis": "itin-docs"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "name": "doc-chaser",
   "displayName": "Doc Chaser by Apraxo",
-  "version": "0.4.1",
-  "description": "Document request lists, received-document checks, client reminders, mortgage gift letters, TRID dates, a Safeguards Rule gap check and a WISP draft for tax, legal, mortgage and agency firms. Every output is a draft for a professional to review.",
+  "version": "0.5.0",
+  "description": "Source-backed document request lists for tax, payroll, mortgage, SBA, immigration, bankruptcy and disability work, plus received-document checks, client reminders, gift letters, notices of incomplete application, TRID dates, a Safeguards Rule gap check and a WISP draft. Every output is a draft for a professional to review.",
   "author": {
     "name": "Apraxo",
     "url": "https://github.com/TryApraxo"

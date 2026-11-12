@@ -1,0 +1,218 @@
+{
+  "id": "legal-ssa-disability-adult",
+  "title": "Social Security disability application (adult): information and documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-ssa",
+  "use_when": "The client is an adult applying for Social Security disability benefits.",
+  "note": "Based on the SSA Adult Disability Starter Kit checklist (Publication 64-110, June 2024) and the SSA Checklist for Online Adult Disability Application (Publication 05-10519, July 2026). The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "adult-kit": {
+      "name": "Social Security Administration, Adult Disability Starter Kit, Publication No. 64-110, June 2024",
+      "url": "https://www.ssa.gov/pubs/EN-64-110.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "online-checklist": {
+      "name": "Social Security Administration, Checklist for Online Adult Disability Application, Publication No. 05-10519, July 2026",
+      "url": "https://www.ssa.gov/hlp/radr/10/ovw001-checklist.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "born-outside-us": "Was the applicant born outside the United States or its territories?",
+    "non-citizen": "Is the applicant not a U.S. citizen?",
+    "children": "Does the applicant have children who became disabled before age 22, are unmarried and under 18, or are 18 to 19 and in secondary school full time?",
+    "military": "Did the applicant serve in the U.S. military?",
+    "self-employed": "Was the applicant self-employed in the current year or prior 5 years?",
+    "workers-comp": "Does the applicant have a workers' compensation or other disability benefit claim?",
+    "international-bank": "Will benefits be deposited to a bank outside the United States?",
+    "special-education": "Did the applicant receive special education?"
+  },
+  "sections": [
+    {
+      "name": "About the applicant",
+      "items": [
+        {
+          "id": "birth-ssn",
+          "label": "Date of birth, place of birth, and Social Security number",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "birth-country",
+          "label": "Name of the birth country at the time of birth",
+          "detail": "It may have a different name now.",
+          "when": [
+            "born-outside-us"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "green-card-number",
+          "label": "Permanent Resident Card number",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "non-citizen"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "spouses",
+          "label": "Name, Social Security number, and date of birth or age of the current spouse and any former spouse(s)",
+          "detail": "Also the dates and places of marriage and dates of divorce or death (if applicable). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "children",
+          "label": "Names and dates of birth of children",
+          "detail": "Children who became disabled prior to age 22, are under age 18 and unmarried, or are aged 18 to 19 and still attending secondary school full time.",
+          "when": [
+            "children"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "military",
+          "label": "U.S. military service: type of duty and branch, service period dates",
+          "detail": "",
+          "when": [
+            "military"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "contacts",
+          "label": "Name, address, and phone number of two people who know about the medical conditions and can help with the claim",
+          "detail": "If available. Other than healthcare providers.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "bank",
+          "label": "Checking or savings account number and the bank's 9-digit routing number",
+          "detail": "For electronic deposit of benefits. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "bank-intl",
+          "label": "International direct deposit details",
+          "detail": "Bank country, bank name, bank code, and currency; account type and number, branch/transit number. Send through the secure portal, never by plain email.",
+          "when": [
+            "international-bank"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "workers-comp",
+          "label": "Workers' compensation or other disability benefit information",
+          "detail": "Including the date of injury, claim number, any settlement agreement details, and the source and payment amounts for any disability benefits.",
+          "when": [
+            "workers-comp"
+          ],
+          "basis": "adult-kit"
+        }
+      ]
+    },
+    {
+      "name": "Medical conditions",
+      "items": [
+        {
+          "id": "records",
+          "label": "Medical records already in the applicant's possession",
+          "detail": "The applicant does not need to ask for or pay healthcare providers for any medical records they do not have.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "providers",
+          "label": "Names, addresses, and phone numbers of healthcare providers that examined or treated the applicant",
+          "detail": "For example doctors, psychiatrists, therapists, nurse practitioners, hospitals. The online checklist also asks for patient ID numbers and dates of examinations and treatments.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "medicines",
+          "label": "List of medicines taken and why",
+          "detail": "For prescription medicines, include the names of the healthcare providers who prescribed them.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "tests",
+          "label": "Names and dates of medical tests had or scheduled, and who ordered them",
+          "detail": "",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "other-records",
+          "label": "Other places that hold medical records",
+          "detail": "Vocational rehabilitation services, workers compensation, public welfare, prison/jail, an attorney, or another place.",
+          "when": [],
+          "basis": "online-checklist"
+        }
+      ]
+    },
+    {
+      "name": "Work, education and training",
+      "items": [
+        {
+          "id": "onset",
+          "label": "Date the medical condition began to affect the ability to work",
+          "detail": "",
+          "when": [],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "jobs",
+          "label": "List of the jobs held in the 5 years before becoming unable to work",
+          "detail": "Dates (month and year) worked if known, average hours per day or week, how much was earned, and the types of duties for each job.",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "employers",
+          "label": "Employer details for the current year and prior 5 years",
+          "detail": "Employer name, employment start and end dates, total earnings (wages, tips, etc.). Not self-employment.",
+          "when": [],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "self-employment",
+          "label": "Self-employment details for the current year and prior 5 years",
+          "detail": "Business type and total net income.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "online-checklist"
+        },
+        {
+          "id": "education",
+          "label": "Highest level of education completed, and when and where",
+          "detail": "",
+          "when": [],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "special-ed",
+          "label": "Where and when special education was received",
+          "detail": "",
+          "when": [
+            "special-education"
+          ],
+          "basis": "adult-kit"
+        },
+        {
+          "id": "training",
+          "label": "List of specialized job, trade, or vocational training and dates completed",
+          "detail": "",
+          "when": [],
+          "basis": "adult-kit"
+        }
+      ]
+    }
+  ]
+}

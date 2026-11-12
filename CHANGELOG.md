@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 (2026-11-12)
+
+- 31 new request-list templates, each a variant for a different client condition, with every item citing an official source: individual tax (basic, self-employed, rental), ITIN, IRS credit proof (three), business records (two), payroll (employee, contractor, employer), mortgage (conventional salaried, self-employed, rental income, other income, FHA, VA, hardship), SBA (7(a), two disaster loans, bank account), immigration (four), bankruptcy (chapter 7 and 13) and Social Security disability (adult and child).
+- `building-document-request-lists`: picks among variants using a new `references/template-index.md`.
+- `drafting-gift-letters`: new templates for Freddie Mac, FHA, VA and a Fannie Mae gift of equity, with a program comparison.
+- `drafting-wisp`: sole-practitioner WISP template, data-theft response checklist and basic-safeguards checklist.
+- New skill `drafting-incompleteness-notices`: the Regulation B notice of incomplete application.
+- Four new eval cases.
+
 ## 0.4.1 (2026-11-11)
 
 - Repository moved to `TryApraxo/doc-chaser`; links and install commands updated.

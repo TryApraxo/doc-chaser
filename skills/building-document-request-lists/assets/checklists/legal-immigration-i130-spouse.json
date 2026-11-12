@@ -1,0 +1,173 @@
+{
+  "id": "legal-immigration-i130-spouse",
+  "title": "Family petition (Form I-130) for a spouse: documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "The client is a U.S. citizen or lawful permanent resident petitioning for a husband or wife on Form I-130.",
+  "note": "Based on the USCIS Instructions for Form I-130 and I-130A (edition 04/01/24). The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "i130-instr": {
+      "name": "USCIS, Instructions for Form I-130, Petition for Alien Relative, and Form I-130A, edition 04/01/24",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-130instr.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "petitioner-citizen": "Is the petitioner a U.S. citizen?",
+    "petitioner-lpr": "Is the petitioner a lawful permanent resident (green card holder)?",
+    "prior-marriage": "Was either spouse married before?",
+    "spouse-in-us": "Is the spouse being petitioned for in the United States?",
+    "heightened-proof": "Did the marriage take place while the spouse was in exclusion, deportation, removal or rescission proceedings, or did a permanent resident petitioner get residence through an earlier marriage and remarry within five years?",
+    "name-change": "Does the petitioner or the spouse use a name different from the one on their documents?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Petitioner's status",
+      "items": [
+        {
+          "id": "citizen-proof",
+          "label": "Proof the petitioner is a U.S. citizen (one of the documents listed)",
+          "detail": "A copy of a birth certificate issued by a civil registrar, vital statistics office, or other civil authority showing birth in the United States; a copy of a naturalization certificate or certificate of citizenship; a copy of Form FS-240, Consular Report of Birth Abroad; a copy of an unexpired U.S. passport; or an original statement from a U.S. consular officer verifying U.S. citizenship with a valid passport. Send through the secure portal, never by plain email.",
+          "when": [
+            "petitioner-citizen"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "lpr-proof",
+          "label": "Copy of the front and back of the petitioner's Permanent Resident Card (Form I-551)",
+          "detail": "If the card has not yet been received: copies of the passport biographic page and the page showing admission as a lawful permanent resident, or other evidence of permanent resident status issued by USCIS or the former INS. Send through the secure portal, never by plain email.",
+          "when": [
+            "petitioner-lpr"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Proof of the marriage",
+      "items": [
+        {
+          "id": "marriage-cert",
+          "label": "Copy of the marriage certificate",
+          "detail": "",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "prior-marriage-end",
+          "label": "Documents showing each prior marriage legally ended",
+          "detail": "Copies of documents showing that each of the prior marriages of either spouse was legally terminated.",
+          "when": [
+            "prior-marriage"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "i130a",
+          "label": "Form I-130A, Supplemental Information for Spouse Beneficiary, completed and signed by the spouse",
+          "detail": "If the spouse is overseas, Form I-130A must still be completed, but the spouse does not have to sign it.",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "photos-petitioner",
+          "label": "Two identical color passport-style photographs of the petitioner",
+          "detail": "Taken within 30 days of filing the petition. 2 by 2 inches, in color, full face, frontal view, white to off-white background, printed on thin paper with a glossy finish, unmounted and unretouched.",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "photos-spouse",
+          "label": "Two identical color passport-style photographs of the spouse",
+          "detail": "Taken within 30 days of filing the petition. 2 by 2 inches, in color, full face, frontal view, white to off-white background, printed on thin paper with a glossy finish, unmounted and unretouched. Required if the spouse is in the United States.",
+          "when": [
+            "spouse-in-us"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Evidence the marriage is genuine (one or more)",
+      "items": [
+        {
+          "id": "joint-property",
+          "label": "Documentation showing joint ownership of property",
+          "detail": "",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "joint-lease",
+          "label": "Lease showing joint tenancy of a common residence",
+          "detail": "Meaning both spouses live at the same address together.",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "joint-finances",
+          "label": "Documentation showing the spouses have combined their financial resources",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "children-birth",
+          "label": "Birth certificates of children born to the spouses together",
+          "detail": "",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "affidavits",
+          "label": "Affidavits from third parties with personal knowledge of the marriage",
+          "detail": "Sworn to or affirmed. Each affidavit must contain the full name and address of the person making it; that person's date and place of birth; and complete information and details explaining how the person acquired his or her knowledge of the marriage.",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "other-marriage",
+          "label": "Any other relevant documentation that there is an ongoing marital union",
+          "detail": "",
+          "when": [],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "good-faith",
+          "label": "Additional evidence that the marriage was entered into in good faith and not for immigration purposes",
+          "detail": "The instructions require clear and convincing evidence in these situations; they do not list specific documents.",
+          "when": [
+            "heightened-proof"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Names and translations",
+      "items": [
+        {
+          "id": "name-change",
+          "label": "Legal documents showing the name change",
+          "detail": "Copies of the legal documents reflecting the name change, such as a marriage certificate, adoption decree, or court order, if the petitioner or the relative uses a name different from the one on the relevant documents.",
+          "when": [
+            "name-change"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "translation",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "The translator must sign a certification that the English translation is complete and accurate and that he or she is competent to translate from the foreign language into English.",
+          "when": [
+            "foreign-language"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    }
+  ]
+}

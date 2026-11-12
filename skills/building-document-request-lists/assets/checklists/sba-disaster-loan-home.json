@@ -1,0 +1,149 @@
+{
+  "id": "sba-disaster-loan-home",
+  "title": "SBA disaster home loan document request",
+  "industry": "lending",
+  "jurisdiction": "US federal",
+  "variant_of": "sba-loan",
+  "use_when": "Use when a homeowner or renter is applying for an SBA disaster loan for a home or personal property on SBA Form 5C; use the business list for businesses and nonprofits.",
+  "note": "Items follow the filing requirements printed on SBA Form 5C (05/23). SBA advises applicants in writing of the documents it needs before loan closing. The form edition read shows an OMB expiration date of 07/31/26, so check sba.gov for a newer edition before relying on this list.",
+  "sources": {
+    "sba-form-5c": {
+      "name": "SBA Form 5C, Disaster Home Loan Application (05/23; OMB expiration date shown 07/31/26)",
+      "url": "https://legacy.sba.gov/sites/default/files/2025-02/SBA-Disaster-Form-5c.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "job-change": "Has any applicant changed employment within the past two years?",
+    "owns-residence": "Does the applicant own the residence?",
+    "primary-residence": "Is the damaged property the applicant's primary residence?",
+    "manufactured-home": "Was a manufactured home damaged?",
+    "vehicle": "Was an automobile or other vehicle damaged?",
+    "non-citizen": "Is any applicant not a United States citizen?"
+  },
+  "sections": [
+    {
+      "name": "Information to prepare",
+      "items": [
+        {
+          "id": "disaster-number",
+          "label": "Disaster number",
+          "detail": "Form 5C says it can be found at sba.gov/disaster.",
+          "when": [],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "tax-return",
+          "label": "Most recent federal tax return",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "insurance",
+          "label": "Information about the insurance policies on the home",
+          "detail": "Form 5C asks for the insurance company name, policy number and current amount received, if any.",
+          "when": [],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "joint-borrower",
+          "label": "Personal details for the applicant and any Joint Borrower to be included in the application",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "citizenship-docs",
+          "label": "Copy of a green card or proof of permanent residency",
+          "detail": "Form 5C says a non-citizen may need to provide a copy of specific documents like these. Send through the secure portal, never by plain email.",
+          "when": [
+            "non-citizen"
+          ],
+          "basis": "sba-form-5c"
+        }
+      ]
+    },
+    {
+      "name": "Required for all loan applications",
+      "items": [
+        {
+          "id": "form-5c",
+          "label": "SBA Form 5C, completed and signed",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "4506c",
+          "label": "IRS Form 4506-C, Tax Information Authorization, completed and signed",
+          "detail": "Enclosed with the application. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5c"
+        }
+      ]
+    },
+    {
+      "name": "If SBA requests it",
+      "items": [
+        {
+          "id": "pay-stub",
+          "label": "Copy of a current pay stub for all applicants",
+          "detail": "Current means within 1 month of the application date. If requested, provide within 7 days of the information request.",
+          "when": [
+            "job-change"
+          ],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "returns-all",
+          "label": "Copies of Federal income tax returns, including all schedules",
+          "detail": "Asked for if SBA needs additional income information. If requested, provide within 7 days of the information request. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5c"
+        }
+      ]
+    },
+    {
+      "name": "Before loan closing, if SBA approves the loan",
+      "items": [
+        {
+          "id": "deed",
+          "label": "COMPLETE legible copy of the deed, including the legal description of the property",
+          "detail": "",
+          "when": [
+            "owns-residence"
+          ],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "residency",
+          "label": "Proof of residency at the damaged address",
+          "detail": "",
+          "when": [
+            "primary-residence"
+          ],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "mh-title",
+          "label": "Copy of the manufactured home title",
+          "detail": "If the applicant owns the lot where the home is located, also a COMPLETE legible copy of the deed, including the legal description of the property.",
+          "when": [
+            "manufactured-home"
+          ],
+          "basis": "sba-form-5c"
+        },
+        {
+          "id": "vehicle-ownership",
+          "label": "Proof of ownership of the vehicle (a copy of the registration, title, bill of sale, etc.)",
+          "detail": "",
+          "when": [
+            "vehicle"
+          ],
+          "basis": "sba-form-5c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "tax-credit-proof-eitc-child",
+  "title": "Proof of a qualifying child for the Earned Income Credit",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-credit-proof",
+  "use_when": "Pick this when the client must show that a child claimed for the Earned Income Credit lived with them, is related to them and meets the age test.",
+  "note": "Built from IRS Form 886-H-EIC (Rev. 10-2022), which the IRS sends in EIC audits and which refers to tax year 2022; use the year being claimed. The IRS says it needs proof of all three tests, cannot accept documents signed by a relative, and needs a legal translation of documents not in English.",
+  "sources": {
+    "f886-h-eic": {
+      "name": "IRS, Form 886-H-EIC, Documents You Need to Send to Claim the Earned Income Credit on the Basis of a Qualifying Child or Children (Rev. 10-2022)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f886he.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "residency": "Need to show the child lived with the client for more than half the year",
+    "po-box": "Client uses a P.O. Box as the mailing address",
+    "parent-not-on-birth-cert": "Child is a son or daughter but the client's name is not on the birth certificate",
+    "born-abroad": "Child was not born in the United States",
+    "grandchild": "Child is a grandchild or great grandchild",
+    "niece-nephew": "Child is a niece or nephew",
+    "sibling": "Child is a brother, sister, half-brother or half-sister",
+    "step-relative": "Child is a stepchild, step-sibling, step-grandchild or step-great grandchild",
+    "pending-adoption": "Child's adoption is not final",
+    "foster": "Foster child placed by an authorized placement agency",
+    "student-19-23": "Child is age 19 but under 24 and a full-time student",
+    "disabled": "Child is permanently and totally disabled"
+  },
+  "sections": [
+    {
+      "name": "Residency test: the child lived with you",
+      "items": [
+        {
+          "id": "res-records",
+          "label": "School records, medical records, adoption or child placement documents, or court records",
+          "detail": "One or more. Must show your U.S. address, your name and the child's name, and dates covering more than half of the year. Medical records are from doctors, a hospital or medical clinic; the IRS notes immunization records may not include all the necessary information.",
+          "when": [
+            "residency"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "res-letters",
+          "label": "Dated statement on letterhead showing the child lived with you",
+          "detail": "From the child's school, childcare provider (not a relative), health care provider, a social service agency, a placement agency official, your employer, an Indian tribal official, your landlord or property manager, a place of worship, or a shelter.",
+          "when": [
+            "residency"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "res-second-doc",
+          "label": "Another document with your name showing the same address",
+          "detail": "Needed if a document has the child's name and your address but not your name.",
+          "when": [
+            "residency"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "form-1093",
+          "label": "Completed Form 1093, P.O. Box Application, stamped by the Post Office",
+          "detail": "",
+          "when": [
+            "po-box"
+          ],
+          "basis": "f886-h-eic"
+        }
+      ]
+    },
+    {
+      "name": "Relationship test",
+      "items": [
+        {
+          "id": "rel-parent",
+          "label": "Adoption records, court decree or paternity test results proving you are the parent",
+          "detail": "",
+          "when": [
+            "parent-not-on-birth-cert"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-born-abroad",
+          "label": "Birth certificate or immigration papers in English, or a legal translation",
+          "detail": "",
+          "when": [
+            "born-abroad"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-grandchild",
+          "label": "Birth certificates linking you to the grandchild",
+          "detail": "For a grandchild: your child's and grandchild's birth certificates. For a great grandchild: your child's, grandchild's and great grandchild's. If the names are not on the birth certificates, a court decree or paternity test results.",
+          "when": [
+            "grandchild"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-niece-nephew",
+          "label": "Birth certificates or other legal documents showing how you are related to the niece or nephew",
+          "detail": "For example the child's birth certificate showing your brother as the father, your brother's birth certificate showing your mother's name, and your own showing your mother's name. Otherwise a court decree or paternity test.",
+          "when": [
+            "niece-nephew"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-sibling",
+          "label": "Your birth certificate and your sibling's, both naming the parent in common",
+          "detail": "If not, another document such as a court decree or paternity test results.",
+          "when": [
+            "sibling"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-step",
+          "label": "Birth certificates or other legal documents, such as court papers or marriage licenses, showing the step relationship",
+          "detail": "If the birth certificate does not name the linking parent, a court decree or DNA test results from an accredited testing laboratory listing the names of the parties involved.",
+          "when": [
+            "step-relative"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-adoption",
+          "label": "Statement on letterhead from an authorized adoption agency",
+          "detail": "",
+          "when": [
+            "pending-adoption"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "rel-foster",
+          "label": "Statement on the letterhead of the authorized placement agency, or the court document placing the child with you during the year",
+          "detail": "",
+          "when": [
+            "foster"
+          ],
+          "basis": "f886-h-eic"
+        }
+      ]
+    },
+    {
+      "name": "Age test",
+      "items": [
+        {
+          "id": "age-student",
+          "label": "School records showing the child was a full-time student for any part of five months of the tax year",
+          "detail": "Must show the child's name and the dates the child attended school during the year. The months do not have to be consecutive.",
+          "when": [
+            "student-19-23"
+          ],
+          "basis": "f886-h-eic"
+        },
+        {
+          "id": "age-disabled",
+          "label": "Letter verifying the child is permanently and totally disabled",
+          "detail": "From a doctor, other health care provider, a social service program or government agency.",
+          "when": [
+            "disabled"
+          ],
+          "basis": "f886-h-eic"
+        }
+      ]
+    }
+  ]
+}

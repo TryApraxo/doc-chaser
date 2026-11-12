@@ -1,0 +1,366 @@
+{
+  "id": "mortgage-fha",
+  "title": "FHA mortgage needs list",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this for an FHA-insured forward mortgage instead of the conventional variants.",
+  "note": "Items follow HUD Handbook 4000.1 for loans scored through the TOTAL Mortgage Scorecard; manually underwritten FHA loans have their own Handbook sections, which were not used here. Lender overlays add conditions.",
+  "sources": {
+    "hud-4000-1": {
+      "name": "HUD, FHA Single Family Housing Policy Handbook 4000.1, issued August 12, 2026 (sections II.A.1 Origination/Processing and II.A.4 Underwriting the Borrower Using the TOTAL Mortgage Scorecard)",
+      "url": "https://www.hud.gov/sites/default/files/Housing/documents/40001-hsgh-Update-18.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "job-history": "Has the borrower been with the current employer for less than two years, or is overtime, bonus or tip income being used?",
+    "job-changes": "Has the borrower changed employers more than three times in the previous 12 months, or changed lines of work?",
+    "temporary-leave": "Is the borrower on temporary leave such as short-term disability or parental leave?",
+    "military": "Is the borrower paid as a military servicemember?",
+    "self-employed": "Does the borrower own 25% or more of a business and use that income?",
+    "business-returns": "For a self-employed borrower: is self-employment income not rising on the personal returns, are funds to close coming from business accounts, or is this a cash-out refinance?",
+    "support-court-ordered": "Is alimony, child support or maintenance income under a divorce decree, legal separation agreement or court order being used?",
+    "support-voluntary": "Is alimony, child support or maintenance income under a voluntary payment agreement being used?",
+    "ssa-disability": "Is Social Security disability income, including SSI, being used?",
+    "va-disability": "Is VA disability income being used?",
+    "private-disability": "Is private disability insurance income being used?",
+    "social-security": "Is Social Security income other than disability being used?",
+    "pension": "Is pension income from a former employer being used?",
+    "ira-401k": "Is recurring IRA or 401(k) distribution income being used?",
+    "large-deposit": "Does a checking or savings account show a single deposit above 50% of total monthly effective income?",
+    "earnest-money": "Does the earnest money deposit exceed 1% of the sales price?",
+    "gift-funds": "Is part of the borrower's funds a gift?",
+    "gift-before-closing": "Will the gift be transferred to the borrower before settlement?",
+    "gift-at-closing": "Will the gift be paid to the settlement agent at settlement?",
+    "gift-of-land": "Is the gift a gift of land?",
+    "gift-of-equity": "Is a family member selling the property and giving equity as a gift?"
+  },
+  "sections": [
+    {
+      "name": "Identity",
+      "items": [
+        {
+          "id": "ssn",
+          "label": "Evidence of a valid Social Security number",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "photo-id",
+          "label": "Valid government-issued photo identification",
+          "detail": "The lender must verify identity with it and may keep a copy in the file. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Employment income",
+      "items": [
+        {
+          "id": "paystub",
+          "label": "Most recent pay stub showing year-to-date earnings",
+          "detail": "Under the Handbook's alternative documentation, paired with the W-2s below. Under its traditional documentation the lender instead pairs the most recent pay stub with a written verification of employment covering two years, or uses an electronic verification covering two years.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "w2",
+          "label": "Original IRS Form W-2s for the previous two years",
+          "detail": "Part of the alternative documentation described above.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "tax-authorization",
+          "label": "Signed IRS Form 4506, 4506-C or 8821 for the previous two tax years",
+          "detail": "One of the conditions the Handbook sets for the lender to rely on the current employer for the two-year work history. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "past-employment",
+          "label": "W-2s or employer verifications from earlier employers for the most recent two years",
+          "detail": "Evidence of enrollment in school or of military service during the most recent two full years may be used for periods not employed.",
+          "when": [
+            "job-history"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "job-change-support",
+          "label": "Training or education transcripts showing qualification for the new position, or employment documents showing continual increases in income or benefits",
+          "detail": "",
+          "when": [
+            "job-changes"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "leave-intent",
+          "label": "Written statement confirming you intend to return to work, with the intended return date",
+          "detail": "",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "leave-employer",
+          "label": "Document from the current employer confirming you are eligible to return after the leave",
+          "detail": "",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "leave-assets",
+          "label": "Statements for liquid assets used to supplement income until the return date",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "les",
+          "label": "Military Leave and Earnings Statement (LES)",
+          "detail": "",
+          "when": [
+            "military"
+          ],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Self-employment income",
+      "items": [
+        {
+          "id": "personal-returns",
+          "label": "Complete individual tax returns for the most recent two years, including all schedules",
+          "detail": "In place of signed returns the lender may obtain a signed IRS Form 4506, 4506-C or 8821 and tax transcripts directly from the IRS.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "business-returns",
+          "label": "Business tax returns for the most recent two years",
+          "detail": "",
+          "when": [
+            "business-returns"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "profit-loss",
+          "label": "Year-to-date profit and loss statement and balance sheet",
+          "detail": "Asked if more than a calendar quarter has passed since the end of the most recent calendar or fiscal tax year. A balance sheet is not required for borrowers filing Schedule C income.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Other income",
+      "items": [
+        {
+          "id": "support-order",
+          "label": "Fully signed copy of the final divorce decree, legal separation agreement or court order",
+          "detail": "The front and the pages showing the financial details may be used to show the income will continue.",
+          "when": [
+            "support-court-ordered"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "support-receipt",
+          "label": "Proof the support payments were received for the most recent three months",
+          "detail": "Deposits on bank statements, canceled checks, or documentation from the child support agency. Send through the secure portal, never by plain email.",
+          "when": [
+            "support-court-ordered"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "support-voluntary",
+          "label": "Voluntary payment agreement with 12 months of canceled checks, deposit slips or tax returns",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "support-voluntary"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "ssa-award",
+          "label": "Most recent Social Security Notice of Award letter, or an equivalent document establishing the benefit",
+          "detail": "",
+          "when": [
+            "ssa-disability",
+            "social-security"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "ssa-receipt",
+          "label": "Tax returns, most recent bank statement showing the Social Security deposit, an SSA proof of income (benefits) letter, or form SSA-1099/1042S",
+          "detail": "Any one of these. Send through the secure portal, never by plain email.",
+          "when": [
+            "ssa-disability",
+            "social-security"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "va-letter",
+          "label": "The veteran's most recent VA Benefits Letter showing the amount of the assistance",
+          "detail": "",
+          "when": [
+            "va-disability"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "va-receipt",
+          "label": "Proof of receipt of the VA disability income",
+          "detail": "Tax returns, or the most recent bank statement showing the income received from VA. Send through the secure portal, never by plain email.",
+          "when": [
+            "va-disability"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "private-disability-doc",
+          "label": "Document from the private disability insurer showing the benefit amount and any expiration date",
+          "detail": "",
+          "when": [
+            "private-disability"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "private-disability-receipt",
+          "label": "Proof of receipt of the private disability income",
+          "detail": "Tax returns, or the most recent bank statement showing the income received from the insurance provider. Send through the secure portal, never by plain email.",
+          "when": [
+            "private-disability"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "pension-proof",
+          "label": "Tax returns, most recent bank statement showing the pension deposit, or the pension or retirement letter from the former employer",
+          "detail": "Any one of these. Send through the secure portal, never by plain email.",
+          "when": [
+            "pension"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "ira-statement",
+          "label": "Most recent IRA or 401(k) statement",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "ira-401k"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "ira-receipt",
+          "label": "Tax returns, or the most recent bank statement showing the distribution received",
+          "detail": "Either one. Send through the secure portal, never by plain email.",
+          "when": [
+            "ira-401k"
+          ],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Assets and funds to close",
+      "items": [
+        {
+          "id": "bank-statements",
+          "label": "Most recent statement for each checking and savings account",
+          "detail": "Paired with a written verification of deposit from the bank. If no verification of deposit is obtained, the statement must show the previous month's ending balance; if it does not, statements for the most recent two months are needed. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "large-deposit",
+          "label": "Documentation of each large deposit",
+          "detail": "",
+          "when": [
+            "large-deposit"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "earnest-money",
+          "label": "Proof of the earnest money deposit and its source",
+          "detail": "One of: a copy of the canceled check; a certification from the deposit holder acknowledging receipt; or a verification of deposit or bank statement showing the average balance was enough to cover the deposit when it was made. Send through the secure portal, never by plain email.",
+          "when": [
+            "earnest-money"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "gift-letter",
+          "label": "Gift letter signed and dated by the donor and the borrower",
+          "detail": "Must include the donor's name, address and telephone number, the donor's relationship to the borrower, the dollar amount of the gift, and a statement that no repayment is required.",
+          "when": [
+            "gift-funds",
+            "gift-of-equity"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "gift-transfer",
+          "label": "Evidence of the gift transfer from the donor to the borrower",
+          "detail": "One of: the donor's bank statement showing the withdrawal; a copy of the donor's canceled check; or a copy of the donor's withdrawal receipt, each with evidence of the deposit into the borrower's account; or evidence of an electronic transfer from the donor's account to the borrower's. Send through the secure portal, never by plain email.",
+          "when": [
+            "gift-before-closing"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "gift-at-closing",
+          "label": "Evidence of the donor's payment to the settlement agent",
+          "detail": "One of: evidence of an electronic transfer from the donor's account, a bank certified check, a cashier's check, or another official bank check.",
+          "when": [
+            "gift-at-closing"
+          ],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "gift-land",
+          "label": "Proof the donor owned the land and evidence of the transfer of title to the borrower",
+          "detail": "",
+          "when": [
+            "gift-of-land"
+          ],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Keeping documents current",
+      "items": [
+        {
+          "id": "refresh",
+          "label": "Updated documents if earlier ones become too old",
+          "detail": "Documents may not be more than 120 days old at the disbursement date. Documents not affected by the passage of time, such as divorce decrees or tax returns, may be older.",
+          "when": [],
+          "basis": "hud-4000-1"
+        }
+      ]
+    }
+  ]
+}

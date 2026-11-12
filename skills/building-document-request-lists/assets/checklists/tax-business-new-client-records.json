@@ -1,0 +1,158 @@
+{
+  "id": "tax-business-new-client-records",
+  "title": "Small business tax return: books and records request",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "business-records",
+  "use_when": "Pick this short list when taking on a small business and you want its books and supporting records by category; use bookkeeping-records-small-business for the itemized version with the full employment tax record list.",
+  "note": "Built from IRS Publication 583 (Rev. December 2024). It lists the kinds of records the IRS describes; it does not list the forms for any particular entity type.",
+  "sources": {
+    "p583": {
+      "name": "IRS, Publication 583, Starting a Business and Keeping Records (Revised December 2024)",
+      "url": "https://www.irs.gov/publications/p583",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "corporation": "The business is a corporation",
+    "inventory": "Buys goods to resell, or materials to make products",
+    "assets": "Owns machinery, furniture or other business property",
+    "employees": "Has employees",
+    "travel-gifts": "Deducts travel, transportation or gift expenses"
+  },
+  "sections": [
+    {
+      "name": "Books and prior filings",
+      "items": [
+        {
+          "id": "books",
+          "label": "Business books summarizing transactions",
+          "detail": "For example accounting journals and ledgers, or records from accounting software. They must show gross income, deductions and credits.",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "financials",
+          "label": "Income (profit and loss) statement and balance sheet",
+          "detail": "",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "prior-returns",
+          "label": "Copies of filed tax returns",
+          "detail": "",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "minutes",
+          "label": "Minutes of board of directors' meetings",
+          "detail": "",
+          "when": [
+            "corporation"
+          ],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Gross receipts",
+      "items": [
+        {
+          "id": "gross-receipts",
+          "label": "Documents showing the amounts and sources of gross receipts",
+          "detail": "Cash register tapes, bank deposit slips, receipt books, invoices, credit card charge slips.",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "1099s",
+          "label": "Forms 1099-MISC and 1099-NEC received",
+          "detail": "",
+          "when": [],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Inventory and purchases",
+      "items": [
+        {
+          "id": "inventory",
+          "label": "Documents showing the cost of inventory",
+          "detail": "Canceled checks, cash register tape receipts, credit card sales slips, invoices.",
+          "when": [
+            "inventory"
+          ],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "items": [
+        {
+          "id": "expenses",
+          "label": "Documents for business expenses",
+          "detail": "Canceled checks, cash register tapes, account statements, credit card sales slips, invoices, petty cash slips for small cash payments.",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "payment-proof",
+          "label": "Account statements proving payment where there is no canceled check",
+          "detail": "Publication 583 says certain financial account statements may prove payment; they must be highly legible.",
+          "when": [],
+          "basis": "p583"
+        },
+        {
+          "id": "travel-gifts",
+          "label": "Records for travel, transportation and gift expenses",
+          "detail": "Publication 583 says specific recordkeeping rules apply; see Publication 463.",
+          "when": [
+            "travel-gifts"
+          ],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Assets",
+      "items": [
+        {
+          "id": "asset-info",
+          "label": "Records for each business asset",
+          "detail": "When and how acquired, purchase price, cost of improvements, Section 179 deduction taken, depreciation taken, casualty loss deductions, how the asset was used, when and how it was disposed of, selling price and expenses of sale.",
+          "when": [
+            "assets"
+          ],
+          "basis": "p583"
+        },
+        {
+          "id": "asset-docs",
+          "label": "Purchase and sales invoices, real estate closing statements and canceled checks for assets",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Employment taxes",
+      "items": [
+        {
+          "id": "employment-tax",
+          "label": "Employment tax records",
+          "detail": "Publication 583 says to keep them for at least 4 years after the date the tax becomes due or is paid, whichever is later.",
+          "when": [
+            "employees"
+          ],
+          "basis": "p583"
+        }
+      ]
+    }
+  ]
+}

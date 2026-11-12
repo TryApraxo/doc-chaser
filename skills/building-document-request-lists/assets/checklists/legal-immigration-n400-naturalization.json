@@ -1,0 +1,275 @@
+{
+  "id": "legal-immigration-n400-naturalization",
+  "title": "Naturalization application (Form N-400): documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "The client is a lawful permanent resident applying for U.S. citizenship on Form N-400.",
+  "note": "Based on the USCIS Document Checklist, Form M-477 (Rev. 11/21/2016), the edition USCIS still publishes; it is older than the current N-400 form, so check it against the current form instructions. The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "m477": {
+      "name": "USCIS, Form M-477, Document Checklist (for Form N-400), Rev. 11/21/2016",
+      "url": "https://www.uscis.gov/sites/default/files/document/guides/M-477.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "resides-abroad": "Does the applicant live outside the United States?",
+    "name-change": "Is the applicant's current legal name different from the name on the Permanent Resident Card?",
+    "marriage-to-citizen": "Is the applicant applying on the basis of marriage to a U.S. citizen?",
+    "prior-marriage": "Was the applicant married before?",
+    "military": "Is the applicant currently in U.S. military service and seeking citizenship based on that service?",
+    "long-trip": "Has the applicant taken any trip outside the United States that lasted 6 months or more since becoming a permanent resident?",
+    "dependents-apart": "Does the applicant have a dependent spouse or children who do not live with the applicant?",
+    "arrest-no-charges": "Has the applicant ever been arrested or detained by any law enforcement officer where no charges were filed?",
+    "arrest-charges": "Has the applicant ever been arrested or detained where charges were filed?",
+    "conviction": "Has the applicant ever been convicted or placed in an alternative sentencing or rehabilitative program?",
+    "record-cleared": "Has any arrest or conviction been vacated, set aside, sealed, expunged or otherwise removed from the record?",
+    "tax-not-filed": "Has the applicant ever failed to file an income tax return since becoming a permanent resident?",
+    "taxes-overdue": "Does the applicant have any federal, state or local taxes that are overdue?",
+    "disability-exception": "Is the applicant applying for a disability exception to the testing requirement?",
+    "selective-service": "Is the applicant a male, 26 or older, who did not register with the Selective Service and lived in the United States between ages 18 and 26 in a status other than lawful nonimmigrant?"
+  },
+  "sections": [
+    {
+      "name": "Every applicant",
+      "items": [
+        {
+          "id": "green-card",
+          "label": "Photocopy of both sides of the Permanent Resident Card (green card)",
+          "detail": "If the card is lost, a photocopy of the receipt of Form I-90, Application to Replace Permanent Resident Card. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "m477"
+        },
+        {
+          "id": "photos",
+          "label": "2 identical color photographs",
+          "detail": "Name and Alien Registration Number (A-Number) written lightly in pencil on the back of each photo. Required if the applicant resides outside the United States.",
+          "when": [
+            "resides-abroad"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "name-change",
+          "label": "The document(s) that legally changed the applicant's name",
+          "detail": "Marriage certificate, divorce decree, or court document.",
+          "when": [
+            "name-change"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Marriage and family",
+      "items": [
+        {
+          "id": "spouse-citizenship",
+          "label": "Evidence the spouse has been a U.S. citizen for the last 3 years",
+          "detail": "One of: birth certificate (if the spouse never lost citizenship since birth); Certificate of Naturalization; Certificate of Citizenship; the inside of the front cover and signature page of the spouse's current U.S. passport; or Form FS-240, Report of Birth Abroad of a Citizen of the United States of America. Send through the secure portal, never by plain email.",
+          "when": [
+            "marriage-to-citizen"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "marriage-cert",
+          "label": "Current marriage certificate",
+          "detail": "",
+          "when": [
+            "marriage-to-citizen"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "spouse-prior",
+          "label": "Proof of termination of all prior marriages of the spouse",
+          "detail": "Divorce decree(s), annulment(s), or death certificate(s).",
+          "when": [
+            "marriage-to-citizen"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "joint-docs",
+          "label": "Documents referring to the applicant and the spouse",
+          "detail": "One of: tax returns, bank accounts, leases, mortgages, or birth certificates of children; IRS-certified copies of the income tax forms both filed for the past 3 years; or an IRS tax return transcript for the last 3 years. Send through the secure portal, never by plain email.",
+          "when": [
+            "marriage-to-citizen"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "own-prior",
+          "label": "Proof that all the applicant's earlier marriages ended",
+          "detail": "Divorce decree(s), annulment(s), or death certificate(s).",
+          "when": [
+            "prior-marriage"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "support-order",
+          "label": "Any court or government order to provide financial support",
+          "detail": "",
+          "when": [
+            "dependents-apart"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "support-evidence",
+          "label": "Evidence of financial support for the dependents",
+          "detail": "Including evidence of compliance with any court or government order, such as: cancelled checks; money and receipts; a court or agency printout of child support payments; evidence of wage garnishments; a letter from the parent or guardian who cares for the children.",
+          "when": [
+            "dependents-apart"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Military service",
+      "items": [
+        {
+          "id": "n426",
+          "label": "Completed original Form N-426, Request for Certification of Military or Naval Service",
+          "detail": "",
+          "when": [
+            "military"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Trips of 6 months or more",
+      "items": [
+        {
+          "id": "trip-tax",
+          "label": "IRS tax return transcript or IRS-certified tax return for the last 5 years",
+          "detail": "For the last 3 years if applying on the basis of marriage to a U.S. citizen. Evidence that the applicant (and family) continued to live, work and/or keep ties to the United States.",
+          "when": [
+            "long-trip"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "trip-housing",
+          "label": "Rent or mortgage payments and pay stubs",
+          "detail": "",
+          "when": [
+            "long-trip"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Arrests and convictions",
+      "items": [
+        {
+          "id": "no-charge-statement",
+          "label": "Original official statement confirming that no charges were filed",
+          "detail": "By the arresting agency or applicable court.",
+          "when": [
+            "arrest-no-charges"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "arrest-record",
+          "label": "Complete arrest record and disposition for each incident",
+          "detail": "An original or court-certified copy (dismissal order, conviction record or acquittal order).",
+          "when": [
+            "arrest-charges"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "sentencing-record",
+          "label": "Sentencing record for each incident",
+          "detail": "An original or court-certified copy.",
+          "when": [
+            "conviction"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "sentence-complete",
+          "label": "Evidence the sentence was completed",
+          "detail": "An original or certified copy of the probation or parole record; or evidence of completing an alternative sentencing program or rehabilitative program.",
+          "when": [
+            "conviction"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "clearing-order",
+          "label": "Court order vacating, setting aside, sealing, expunging or otherwise removing the arrest or conviction",
+          "detail": "An original or court-certified copy, or an original statement from the court that no record exists of the arrest or conviction.",
+          "when": [
+            "record-cleared"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Taxes",
+      "items": [
+        {
+          "id": "irs-correspondence",
+          "label": "All correspondence with the IRS regarding the failure to file",
+          "detail": "",
+          "when": [
+            "tax-not-filed"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "tax-agreement",
+          "label": "Signed agreement from the IRS or state or local tax office",
+          "detail": "Showing that a tax return has been filed and payment of the taxes owed has been arranged.",
+          "when": [
+            "taxes-overdue"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "tax-status",
+          "label": "Documentation from the IRS or state or local tax office showing the current status of the repayment program",
+          "detail": "",
+          "when": [
+            "taxes-overdue"
+          ],
+          "basis": "m477"
+        }
+      ]
+    },
+    {
+      "name": "Other situations",
+      "items": [
+        {
+          "id": "n648",
+          "label": "Original Form N-648, Medical Certification for Disability Exceptions",
+          "detail": "Completed less than 6 months ago by a licensed medical or osteopathic doctor or licensed clinical psychologist.",
+          "when": [
+            "disability-exception"
+          ],
+          "basis": "m477"
+        },
+        {
+          "id": "sss-letter",
+          "label": "Status Information Letter from the Selective Service",
+          "detail": "",
+          "when": [
+            "selective-service"
+          ],
+          "basis": "m477"
+        }
+      ]
+    }
+  ]
+}

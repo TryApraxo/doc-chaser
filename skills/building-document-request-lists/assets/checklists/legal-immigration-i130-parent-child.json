@@ -1,0 +1,270 @@
+{
+  "id": "legal-immigration-i130-parent-child",
+  "title": "Family petition (Form I-130) for a child, parent, brother or sister: documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "The client is petitioning on Form I-130 for a child, parent, brother or sister rather than a spouse.",
+  "note": "Based on the USCIS Instructions for Form I-130 and I-130A (edition 04/01/24). The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "i130-instr": {
+      "name": "USCIS, Instructions for Form I-130, Petition for Alien Relative, and Form I-130A, edition 04/01/24",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-130instr.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "petitioner-citizen": "Is the petitioner a U.S. citizen?",
+    "petitioner-lpr": "Is the petitioner a lawful permanent resident (green card holder)?",
+    "child-mother": "Is the petitioner the mother of the child being petitioned for?",
+    "child-father": "Is the petitioner the father of the child being petitioned for?",
+    "child-out-of-wedlock-father": "Is the petitioner the father of a child born out of wedlock?",
+    "mother": "Is the petition for the petitioner's mother?",
+    "father": "Is the petition for the petitioner's father?",
+    "sibling": "Is the petition for a brother or sister?",
+    "sibling-different-mothers": "Do the petitioner and the brother or sister share a father but have different mothers?",
+    "step": "Is the relationship a stepparent and stepchild relationship?",
+    "adoption": "Is the relationship through adoption?",
+    "name-change": "Does the petitioner or the relative use a name different from the one on their documents?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Petitioner's status",
+      "items": [
+        {
+          "id": "citizen-proof",
+          "label": "Proof the petitioner is a U.S. citizen (one of the documents listed)",
+          "detail": "A copy of a birth certificate issued by a civil registrar, vital statistics office, or other civil authority showing birth in the United States; a copy of a naturalization certificate or certificate of citizenship; a copy of Form FS-240, Consular Report of Birth Abroad; a copy of an unexpired U.S. passport; or an original statement from a U.S. consular officer verifying U.S. citizenship with a valid passport. Send through the secure portal, never by plain email.",
+          "when": [
+            "petitioner-citizen"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "lpr-proof",
+          "label": "Copy of the front and back of the petitioner's Permanent Resident Card (Form I-551)",
+          "detail": "If the card has not yet been received: copies of the passport biographic page and the page showing admission as a lawful permanent resident, or other evidence of permanent resident status issued by USCIS or the former INS. Send through the secure portal, never by plain email.",
+          "when": [
+            "petitioner-lpr"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Petition for a child",
+      "items": [
+        {
+          "id": "child-bc-mother",
+          "label": "Copy of the child's birth certificate showing the mother's name and the child's name",
+          "detail": "",
+          "when": [
+            "child-mother"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "child-bc-father",
+          "label": "Copy of the child's birth certificate showing both parents' names",
+          "detail": "",
+          "when": [
+            "child-father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "father-marriage",
+          "label": "Copy of the father's marriage certificate to the child's mother",
+          "detail": "",
+          "when": [
+            "child-father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "father-prior-marriages",
+          "label": "Proof of legal termination of the parents' prior marriages, if any",
+          "detail": "Issued by civil authorities.",
+          "when": [
+            "child-father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "legitimation",
+          "label": "Evidence the parents married while the child was under 18, or that the child was legitimated before age 18",
+          "detail": "Legitimated under the law of the child's residence or domicile, or under the law of the father's residence or domicile.",
+          "when": [
+            "child-out-of-wedlock-father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "bona-fide-parent",
+          "label": "Evidence of a real parent-child relationship before the child reached 21 years of age",
+          "detail": "Needed if the child was not legitimated before reaching 18 years of age. May include evidence that the father lived with the child, supported him or her, or otherwise showed continuing parental interest in the child's welfare.",
+          "when": [
+            "child-out-of-wedlock-father"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Petition for a parent",
+      "items": [
+        {
+          "id": "own-bc-mother",
+          "label": "Copy of the petitioner's birth certificate showing the petitioner's name and the mother's name",
+          "detail": "",
+          "when": [
+            "mother"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "own-bc-father",
+          "label": "Copy of the petitioner's birth certificate showing the names of both parents",
+          "detail": "",
+          "when": [
+            "father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "parents-marriage",
+          "label": "Copy of the parents' marriage certificate",
+          "detail": "Establishing that the father was married to the mother.",
+          "when": [
+            "father"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "parents-prior-marriages",
+          "label": "Documents showing each prior marriage of the mother or father legally ended",
+          "detail": "Needed if either parent was previously married.",
+          "when": [
+            "father"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Petition for a brother or sister",
+      "items": [
+        {
+          "id": "sib-own-bc",
+          "label": "Copy of the petitioner's birth certificate",
+          "detail": "Together with the brother's or sister's, it must show at least one common parent.",
+          "when": [
+            "sibling"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "sib-bc",
+          "label": "Copy of the brother's or sister's birth certificate",
+          "detail": "",
+          "when": [
+            "sibling"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "sib-father-marriages",
+          "label": "Copies of the marriage certificates showing the father was married to each mother",
+          "detail": "",
+          "when": [
+            "sibling-different-mothers"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "sib-prior-marriages",
+          "label": "Documents showing any prior marriages of the father or either mother legally ended",
+          "detail": "",
+          "when": [
+            "sibling-different-mothers"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Step and adoptive relationships",
+      "items": [
+        {
+          "id": "step-marriage",
+          "label": "Copy of the marriage certificate of the stepparent to the child's natural parent",
+          "detail": "Showing that the marriage occurred before the child turned 18 years of age.",
+          "when": [
+            "step"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "step-prior",
+          "label": "Documents showing any prior marriages legally ended",
+          "detail": "If applicable.",
+          "when": [
+            "step"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "step-bc",
+          "label": "Copy of the stepchild's birth certificate",
+          "detail": "",
+          "when": [
+            "step"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "adoption-decree",
+          "label": "Copy of the adoption decree",
+          "detail": "Showing that the adoption took place before the child turned 16 years of age (before 18 for an older sibling of a child adopted under 16 by the same parents).",
+          "when": [
+            "adoption"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "adoption-custody",
+          "label": "Evidence the child was in the legal custody of and lived with the adopting parents for at least two years",
+          "detail": "Before or after adoption. Only a court or recognized government entity may grant legal custody.",
+          "when": [
+            "adoption"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    },
+    {
+      "name": "Names and translations",
+      "items": [
+        {
+          "id": "name-change",
+          "label": "Legal documents showing the name change",
+          "detail": "Copies of the legal documents reflecting the name change, such as a marriage certificate, adoption decree, or court order, if the petitioner or the relative uses a name different from the one on the relevant documents.",
+          "when": [
+            "name-change"
+          ],
+          "basis": "i130-instr"
+        },
+        {
+          "id": "translation",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "The translator must sign a certification that the English translation is complete and accurate and that he or she is competent to translate from the foreign language into English.",
+          "when": [
+            "foreign-language"
+          ],
+          "basis": "i130-instr"
+        }
+      ]
+    }
+  ]
+}

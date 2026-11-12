@@ -1,0 +1,203 @@
+{
+  "id": "mortgage-hardship-assistance",
+  "title": "Mortgage assistance application: documents by hardship and income type",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-hardship",
+  "use_when": "Pick this when a borrower with payment difficulties is applying to the servicer for mortgage assistance (loss mitigation) on a loan owned by Fannie Mae or Freddie Mac.",
+  "note": "Items follow Fannie Mae/Freddie Mac Form 710 and Fannie Mae Servicing Guide D2-2-05. The form asks for no hardship documents for unemployment, reduced income, increased housing expenses or a disaster, and no income documents for unemployment benefits. Servicers of loans with other owners or insurers use their own forms.",
+  "sources": {
+    "form-710": {
+      "name": "Fannie Mae/Freddie Mac Form 710, Mortgage Assistance Application (effective 12.11.24), copy published with the Freddie Mac Single-Family Seller/Servicer Guide",
+      "url": "https://guide.freddiemac.com/ci/okcsFattach/get/1001328_5",
+      "retrieved": "2026-11-11"
+    },
+    "servicing-guide": {
+      "name": "Fannie Mae Servicing Guide D2-2-05, Receiving a Borrower Response Package (06/09/2021)",
+      "url": "https://servicing-guide.fanniemae.com/svc/d2-2-05/receiving-borrower-response-package",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "disability-illness": "Is the hardship a long-term or permanent disability or serious illness of a borrower or dependent family member?",
+    "divorce": "Is the hardship a divorce or legal separation?",
+    "separation-unmarried": "Is the hardship a separation of borrowers who are not married or in a civil union or domestic partnership?",
+    "death": "Is the hardship the death of a borrower or of the primary or secondary wage earner?",
+    "relocation-military": "Is the hardship a distant transfer of an active-duty service member?",
+    "relocation-job": "Is the hardship a distant employment transfer or new job in another location?",
+    "other-hardship": "Is the hardship something the form does not list?",
+    "wages": "Does the borrower have wages, salary, overtime, commission, tip or bonus income?",
+    "self-employed": "Does the borrower have self-employment income?",
+    "benefits": "Does the borrower have Social Security, pension, disability, death benefit, adoption assistance, housing allowance or other public assistance income?",
+    "rental": "Does the borrower have rental income?",
+    "investment": "Does the borrower have investment or insurance income?",
+    "other-income": "Does the borrower have other income, including alimony, child support or separate maintenance they choose to have considered?",
+    "transcript-requested": "Has the servicer asked for a tax transcript authorization?"
+  },
+  "sections": [
+    {
+      "name": "Application",
+      "items": [
+        {
+          "id": "form-710",
+          "label": "Completed and signed Mortgage Assistance Application (Form 710)",
+          "detail": "Every section filled in; the form asks for the last four digits of each borrower's Social Security number. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "form-710"
+        },
+        {
+          "id": "income-age",
+          "label": "Updated income documents if earlier ones become too old",
+          "detail": "Income documents must be no more than 90 days old when the servicer first finds the package complete.",
+          "when": [],
+          "basis": "servicing-guide"
+        },
+        {
+          "id": "form-4506c",
+          "label": "Signed IRS Form 4506-C",
+          "detail": "Asked by the servicer to reconcile inconsistencies between the application and the income documents, or when Fannie Mae requests it. Send through the secure portal, never by plain email.",
+          "when": [
+            "transcript-requested"
+          ],
+          "basis": "servicing-guide"
+        }
+      ]
+    },
+    {
+      "name": "Hardship documents",
+      "items": [
+        {
+          "id": "disability-statement",
+          "label": "Written statement from the borrower, or other documentation verifying the disability or illness",
+          "detail": "The form says detailed medical information and information from a medical provider are not required.",
+          "when": [
+            "disability-illness"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "divorce-decree",
+          "label": "Final divorce decree or final separation agreement",
+          "detail": "Alternative: a recorded quitclaim deed.",
+          "when": [
+            "divorce"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "quitclaim",
+          "label": "Recorded quitclaim deed",
+          "detail": "Alternative: a legally binding agreement showing the non-occupying borrower or co-borrower has given up all rights to the property.",
+          "when": [
+            "separation-unmarried"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "death-certificate",
+          "label": "Death certificate",
+          "detail": "Alternative: an obituary or newspaper article reporting the death.",
+          "when": [
+            "death"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "pcs-orders",
+          "label": "Permanent Change of Station (PCS) orders or a letter showing the transfer",
+          "detail": "",
+          "when": [
+            "relocation-military"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "transfer-letter",
+          "label": "Signed offer letter or employer notice showing the transfer to a new location",
+          "detail": "A written explanation is used if employer documentation does not apply.",
+          "when": [
+            "relocation-job"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "relocation-assistance",
+          "label": "Documentation of the amount of any relocation assistance provided",
+          "detail": "",
+          "when": [
+            "relocation-job"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "other-explanation",
+          "label": "Written explanation of the hardship, with any relevant documentation",
+          "detail": "",
+          "when": [
+            "other-hardship"
+          ],
+          "basis": "form-710"
+        }
+      ]
+    },
+    {
+      "name": "Income documents",
+      "items": [
+        {
+          "id": "wage-proof",
+          "label": "Most recent pay stub, with documentation of year-to-date earnings if the pay stub does not show them",
+          "detail": "Alternative: two most recent bank statements showing the income deposit amounts. Send through the secure portal, never by plain email.",
+          "when": [
+            "wages"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "self-employed-proof",
+          "label": "Two most recent bank statements showing the self-employment income deposits",
+          "detail": "Alternatives: the most recent signed and dated quarterly or year-to-date profit and loss statement; the most recent complete and signed business tax return; or the most recent complete and signed individual federal income tax return. Send through the secure portal, never by plain email.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "benefit-proof",
+          "label": "Two most recent bank statements showing the benefit deposit amounts",
+          "detail": "Alternative: award letters or other documentation showing the amount and frequency of the benefits. Applies to taxable and non-taxable benefits. Send through the secure portal, never by plain email.",
+          "when": [
+            "benefits"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "rent-proof",
+          "label": "Two most recent bank statements showing receipt of rent",
+          "detail": "Alternative: the two most recent deposited rent checks. Send through the secure portal, never by plain email.",
+          "when": [
+            "rental"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "investment-proof",
+          "label": "Two most recent investment statements",
+          "detail": "Alternative: two most recent bank statements showing receipt of the income. Send through the secure portal, never by plain email.",
+          "when": [
+            "investment"
+          ],
+          "basis": "form-710"
+        },
+        {
+          "id": "other-income-proof",
+          "label": "Two most recent bank statements showing receipt of the income",
+          "detail": "Alternative: other documentation showing the amount and frequency of the income. Send through the secure portal, never by plain email.",
+          "when": [
+            "other-income"
+          ],
+          "basis": "form-710"
+        }
+      ]
+    }
+  ]
+}

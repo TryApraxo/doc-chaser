@@ -1,0 +1,179 @@
+{
+  "id": "sba-disaster-loan-business",
+  "title": "SBA disaster business loan document request",
+  "industry": "lending",
+  "jurisdiction": "US federal",
+  "variant_of": "sba-loan",
+  "use_when": "Use when a business or private nonprofit is applying for an SBA disaster loan (physical damage, economic injury or Military Reservist EIDL) on SBA Form 5; use the home list for homeowners and renters.",
+  "note": "Items follow the filing requirements printed on SBA Form 5 (05/23). SBA says additional information may be necessary to process the application. The form edition read shows an OMB expiration date of 07/31/26, so check sba.gov for a newer edition before relying on this list.",
+  "sources": {
+    "sba-form-5": {
+      "name": "SBA Form 5, Disaster Business Loan Application (05/23; OMB expiration date shown 07/31/26)",
+      "url": "https://legacy.sba.gov/sites/default/files/2025-02/SBA-Disaster-Form-5.pdf",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "for-profit": "Is the applicant a business (not a non-profit organization)?",
+    "nonprofit": "Is the applicant a non-profit organization (house of worship, association, etc.)?",
+    "mreidl": "Is this a Military Reservist Economic Injury Disaster Loan (MREIDL) application?",
+    "non-citizen": "Is any owner, general partner or managing member not a United States citizen?"
+  },
+  "sections": [
+    {
+      "name": "Information to prepare",
+      "items": [
+        {
+          "id": "disaster-number",
+          "label": "Designated disaster number",
+          "detail": "Form 5 says it can be found at sba.gov/disaster.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "federal-tax-id",
+          "label": "Federal Tax ID of the business (EIN, or SSN if used to file)",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "insurance",
+          "label": "Information about all insurance policies for the business",
+          "detail": "Form 5 asks for the company name, policy number and current amount received, if any, for hazard, business interruption, flood, windstorm and separate fire insurance.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "principals",
+          "label": "Information about all general partners or managing members, and any persons or entities who own 20% or more of the business",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "citizenship-docs",
+          "label": "Copy of a green card or proof of permanent residency",
+          "detail": "Form 5 says a non-citizen may need to provide a copy of specific documents like these. Send through the secure portal, never by plain email.",
+          "when": [
+            "non-citizen"
+          ],
+          "basis": "sba-form-5"
+        }
+      ]
+    },
+    {
+      "name": "Must be submitted",
+      "items": [
+        {
+          "id": "form-5",
+          "label": "SBA Form 5, completed and signed",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "liabilities",
+          "label": "Schedule of Liabilities listing all fixed debts",
+          "detail": "SBA Form 2202 may be used.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "4506c",
+          "label": "IRS Form 4506-C, Request for Transcript of Tax Returns, completed and signed",
+          "detail": "By each applicant, each principal owning 20 percent or more of the applicant business, each general partner or managing member; and for any owner who has greater than 50 percent ownership in an affiliate business. Send through the secure portal, never by plain email.",
+          "when": [
+            "for-profit"
+          ],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "business-returns",
+          "label": "Complete copies, including all schedules, of the most recent Federal income tax returns for the applicant business",
+          "detail": "An explanation if not available. Send through the secure portal, never by plain email.",
+          "when": [
+            "for-profit"
+          ],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "form-413",
+          "label": "SBA Form 413, Personal Financial Statement, completed, signed and dated",
+          "detail": "By the applicant, each principal owning 20 percent or more of the applicant business, and each general partner or managing member. Send through the secure portal, never by plain email.",
+          "when": [
+            "for-profit"
+          ],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "np-return",
+          "label": "Complete copy of the organization's most recent tax return, OR a copy of its IRS tax-exempt certification and complete copies of its three most recent years' Statement of Activities",
+          "detail": "",
+          "when": [
+            "nonprofit"
+          ],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "np-4506c",
+          "label": "IRS Form 4506-C, Request for Transcript of Tax Returns, completed and signed by each applicant and for any affiliated entity",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "nonprofit"
+          ],
+          "basis": "sba-form-5"
+        }
+      ]
+    },
+    {
+      "name": "Additional requirements for Military Reservist Economic Injury (MREIDL)",
+      "items": [
+        {
+          "id": "call-up",
+          "label": "Copy of the essential employee's notice of expected call-up to active service for a period of more than 30 consecutive days, or official call-up orders, or release/discharge from active service",
+          "detail": "",
+          "when": [
+            "mreidl"
+          ],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "injury-explanation",
+          "label": "Written explanation and financial estimate of how the call-up of the essential employee has resulted or will result in economic injury to the business, and the steps the business is taking to alleviate it",
+          "detail": "",
+          "when": [
+            "mreidl"
+          ],
+          "basis": "sba-form-5"
+        }
+      ]
+    },
+    {
+      "name": "If SBA requests it",
+      "items": [
+        {
+          "id": "principal-returns",
+          "label": "Complete copy, including all schedules, of the most recent Federal income tax return for each principal owning 20 percent or more, each general partner or managing member, and each affiliate when any owner has more than 50 percent ownership in the affiliate business",
+          "detail": "If requested, provide within 7 days of the information request. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "year-end-fs",
+          "label": "Year-end profit-and-loss statement and balance sheet for the tax year, if the most recent Federal income tax return has not been filed",
+          "detail": "If requested, provide within 7 days of the information request.",
+          "when": [],
+          "basis": "sba-form-5"
+        },
+        {
+          "id": "ytd-pl",
+          "label": "Current year-to-date profit-and-loss statement",
+          "detail": "If requested, provide within 7 days of the information request.",
+          "when": [],
+          "basis": "sba-form-5"
+        }
+      ]
+    }
+  ]
+}

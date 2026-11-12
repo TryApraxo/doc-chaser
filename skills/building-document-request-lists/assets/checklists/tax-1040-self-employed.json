@@ -1,0 +1,300 @@
+{
+  "id": "tax-1040-self-employed",
+  "title": "Self-employed or gig worker tax return (Schedule C) document request",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-individual",
+  "use_when": "Pick this when the client is a sole proprietor, freelancer or gig worker who reports business income on Schedule C; add the basic individual list for personal items.",
+  "note": "Built from IRS recordkeeping guidance for small businesses and gig workers (Publications 583, 587 and 463). It lists the kinds of records the IRS says to keep; it does not cover personal items, state returns or every deduction.",
+  "sources": {
+    "records": {
+      "name": "IRS, What kind of records should I keep (web page, last reviewed or updated 03-Aug-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+      "retrieved": "2026-11-11"
+    },
+    "p583": {
+      "name": "IRS, Publication 583, Starting a Business and Keeping Records (Revised December 2024)",
+      "url": "https://www.irs.gov/publications/p583",
+      "retrieved": "2026-11-11"
+    },
+    "gigwork": {
+      "name": "IRS, Manage taxes for your gig work (web page, last reviewed or updated 28-Jun-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/manage-taxes-for-your-gig-work",
+      "retrieved": "2026-11-11"
+    },
+    "p587": {
+      "name": "IRS, Publication 587 (2025), Business Use of Your Home",
+      "url": "https://www.irs.gov/publications/p587",
+      "retrieved": "2026-11-11"
+    },
+    "p463": {
+      "name": "IRS, Publication 463 (2025), Travel, Gift, and Car Expenses, chapter 5 and Table 5-1",
+      "url": "https://www.irs.gov/publications/p463",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "gig-employee": "Did some gig work as an employee",
+    "inventory": "Buys goods to resell, or materials to make products",
+    "vehicle": "Used a car or other vehicle for business",
+    "travel": "Traveled away from home for business",
+    "gifts": "Gave business gifts",
+    "home-office": "Uses part of the home for business",
+    "assets": "Owns equipment, furniture or other property used in the business",
+    "employees": "Has employees",
+    "new-client": "New client of the firm"
+  },
+  "sections": [
+    {
+      "name": "Income forms and records",
+      "items": [
+        {
+          "id": "1099-k",
+          "label": "Forms 1099-K, Payment Card and Third Party Network Transactions",
+          "detail": "The IRS says copies should arrive by January 31 if the businesses you work with report payments.",
+          "when": [],
+          "basis": "gigwork"
+        },
+        {
+          "id": "1099-nec",
+          "label": "Forms 1099-NEC, Nonemployee Compensation",
+          "detail": "",
+          "when": [],
+          "basis": "gigwork"
+        },
+        {
+          "id": "1099-misc",
+          "label": "Forms 1099-MISC, Miscellaneous Income",
+          "detail": "",
+          "when": [],
+          "basis": "gigwork"
+        },
+        {
+          "id": "w2-gig",
+          "label": "Form W-2 for gig work done as an employee",
+          "detail": "",
+          "when": [
+            "gig-employee"
+          ],
+          "basis": "gigwork"
+        },
+        {
+          "id": "unreported-income",
+          "label": "Records of money received from gig work and sales that is not on a Form 1099 or W-2",
+          "detail": "Sales receipts. The IRS says all income must be reported even without a Form 1099.",
+          "when": [],
+          "basis": "gigwork"
+        },
+        {
+          "id": "gross-receipts",
+          "label": "Documents showing the amounts and sources of business income (gross receipts)",
+          "detail": "Cash register tapes, deposit information (cash and credit sales), receipt books, invoices.",
+          "when": [],
+          "basis": "records"
+        },
+        {
+          "id": "card-slips",
+          "label": "Credit card charge slips for sales",
+          "detail": "",
+          "when": [],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "items": [
+        {
+          "id": "books",
+          "label": "Summary of business transactions (business books)",
+          "detail": "For example accounting journals and ledgers, or records from accounting software. The books must show gross income, deductions and credits.",
+          "when": [],
+          "basis": "records"
+        },
+        {
+          "id": "prior-returns",
+          "label": "Copies of filed tax returns",
+          "detail": "The IRS says they help in preparing future returns.",
+          "when": [
+            "new-client"
+          ],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Purchases and inventory",
+      "items": [
+        {
+          "id": "purchases",
+          "label": "Documents for items bought to resell, or raw materials and parts",
+          "detail": "Canceled checks or other proof of payment or electronic funds transfer, cash register tape receipts, credit card receipts and statements, invoices. They should show the payee, amount paid, proof of payment, date and a description of the item.",
+          "when": [
+            "inventory"
+          ],
+          "basis": "records"
+        }
+      ]
+    },
+    {
+      "name": "Business expenses",
+      "items": [
+        {
+          "id": "expenses",
+          "label": "Documents for business expenses",
+          "detail": "Canceled checks or other proof of payment or electronic funds transfer, cash register tape receipts, account statements, credit card receipts and statements, invoices. They should show the payee, amount paid, proof of payment, date and a description showing the business purpose.",
+          "when": [],
+          "basis": "records"
+        },
+        {
+          "id": "petty-cash",
+          "label": "Petty cash slips for small cash payments",
+          "detail": "",
+          "when": [],
+          "basis": "p583"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle, travel and gifts",
+      "items": [
+        {
+          "id": "car-log",
+          "label": "Car records: mileage for each business use and total miles for the year",
+          "detail": "Also the cost of the car and any improvements, the date you started using it for business, the date of each use, the business destination and the business purpose.",
+          "when": [
+            "vehicle"
+          ],
+          "basis": "p463"
+        },
+        {
+          "id": "travel-records",
+          "label": "Travel records for each business trip",
+          "detail": "Cost of each separate expense for travel, lodging and meals; dates you left and returned and number of days spent on business; destination; business purpose.",
+          "when": [
+            "travel"
+          ],
+          "basis": "p463"
+        },
+        {
+          "id": "gift-records",
+          "label": "Records of business gifts",
+          "detail": "Cost, date and description of each gift.",
+          "when": [
+            "gifts"
+          ],
+          "basis": "p463"
+        },
+        {
+          "id": "travel-receipts",
+          "label": "Receipts, canceled checks or bills supporting travel, gift and car expenses",
+          "detail": "Publication 463 says documentary evidence is not needed for an expense, other than lodging, of less than $75, or a transportation expense for which a receipt is not readily available.",
+          "when": [
+            "vehicle",
+            "travel",
+            "gifts"
+          ],
+          "basis": "p463"
+        },
+        {
+          "id": "travel-log",
+          "label": "Account book, diary, log, statement of expense, trip sheets or similar record",
+          "detail": "",
+          "when": [
+            "vehicle",
+            "travel",
+            "gifts"
+          ],
+          "basis": "p463"
+        }
+      ]
+    },
+    {
+      "name": "Business use of the home",
+      "items": [
+        {
+          "id": "home-area",
+          "label": "Records showing the part of the home used for business",
+          "detail": "",
+          "when": [
+            "home-office"
+          ],
+          "basis": "p587"
+        },
+        {
+          "id": "home-use",
+          "label": "Records showing that part of the home is used exclusively and regularly for business",
+          "detail": "As the principal place of business or the place where clients or customers are met.",
+          "when": [
+            "home-office"
+          ],
+          "basis": "p587"
+        },
+        {
+          "id": "home-expenses",
+          "label": "Canceled checks, receipts and other evidence of home expenses paid",
+          "detail": "Records must show the depreciation and expenses for the business part.",
+          "when": [
+            "home-office"
+          ],
+          "basis": "p587"
+        },
+        {
+          "id": "home-basis",
+          "label": "Records proving the home's depreciable basis",
+          "detail": "When and how the home was acquired, the original purchase price, any improvements, and any depreciation allowed for an office in the home.",
+          "when": [
+            "home-office"
+          ],
+          "basis": "p587"
+        },
+        {
+          "id": "form-8829",
+          "label": "Copies of earlier Forms 8829 or the worksheet used to figure the deduction",
+          "detail": "",
+          "when": [
+            "home-office"
+          ],
+          "basis": "p587"
+        }
+      ]
+    },
+    {
+      "name": "Business assets",
+      "items": [
+        {
+          "id": "asset-info",
+          "label": "Records for each business asset, such as machinery and furniture",
+          "detail": "When and how acquired, purchase price, cost of improvements, Section 179 deduction taken, depreciation taken, casualty loss deductions, how the asset was used, when and how it was disposed of, selling price and expenses of sale.",
+          "when": [
+            "assets"
+          ],
+          "basis": "records"
+        },
+        {
+          "id": "asset-docs",
+          "label": "Purchase and sales invoices, real estate closing statements, and canceled checks or other proof of payment for assets",
+          "detail": "",
+          "when": [
+            "assets"
+          ],
+          "basis": "records"
+        }
+      ]
+    },
+    {
+      "name": "Employees",
+      "items": [
+        {
+          "id": "employment-tax",
+          "label": "Employment tax records",
+          "detail": "The IRS says to keep all records of employment for at least four years.",
+          "when": [
+            "employees"
+          ],
+          "basis": "records"
+        }
+      ]
+    }
+  ]
+}

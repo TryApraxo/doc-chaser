@@ -1,0 +1,211 @@
+{
+  "id": "legal-bankruptcy-chapter13",
+  "title": "Chapter 13 bankruptcy (individual debtor): documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-bankruptcy",
+  "use_when": "The client is an individual with regular income filing a chapter 13 (repayment plan) case.",
+  "note": "Based on 11 U.S.C. 521 and 1308, Bankruptcy Rule 4002, the U.S. Courts Bankruptcy Basics chapter 13 page and U.S. Trustee Program guidance for the section 341 meeting; the trustee and local rules may ask for more. The responsible lawyer decides what the matter needs.",
+  "sources": {
+    "uscourts-ch13": {
+      "name": "United States Courts, Bankruptcy Basics: Chapter 13",
+      "url": "https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-13-bankruptcy-basics",
+      "retrieved": "2026-11-11"
+    },
+    "usc-521": {
+      "name": "11 U.S.C. 521, Debtor's duties (Cornell Legal Information Institute)",
+      "url": "https://www.law.cornell.edu/uscode/text/11/521",
+      "retrieved": "2026-11-11"
+    },
+    "frbp-4002": {
+      "name": "Federal Rules of Bankruptcy Procedure, Rule 4002, Debtor's Duties, as amended effective Dec. 1, 2024 (Cornell Legal Information Institute)",
+      "url": "https://www.law.cornell.edu/rules/frbp/rule_4002",
+      "retrieved": "2026-11-11"
+    },
+    "ust-341": {
+      "name": "U.S. Department of Justice, U.S. Trustee Program, Section 341 Meeting of Creditors",
+      "url": "https://www.justice.gov/ust/moc",
+      "retrieved": "2026-11-11"
+    },
+    "ust-id": {
+      "name": "U.S. Trustee Program, Acceptable Photo Identification and Social Security Number Documents, 08/25/2023",
+      "url": "https://www.justice.gov/ust/media/1260521/dl?inline",
+      "retrieved": "2026-11-11"
+    },
+    "usc-1308": {
+      "name": "11 U.S.C. 1308, Filing of prepetition tax returns (Cornell Legal Information Institute)",
+      "url": "https://www.law.cornell.edu/uscode/text/11/1308",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "married": "Is the debtor married (whether or not the spouse is also filing)?",
+    "debt-plan": "Was a debt repayment plan developed during credit counseling?",
+    "education-account": "Does the debtor have an interest in an education IRA, ABLE account or state tuition program?",
+    "means-test-expenses": "Does the debtor claim monthly expenses that must be documented under 11 U.S.C. 707(b)(2)(A) or (B)?",
+    "annual-statement-requested": "Has the court, the United States trustee or a party in interest asked for the annual income and expense statement?",
+    "returns-requested": "Has the court, the U.S. trustee or a party in interest asked for tax returns filed during the case?"
+  },
+  "sections": [
+    {
+      "name": "Before filing",
+      "items": [
+        {
+          "id": "counseling-cert",
+          "label": "Certificate from the approved credit counseling agency",
+          "detail": "Counseling must be received within 180 days before filing from an approved credit counseling agency.",
+          "when": [],
+          "basis": "usc-521"
+        },
+        {
+          "id": "debt-plan",
+          "label": "Copy of the debt repayment plan developed through credit counseling",
+          "detail": "",
+          "when": [
+            "debt-plan"
+          ],
+          "basis": "usc-521"
+        },
+        {
+          "id": "creditors",
+          "label": "List of all creditors and the amount and nature of their claims",
+          "detail": "",
+          "when": [],
+          "basis": "uscourts-ch13"
+        },
+        {
+          "id": "income-info",
+          "label": "The source, amount, and frequency of the debtor's income",
+          "detail": "",
+          "when": [],
+          "basis": "uscourts-ch13"
+        },
+        {
+          "id": "property-list",
+          "label": "List of all of the debtor's property",
+          "detail": "",
+          "when": [],
+          "basis": "uscourts-ch13"
+        },
+        {
+          "id": "expenses",
+          "label": "Detailed list of the debtor's monthly living expenses",
+          "detail": "Food, clothing, shelter, utilities, taxes, transportation, medicine, etc.",
+          "when": [],
+          "basis": "uscourts-ch13"
+        },
+        {
+          "id": "spouse-info",
+          "label": "The same creditor, income, property and expense information for the debtor's spouse",
+          "detail": "Needed whether filing a joint petition, separate individual petitions, or even if only one spouse is filing.",
+          "when": [
+            "married"
+          ],
+          "basis": "uscourts-ch13"
+        },
+        {
+          "id": "pay-advices",
+          "label": "Copies of all payment advices or other evidence of payment from any employer",
+          "detail": "Received within 60 days before the date of the filing of the petition. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "usc-521"
+        },
+        {
+          "id": "income-change",
+          "label": "Any reasonably anticipated increase in income or expenditures",
+          "detail": "Over the 12-month period following the date of the filing of the petition.",
+          "when": [],
+          "basis": "usc-521"
+        },
+        {
+          "id": "education-accounts",
+          "label": "Record of any interest in an education IRA, qualified ABLE program or qualified state tuition program",
+          "detail": "",
+          "when": [
+            "education-account"
+          ],
+          "basis": "usc-521"
+        }
+      ]
+    },
+    {
+      "name": "For the trustee and the meeting of creditors",
+      "items": [
+        {
+          "id": "photo-id",
+          "label": "Clear copy of a government-issued photo ID",
+          "detail": "Acceptable: driver's license, U.S. government ID, state ID, student ID, passport or current visa if not a U.S. citizen, military ID, resident alien card, identity card issued by a national government authority. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "ust-id"
+        },
+        {
+          "id": "ssn-proof",
+          "label": "Evidence of the debtor's Social Security number",
+          "detail": "Acceptable: Social Security card, medical insurance card, pay stub, W-2 form, IRS Form 1099, Social Security Administration statement, or ITIN (only if the debtor is not eligible for an SSN). Tax returns are not acceptable proof. Or a written statement that the debtor has no Social Security number. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "ust-id"
+        },
+        {
+          "id": "current-income",
+          "label": "Evidence of current income, such as the most recent payment advice",
+          "detail": "If it does not exist or is not in the debtor's possession, a written statement saying so. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "frbp-4002"
+        },
+        {
+          "id": "account-statements",
+          "label": "Statement for each depository and investment account for the period that includes the petition filing date",
+          "detail": "Including checking, savings, and money market accounts, mutual funds and brokerage accounts, unless the trustee or the United States trustee instructs otherwise. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "frbp-4002"
+        },
+        {
+          "id": "expense-docs",
+          "label": "Documentation of claimed monthly expenses",
+          "detail": "If required by 11 U.S.C. 707(b)(2)(A) or (B).",
+          "when": [
+            "means-test-expenses"
+          ],
+          "basis": "frbp-4002"
+        },
+        {
+          "id": "tax-return",
+          "label": "Copy of the federal income tax return for the most recent tax year, including any attachments, or a transcript of the return",
+          "detail": "For the most recent tax year ending before the case was commenced and for which a return was filed. Due to the trustee at least 7 days before the first date set for the meeting of creditors. If none exists, a written statement saying so. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "frbp-4002"
+        },
+        {
+          "id": "later-returns",
+          "label": "Tax returns filed during the case",
+          "detail": "Section 521(f) makes this a duty at the request of the court, the United States trustee or any party in interest. Includes returns for prior years that had not been filed when the case began. Send through the secure portal, never by plain email.",
+          "when": [
+            "returns-requested"
+          ],
+          "basis": "usc-521"
+        }
+      ]
+    },
+    {
+      "name": "Chapter 13 additions",
+      "items": [
+        {
+          "id": "four-year-returns",
+          "label": "Filing status of every required tax return for the 4 years before the petition: which have been filed and which have not",
+          "detail": "Section 1308 requires the debtor to file these returns with the tax authorities not later than the day before the first scheduled meeting of creditors. It requires filing, not copies; the firm collects this to confirm the filing has been done.",
+          "when": [],
+          "basis": "usc-1308"
+        },
+        {
+          "id": "annual-statement",
+          "label": "Yearly statement of income and expenditures for the most recent tax year, and of monthly income",
+          "detail": "Under penalty of perjury, showing how income, expenditures, and monthly income are calculated; it must disclose the amount and sources of income, anyone responsible with the debtor for the support of a dependent, and anyone who contributed to the household and the amount.",
+          "when": [
+            "annual-statement-requested"
+          ],
+          "basis": "usc-521"
+        }
+      ]
+    }
+  ]
+}

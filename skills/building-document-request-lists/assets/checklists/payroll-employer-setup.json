@@ -1,0 +1,202 @@
+{
+  "id": "payroll-employer-setup",
+  "title": "New payroll client setup request",
+  "industry": "payroll",
+  "jurisdiction": "US federal",
+  "variant_of": "payroll-onboarding",
+  "use_when": "Use when a payroll provider or reporting agent is taking on a new employer client; use the new-hire and contractor lists for individual workers.",
+  "note": "Items follow IRS Form 8655 and IRS pages on EINs, employment tax deposits, EFTPS and employment tax recordkeeping. State and local payroll registrations and the provider's own bank authorization forms are not covered.",
+  "sources": {
+    "form-8655": {
+      "name": "IRS Form 8655, Reporting Agent Authorization (Rev. January 2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8655.pdf",
+      "retrieved": "2026-11-11"
+    },
+    "irs-ein": {
+      "name": "IRS, Get an employer identification number (page last reviewed or updated 16-Oct-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
+      "retrieved": "2026-11-11"
+    },
+    "irs-deposits": {
+      "name": "IRS, Depositing and reporting employment taxes (page last reviewed or updated 29-Jun-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes",
+      "retrieved": "2026-11-11"
+    },
+    "irs-eftps": {
+      "name": "IRS, EFTPS: The Electronic Federal Tax Payment System (page last reviewed or updated 10-Nov-2026)",
+      "url": "https://www.irs.gov/payments/eftps-the-electronic-federal-tax-payment-system",
+      "retrieved": "2026-11-11"
+    },
+    "irs-emp-records": {
+      "name": "IRS, Employment tax recordkeeping (page last reviewed or updated 12-Jun-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-recordkeeping",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "existing-payroll": "Has the business already paid employees under this EIN?",
+    "form-944": "Has the IRS notified the business in writing that it is in the Form 944 program?",
+    "state-local": "Will the reporting agent also sign and file state or local returns?"
+  },
+  "sections": [
+    {
+      "name": "Employer identity and authorization",
+      "items": [
+        {
+          "id": "ein",
+          "label": "Employer identification number (EIN) and the EIN confirmation letter",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "irs-ein"
+        },
+        {
+          "id": "legal-name",
+          "label": "Name of taxpayer (as distinguished from trade name), trade name if any, and address",
+          "detail": "Form 8655 lines 1a, 1b and 3.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "contact",
+          "label": "Contact person and daytime telephone number",
+          "detail": "Form 8655 lines 6 and 7.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "seasonal",
+          "label": "Whether the business is a seasonal employer",
+          "detail": "Form 8655 line 4.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "f8655",
+          "label": "Signed Form 8655, Reporting Agent Authorization",
+          "detail": "Signed by the taxpayer, with title and date. The authority is effective upon signature of the taxpayer and IRS receipt of Form 8655. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "returns-scope",
+          "label": "Which returns the reporting agent will sign and file, and the starting period for each",
+          "detail": "Form 8655 line 15 lists Forms 940, 941, 943, 944, 945, 1042 and CT-1.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "deposits-scope",
+          "label": "Which deposits and payments the reporting agent will make, and the starting month for each",
+          "detail": "Form 8655 line 16.",
+          "when": [],
+          "basis": "form-8655"
+        },
+        {
+          "id": "state-local-auth",
+          "label": "Authorization for the reporting agent to sign and file state or local returns",
+          "detail": "Form 8655 line 19 checkbox.",
+          "when": [
+            "state-local"
+          ],
+          "basis": "form-8655"
+        }
+      ]
+    },
+    {
+      "name": "Deposits and filing",
+      "items": [
+        {
+          "id": "deposit-schedule",
+          "label": "Federal tax deposit schedule: monthly or semi-weekly",
+          "detail": "The IRS says the employer must determine which of the two schedules applies before the beginning of each calendar year.",
+          "when": [],
+          "basis": "irs-deposits"
+        },
+        {
+          "id": "f944-notice",
+          "label": "IRS written notification about the Form 944 program",
+          "detail": "",
+          "when": [
+            "form-944"
+          ],
+          "basis": "irs-deposits"
+        },
+        {
+          "id": "eftps",
+          "label": "Whether the business is enrolled in EFTPS",
+          "detail": "The IRS says new enrollments for EFTPS can take up to five business days to process.",
+          "when": [],
+          "basis": "irs-eftps"
+        }
+      ]
+    },
+    {
+      "name": "Existing payroll records",
+      "items": [
+        {
+          "id": "prior-returns",
+          "label": "Copies of employment tax returns filed and confirmation numbers",
+          "detail": "",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "prior-deposits",
+          "label": "Dates and amounts of tax deposits made, and acknowledgment numbers for deposits made by EFTPS",
+          "detail": "",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "prior-wages",
+          "label": "Amounts and dates of all wage, annuity and pension payments",
+          "detail": "",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "employee-list",
+          "label": "Names, addresses, Social Security numbers and occupations of employees",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "employment-dates",
+          "label": "Dates of employment for each employee",
+          "detail": "",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "w4-copies",
+          "label": "Copies of employees' income tax withholding certificates (Forms W-4)",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        },
+        {
+          "id": "fringe",
+          "label": "Records of fringe benefits and expense reimbursements provided to employees",
+          "detail": "",
+          "when": [
+            "existing-payroll"
+          ],
+          "basis": "irs-emp-records"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "id": "mortgage-conventional-salaried",
+  "title": "Conventional mortgage needs list: wage earner (Fannie Mae)",
+  "industry": "mortgage",
+  "jurisdiction": "US",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Pick this for a conventional loan to be sold to Fannie Mae when the borrower qualifies on W-2 employment income, instead of the self-employed, rental-income or other-income variants.",
+  "note": "Items follow the Fannie Mae Selling Guide topics cited, as published on the retrieval date; they apply to loans sold to Fannie Mae. Desktop Underwriter findings may ask for different documents, and lender overlays add conditions.",
+  "sources": {
+    "employment-docs": {
+      "name": "Fannie Mae Selling Guide B3-3.2-01, Standards for Employment and Income Documentation (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.2-01/standards-employment-and-income-documentation",
+      "retrieved": "2026-11-11"
+    },
+    "employment-income": {
+      "name": "Fannie Mae Selling Guide B3-3.2-02, Standards for Employment-Related Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.2-02/standards-employment-related-income",
+      "retrieved": "2026-11-11"
+    },
+    "base-income": {
+      "name": "Fannie Mae Selling Guide B3-3.3-01, Base Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-01/base-income",
+      "retrieved": "2026-11-11"
+    },
+    "variable-income": {
+      "name": "Fannie Mae Selling Guide B3-3.3-02, Bonus, Commission, Overtime, and Tip Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-02/bonus-commission-overtime-and-tip-income",
+      "retrieved": "2026-11-11"
+    },
+    "offers": {
+      "name": "Fannie Mae Selling Guide B3-3.3-03, Employment Offers or Contracts (10/07/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-03/employment-offers-or-contracts",
+      "retrieved": "2026-11-11"
+    },
+    "military": {
+      "name": "Fannie Mae Selling Guide B3-3.3-05, Military Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-05/military-income",
+      "retrieved": "2026-11-11"
+    },
+    "seasonal": {
+      "name": "Fannie Mae Selling Guide B3-3.3-08, Seasonal Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-08/seasonal-income",
+      "retrieved": "2026-11-11"
+    },
+    "unemployment": {
+      "name": "Fannie Mae Selling Guide B3-3.4-17, Unemployment Benefits Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.4-17/unemployment-benefits-income",
+      "retrieved": "2026-11-11"
+    },
+    "leave": {
+      "name": "Fannie Mae Selling Guide B3-3.3-09, Temporary Leave Income (03/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.3-09/temporary-leave-income",
+      "retrieved": "2026-11-11"
+    },
+    "tax-transcripts": {
+      "name": "Fannie Mae Selling Guide B3-3.1-02, Tax Return and Transcript Documentation Requirements (06/03/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-3.1-02/tax-return-and-transcript-documentation-requirements",
+      "retrieved": "2026-11-11"
+    },
+    "assets": {
+      "name": "Fannie Mae Selling Guide B3-4.2-01, Verification of Deposits and Assets (05/04/2022)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-4.2-01/verification-deposits-and-assets",
+      "retrieved": "2026-11-11"
+    },
+    "deposits": {
+      "name": "Fannie Mae Selling Guide B3-4.2-02, Depository Accounts (12/14/2022)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-4.2-02/depository-accounts",
+      "retrieved": "2026-11-11"
+    },
+    "earnest-money": {
+      "name": "Fannie Mae Selling Guide B3-4.3-09, Earnest Money Deposit (05/04/2022)",
+      "url": "https://selling-guide.fanniemae.com/sel/b3-4.3-09/earnest-money-deposit",
+      "retrieved": "2026-11-11"
+    },
+    "doc-age": {
+      "name": "Fannie Mae Selling Guide B1-1-03, Allowable Age of Credit Documents and Federal Income Tax Returns (04/02/2025)",
+      "url": "https://selling-guide.fanniemae.com/sel/b1-1-03/allowable-age-credit-documents-and-federal-income-tax-returns",
+      "retrieved": "2026-11-11"
+    }
+  },
+  "situations": {
+    "variable-pay": "Is bonus, commission, overtime or tip income being used to qualify?",
+    "unreported-tips": "Is tip income used that the employer does not report on the W-2?",
+    "second-job": "Is income from more than one job at the same time being used?",
+    "seasonal": "Is seasonal employment income being used?",
+    "seasonal-unemployment": "Is unemployment compensation tied to seasonal layoffs being used as income?",
+    "military": "Is the borrower paid as a military servicemember?",
+    "new-job": "Will the borrower start a new job under an offer or contract?",
+    "temporary-leave": "Will the borrower be on temporary leave (parental, short-term medical or similar) at closing?",
+    "family-employer": "Is the borrower employed by a family member or by a party with an interest in the transaction?",
+    "foreign-income": "Is the borrower paid in foreign currency by a foreign company or government?",
+    "purchase": "Is this a purchase?",
+    "refinance": "Is this a refinance?",
+    "old-statement": "Is the latest bank statement dated more than 45 days before the loan application?",
+    "retirement-assets": "Are retirement account funds being counted as assets?",
+    "large-deposit": "On a purchase, does any account show a single deposit above 50% of total monthly qualifying income that is needed for the transaction?",
+    "earnest-money": "Was an earnest money deposit paid on the purchase contract?"
+  },
+  "sections": [
+    {
+      "name": "Employment income",
+      "items": [
+        {
+          "id": "paystub",
+          "label": "Most recent pay stub",
+          "detail": "Dated no earlier than 30 days before the initial loan application date and showing all year-to-date earnings. Must be computer-generated or typed by the employer (a pay stub downloaded from the Internet is fine) and name the employer. Alternative: the employer completes a Request for Verification of Employment (Form 1005) for the lender.",
+          "when": [],
+          "basis": "employment-docs"
+        },
+        {
+          "id": "w2-recent",
+          "label": "Most recent W-2",
+          "detail": "For salary or fixed hourly pay the Guide asks for the most recent pay stub plus the most recent W-2, or a completed Form 1005 from the employer instead of both.",
+          "when": [],
+          "basis": "base-income"
+        },
+        {
+          "id": "w2-substitute",
+          "label": "Year-end pay stub or IRS Wage and Income transcript if a W-2 is missing",
+          "detail": "The Guide treats the W-2 for the calendar year before the current one as the most recent. A year-end pay stub showing the full year's earnings, an IRS Wage and Income (W-2) transcript or Form 1005 may stand in for it.",
+          "when": [],
+          "basis": "employment-docs"
+        },
+        {
+          "id": "w2-two-years",
+          "label": "W-2s for the last two years",
+          "detail": "Asked with the most recent pay stub when bonus, commission, overtime or tip income is used. Alternative: a completed Form 1005 from the employer.",
+          "when": [
+            "variable-pay"
+          ],
+          "basis": "variable-income"
+        },
+        {
+          "id": "tips-4137",
+          "label": "Personal federal tax returns for the last two years including IRS Form 4137",
+          "detail": "For tip income the employer does not report; may be given in place of the W-2s.",
+          "when": [
+            "unreported-tips"
+          ],
+          "basis": "variable-income"
+        },
+        {
+          "id": "second-job-docs",
+          "label": "Pay stub and W-2 documents for every job whose income is used",
+          "detail": "Each income source is documented under the rules for its own income type.",
+          "when": [
+            "second-job"
+          ],
+          "basis": "employment-income"
+        },
+        {
+          "id": "seasonal-w2",
+          "label": "Most recent pay stub and W-2s for the last two years from the seasonal employer",
+          "detail": "Alternative: a completed Form 1005 from the employer.",
+          "when": [
+            "seasonal"
+          ],
+          "basis": "seasonal"
+        },
+        {
+          "id": "seasonal-unemployment-returns",
+          "label": "Signed personal federal tax returns for the last two years showing the unemployment compensation",
+          "detail": "",
+          "when": [
+            "seasonal-unemployment"
+          ],
+          "basis": "unemployment"
+        },
+        {
+          "id": "les",
+          "label": "Most recent military Leave and Earnings Statement (LES)",
+          "detail": "Dated within 120 days of the note date.",
+          "when": [
+            "military"
+          ],
+          "basis": "military"
+        },
+        {
+          "id": "offer-letter",
+          "label": "Fully signed employment offer or contract",
+          "detail": "Must identify the employer and the borrower and state the position, type and rate of pay and start date. Acceptance can be shown by a signed agreement, a written confirmation such as an email, or other verifiable means. Where no pay stub will exist before the loan is delivered, the offer must also be non-contingent.",
+          "when": [
+            "new-job"
+          ],
+          "basis": "offers"
+        },
+        {
+          "id": "offer-paystub",
+          "label": "First pay stub from the new job, once received",
+          "detail": "Under the option where a pay stub is obtained before loan delivery, the lender keeps the most recent pay stub supporting the income in the offer.",
+          "when": [
+            "new-job"
+          ],
+          "basis": "offers"
+        },
+        {
+          "id": "leave-intent",
+          "label": "Written confirmation that you intend to return to work",
+          "detail": "",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "leave"
+        },
+        {
+          "id": "leave-return-date",
+          "label": "Employer document confirming the expected return-to-work date",
+          "detail": "Produced by the employer or its leave administrator, for example earlier correspondence stating the length of leave or return date, or a printout from the employer's system. The borrower, the employer or the administrator may send it.",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "leave"
+        },
+        {
+          "id": "leave-pay",
+          "label": "Documents showing the amount and duration of leave pay and the regular pay received before the leave",
+          "detail": "May take several documents depending on the type and length of leave.",
+          "when": [
+            "temporary-leave"
+          ],
+          "basis": "leave"
+        },
+        {
+          "id": "family-employer-return",
+          "label": "Most recent year's signed federal income tax return",
+          "detail": "Asked when the employer is a family member or interested party; the Guide uses it to see the borrower's ownership share in that business. The most recent year's earnings are documented with a W-2 or tax returns.",
+          "when": [
+            "family-employer"
+          ],
+          "basis": "employment-income"
+        },
+        {
+          "id": "foreign-returns",
+          "label": "Signed federal income tax returns for the most recent two years that include the foreign employment income",
+          "detail": "",
+          "when": [
+            "foreign-income"
+          ],
+          "basis": "employment-income"
+        },
+        {
+          "id": "foreign-translation",
+          "label": "English versions of any foreign-language documents",
+          "detail": "Documents of foreign origin must be in English; otherwise the lender has to attach a complete translation to each one.",
+          "when": [
+            "foreign-income"
+          ],
+          "basis": "employment-income"
+        }
+      ]
+    },
+    {
+      "name": "Tax authorization",
+      "items": [
+        {
+          "id": "form-4506c",
+          "label": "Signed IRS Form 4506-C",
+          "detail": "One for each borrower whose income is used, completed and signed at or before closing; the form is valid for 120 days after signing. The Guide says the borrower should not be asked to sign until the transcript type, years and date are filled in. An alternative authorization such as IRS Form 8821 may be used. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "tax-transcripts"
+        }
+      ]
+    },
+    {
+      "name": "Assets and funds to close",
+      "items": [
+        {
+          "id": "statements-purchase",
+          "label": "Bank or investment account statements covering the most recent two full months",
+          "detail": "60 days, or the most recent quarter if the account reports quarterly. Each statement must show the institution, the borrower as account holder, at least the last four digits of the account number, the period covered, all transactions and the ending balance. Alternative: a Request for Verification of Deposit (Form 1006) returned directly by the bank. Send through the secure portal, never by plain email.",
+          "when": [
+            "purchase"
+          ],
+          "basis": "assets"
+        },
+        {
+          "id": "statements-refinance",
+          "label": "Bank or investment account statement covering the most recent full month",
+          "detail": "30 days, or the most recent quarter if the account reports quarterly. Same content requirements as for a purchase. Alternative: a Request for Verification of Deposit (Form 1006) returned directly by the bank. Send through the secure portal, never by plain email.",
+          "when": [
+            "refinance"
+          ],
+          "basis": "assets"
+        },
+        {
+          "id": "statement-update",
+          "label": "More recent bank-generated balance printout",
+          "detail": "Showing at least the last four digits of the account number, the balance and the date. Send through the secure portal, never by plain email.",
+          "when": [
+            "old-statement"
+          ],
+          "basis": "assets"
+        },
+        {
+          "id": "retirement-statement",
+          "label": "Most recent retirement account statement",
+          "detail": "Must show the borrower's vested amount and the terms. Send through the secure portal, never by plain email.",
+          "when": [
+            "retirement-assets"
+          ],
+          "basis": "assets"
+        },
+        {
+          "id": "large-deposit",
+          "label": "Explanation and source documents for each large deposit",
+          "detail": "Examples the Guide gives: a written explanation from the borrower, proof of ownership of an asset that was sold, or a wedding invitation supporting gift funds. Not needed where the source is printed on the statement, such as payroll, Social Security or a tax refund.",
+          "when": [
+            "large-deposit"
+          ],
+          "basis": "deposits"
+        },
+        {
+          "id": "emd-receipt",
+          "label": "Proof the earnest money deposit was received",
+          "detail": "A copy of the borrower's canceled check or a written statement from the holder of the deposit.",
+          "when": [
+            "earnest-money"
+          ],
+          "basis": "earnest-money"
+        },
+        {
+          "id": "emd-source",
+          "label": "Bank statements supporting the earnest money deposit",
+          "detail": "When the deposit counts toward the borrower's minimum contribution: statements showing the average balance for the past two months supported the deposit. If a canceled check is used, the statements must run up to and including the date the check cleared. Send through the secure portal, never by plain email.",
+          "when": [
+            "earnest-money"
+          ],
+          "basis": "earnest-money"
+        }
+      ]
+    },
+    {
+      "name": "Keeping documents current",
+      "items": [
+        {
+          "id": "refresh",
+          "label": "Updated pay stub or account statement if an earlier one becomes too old",
+          "detail": "Employment, income and asset documents must be no more than four months old on the note date; older ones have to be updated.",
+          "when": [],
+          "basis": "doc-age"
+        }
+      ]
+    }
+  ]
+}

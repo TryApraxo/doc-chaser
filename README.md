@@ -14,12 +14,34 @@ Skills for the paperwork side of a professional-services firm: asking clients fo
 | `reviewing-received-documents` | "Check what the client sent. What's still missing?" | Each item marked received, rejected or outstanding, with the exact resend instruction |
 | `drafting-client-reminders` | "The client still hasn't sent their W-2. Write a reminder." | A first request, reminders and a final notice, for email or text |
 | `estimating-chasing-cost` | "How much does chasing clients cost us?" | Hours and cost per year from your own numbers, with what-if scenarios |
-| `drafting-wisp` | "I need a WISP for my tax practice." | A Written Information Security Plan draft in the IRS Publication 5708 structure, with gaps marked |
+| `drafting-wisp` | "I need a WISP for my tax practice." | A Written Information Security Plan draft in the IRS Publication 5708 structure (full or sole-practitioner version), plus a data-theft response checklist and a basic-safeguards checklist |
 | `assessing-safeguards-readiness` | "Where do we stand on the FTC Safeguards Rule?" | A gap report: every requirement with its status and citation, and what to fix first |
 | `calculating-trid-deadlines` | "When must the borrower have the CD for an April 2 closing?" | Loan Estimate and Closing Disclosure dates, each with its Regulation Z citation |
-| `drafting-gift-letters` | "Her parents are gifting the down payment. Draft the gift letter." | A gift letter with the elements Fannie Mae requires, eligibility flags and the transfer evidence to collect |
+| `drafting-gift-letters` | "Her parents are gifting the down payment. Draft the gift letter." | A gift letter for the loan program (Fannie Mae, Freddie Mac, FHA, VA, or a Fannie Mae gift of equity), eligibility flags and the transfer evidence to collect |
+| `drafting-incompleteness-notices` | "The borrower still hasn't sent the documents and the 30 days are running." | The Regulation B notice of incomplete application in the sample-form wording, with the 30-day timing check |
 
-Bundled request-list templates: individual tax return (Form 1040), bookkeeping onboarding, mortgage purchase, mortgage refinance, legal client intake and agency onboarding.
+## Template library
+
+37 request-list templates and 11 letter, plan and checklist templates. Templates with the same purpose come as variants for different conditions; each skill picks the variant that fits the client. Every template added since 0.5.0 cites the official source for each item, with the edition and the date it was read.
+
+| Purpose | Variants |
+|---|---|
+| Individual tax return | General 1040; simple wage earner (IRS free-prep list); self-employed (Schedule C); rental property (Schedule E) |
+| ITIN application | Form W-7 supporting documents, with tags for dependents and renewals |
+| Proof for credits and filing status | EITC qualifying child; dependents and head of household; education credit (IRS Form 886-H series) |
+| Business records | Short list by category; itemized list with employment tax records (IRS Publication 583); bookkeeping onboarding |
+| Payroll onboarding | New employee (Form W-4 and Form I-9 Lists A, B, C); new contractor (Form W-9); new employer client (Form 8655, EIN, EFTPS) |
+| Mortgage needs list | Program not yet known (purchase, refinance); conventional salaried; conventional self-employed; rental income; other income sources; FHA; VA eligibility evidence |
+| Mortgage hardship | Mortgage assistance application (Form 710) by hardship and income type |
+| SBA loans and banking | 7(a) application; disaster loan for a business; disaster loan for a home; business bank account |
+| Immigration | I-130 for a spouse; I-130 for a parent, child or sibling; I-485 family-based; N-400 naturalization |
+| Bankruptcy | Chapter 7; chapter 13 |
+| Social Security disability | Adult; child |
+| Gift letter | Fannie Mae; Freddie Mac; FHA; VA; Fannie Mae gift of equity |
+| Security plan | Full WISP; sole-practitioner WISP; data-theft response checklist; basic-safeguards checklist |
+| Notice of incomplete application | Written notice; written notice after an oral request (Regulation B Form C-6) |
+
+The full index, with a "use when" line for each file, is in [template-index.md](skills/building-document-request-lists/references/template-index.md).
 
 ## Example prompts
 
@@ -31,6 +53,10 @@ Bundled request-list templates: individual tax return (Form 1040), bookkeeping o
 - "We mailed the LE on June 29. What's the earliest we can close?"
 - "She uploaded a January pay stub and half a bank statement. What do I still need, and what do I tell her?"
 - "Borrower's mother is wiring $20,000 for the down payment on a primary residence. Draft the gift letter."
+- "New hire starts Monday. What do I collect for payroll and the I-9?"
+- "Client is filing chapter 13. What documents do I need from them before the meeting of creditors?"
+- "FHA loan, the borrower's aunt is giving $8,000. Draft the gift letter."
+- "Application came in October 20 and we still have no bank statements. Draft the notice of incompleteness."
 - "Two-person tax shop, 400 clients, MFA on the tax software but not on email. Where do we stand on the Safeguards Rule?"
 
 ## Install
@@ -75,9 +101,19 @@ Your conversation with Claude is handled under the terms of the Claude product y
 | Gift letter rules | Fannie Mae Selling Guide [B3-4.3-04, Personal Gifts](https://selling-guide.fanniemae.com/sel/b3-4.3-04/personal-gifts) (topic dated 02/04/2026) |
 | Retention reference | IRS, [How long should I keep records?](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
 | TRID timing | Regulation Z, [12 CFR 1026.19](https://www.consumerfinance.gov/rules-policy/regulations/1026/19/) and [1026.2](https://www.consumerfinance.gov/rules-policy/regulations/1026/2/) |
-| Bookkeeping, legal and agency lists; reminder cadence; document completeness checks | Common practice. No official source; edit them to fit your firm |
+| Tax variants, ITIN, credit proof, business records | IRS: free tax preparation checklist, Form 13614-C, Publications 583, 527, 587 and 463, Form W-7 instructions, Forms 886-H-EIC, 886-H-DEP, 886-H-HOH and 886-H-AOC |
+| Payroll | IRS hiring-employees and independent-contractor pages, Forms W-9 and 8655; USCIS Form I-9 (edition 01/20/25) and its Lists of Acceptable Documents |
+| Mortgage variants | Fannie Mae Selling Guide income, asset and rental topics; HUD Handbook 4000.1 (issued August 12, 2026); VA.gov Certificate of Eligibility pages; Fannie Mae/Freddie Mac Form 710 |
+| SBA | 13 CFR 120.191; SBA Forms 1919, 413, 5 and 5C; SBA.gov |
+| Immigration | USCIS Form I-130 and I-485 instructions, the I-485 initial evidence checklist, and Form M-477 |
+| Bankruptcy | 11 U.S.C. 521 and 1308; Bankruptcy Rule 4002; U.S. Courts Bankruptcy Basics; U.S. Trustee Program |
+| Social Security disability | SSA Adult and Child Disability Starter Kits; SSA online application checklist |
+| Gift letter variants | Freddie Mac Guide 5501.4; HUD Handbook 4000.1; VA Pamphlet 26-7 chapter 4; Fannie Mae B3-4.3-05 |
+| Notice of incomplete application | Regulation B, [12 CFR 1002.9](https://www.consumerfinance.gov/rules-policy/regulations/1002/9/) and Appendix C, Form C-6 |
+| Breach response and basic safeguards | IRS data-theft page and Publication 4557; FTC Data Breach Response guide; 16 CFR 314.4(j) |
+| The six original general lists (parts), reminder cadence, document completeness checks | Common practice. No official source; labelled in each file; edit them to fit your firm |
 
-Sources were read on 2026-11-11. Rules and guides change: check the linked source before relying on a specific requirement. The adaptation of government material is not endorsed by any agency.
+Sources were read on 2026-11-11. Each template file names the exact document, edition and URL for its items. Rules and guides change: check the linked source before relying on a specific requirement. The adaptation of government material is not endorsed by any agency.
 
 ## Limits
 
@@ -85,7 +121,10 @@ Sources were read on 2026-11-11. Rules and guides change: check the linked sourc
 - Mortgage lists are the common core. Lender, investor and loan-program rules add conditions.
 - The TRID calculator does not model state waiting periods, rescission, timeshares or the restart of the Closing Disclosure waiting period.
 - A WISP draft does not make a firm compliant. It must describe what the firm really does and be reviewed and signed by the firm.
-- Gift letter checks follow Fannie Mae's rules for conventional loans. FHA, VA, USDA, Freddie Mac and portfolio loans differ.
+- Gift letters cover Fannie Mae, Freddie Mac, FHA and VA. USDA and portfolio loans have no template.
+- Templates built from an agency form follow the edition named in the file. Some editions are old (USCIS M-477 is from 2016; SBA Forms 5 and 5C show a passed expiry date). Check the agency's current edition before filing.
+- The VA list covers Certificate of Eligibility evidence only. The FHA list covers the automated-underwriting sections of the Handbook, not manual underwriting. The SBA 7(a) list is the regulation's minimum; lenders ask for more. No USDA list.
+- The notice of incomplete application covers Regulation B only, and the creditor chooses the response date.
 - The Safeguards check is a self-assessment from your own answers. It is not an audit and never concludes that a firm complies.
 - The document review checks completeness. It does not judge whether a document is genuine.
 - The chasing-cost calculator uses your numbers only. It contains no industry benchmarks.
@@ -100,7 +139,7 @@ claude plugin validate --profile directory --strict .
 claude plugin eval .
 ```
 
-The `evals/` folder holds nine end-to-end cases, each run with and without the plugin. The TRID reference file includes check cases from the Regulation Z official commentary.
+The `evals/` folder holds thirteen end-to-end cases, each run with and without the plugin. The TRID reference file includes check cases from the Regulation Z official commentary.
 
 ## Support
 
