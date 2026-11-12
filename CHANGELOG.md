@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (2026-11-11)
+
+- Repository moved to `TryApraxo/doc-chaser`; links and install commands updated.
+
 ## 0.4.0 (2026-11-11)
 
 - The plugin no longer ships any scripts. The directory will accept scripts only from Verified organizations, so the five skills that used one now carry the formula, counting procedure or rules in their instructions and reference files, with check cases.

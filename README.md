@@ -38,7 +38,7 @@ Bundled request-list templates: individual tax return (Form 1040), bookkeeping o
 In Claude Code:
 
 ```bash
-claude plugin marketplace add ApraxoTeam/doc-chaser
+claude plugin marketplace add TryApraxo/doc-chaser
 ```
 
 ```bash
@@ -104,7 +104,7 @@ The `evals/` folder holds nine end-to-end cases, each run with and without the p
 
 ## Support
 
-Open an issue at https://github.com/ApraxoTeam/doc-chaser/issues
+Open an issue at https://github.com/TryApraxo/doc-chaser/issues
 
 ## About Apraxo
 
