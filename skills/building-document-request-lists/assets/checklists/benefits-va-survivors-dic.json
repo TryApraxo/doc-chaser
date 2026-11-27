@@ -1,0 +1,201 @@
+{
+  "id": "benefits-va-survivors-dic",
+  "title": "VA survivors claim (DIC, Survivors Pension, accrued benefits): evidence and forms",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "benefits-va",
+  "use_when": "Use when a surviving spouse, child, or parent of a Veteran or service member is claiming Dependency and Indemnity Compensation, Survivors Pension, or accrued benefits; use benefits-va-pension or benefits-va-disability-compensation for a living Veteran's own claim.",
+  "note": "Built from the VA.gov pages Evidence to support VA pension, DIC, or accrued benefits claims (last updated September 22, 2026), About VA DIC for spouses, dependents, and parents (September 25, 2026), and Survivors Pension (September 23, 2026). The official evidence requirements are in VA Form 21P-534EZ, which was not loaded; eligibility, income and net worth limits, and burial benefits are not covered.",
+  "sources": {
+    "va-survivor-evidence": {
+      "name": "U.S. Department of Veterans Affairs, Evidence to support VA pension, DIC, or accrued benefits claims (Last updated: September 22, 2026)",
+      "url": "https://www.va.gov/resources/evidence-to-support-va-pension-dic-or-accrued-benefits-claims/",
+      "retrieved": "2026-11-26"
+    },
+    "va-dic": {
+      "name": "U.S. Department of Veterans Affairs, About VA DIC for spouses, dependents, and parents (Last updated: September 25, 2026)",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation/",
+      "retrieved": "2026-11-26"
+    },
+    "va-survivors-pension": {
+      "name": "U.S. Department of Veterans Affairs, Survivors Pension (Last updated: September 23, 2026)",
+      "url": "https://www.va.gov/pension/survivors-pension/",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "survivor-of-veteran": "Is the claimant the surviving spouse or child of a Veteran (rather than of a service member who died on active duty)?",
+    "active-duty-death": "Did the service member die while on active duty?",
+    "parent": "Is the claimant a surviving parent?",
+    "spouse": "Is the claimant the surviving spouse?",
+    "dic": "Is the claim for Dependency and Indemnity Compensation?",
+    "survivors-pension": "Is the claim for Survivors Pension?",
+    "not-sc-death": "Did the Veteran die of a cause not connected to service while rated totally disabled for a service-connected disability?",
+    "aid-attendance": "Is the survivor claiming extra benefits for Aid and Attendance or being housebound?",
+    "care-facility": "Is the survivor in an assisted living facility or a nursing home?",
+    "estate-rep": "Has a representative of the deceased beneficiary's estate been appointed?",
+    "last-illness-burial": "Is the claimant seeking reimbursement for the deceased beneficiary's last illness and burial expenses?"
+  },
+  "sections": [
+    {
+      "name": "Application form",
+      "items": [
+        {
+          "id": "form-534ez",
+          "label": "Application for DIC, Survivors Pension, and/or Accrued Benefits",
+          "detail": "VA Form 21P-534EZ, for the surviving spouse or child of a Veteran; mailed to Department of Veterans Affairs, Pension Intake Center, PO Box 5365, Janesville, WI 53547-5365, or brought to a regional office. Send through the secure portal, never by plain email.",
+          "when": [
+            "survivor-of-veteran"
+          ],
+          "basis": "va-survivors-pension"
+        },
+        {
+          "id": "form-534a",
+          "label": "Application for Dependency and Indemnity Compensation by a Surviving Spouse or Child",
+          "detail": "VA Form 21P-534a. The military casualty assistance officer helps complete and mail it. Send through the secure portal, never by plain email.",
+          "when": [
+            "active-duty-death"
+          ],
+          "basis": "va-dic"
+        },
+        {
+          "id": "form-535",
+          "label": "Application for Dependency and Indemnity Compensation by Parent(s)",
+          "detail": "VA Form 21P-535. Send through the secure portal, never by plain email.",
+          "when": [
+            "parent"
+          ],
+          "basis": "va-dic"
+        }
+      ]
+    },
+    {
+      "name": "About the Veteran",
+      "items": [
+        {
+          "id": "dd214",
+          "label": "The Veteran's DD214 or other separation documents",
+          "detail": "Submit or give VA permission to gather. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "death-certificate",
+          "label": "Copy of the Veteran's death certificate showing cause of death",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "guard-reserve-records",
+          "label": "Service treatment and personnel records held by the Veteran's National Guard or Reserve unit",
+          "detail": "Any that are relevant; submit or give VA permission to gather. Send through the secure portal, never by plain email.",
+          "when": [
+            "dic"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "private-records",
+          "label": "The Veteran's relevant private medical treatment records",
+          "detail": "Evidence may include doctor's reports and medical test results. Send through the secure portal, never by plain email.",
+          "when": [
+            "dic"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "federal-records",
+          "label": "The Veteran's treatment records held at a federal facility, like a VA medical center",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "dic"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "lay-evidence",
+          "label": "Statements from people who saw the Veteran's chronic (long-lasting) symptoms",
+          "detail": "Lay evidence from someone who is not a trained professional.",
+          "when": [
+            "dic"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "total-rating",
+          "label": "Evidence the Veteran was rated 100% disabled for a service-connected disability for the required period",
+          "detail": "At least 10 years before death; or since release from active duty and at least 5 years immediately before death; or at least 1 year before death for a former POW who died after September 30, 1999.",
+          "when": [
+            "not-sc-death"
+          ],
+          "basis": "va-dic"
+        }
+      ]
+    },
+    {
+      "name": "About the survivor",
+      "items": [
+        {
+          "id": "marriage",
+          "label": "Marriage certificate or other evidence of the marriage",
+          "detail": "Showing marriage to the Veteran for at least 1 year immediately before death, or a child born before or during the marriage, or marriage before a fixed date based on certain wartime periods. Send through the secure portal, never by plain email.",
+          "when": [
+            "spouse"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "income-net-worth",
+          "label": "Evidence of family net worth and yearly income",
+          "detail": "Must meet limits set by Congress. Net worth excludes the house, car, and most home furnishings. Send through the secure portal, never by plain email.",
+          "when": [
+            "survivors-pension"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "form-2680",
+          "label": "Examination for Housebound Status or Permanent Need for Regular Aid and Attendance",
+          "detail": "VA Form 21-2680. Send through the secure portal, never by plain email.",
+          "when": [
+            "aid-attendance"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "form-0779",
+          "label": "Request for Nursing Home Information in Connection with Claim for Aid and Attendance",
+          "detail": "VA Form 21-0779, for someone in an assisted living facility or nursing home.",
+          "when": [
+            "care-facility"
+          ],
+          "basis": "va-survivor-evidence"
+        }
+      ]
+    },
+    {
+      "name": "Accrued benefits and estate",
+      "items": [
+        {
+          "id": "estate-letters",
+          "label": "Certified copy of the letters of administration or letters testamentary",
+          "detail": "With the signature and seal of the appointing court.",
+          "when": [
+            "estate-rep"
+          ],
+          "basis": "va-survivor-evidence"
+        },
+        {
+          "id": "last-illness-bills",
+          "label": "All billing and account statements for the last illness and burial",
+          "detail": "On the creditor's regular billhead, showing the dates, nature and costs of services or supplies, the name of the deceased who paid for them, and proof of payment and who paid. Send through the secure portal, never by plain email.",
+          "when": [
+            "last-illness-burial"
+          ],
+          "basis": "va-survivor-evidence"
+        }
+      ]
+    }
+  ]
+}

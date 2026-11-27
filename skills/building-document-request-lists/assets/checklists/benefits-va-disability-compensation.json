@@ -1,0 +1,280 @@
+{
+  "id": "benefits-va-disability-compensation",
+  "title": "VA disability compensation claim: evidence and forms",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "benefits-va",
+  "use_when": "Use when a Veteran or service member is filing a VA disability compensation claim (new, increased, secondary, supplemental or presumptive); use benefits-va-pension for needs-based pension and benefits-va-survivors-dic for survivors.",
+  "note": "Built from the VA.gov pages Evidence needed for your disability claim and How to file a VA disability claim (both last updated November 24, 2026) and the VA Form 21-526EZ page (form revision January 2026). VA decides service connection and ratings; this list does not, and it does not cover decision reviews of an existing decision.",
+  "sources": {
+    "va-evidence": {
+      "name": "U.S. Department of Veterans Affairs, Evidence needed for your disability claim (Last updated: November 24, 2026)",
+      "url": "https://www.va.gov/disability/how-to-file-claim/evidence-needed/",
+      "retrieved": "2026-11-26"
+    },
+    "va-file": {
+      "name": "U.S. Department of Veterans Affairs, How to file a VA disability claim (Last updated: November 24, 2026)",
+      "url": "https://www.va.gov/disability/how-to-file-claim/",
+      "retrieved": "2026-11-26"
+    },
+    "va-526": {
+      "name": "U.S. Department of Veterans Affairs, VA Form 21-526EZ page (Form revision date: January 2026; Last updated: November 2, 2026)",
+      "url": "https://www.va.gov/find-forms/about-form-21-526ez/",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "paper-filing": "Will the claim be filed on a paper or PDF form rather than online?",
+    "non-va-records": "Should VA request records from a private (non-VA) provider or Vet Center?",
+    "bdd": "Is this a Benefits Delivery at Discharge (BDD) claim by a service member before separation?",
+    "pre-existing": "Did a claimed condition exist before service and get worse because of service?",
+    "increase": "Is the claim for more compensation for a service-connected disability that has gotten worse?",
+    "secondary": "Is a claimed condition caused by a disability already service connected?",
+    "supplemental": "Is the claim for a condition VA denied in the past?",
+    "presumptive": "Is a claimed condition presumptive (for example toxic exposure, POW, tropical disease, or within a year of discharge)?",
+    "mental-health": "Is the claim for PTSD or another mental health condition due to an in-service traumatic event?",
+    "unemployability": "Is the Veteran claiming they can't keep substantially gainful work because of service-connected disability (Individual Unemployability)?",
+    "temp-100": "Was the Veteran hospitalized more than 21 days, or did they have surgery or a cast, for a service-connected disability?",
+    "sec-1151": "Was a disability caused or made worse by VA care, a VA exam, or VA training?",
+    "disabled-child": "Is the Veteran claiming additional compensation for a child who became permanently disabled before age 18?",
+    "aid-attendance": "Is the Veteran claiming Aid and Attendance or Housebound benefits for themselves or a spouse?",
+    "nursing-home": "Is the person needing Aid and Attendance in a nursing home?",
+    "auto": "Is the Veteran applying for an automobile allowance or adaptive equipment?",
+    "housing": "Is the Veteran applying for a Specially Adapted Housing or Special Home Adaptation grant?"
+  },
+  "sections": [
+    {
+      "name": "Application",
+      "items": [
+        {
+          "id": "form-526ez",
+          "label": "Application for Disability Compensation and Related Compensation Benefits",
+          "detail": "VA Form 21-526EZ (revision January 2026), printed and mailed to the address listed on the form, or filed online instead. Filing online records the intent to file automatically. Send through the secure portal, never by plain email.",
+          "when": [
+            "paper-filing"
+          ],
+          "basis": "va-526"
+        }
+      ]
+    },
+    {
+      "name": "Needed for every claim",
+      "items": [
+        {
+          "id": "dd214",
+          "label": "DD214 or other separation documents",
+          "detail": "VA requires these for all disability claims (submit them or give VA permission to gather them). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "service-treatment",
+          "label": "Service treatment records",
+          "detail": "Required for all claims; submit or give VA permission to gather them. If records were destroyed in the 1973 NPRC fire, VA can help reconstruct them. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "medical-evidence",
+          "label": "Medical evidence about the illness or injury",
+          "detail": "Like doctors' reports, X-rays, and medical test results. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "va-records",
+          "label": "VA medical and hospital records",
+          "detail": "Relating to the claimed illnesses or injuries, or showing a rated disability has gotten worse. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-file"
+        },
+        {
+          "id": "private-records",
+          "label": "Private medical records and hospital reports",
+          "detail": "Relating to the claimed illnesses or injuries, or showing a disability has gotten worse. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-file"
+        },
+        {
+          "id": "form-4142",
+          "label": "Authorization for VA to get non-VA medical records",
+          "detail": "VA Forms 21-4142 and 21-4142a (both in one PDF). Not needed separately if permission is given while filing online. Send through the secure portal, never by plain email.",
+          "when": [
+            "non-va-records"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "lay-statements",
+          "label": "Supporting statements from the Veteran or people who know about the condition",
+          "detail": "Optional lay evidence: a statement on blank paper, a Lay or Witness Statement (VA Form 21-10210, \"buddy statement\"), or a Statement in Support of Claim (VA Form 21-4138). Can come from family, friends, clergy, law enforcement, or people the Veteran served with.",
+          "when": [],
+          "basis": "va-evidence"
+        }
+      ]
+    },
+    {
+      "name": "By claim type",
+      "items": [
+        {
+          "id": "bdd",
+          "label": "Copies of service treatment records for the current period of service, and a completed Separation Health Assessment - Part A Self-Assessment",
+          "detail": "Required for Benefits Delivery at Discharge claims. Send through the secure portal, never by plain email.",
+          "when": [
+            "bdd"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "pre-service",
+          "label": "Any information or evidence about the condition as it was before entering service",
+          "detail": "For a condition that existed before service and got worse because of service.",
+          "when": [
+            "pre-existing"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "increase-evidence",
+          "label": "Current evidence that the service-connected disability has gotten worse",
+          "detail": "At least 1 of: medical records or medical opinions from healthcare providers, or lay evidence such as a buddy statement (VA Form 21-10210). Send through the secure portal, never by plain email.",
+          "when": [
+            "increase"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "secondary-evidence",
+          "label": "Evidence of the new condition and its link to the existing service-connected disability",
+          "detail": "Usually medical records or medical opinions; lay evidence in certain circumstances. Send through the secure portal, never by plain email.",
+          "when": [
+            "secondary"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "supplemental-evidence",
+          "label": "New and relevant evidence not given to VA before",
+          "detail": "For VA to gather records instead, give the name of the facility that treated the Veteran and the treatment dates.",
+          "when": [
+            "supplemental"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "presumptive-evidence",
+          "label": "Medical records showing the diagnosis and severity, and military records showing the qualifying service",
+          "detail": "For presumptive conditions, including those newly covered by a change in law. Send through the secure portal, never by plain email.",
+          "when": [
+            "presumptive"
+          ],
+          "basis": "va-evidence"
+        }
+      ]
+    },
+    {
+      "name": "Additional issues and benefits",
+      "items": [
+        {
+          "id": "form-0781",
+          "label": "Statement in Support of Claimed Mental Health Disorder(s) Due to an In-Service Traumatic Event(s)",
+          "detail": "VA Form 21-0781. Optional, but may help VA identify records; not needed separately if answered while filing online.",
+          "when": [
+            "mental-health"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-8940",
+          "label": "Veteran's Application for Increased Compensation Based on Unemployability",
+          "detail": "VA Form 21-8940. Send through the secure portal, never by plain email.",
+          "when": [
+            "unemployability"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-4192",
+          "label": "Request for Employment Information, completed by the last employer",
+          "detail": "VA Form 21-4192.",
+          "when": [
+            "unemployability"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "iu-medical",
+          "label": "Medical evidence that a service-connected disability prevents getting or keeping substantially gainful work",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [
+            "unemployability"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "temp-100",
+          "label": "Hospital or treatment records showing the stay, surgery, or cast",
+          "detail": "More than 21 days in a VA or approved hospital or under observation at VA expense; or surgery needing at least 1 month's recovery or with severe after-effects; or a major joint immobilized by a cast. Send through the secure portal, never by plain email.",
+          "when": [
+            "temp-100"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "sec-1151",
+          "label": "Evidence that VA care, a VA exam, or VA training caused or worsened the disability",
+          "detail": "Must also show VA fault, a result that was not reasonably expected, or participation in a VR&E or compensated work therapy program. Send through the secure portal, never by plain email.",
+          "when": [
+            "sec-1151"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "disabled-child",
+          "label": "Medical evidence that the child became permanently disabled before their 18th birthday",
+          "detail": "Requires a combined rating of 30% or more. Send through the secure portal, never by plain email.",
+          "when": [
+            "disabled-child"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-2680",
+          "label": "Examination for Housebound Status or Permanent Need for Regular Aid and Attendance",
+          "detail": "VA Form 21-2680, with evidence of needing help with daily activities, being confined to bed, or (for housebound) the qualifying ratings. Spousal Aid and Attendance requires a 30% combined rating. Send through the secure portal, never by plain email.",
+          "when": [
+            "aid-attendance"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-0779",
+          "label": "Request for Nursing Home Information in Connection with Claim for Aid and Attendance",
+          "detail": "VA Form 21-0779, in place of Form 21-2680 for someone in a nursing home.",
+          "when": [
+            "nursing-home"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-4502",
+          "label": "Application for Automobile or Other Conveyance and Adaptive Equipment, with evidence of the qualifying disability",
+          "detail": "VA Form 21-4502. Qualifying disabilities include loss or loss of use of a hand or foot, certain vision loss, severe burn, ALS, or ankylosis of a knee or hip. Send through the secure portal, never by plain email.",
+          "when": [
+            "auto"
+          ],
+          "basis": "va-evidence"
+        },
+        {
+          "id": "form-26-4555",
+          "label": "Application in Acquiring Specially Adapted Housing or Special Home Adaptation Grant, with evidence of a qualifying permanent and total disability",
+          "detail": "VA Form 26-4555. Send through the secure portal, never by plain email.",
+          "when": [
+            "housing"
+          ],
+          "basis": "va-evidence"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "id": "benefits-aca-marketplace-verification",
+  "title": "Health Insurance Marketplace data matching issue: documents to send",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "benefits-health-coverage",
+  "use_when": "Use when a client's HealthCare.gov Marketplace notice asks for documents to resolve a data matching issue (inconsistency) on their application.",
+  "note": "Built from the HealthCare.gov pages on resolving a data matching issue, required documents and deadlines, and uploading documents. It covers the federal Marketplace (HealthCare.gov) only, not state-run Marketplaces, Special Enrollment Period confirmation, or identity proofing, and it does not decide eligibility. The pages give no document list for incarceration status.",
+  "sources": {
+    "hc-dmi": {
+      "name": "HealthCare.gov, How do I resolve a data matching issue? (web page; no review date shown)",
+      "url": "https://www.healthcare.gov/help/how-do-i-resolve-an-inconsistency/",
+      "retrieved": "2026-11-26"
+    },
+    "hc-deadlines": {
+      "name": "HealthCare.gov, Required documents & deadlines (web page; no review date shown)",
+      "url": "https://www.healthcare.gov/verify-information/documents-and-deadlines/",
+      "retrieved": "2026-11-26"
+    },
+    "hc-upload": {
+      "name": "HealthCare.gov, How do I upload a document? (web page; no review date shown)",
+      "url": "https://www.healthcare.gov/help/how-to-upload-documents/",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "citizenship": "Does the notice ask you to confirm U.S. citizenship?",
+    "immigration": "Does the notice ask you to confirm immigration status?",
+    "income": "Does the notice ask you to confirm household income?",
+    "income-change": "Do you expect your income this year to go up or down from last year?",
+    "self-employed": "Does anyone in the household have self-employment income?",
+    "unearned-income": "Does anyone in the household have unearned income such as a pension, annuity, interest, settlement, or severance pay?",
+    "aian": "Does the notice ask you to confirm American Indian or Alaska Native status?",
+    "job-coverage": "Does the notice ask you to confirm you don't have qualifying job-based coverage?",
+    "medicaid-chip": "Does the notice ask you to confirm you don't have Medicaid or CHIP coverage?",
+    "tricare": "Does the notice ask you to confirm you don't have TRICARE coverage?",
+    "va-coverage": "Does the notice ask you to confirm you don't have VA health coverage?",
+    "medicare": "Does the notice ask you to confirm you don't have Medicare coverage?",
+    "peace-corps": "Does the notice ask you to confirm you don't have Peace Corps health coverage?",
+    "ssn": "Does the notice ask you to confirm a Social Security number?",
+    "mailing": "Will the documents be mailed instead of uploaded?"
+  },
+  "sections": [
+    {
+      "name": "The notice",
+      "items": [
+        {
+          "id": "notice",
+          "label": "The Marketplace notice that lists what to confirm and the deadline",
+          "detail": "Found under Messages in the Marketplace account. Deadlines: 90 days for information that doesn't match (like household income), 95 days for citizenship and immigration status, 30 days for a loss-of-coverage Special Enrollment Period. Uploads must be .pdf, .jpeg, .jpg, .gif, .xml, .png, .tiff or .bmp and under 10 MB; documents are not accepted by email or fax.",
+          "when": [],
+          "basis": "hc-deadlines"
+        },
+        {
+          "id": "barcode-page",
+          "label": "Printed bar code page from the eligibility notice",
+          "detail": "Last page of the eligibility notice. If there is no bar code, include the printed name and application ID. Mail photocopies only, never originals.",
+          "when": ["mailing"],
+          "basis": "hc-upload"
+        }
+      ]
+    },
+    {
+      "name": "Citizenship and immigration",
+      "items": [
+        {
+          "id": "citizenship-single",
+          "label": "One document that proves U.S. citizenship",
+          "detail": "U.S. passport; Certificate of Naturalization (N-550/N-570); Certificate of Citizenship (N-560/N-561); state-issued enhanced driver's license (Michigan, New York, Vermont, Washington); or a document from a federally recognized tribe showing membership (tribal enrollment card, Certificate of Degree of Indian Blood, tribal census document, or tribal letterhead signed by a tribal official). Send through the secure portal, never by plain email.",
+          "when": ["citizenship"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "citizenship-birth",
+          "label": "If none of those: one document showing U.S. citizenship or a U.S. place of birth",
+          "detail": "For example a U.S. public birth certificate, Consular Report of Birth Abroad (FS-240), Certification of Report of Birth (DS-1350), Certification of Birth Abroad (FS-545), U.S. Citizen ID card (I-197/I-179), Northern Mariana Card (I-873), final adoption decree, civil service record before June 1, 1976, or a military, medical, insurance, religious, school or census record showing a U.S. place of birth, or IR3/IH3 documentation. Must be sent together with an identity document. Send through the secure portal, never by plain email.",
+          "when": ["citizenship"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "citizenship-identity",
+          "label": "Plus one identity document (with photo or identifying details)",
+          "detail": "Driver's license or government ID card, school ID, U.S. military card or draft record or military dependent's ID, Coast Guard Merchant Mariner card, voter registration card, a clinic, doctor, hospital or school record for children under 19, or 2 documents with consistent identifying information (employer IDs, diplomas, marriage certificate, divorce decree, property deed or title). Send through the secure portal, never by plain email.",
+          "when": ["citizenship"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "immigration-doc",
+          "label": "Immigration status document",
+          "detail": "One of: Permanent Resident Card (I-551), Reentry Permit (I-327), Refugee Travel Document (I-571), Employment Authorization Card (I-766), machine-readable immigrant visa or temporary I-551 stamp, foreign passport, I-94/I-94A, I-20, DS-2019, Notice of Action (I-797) or I-797C receipt, ORR certification or eligibility letter (if under 18), a document showing withholding of removal, or a document showing tribal membership or American Indian born in Canada. Send through the secure portal, never by plain email.",
+          "when": ["immigration"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "aian-doc",
+          "label": "Proof of American Indian or Alaska Native status",
+          "detail": "Tribal enrollment or membership card, Bureau of Indian Affairs document, document from a federally recognized tribe declaring membership, Certificate of Degree of Indian Blood, Certificate of Indian status card, I-872 American Indian Card, Indian Health Service eligibility document, Alaska Native shareholder documentation, or a Marketplace letter granting a tribal exemption. Send through the secure portal, never by plain email.",
+          "when": ["aian"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "ssn-doc",
+          "label": "A document showing your first name, last name, and Social Security number",
+          "detail": "Social Security card, federal or state Form 1040, W-2 or 1099, W-4, Form 1095 (A, B or C), pay stub, SSA document (including 4029), military record or ID, military dependent's ID, unemployment benefits letter, court order granting a name change (with original and new names and SSN), or divorce decree. Send through the secure portal, never by plain email.",
+          "when": ["ssn"],
+          "basis": "hc-dmi"
+        }
+      ]
+    },
+    {
+      "name": "Household income",
+      "items": [
+        {
+          "id": "income-doc",
+          "label": "Proof of income showing a yearly amount close to what is on the application",
+          "detail": "Federal or state Form 1040 (with Schedule 1 if filed), W-2 or 1099, pay stubs (with name, amount, pay period and payment date; give the average overtime per paycheck), Social Security benefits letter, or unemployment benefits letter. If the job changed since last year, send recent pay stubs from the new job instead of last year's return or W-2. Send through the secure portal, never by plain email.",
+          "when": ["income"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "income-change",
+          "label": "Recent pay stubs, or a document stating when contract work ends or what the new wages will be",
+          "detail": "For income expected to go up or down in the coverage year. Send through the secure portal, never by plain email.",
+          "when": ["income-change"],
+          "basis": "hc-deadlines"
+        },
+        {
+          "id": "income-letter",
+          "label": "Annual Income Letter of Explanation",
+          "detail": "Use when no documents show current-year income; state the total income for the year. Upload under \"Other\" in the drop-down.",
+          "when": ["income"],
+          "basis": "hc-deadlines"
+        },
+        {
+          "id": "self-employment",
+          "label": "Self-employment income records",
+          "detail": "1040 SE with Schedule C, F or SE; 1065 Schedule K-1 with Schedule E; tax return; bookkeeping records; receipts for allowable expenses; signed time sheets and payroll receipts if there are employees; or the most recent quarterly or year-to-date profit and loss statement. A self-employment ledger must show name, company name, dates covered and net income. Send through the secure portal, never by plain email.",
+          "when": ["self-employed"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "unearned",
+          "label": "Proof of unearned income",
+          "detail": "For example annuity or pension distribution statements, workers' compensation letter, prize, settlement or court award letter, proof of gifts or inheritances, union strike pay, proceeds from selling property, interest and dividend statements, loan proceeds statement, royalty statement or 1099-MISC, bonus, severance, sick, vacation or deferred compensation proof, residuals, or travel/business reimbursement. Send through the secure portal, never by plain email.",
+          "when": ["unearned-income"],
+          "basis": "hc-dmi"
+        }
+      ]
+    },
+    {
+      "name": "Other health coverage",
+      "items": [
+        {
+          "id": "job-coverage",
+          "label": "Employer Coverage Tool with a cover letter signed by the employer, or an employer letter",
+          "detail": "The employer letter must state the employer doesn't offer coverage, or doesn't offer qualifying coverage, or show the employee's share of the premium for the lowest-cost self-only plan meeting minimum value. A health insurance letter confirming coverage and end dates outside the Marketplace is also accepted.",
+          "when": ["job-coverage"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "medicaid-chip",
+          "label": "Letter from the Medicaid or CHIP agency, or a letter describing recent coverage",
+          "detail": "Showing not enrolled in or eligible for Medicaid/CHIP, or enrolled only in a limited program (pregnancy-related, family planning, tuberculosis, emergency treatment, limited demonstration project, or medically needy/spend-down). A letter can describe the program and when coverage ended, or that you were never enrolled.",
+          "when": ["medicaid-chip"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "tricare",
+          "label": "Letter or statement from TRICARE",
+          "detail": "Showing the end or un-enrollment date, ineligibility, a life change (like divorce) ending eligibility, or enrollment only in a non-qualifying program (TRICARE Plus, direct care, line-of-duty care, transitional care, space-available care). Without these, a letter describing when TRICARE ended or that you were never enrolled (template available; upload under \"Other\").",
+          "when": ["tricare"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "va-coverage",
+          "label": "Letter from the VA showing when previous health coverage ended",
+          "detail": "Without it, a letter describing that you're not enrolled in VA health coverage (template available; upload under \"Other\").",
+          "when": ["va-coverage"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "medicare",
+          "label": "Letter or statement from Medicare or Social Security about Part A",
+          "detail": "Stating you or family members are not eligible for or enrolled in premium-free Part A, are eligible for but not enrolled in premium Part A, or are no longer eligible for SSDI with coverage ending within 90 days. A document showing no premium for \"Medical Insurance\" refers to Part B and is not accepted. Without it, a letter explaining why you're not eligible for premium-free Part A.",
+          "when": ["medicare"],
+          "basis": "hc-dmi"
+        },
+        {
+          "id": "peace-corps",
+          "label": "Letter from the Peace Corps with the end date of previous coverage, or showing you never had it",
+          "detail": "Without it, a letter describing that you're no longer, or were never, eligible for or enrolled in Peace Corps coverage (template available; upload under \"Other\").",
+          "when": ["peace-corps"],
+          "basis": "hc-dmi"
+        }
+      ]
+    }
+  ]
+}

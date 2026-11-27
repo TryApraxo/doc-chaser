@@ -1,0 +1,167 @@
+{
+  "id": "tax-1099-filing-season",
+  "title": "Year-end 1099-NEC and 1099-MISC preparation: what to collect from the business",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-information-returns",
+  "use_when": "Use when the firm prepares a business client's Forms 1099-NEC and 1099-MISC for payments made in 2026; use payroll-new-contractor when collecting paperwork from one new contractor at the start of an engagement.",
+  "note": "Built from IRS Publication 1099, General Instructions for Certain Information Returns (for use in preparing 2026 returns) and the Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026). For payments in tax years after 2025 most thresholds rose from $600 to $2,000; royalties stay at $10 and attorney gross proceeds at $600. It does not cover Forms 1099-K, 1042-S or W-2, state filing, or whether a worker is an employee.",
+  "sources": {
+    "i1099mec": {
+      "name": "IRS, Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i1099mec.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "p1099": {
+      "name": "IRS, Publication 1099, General Instructions for Certain Information Returns (for use in preparing 2026 returns)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p1099.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "rent": "Did the business pay rent (other than to a real estate agent or property manager) of $2,000 or more to anyone?",
+    "royalties": "Did the business pay royalties of $10 or more?",
+    "attorneys": "Did the business pay a lawyer or law firm, including settlement payments made through a lawyer?",
+    "medical": "Did the business pay doctors or other health care providers in the course of its business?",
+    "foreign-payees": "Were any payees foreign persons?",
+    "backup-withholding": "Did the business withhold federal income tax (backup withholding) from any payee?",
+    "tin-notices": "Has the business received an IRS notice (CP2100 or similar) that a payee's name and TIN do not match?",
+    "direct-sales": "Did the business sell $5,000 or more of consumer products to anyone for resale outside a permanent retail store?"
+  },
+  "sections": [
+    {
+      "name": "Payee information",
+      "items": [
+        {
+          "id": "vendor-list",
+          "label": "List of every person and business paid during the year, with full name and address",
+          "detail": "Pub. 1099 part J: show the full name and address; for a sole proprietor, the individual's name first (a DBA may go on the second line); for a single-member disregarded LLC, the owner's name first.",
+          "when": [],
+          "basis": "p1099"
+        },
+        {
+          "id": "w9s",
+          "label": "Completed Form W-9 for each U.S. payee",
+          "detail": "Pub. 1099 part J: the IRS suggests requesting Form W-9 to get the recipient's TIN. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "p1099"
+        },
+        {
+          "id": "payee-tins",
+          "label": "Each payee's taxpayer identification number (SSN, ITIN or EIN)",
+          "detail": "Instructions, Recipient's TIN. If a payee has not provided one, say so: the box is left blank and backup withholding may apply. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "payee-entity-type",
+          "label": "Whether each payee is an individual, partnership, LLC or corporation",
+          "detail": "Instructions: payments to corporations are generally not reportable, except for legal services, medical and health care payments, and certain other payments listed under Reportable payments to corporations.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "w8s",
+          "label": "Form W-8 for each foreign payee",
+          "detail": "Pub. 1099 part J: the IRS suggests requesting the appropriate Form W-8 from a foreign recipient. Send through the secure portal, never by plain email.",
+          "when": ["foreign-payees"],
+          "basis": "p1099"
+        }
+      ]
+    },
+    {
+      "name": "Payment totals",
+      "items": [
+        {
+          "id": "nec-totals",
+          "label": "Total paid to each non-employee for services during the year",
+          "detail": "Form 1099-NEC, box 1a: nonemployee compensation of $2,000 or more, including fees, commissions, prizes and awards for services.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "payment-method",
+          "label": "How each payment was made (check, ACH, cash, credit card, or a payment app such as a third-party network)",
+          "detail": "Instructions, Form 1099-K: payments made by credit card, payment card or third-party network are reported by the payment settlement entity on Form 1099-K and are not reported on Form 1099-MISC or 1099-NEC.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "cash-tips-overtime",
+          "label": "Any cash tips or qualified overtime pay included in amounts paid to non-employees, with the payee's occupation",
+          "detail": "New boxes 1b, 1c and 1d on Form 1099-NEC (and 13a, 13b and 14 on Form 1099-MISC) report cash tips, the Treasury Tipped Occupation Code and overtime compensation.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "rent-totals",
+          "label": "Rent paid to each landlord or equipment lessor",
+          "detail": "Form 1099-MISC, box 1: $2,000 or more. Rent paid to a real estate agent or property manager is not reported by the business.",
+          "when": ["rent"],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "royalty-totals",
+          "label": "Royalties paid to each recipient",
+          "detail": "Form 1099-MISC, box 2: at least $10, reported as gross royalties before reduction for fees, commissions or expenses.",
+          "when": ["royalties"],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "attorney-payments",
+          "label": "Payments to lawyers and law firms, split between fees for legal services and settlement or other gross proceeds",
+          "detail": "Attorney fees of $2,000 or more go in Form 1099-NEC box 1a; gross proceeds of $600 or more go in Form 1099-MISC box 10. The corporate exemption does not apply to legal services.",
+          "when": ["attorneys"],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "medical-payments",
+          "label": "Payments to each physician or health care provider",
+          "detail": "Form 1099-MISC, box 6: $2,000 or more, including payments to corporations.",
+          "when": ["medical"],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "other-income",
+          "label": "Prizes, awards and other income payments not for services",
+          "detail": "Form 1099-MISC, box 3: $2,000 or more.",
+          "when": [],
+          "basis": "i1099mec"
+        },
+        {
+          "id": "direct-sales",
+          "label": "Customers who bought $5,000 or more of consumer products for resale",
+          "detail": "Form 1099-NEC box 2 or Form 1099-MISC box 7 (checkbox only, no dollar amount).",
+          "when": ["direct-sales"],
+          "basis": "i1099mec"
+        }
+      ]
+    },
+    {
+      "name": "Withholding and IRS notices",
+      "items": [
+        {
+          "id": "backup-withholding",
+          "label": "Federal income tax withheld from each payee under backup withholding",
+          "detail": "Form 1099-MISC box 4 / Form 1099-NEC; Pub. 1099 part N says backup withholding is reported on Form 945 and on the 1099 even if the payment is below the reporting threshold.",
+          "when": ["backup-withholding"],
+          "basis": "p1099"
+        },
+        {
+          "id": "tin-notices",
+          "label": "Copies of IRS incorrect name/TIN notices (CP2100) and any B notices sent to payees",
+          "detail": "Pub. 1099 part N; and the instructions' 2nd TIN Not. box, used when the IRS notified the payer twice within 3 calendar years.",
+          "when": ["tin-notices"],
+          "basis": "p1099"
+        },
+        {
+          "id": "recertified-w9",
+          "label": "Any new certified Form W-9 received from a payee after an IRS notice",
+          "detail": "Pub. 1099 part N: stop withholding within 30 days after receiving a certified Form W-9. Send through the secure portal, never by plain email.",
+          "when": ["tin-notices"],
+          "basis": "p1099"
+        }
+      ]
+    }
+  ]
+}

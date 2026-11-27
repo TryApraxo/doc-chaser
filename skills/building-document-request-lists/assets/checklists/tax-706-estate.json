@@ -1,0 +1,215 @@
+{
+  "id": "tax-706-estate",
+  "title": "Federal estate tax return (Form 706): documents to collect",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-estate-gift",
+  "use_when": "Use when the firm is preparing Form 706 for a decedent who died after December 31, 2025, whether the return is required or filed only to elect portability.",
+  "note": "Built from the IRS Instructions for Form 706 (Rev. July 2026), including the attachment checklist at the end of the instructions and the attachment rules for each schedule. It does not cover state estate or inheritance tax returns, Form 706-NA for nonresident non-citizens, the Form 8971 basis-reporting filing, or whether a return is required.",
+  "sources": {
+    "i706": {
+      "name": "IRS, Instructions for Form 706, United States Estate (and Generation-Skipping Transfer) Tax Return (Rev. July 2026), for decedents dying after December 31, 2025",
+      "url": "https://www.irs.gov/pub/irs-pdf/i706.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "will": "Did the decedent leave a will?",
+    "nonresident-citizen": "Was the decedent a U.S. citizen living outside the United States?",
+    "life-insurance": "Was there any life insurance on the decedent's life, or did the decedent own a policy on someone else's life?",
+    "trusts": "Was the decedent a grantor or beneficiary of any trust?",
+    "prior-gifts": "Did the decedent ever file a gift tax return (Form 709)?",
+    "closely-held": "Did the decedent own stock in a closely held or inactive corporation, or an interest in a partnership or unincorporated business?",
+    "collectibles": "Did the decedent own art or collectibles (jewelry, silverware, coin or stamp collections and the like) worth more than $3,000 for any item or collection?",
+    "joint-property": "Did the decedent own property jointly with someone other than only a spouse, where the estate will claim less than the full value?",
+    "power-of-appointment": "Did the decedent ever hold a power of appointment?",
+    "marital-deduction": "Is property passing to a surviving spouse under the will, with a marital deduction claimed?",
+    "charitable": "Is the estate claiming a charitable deduction?",
+    "foreign-tax": "Was a foreign death tax paid on property in the estate?",
+    "dsue-received": "Was the decedent a surviving spouse who received an unused exclusion (DSUE) amount from a spouse who died earlier?",
+    "representative": "Will someone other than the executor deal with the IRS on the return?"
+  },
+  "sections": [
+    {
+      "name": "Death and probate documents",
+      "items": [
+        {
+          "id": "death-certificate",
+          "label": "Death certificate",
+          "detail": "Part I, line 10. The instructions say a death certificate must be attached to the return. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "will-certified",
+          "label": "Certified copy of the will",
+          "detail": "Part I, lines 9a and 9b. If a certified copy cannot be obtained, a plain copy plus an explanation of why it is not certified.",
+          "when": ["will"],
+          "basis": "i706"
+        },
+        {
+          "id": "foreign-probate-inventory",
+          "label": "Inventory of property and schedule of liabilities, claims and expenses filed with the foreign probate court",
+          "detail": "Supplemental Documents. Must be certified by a proper official of the court.",
+          "when": ["nonresident-citizen"],
+          "basis": "i706"
+        },
+        {
+          "id": "foreign-death-tax-return",
+          "label": "Copy of the foreign estate, inheritance or other death tax return",
+          "detail": "Supplemental Documents. Certified by a proper official of the foreign tax department, if the estate is subject to a foreign death tax.",
+          "when": ["nonresident-citizen"],
+          "basis": "i706"
+        },
+        {
+          "id": "decedent-ssn",
+          "label": "Decedent's Social Security number",
+          "detail": "Checklist for Completing Form 706: the decedent's name, SSN and \"Form 706\" go on any check or money order. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "poa",
+          "label": "Signed Form 2848 or Form 8821",
+          "detail": "Listed in the attachment checklist, if applicable.",
+          "when": ["representative"],
+          "basis": "i706"
+        }
+      ]
+    },
+    {
+      "name": "Property and valuation",
+      "items": [
+        {
+          "id": "real-estate-appraisals",
+          "label": "Appraisals of real estate",
+          "detail": "Schedule A: explain how reported values were determined and attach copies of any appraisals. The attachment checklist asks for any appraisals used to value property on the return.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "securities-cusip",
+          "label": "Brokerage statements showing each stock and bond, with CUSIP numbers, as of the date of death",
+          "detail": "Schedule B; the checklist asks that the CUSIP number be included for all stocks and bonds. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "broker-quotes",
+          "label": "Broker quotation letters or evidence of sale used to value securities",
+          "detail": "Schedule B: attach copies of the letters furnishing the quotations or evidence of sale; for securities reported at no value, attach the correspondence or statements used.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "close-corp-financials",
+          "label": "Balance sheets and earnings statements for the closely held company, for each of the 5 years before the date of death",
+          "detail": "Schedule B (close corporations): complete financial data, including the balance sheet nearest the valuation date and net earnings and dividends for each of the 5 years. Schedule F (partnership or unincorporated business): statements of assets and liabilities for the valuation date and the 5 years before, and net earnings for the same 5 years, with the entity's EIN.",
+          "when": ["closely-held"],
+          "basis": "i706"
+        },
+        {
+          "id": "notes-mortgages",
+          "label": "Details of mortgages, promissory notes and land sale contracts owed to the decedent",
+          "detail": "Schedule C: face value, unpaid balance, date, maker, property, maturity, interest rate and interest date; for land sale contracts, purchaser, contract date, property, price, initial payment, installments, unpaid principal and interest rate.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "bank-cash",
+          "label": "Statements for bank and savings accounts as of the date of death, and the amount of cash on hand",
+          "detail": "Schedule C lists cash on hand separately from deposits in banks, savings and loan associations and other financial organizations. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i706"
+        },
+        {
+          "id": "form-712",
+          "label": "Life insurance statement (Form 712) from each insurance company",
+          "detail": "Schedule D: request Form 712 for every policy listed and attach it. If the insurer will not provide one, other evidence of the amount, such as the policy, riders, assignments or a copy of the proceeds check. Schedule F uses Form 712 for policies the decedent owned on another person's life.",
+          "when": ["life-insurance"],
+          "basis": "i706"
+        },
+        {
+          "id": "joint-contribution-proof",
+          "label": "Proof of what each co-owner contributed to jointly owned property",
+          "detail": "Schedule E: to include less than the full value, attach proof of the extent, origin and nature of the decedent's and co-tenants' interests.",
+          "when": ["joint-property"],
+          "basis": "i706"
+        },
+        {
+          "id": "collectible-appraisals",
+          "label": "Expert appraisal under oath for art and collectibles, with the appraiser's qualifications",
+          "detail": "Schedule F, line 1: required for any item or collection of similar items valued at more than $3,000.",
+          "when": ["collectibles"],
+          "basis": "i706"
+        },
+        {
+          "id": "entity-eins",
+          "label": "Employer identification numbers of trusts, partnerships and closely held entities",
+          "detail": "Checklist for Completing Form 706: include the EIN of trusts, partnerships and closely held entities.",
+          "when": [],
+          "basis": "i706"
+        }
+      ]
+    },
+    {
+      "name": "Trusts, transfers and powers",
+      "items": [
+        {
+          "id": "trust-documents",
+          "label": "Copies of all trust documents where the decedent was a grantor or a beneficiary",
+          "detail": "Attachment checklist and Part IV, line 13: attach a copy of the trust instrument for each trust. Schedule G: copies of instruments of public record should be certified; others verified.",
+          "when": ["trusts"],
+          "basis": "i706"
+        },
+        {
+          "id": "power-instruments",
+          "label": "Certified or verified copy of the document granting the power of appointment and any document exercising or releasing it",
+          "detail": "Schedule H attachments; required even if the estate contends the power is not a general power.",
+          "when": ["power-of-appointment"],
+          "basis": "i706"
+        },
+        {
+          "id": "prior-709s",
+          "label": "Copies of every gift tax return (Form 709) the decedent filed",
+          "detail": "Attachment checklist: marked \"Exhibit to Estate Tax Return\" across the top of the first page.",
+          "when": ["prior-gifts"],
+          "basis": "i706"
+        },
+        {
+          "id": "spouse-706",
+          "label": "Copy of the estate tax return of each predeceased spouse whose unused exclusion amount was received",
+          "detail": "Part VI, Section D; the checklist says to include the predeceased spouse's Form 706 marked \"Exhibit to Estate Tax Return\".",
+          "when": ["dsue-received"],
+          "basis": "i706"
+        }
+      ]
+    },
+    {
+      "name": "Deductions and credits",
+      "items": [
+        {
+          "id": "probate-order-marital",
+          "label": "Certified copy of the court order admitting the will to probate, and any decree interpreting the will or ordering distribution",
+          "detail": "Schedule M attachments, when property passing under the will is listed for the marital deduction.",
+          "when": ["marital-deduction"],
+          "basis": "i706"
+        },
+        {
+          "id": "charitable-docs",
+          "label": "Certified copy of the probate order (for gifts by will) or a copy of the written instrument making the charitable transfer",
+          "detail": "Schedule O attachments.",
+          "when": ["charitable"],
+          "basis": "i706"
+        },
+        {
+          "id": "form-706-ce",
+          "label": "Certificate of payment of foreign death tax (Form 706-CE)",
+          "detail": "Attachment checklist and Schedule P; the credit cannot be finally allowed until the foreign tax is paid and Form 706-CE is filed.",
+          "when": ["foreign-tax"],
+          "basis": "i706"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "insurance-nfip-flood-claim",
+  "title": "NFIP flood insurance claim: documents to gather",
+  "industry": "insurance",
+  "jurisdiction": "US federal",
+  "variant_of": "insurance-claim",
+  "use_when": "Use when a client with a National Flood Insurance Program (NFIP) policy is filing a flood claim; for FEMA disaster grants use disaster-fema-individual-assistance, and for SBA disaster home loans use sba-disaster-loan-home.",
+  "note": "Built from FEMA's NFIP Claims Checklist for Policyholders (January 2026), the FloodSmart page on starting a flood claim, and the Standard Flood Insurance Policy Dwelling Form (44 CFR Part 61, Appendix A(1)) requirements in case of loss. It does not decide coverage, cover private flood or homeowners policies, or cover deadline extensions FEMA may grant after a specific flood.",
+  "sources": {
+    "nfip-checklist": {
+      "name": "FEMA, NFIP Claims Checklist for Policyholders (January 2026; resource page dated May 06, 2026)",
+      "url": "https://agents.floodsmart.gov/sites/default/files/media/document/2026-05/NFIP%20Claims%20Checklist%20for%20Policyholders.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "floodsmart-claim": {
+      "name": "FEMA FloodSmart, How to start a flood insurance claim (web page; no review date shown)",
+      "url": "https://www.floodsmart.gov/how-do-i-start-my-flood-claim",
+      "retrieved": "2026-11-26"
+    },
+    "sfip-dwelling": {
+      "name": "eCFR, 44 CFR Part 61 Appendix A(1), Standard Flood Insurance Policy, Dwelling Form (as amended through 86 FR 48511, Aug. 31, 2021; eCFR version of 2026-11-20)",
+      "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-20/title-44.xml?part=61&appendix=Appendix%20A(1)%20to%20Part%2061",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "building-coverage": "Does the policy include building coverage?",
+    "contents-coverage": "Does the policy include contents coverage?",
+    "has-mortgage": "Is there a mortgage or other lien on the property?",
+    "condo-unit": "Is the insured property a unit in a condominium building?",
+    "discarded-items": "Did the client have to throw away damaged items before the adjuster's inspection?",
+    "repairs-done": "Has the client already paid for cleanup or repairs?",
+    "other-insurance": "Does any other insurance policy cover the loss?"
+  },
+  "sections": [
+    {
+      "name": "Policy and contact details",
+      "items": [
+        {
+          "id": "policy-number",
+          "label": "Flood insurance policy number and the insurer's name",
+          "detail": "The checklist says to have the policy number, if available, when reporting the claim.",
+          "when": [],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "declarations-page",
+          "label": "Policy declarations page showing coverage type (building, contents or both), limits and deductibles",
+          "detail": "The checklist also says to check that the correct mortgage company is listed on the declarations page to avoid payment delays.",
+          "when": [],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "mortgage-holder",
+          "label": "Name of the current mortgage company and anyone else with a lien or claim on the property",
+          "detail": "SFIP Dwelling Form, VII.G.4.g (proof of loss). FloodSmart notes the claim check is written to the policyholder and the mortgage company.",
+          "when": [
+            "has-mortgage"
+          ],
+          "basis": "sfip-dwelling"
+        },
+        {
+          "id": "current-contact",
+          "label": "Current mailing address and phone number if displaced",
+          "detail": "FloodSmart says the adjuster will ask for these.",
+          "when": [],
+          "basis": "floodsmart-claim"
+        },
+        {
+          "id": "conversation-log",
+          "label": "Log of all conversations about the claim (date, time, name, what was discussed)",
+          "detail": "Covers the insurer, adjuster, contractors, cleaners and others.",
+          "when": [],
+          "basis": "nfip-checklist"
+        }
+      ]
+    },
+    {
+      "name": "Proof of the damage",
+      "items": [
+        {
+          "id": "building-photos",
+          "label": "Photos and videos of all building damage, inside and out, from several angles and distances",
+          "detail": "Include signs of structural damage and the floodwater lines inside and outside the structure. Take them only when it is safe.",
+          "when": [
+            "building-coverage"
+          ],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "serial-numbers",
+          "label": "Make, model and serial number of appliances, electronics and items of exceptional value",
+          "detail": "Photos or written notes are both acceptable per the checklist and FloodSmart.",
+          "when": [],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "contents-list",
+          "label": "List of damaged belongings with description, quantity, make, model, serial number, approximate age, value and replacement cost",
+          "detail": "The SFIP also requires an inventory showing quantity, description, actual cash value and amount of loss, with bills, receipts and related documents attached (VII.G.3).",
+          "when": [
+            "contents-coverage"
+          ],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "contents-photos",
+          "label": "Photos and videos of damaged belongings that will need to be replaced",
+          "detail": "",
+          "when": [
+            "contents-coverage"
+          ],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "receipts",
+          "label": "Receipts, invoices, bills and other records for the damaged property",
+          "detail": "Checklist: gather supporting documentation such as receipts or invoices, if available. SFIP VII.H.1.c: the insurer may examine books of account, bills, invoices and vouchers, or certified copies if the originals are lost.",
+          "when": [],
+          "basis": "sfip-dwelling"
+        },
+        {
+          "id": "samples",
+          "label": "Samples of discarded flooring, carpet, blinds or curtains to show the adjuster",
+          "detail": "Do not discard anything before the adjuster sees it unless it is a health hazard or local law requires disposal.",
+          "when": [
+            "discarded-items"
+          ],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "cleanup-repair-receipts",
+          "label": "Receipts and photos for cleanup and repairs",
+          "detail": "The checklist says to keep receipts and photograph repairs; proof of repair may be requested on a future claim for the same item.",
+          "when": [
+            "repairs-done"
+          ],
+          "basis": "nfip-checklist"
+        },
+        {
+          "id": "repair-estimates",
+          "label": "Specifications of the damaged building and detailed repair estimates",
+          "detail": "SFIP Dwelling Form, VII.G.4.f.",
+          "when": [
+            "building-coverage"
+          ],
+          "basis": "sfip-dwelling"
+        }
+      ]
+    },
+    {
+      "name": "Proof of loss",
+      "items": [
+        {
+          "id": "proof-of-loss",
+          "label": "Signed and sworn proof of loss stating the amount claimed",
+          "detail": "SFIP Dwelling Form, VII.G.4: due within 60 days after the loss, even if the adjuster does not provide the form. Includes the date and time of loss, how it happened, the policyholder's interest and others' interests, other insurance, changes in title or occupancy, and who occupied the building and for what purpose.",
+          "when": [],
+          "basis": "sfip-dwelling"
+        },
+        {
+          "id": "other-insurance",
+          "label": "Details of any other insurance that may cover the loss",
+          "detail": "SFIP Dwelling Form, VII.G.4.d.",
+          "when": [
+            "other-insurance"
+          ],
+          "basis": "sfip-dwelling"
+        },
+        {
+          "id": "deed-policies",
+          "label": "Deed showing ownership and any other property insurance policies, if the insurer asks",
+          "detail": "SFIP Dwelling Form, VII.H.1.c(1).",
+          "when": [],
+          "basis": "sfip-dwelling"
+        },
+        {
+          "id": "condo-docs",
+          "label": "Condominium declarations, articles, bylaws and rules, if the insurer asks",
+          "detail": "SFIP Dwelling Form, VII.H.1.c(2).",
+          "when": [
+            "condo-unit"
+          ],
+          "basis": "sfip-dwelling"
+        }
+      ]
+    }
+  ]
+}

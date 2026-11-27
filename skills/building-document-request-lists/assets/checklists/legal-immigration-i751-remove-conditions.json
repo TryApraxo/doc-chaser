@@ -1,0 +1,225 @@
+{
+  "id": "legal-immigration-i751-remove-conditions",
+  "title": "Removing conditions on a marriage-based green card (Form I-751): documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "Use when a conditional permanent resident who got status through marriage is filing Form I-751, jointly or with a waiver of the joint filing requirement; use the I-485 family list for the original green card application.",
+  "note": "Based on the USCIS Checklist of Required Initial Evidence on the Form I-751 page (last reviewed/updated 06/16/2026) and the Form I-751 Instructions (edition 04/01/24, OMB expiration 03/31/2027). It does not decide whether a waiver applies or whether the evidence is enough; the responsible lawyer decides what the matter needs.",
+  "sources": {
+    "i751-page": {
+      "name": "USCIS, I-751, Petition to Remove Conditions on Residence, form page with Checklist of Required Initial Evidence (for informational purposes only), Last Reviewed/Updated 06/16/2026",
+      "url": "https://www.uscis.gov/i-751",
+      "retrieved": "2026-11-26"
+    },
+    "i751-instr": {
+      "name": "USCIS, Instructions for Petition to Remove Conditions on Residence, Form I-751, edition 04/01/24 (OMB No. 1615-0038, expires 03/31/2027)",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-751instr.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "joint": "Is the client filing jointly with the spouse (or stepparent) through whom they got conditional status?",
+    "waiver-death": "Is the client filing alone because the petitioning spouse or stepparent died?",
+    "waiver-divorce": "Is the client filing alone because the marriage ended by divorce or annulment?",
+    "waiver-abuse": "Is the client filing alone because they or their child were battered or subjected to extreme cruelty by the spouse or stepparent?",
+    "waiver-hardship": "Is the client filing alone because losing status and removal would cause extreme hardship?",
+    "children": "Is the client including conditional resident children on the petition?",
+    "child-separate": "Is the client a child filing separately from the conditional resident parent?",
+    "late-filing": "Is the petition being filed after the conditional residence expired?",
+    "orders-abroad": "Is the client filing from outside the United States because they, the spouse or the stepparent live abroad on U.S. military or government orders?",
+    "arrests": "Has the client ever been arrested, detained, charged, convicted, or placed in an alternative sentencing or rehabilitative program, in the U.S. or abroad?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Green cards",
+      "items": [
+        {
+          "id": "green-card",
+          "label": "Copy of the front and back of the client's green card",
+          "detail": "Permanent resident card or alien registration card, both sides. Instructions, What Initial Evidence Is Required? Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "children-green-cards",
+          "label": "Copy of the front and back of each included child's green card",
+          "detail": "For each conditional resident child listed in Part 5 of the petition, both sides. Send through the secure portal, never by plain email.",
+          "when": ["children"],
+          "basis": "i751-instr"
+        }
+      ]
+    },
+    {
+      "name": "Evidence the marriage was real",
+      "items": [
+        {
+          "id": "children-birth-certs",
+          "label": "Birth certificates of any children born during the marriage",
+          "detail": "Copies. Evidence of the Relationship, item 1. Covers the period from the date of marriage to the present (or to the spouse's death, or to the end of the marriage).",
+          "when": ["joint", "waiver-death", "waiver-divorce", "waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "lease-mortgage",
+          "label": "Leases or mortgage documents showing you lived together or own your home together",
+          "detail": "Copies showing joint occupancy and/or ownership of the shared residence. Evidence of the Relationship, item 2.",
+          "when": ["joint", "waiver-death", "waiver-divorce", "waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "joint-finances",
+          "label": "Joint financial records",
+          "detail": "Copies such as joint savings and checking accounts with transaction history, complete joint federal and state tax returns, insurance policies naming the other spouse as beneficiary, joint utility bills, or joint installment or other loans. If applicable, military Leave and Earnings Statements showing Basic Allowance for Quarters with family members and/or Form DD-1172. Evidence of the Relationship, item 3. Send through the secure portal, never by plain email.",
+          "when": ["joint", "waiver-death", "waiver-divorce", "waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "other-relationship-docs",
+          "label": "Any other documents showing the marriage was not entered to get around immigration law",
+          "detail": "Copies of as many documents as possible. Evidence of the Relationship, item 4. Do not send originals unless the instructions ask for them.",
+          "when": ["joint", "waiver-death", "waiver-divorce", "waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "affidavits",
+          "label": "Sworn statements from at least two people who know you both",
+          "detail": "Original affidavits from people who have known both spouses since conditional residence was granted and know the marriage personally. Each must give the person's full name and address, date and place of birth, relationship to either spouse, and full details of how they know. Must be backed by other evidence. Evidence of the Relationship, item 5.",
+          "when": ["joint", "waiver-death", "waiver-divorce", "waiver-abuse"],
+          "basis": "i751-instr"
+        }
+      ]
+    },
+    {
+      "name": "Waiver evidence",
+      "items": [
+        {
+          "id": "death-certificate",
+          "label": "Spouse's or stepparent's death certificate",
+          "detail": "Copy.",
+          "when": ["waiver-death"],
+          "basis": "i751-page"
+        },
+        {
+          "id": "divorce-decree",
+          "label": "Final divorce decree or annulment",
+          "detail": "Copy of the final decree or other document ending or annulling the marriage.",
+          "when": ["waiver-divorce"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "end-of-relationship",
+          "label": "Evidence about how the relationship ended",
+          "detail": "Evidence demonstrating any circumstances surrounding the end of the relationship.",
+          "when": ["waiver-divorce"],
+          "basis": "i751-page"
+        },
+        {
+          "id": "abuse-evidence",
+          "label": "Evidence of the abuse",
+          "detail": "Copies of reports or official records from police, courts, medical personnel, school officials, clergy, social workers and other social service agencies; legal documents about a protection order or other steps taken to end the abuse; evidence of seeking safe haven in a shelter; photographs of injuries. USCIS accepts any credible evidence. Send through the secure portal, never by plain email.",
+          "when": ["waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "abuse-divorce-decree",
+          "label": "Divorce decree, if the marriage ended by divorce on grounds of abuse or extreme cruelty",
+          "detail": "Copy.",
+          "when": ["waiver-abuse"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "hardship-evidence",
+          "label": "Evidence of extreme hardship if you were removed",
+          "detail": "Must show hardship significantly greater than other people removed after long stays, and relate only to factors that arose during the two-year conditional residence period.",
+          "when": ["waiver-hardship"],
+          "basis": "i751-instr"
+        }
+      ]
+    },
+    {
+      "name": "Explanations",
+      "items": [
+        {
+          "id": "late-explanation",
+          "label": "Written explanation of why the petition is late",
+          "detail": "Must show the delay was due to extraordinary circumstances beyond the client's control and that the length of the delay was reasonable. Instructions, Effect of not filing, Special Note.",
+          "when": ["late-filing"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "child-separate-explanation",
+          "label": "Explanation of why the child is filing separately from the parent, with supporting documents",
+          "detail": "A full explanation plus copies of any supporting documentation.",
+          "when": ["child-separate"],
+          "basis": "i751-instr"
+        }
+      ]
+    },
+    {
+      "name": "Criminal history",
+      "items": [
+        {
+          "id": "no-charge-statement",
+          "label": "Official statement that no charges were filed, for any arrest or detention without charges",
+          "detail": "Original statement from the arresting agency or a court order confirming no charges were filed. Not needed for traffic fines under $500 or points without an actual arrest, unless alcohol or drug related.",
+          "when": ["arrests"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "arrest-records",
+          "label": "Complete arrest record and court disposition for each incident where charges were filed",
+          "detail": "Original or court-certified copy (for example dismissal order, conviction record, or acquittal order).",
+          "when": ["arrests"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "sentencing-records",
+          "label": "Sentencing record and proof the sentence was completed, for any conviction or alternative program",
+          "detail": "Original or court-certified sentencing record for each incident, plus an original or certified probation or parole record, or evidence of completing the alternative sentencing or rehabilitative program. Also any original or court-certified order vacating, setting aside, sealing or expunging the arrest or conviction, or an original court statement that no record exists.",
+          "when": ["arrests"],
+          "basis": "i751-instr"
+        }
+      ]
+    },
+    {
+      "name": "Filing from abroad on military or government orders",
+      "items": [
+        {
+          "id": "photos-abroad",
+          "label": "Two passport-style color photos for each petitioner and dependent, any age",
+          "detail": "2 by 2 inches, full face, white to off-white background, thin glossy paper, unmounted and unretouched; name and A-Number lightly printed on the back in pencil or felt pen.",
+          "when": ["orders-abroad"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "fingerprint-cards",
+          "label": "Two completed fingerprint cards (Form FD-258) for each petitioner and dependent aged 14 to 79",
+          "detail": "Prepared by a U.S. Embassy or Consulate, USCIS office, or U.S. military installation; A-Number written on the card; not bent, folded or creased.",
+          "when": ["orders-abroad"],
+          "basis": "i751-instr"
+        },
+        {
+          "id": "orders-copy",
+          "label": "Copy of the current military or government orders",
+          "detail": "",
+          "when": ["orders-abroad"],
+          "basis": "i751-page"
+        }
+      ]
+    },
+    {
+      "name": "Translations",
+      "items": [
+        {
+          "id": "translations",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "With the translator's certification that it is complete and accurate and that they are competent to translate, including their signature, printed name, signature date and contact information.",
+          "when": ["foreign-language"],
+          "basis": "i751-instr"
+        }
+      ]
+    }
+  ]
+}

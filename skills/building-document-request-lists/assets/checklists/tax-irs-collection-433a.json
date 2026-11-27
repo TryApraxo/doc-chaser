@@ -1,0 +1,401 @@
+{
+  "id": "tax-irs-collection-433a",
+  "title": "IRS collection financial statement (Form 433-A) for an individual",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-irs-resolution",
+  "use_when": "Use when an individual wage earner or sole proprietor who owes the IRS must complete the full Form 433-A collection information statement; use the Form 433-F list when the IRS asked for the shorter 433-F, the Form 433-B list for a corporation, partnership or LLC, and the offer in compromise list for Form 433-A (OIC).",
+  "note": "Built from Form 433-A (Rev. 6-2026) and Publication 1854 (Rev. 6-2026). The form itself requires few attachments up front; most documents below are the verification the IRS says it may ask for after review. It does not cover state tax agencies, the IRS allowable-expense calculation, or which payment arrangement the client qualifies for.",
+  "sources": {
+    "f433a": {
+      "name": "IRS Form 433-A, Collection Information Statement for Wage Earners and Self-Employed Individuals (Rev. 6-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f433a.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "p1854": {
+      "name": "IRS Publication 1854, How to Prepare a Collection Information Statement (Form 433-A) (Rev. 6-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p1854.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "wage-earner": "Does the client or spouse earn wages from an employer?",
+    "self-employed": "Is the client self-employed as a sole proprietor (filing Schedule C)?",
+    "joint": "Is the tax debt a joint liability of the client and a spouse?",
+    "business-entity": "Does the client or spouse have an interest in an LLC, partnership, corporation or other business entity?",
+    "income-change": "Does the client expect household income to go up or down?",
+    "lawsuit": "Is the client a party to a lawsuit?",
+    "bankruptcy": "Has the client ever filed bankruptcy?",
+    "trust": "Is the client a beneficiary of a trust, estate or life insurance policy, or a trustee, fiduciary or contributor of a trust?",
+    "safe-deposit": "Does the client have a safe deposit box (business or personal)?",
+    "transfers": "In the past 10 years, did the client transfer any asset worth more than $10,000 for less than its full value?",
+    "digital-assets": "Does the client own any cryptocurrency, NFTs or other digital assets?",
+    "life-insurance": "Does the client own a life insurance policy with cash value?",
+    "real-property": "Does the client own, or hold an interest in, a house, condo, time share, land or other real estate?",
+    "vehicles": "Does the client own or lease a car, boat, RV, motorcycle, trailer or other vehicle?",
+    "rental": "Does the client receive rental income?",
+    "court-ordered": "Does the client pay child support, alimony or other court-ordered payments?",
+    "state-tax": "Does the client owe delinquent state or local taxes?",
+    "high-expenses": "Will the client claim food, clothing or out-of-pocket health care costs above the IRS standard amounts?"
+  },
+  "sections": [
+    {
+      "name": "About the client and household",
+      "items": [
+        {
+          "id": "identity",
+          "label": "Full name, Social Security number or ITIN, and date of birth for the client and spouse",
+          "detail": "Form 433-A lines 1a and 2b, with address, county and phone numbers (lines 1b-1e) and marital status (line 2a). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "household",
+          "label": "Name, age and relationship of everyone else in the household or claimed as a dependent",
+          "detail": "Form 433-A line 2c, including whether each person is claimed on Form 1040 and contributes to household income.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "tax-returns",
+          "label": "Copies of previously filed income tax returns",
+          "detail": "Listed in the verification note after the Form 433-A signature line. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "foreign-ties",
+          "label": "Passport, time lived abroad and dual citizenship details",
+          "detail": "Form 433-A lines 8a-8c: whether the client has a U.S. passport, dates lived outside the U.S. for 6 months or longer in the past 10 years, and any country of dual citizenship.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "business-entity-info",
+          "label": "Name, type and ownership percentage of any business entity the client or spouse has an interest in",
+          "detail": "Form 433-A lines 3a-3c. Line 52 says LLCs, partnerships and corporations must complete Form 433-B.",
+          "when": [
+            "business-entity"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "spouse-signature",
+          "label": "Signatures of both spouses on the certification",
+          "detail": "Publication 1854: for joint income tax liabilities, both husband and wife must sign the statement.",
+          "when": [
+            "joint"
+          ],
+          "basis": "p1854"
+        }
+      ]
+    },
+    {
+      "name": "Employment and other financial information",
+      "items": [
+        {
+          "id": "employer",
+          "label": "Employer name, address, phone, time on the job, occupation and pay frequency for the client and spouse",
+          "detail": "Form 433-A Section 2, lines 4a-4h and 5a-5h.",
+          "when": [
+            "wage-earner"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "pay-statements",
+          "label": "Recent pay statements",
+          "detail": "Listed in the verification note after the Form 433-A signature line. Used for gross monthly wages on lines 21-22 (do not deduct withholding or allotments). Send through the secure portal, never by plain email.",
+          "when": [
+            "wage-earner"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "income-change",
+          "label": "Explanation of the expected income increase or decrease, how much and when",
+          "detail": "Form 433-A line 6, Section 3 (attach copies of applicable documentation).",
+          "when": [
+            "income-change"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "lawsuit",
+          "label": "Lawsuit details: court location, representation, docket or case number, amount, expected completion date and subject",
+          "detail": "Form 433-A line 7, Section 3 (attach copies of applicable documentation).",
+          "when": [
+            "lawsuit"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "bankruptcy",
+          "label": "Bankruptcy filing, dismissal and discharge dates, petition number and where filed",
+          "detail": "Form 433-A line 8, Section 3 (attach copies of applicable documentation).",
+          "when": [
+            "bankruptcy"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "trust",
+          "label": "Name, EIN and place recorded of any trust, estate or policy, and any amount the client expects to receive and when",
+          "detail": "Form 433-A lines 9b-9c, including trusts and estates in foreign countries.",
+          "when": [
+            "trust"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "safe-deposit",
+          "label": "Safe deposit box location, box number, contents and value",
+          "detail": "Form 433-A line 10, including boxes in foreign countries.",
+          "when": [
+            "safe-deposit"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "transfers",
+          "label": "List of assets transferred for less than full value: value at transfer, date and who received them",
+          "detail": "Form 433-A line 11: transfers in the past 10 years of assets with a fair market value over $10,000.",
+          "when": [
+            "transfers"
+          ],
+          "basis": "f433a"
+        }
+      ]
+    },
+    {
+      "name": "Assets and debts",
+      "items": [
+        {
+          "id": "bank-accounts",
+          "label": "List of every personal bank account, with institution, account number and current balance",
+          "detail": "Form 433-A line 13: checking, online and mobile (e.g., PayPal), money market and savings accounts and stored value cards. Publication 1854 says to list accounts even with no balance. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "bank-statements",
+          "label": "Bank statements",
+          "detail": "Listed in the verification note after the Form 433-A signature line. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "investments",
+          "label": "Investment and retirement account statements, and any business ownership interests",
+          "detail": "Form 433-A line 14: stocks, bonds, mutual funds, stock options, CDs, IRAs, Keogh and 401(k) plans, commodities, and any business entity in which the client has a financial interest. Bank and investment statements are listed in the verification note. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "digital-assets",
+          "label": "List of digital assets with wallet or exchange, email used to set it up, location, amount and U.S. dollar value, plus a statement of each virtual currency's public key",
+          "detail": "Form 433-A line 15, including the names of everyone with access to the private keys or wallets. Send through the secure portal, never by plain email.",
+          "when": [
+            "digital-assets"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "credit",
+          "label": "Lines of credit and bank-issued credit cards: credit limit, amount owed and available credit",
+          "detail": "Form 433-A line 16. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "life-insurance",
+          "label": "Life insurance company, policy number, owner, current cash value and any loan balance",
+          "detail": "Form 433-A line 17.",
+          "when": [
+            "life-insurance"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "real-property",
+          "label": "Real estate details: description, location, all title holders and how title is held, purchase date, fair market value, loan balance, monthly payment and lender",
+          "detail": "Form 433-A line 18, including life estates and, in community property states, community-property interests.",
+          "when": [
+            "real-property"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "vehicles",
+          "label": "Vehicles owned or leased: purchase date, fair market value, loan balance, monthly payment, final payment date and lender or lessor",
+          "detail": "Form 433-A line 19: cars, boats, RVs, motorcycles, all-terrain and off-road vehicles, trailers.",
+          "when": [
+            "vehicles"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "personal-assets",
+          "label": "Other valuable personal assets and intangibles, with value and any loan",
+          "detail": "Form 433-A line 20: furniture, artwork, jewelry, collections, antiques, and licenses, domain names, patents, copyrights, mining claims.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "loan-statements",
+          "label": "Current loan statements for mortgages, vehicle loans and other secured debts",
+          "detail": "Listed in the verification note after the Form 433-A signature line. Send through the secure portal, never by plain email.",
+          "when": [
+            "real-property",
+            "vehicles"
+          ],
+          "basis": "f433a"
+        }
+      ]
+    },
+    {
+      "name": "Monthly household income and expenses",
+      "items": [
+        {
+          "id": "other-income",
+          "label": "Statements for other income: interest and dividends, distributions, pensions, Social Security, child support, alimony and any other income",
+          "detail": "Form 433-A lines 23 and 26-34. Other income includes unemployment, gambling, sharing-economy and digital-platform income, and recurring capital gains including cryptocurrency.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "rental-income",
+          "label": "Rental income and cash rental expenses",
+          "detail": "Form 433-A line 25 and footnote 3: net monthly rental income without depreciation or depletion.",
+          "when": [
+            "rental"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "recurring-bills",
+          "label": "Bills or statements for recurring expenses: rent or mortgage, property taxes, insurance, utilities, phone and internet, vehicle costs, health insurance, child care and life insurance",
+          "detail": "Form 433-A lines 37-45; bills or statements for recurring expenses are listed in the verification note. Publication 1854 says the IRS may ask for substantiation of certain expenses.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "expenses-above-standard",
+          "label": "Receipts or records supporting food, clothing or out-of-pocket health care costs above the IRS standard",
+          "detail": "Publication 1854, items 35 and 41: if you claim a higher amount, you must verify and substantiate it. Send through the secure portal, never by plain email.",
+          "when": [
+            "high-expenses"
+          ],
+          "basis": "p1854"
+        },
+        {
+          "id": "current-taxes",
+          "label": "Current-year federal and state taxes withheld or paid as estimated taxes",
+          "detail": "Form 433-A line 46 and footnote 13.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "court-ordered",
+          "label": "Court-ordered payments such as child support and alimony",
+          "detail": "Form 433-A line 43; Publication 1854 item 42.",
+          "when": [
+            "court-ordered"
+          ],
+          "basis": "p1854"
+        },
+        {
+          "id": "secured-debts-list",
+          "label": "List of other secured debts and their monthly payments",
+          "detail": "Form 433-A line 47 (attach list). Publication 1854 says not to duplicate mortgage or car payments.",
+          "when": [],
+          "basis": "f433a"
+        },
+        {
+          "id": "state-tax",
+          "label": "Delinquent state or local tax amount and monthly payment",
+          "detail": "Form 433-A line 48.",
+          "when": [
+            "state-tax"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "other-expenses-list",
+          "label": "List and explanation of other expenses such as student loans or tuition required for employment",
+          "detail": "Form 433-A line 49 (attach list); Publication 1854 says attach a list and explanation.",
+          "when": [],
+          "basis": "p1854"
+        }
+      ]
+    },
+    {
+      "name": "Self-employment (sole proprietor)",
+      "items": [
+        {
+          "id": "business-info",
+          "label": "Business name, address, phone, EIN, type of business, website, number of employees, average monthly payroll and tax deposit frequency",
+          "detail": "Form 433-A lines 53a-60. Send through the secure portal, never by plain email.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "payment-processors",
+          "label": "Payment processors and merchant accounts the business uses, with account numbers",
+          "detail": "Form 433-A lines 62-63: e.g., PayPal, Authorize.net, virtual currency wallets or exchanges, and credit cards accepted. Send through the secure portal, never by plain email.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "business-bank",
+          "label": "List of business bank accounts with balances, and business cash on hand",
+          "detail": "Form 433-A lines 64-65. Publication 1854 says to list accounts even with no balance. Send through the secure portal, never by plain email.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "receivables",
+          "label": "Accounts and notes receivable, including contracts and government grants",
+          "detail": "Form 433-A line 66: list all contracts separately, including those awarded but not started.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "business-assets",
+          "label": "List of business tools, equipment, inventory and intangible assets with values and loans",
+          "detail": "Form 433-A line 67.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "profit-loss",
+          "label": "Business profit and loss statement for the prior 3, 6, 9 or 12 months",
+          "detail": "Form 433-A Section 7: lines 68-88 should reconcile with the business profit and loss statement for the period used. Footnote 2 to line 24: if net business income is more or less than in previous years, attach an explanation.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        },
+        {
+          "id": "se-records",
+          "label": "Self-employment records supporting business income and expenses",
+          "detail": "Listed in the verification note after the Form 433-A signature line.",
+          "when": [
+            "self-employed"
+          ],
+          "basis": "f433a"
+        }
+      ]
+    }
+  ]
+}

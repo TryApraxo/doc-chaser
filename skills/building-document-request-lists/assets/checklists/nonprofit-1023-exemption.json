@@ -1,0 +1,303 @@
+{
+  "id": "nonprofit-1023-exemption",
+  "title": "501(c)(3) exemption application (Form 1023): documents needed",
+  "industry": "nonprofit",
+  "jurisdiction": "US federal",
+  "variant_of": "nonprofit-exemption",
+  "use_when": "Use when an organization is applying for recognition of 501(c)(3) tax-exempt status on the full Form 1023.",
+  "note": "Built from the IRS Instructions for Form 1023 (Rev. December 2024) and the IRS page on the required attachment to Form 1023. It does not decide whether the organization qualifies, whether Form 1023-EZ could be used instead, or cover state charity registration or state tax exemption.",
+  "sources": {
+    "i1023": {
+      "name": "IRS, Instructions for Form 1023, Application for Recognition of Exemption Under Section 501(c)(3) (Rev. December 2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i1023.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "irs-attach": {
+      "name": "IRS, Form 1023: Required attachment to Form 1023 (page last reviewed or updated 09-Oct-2026)",
+      "url": "https://www.irs.gov/charities-non-profits/form-1023-required-attachment-to-form-1023",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "corporation": "Is the organization a nonprofit corporation?",
+    "llc": "Is the organization a limited liability company?",
+    "association": "Is the organization an unincorporated association?",
+    "trust": "Is the organization a trust?",
+    "trust-by-will": "Was the trust created by a will?",
+    "no-filed-copy": "Is the organization missing a copy of its organizing document that shows it was filed with the state, or a signed and dated copy?",
+    "amended": "Has the organizing document ever been amended?",
+    "has-bylaws": "Has the organization adopted bylaws or other rules of operation?",
+    "existed-5-years": "Has the organization existed for 5 years or more?",
+    "under-5-years": "Has the organization existed for less than 5 years?",
+    "pays-insiders": "Does or will the organization pay its officers, directors or trustees, or pay any employee or contractor over $100,000?",
+    "representative": "Will an attorney, CPA or enrolled agent represent the organization on the application?",
+    "info-only-appointee": "Should someone outside the organization be able to discuss the application with the IRS without representing it?",
+    "successor": "Did the organization take over another organization's activities, take over 25% or more of its net assets, or convert from for-profit to nonprofit?",
+    "late-filing": "Is the organization applying more than 27 months after it was formed, or seeking reinstatement after automatic revocation?",
+    "expedite": "Does the organization want to ask the IRS to expedite the application?"
+  },
+  "sections": [
+    {
+      "name": "Organizing documents",
+      "items": [
+        {
+          "id": "articles-incorporation",
+          "label": "Articles of incorporation, showing they were filed with the state",
+          "detail": "Form 1023 Part II, line 1. The articles must show certification of filing (evidence that on a specific date they were filed with and approved by the appropriate state authority) and be an exact copy of what is on file with the state.",
+          "when": [
+            "corporation"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "articles-organization",
+          "label": "Articles of organization, showing they were filed with the state, and the operating agreement if one was adopted",
+          "detail": "Form 1023 Part II, line 1. For an LLC the operating agreement, if adopted, is part of the organizing document. The articles must show certificate of filing and be an exact copy of what is on file with the state.",
+          "when": [
+            "llc"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "articles-association",
+          "label": "Articles of association or constitution, signed and dated",
+          "detail": "Form 1023 Part II, line 1. Must include the organization's name, its purpose, the date it was adopted, and the signatures of at least two individuals.",
+          "when": [
+            "association"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "trust-agreement",
+          "label": "Trust agreement or declaration of trust, signed by at least one trustee",
+          "detail": "Form 1023 Part II, line 1.",
+          "when": [
+            "trust"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "will-death-certificate",
+          "label": "Relevant portions of the will, and the death certificate or a statement of the date of death",
+          "detail": "Form 1023 Part II, line 1, for trusts created by a will. Send through the secure portal, never by plain email.",
+          "when": [
+            "trust-by-will"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "substitute-declaration",
+          "label": "Signed declaration that the copy of the organizing document is complete and correct",
+          "detail": "Form 1023 Part II, line 1. For a corporation or LLC without a state-filed copy, a substitute copy with a declaration signed by an authorized officer; for an association or trust whose copy is unsigned or undated, a declaration that the copy is a complete and accurate copy of the signed and dated original, stating the original date of adoption or signing.",
+          "when": [
+            "no-filed-copy"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "amendments",
+          "label": "Every amendment to the organizing document, in date order",
+          "detail": "Listed as required if applicable, in chronological order, in the consolidated attachment.",
+          "when": [
+            "amended"
+          ],
+          "basis": "irs-attach"
+        },
+        {
+          "id": "bylaws",
+          "label": "Current bylaws or other rules of operation, with any amendments",
+          "detail": "Form 1023 Part II, line 4. Bylaws do not need to be signed unless they are the organizing document. The instructions suggest checking that the bylaws are consistent with the tax year entered in Part I, line 3.",
+          "when": [
+            "has-bylaws"
+          ],
+          "basis": "i1023"
+        }
+      ]
+    },
+    {
+      "name": "Organization details for the form",
+      "items": [
+        {
+          "id": "legal-name-address",
+          "label": "Exact legal name and mailing address",
+          "detail": "Form 1023 Part I, lines 1a–1i. The name must match the organizing document, including amendments.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "ein",
+          "label": "The organization's own Employer Identification Number (EIN)",
+          "detail": "Form 1023 Part I, line 2. The organization must have its own EIN before submitting; it may not use the EIN of a related organization. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "tax-year-end",
+          "label": "Month the organization's tax year ends",
+          "detail": "Form 1023 Part I, line 3.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "contact",
+          "label": "Name, title and daytime phone number of the person the IRS should contact",
+          "detail": "Form 1023 Part I, lines 4–5.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "websites",
+          "label": "Website address and any websites maintained on the organization's behalf",
+          "detail": "Form 1023 Part I, line 8.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "officers",
+          "label": "Full names, titles and mailing addresses of all officers, directors and trustees",
+          "detail": "Form 1023 Part I, line 9. The person who signs Form 1023 must be within the first five entries.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "formation-date-state",
+          "label": "Date and state (or other jurisdiction) of formation",
+          "detail": "Form 1023 Part II, lines 2–3. For a corporation, the date the articles were filed and approved; for an association, the date adopted; for a trust, the date funded.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "activities",
+          "label": "Detailed description of past, present and planned activities",
+          "detail": "Form 1023 Part IV, line 1. The IRS will not recognize exemption based on a mission statement alone; the description must explain the specific activities that carry out the exempt purpose.",
+          "when": [],
+          "basis": "i1023"
+        },
+        {
+          "id": "fundraising",
+          "label": "How the organization raises or will raise funds (staff, volunteers, agents or contractors)",
+          "detail": "Form 1023 Part IV, line 16.",
+          "when": [],
+          "basis": "i1023"
+        }
+      ]
+    },
+    {
+      "name": "Compensation and conflicts of interest",
+      "items": [
+        {
+          "id": "compensation",
+          "label": "Compensation paid or planned for officers, directors, trustees, and anyone paid over $100,000",
+          "detail": "Form 1023 Part V, line 1. Compensation includes salary, deferred compensation, retirement benefits, fringe benefits and bonuses, including amounts from related organizations. Must be consistent with Part VI financial data.",
+          "when": [
+            "pays-insiders"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "comparable-pay",
+          "label": "Comparable compensation data from similarly situated organizations, if used to set pay",
+          "detail": "Form 1023 Part V, line 1e. The instructions say to document the sources of comparable compensation data and retain copies.",
+          "when": [
+            "pays-insiders"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "conflict-policy",
+          "label": "Conflict of interest policy, if one has been adopted",
+          "detail": "Form 1023 Part V, line 2. A policy is not required to obtain exemption; a sample policy is in Appendix A of the instructions.",
+          "when": [],
+          "basis": "i1023"
+        }
+      ]
+    },
+    {
+      "name": "Financial data",
+      "items": [
+        {
+          "id": "actuals-5-years",
+          "label": "Actual income and expenses for the 5 most recently completed tax years",
+          "detail": "Form 1023 Part VI, line 1 and Statement of Revenue and Expenses. Prepared on the accounting method used for the books and the tax year in Part I, line 3. The IRS may request more than 5 years.",
+          "when": [
+            "existed-5-years"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "actuals-and-budget",
+          "label": "Actual income and expenses for each completed year, plus a good-faith budget for the current and future years",
+          "detail": "Form 1023 Part VI, line 1. Less than 1 year: current year plus the next 2 years (3 years total). More than 1 but fewer than 5 years: actuals for each completed year plus projections for a total of 4 years.",
+          "when": [
+            "under-5-years"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "balance-sheet",
+          "label": "Balance sheet for the most recently completed tax year (or most current information if no full year)",
+          "detail": "Form 1023 Part VI, Section B. Uses the year-end date, not the preparation date. Includes cash in checking and savings accounts, receivables, investments, loans and liabilities. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i1023"
+        }
+      ]
+    },
+    {
+      "name": "Authorizations and other attachments",
+      "items": [
+        {
+          "id": "form-2848",
+          "label": "Signed Form 2848, Power of Attorney and Declaration of Representative",
+          "detail": "Uploaded if the organization wants a representative for the application. A CAF number is not required. Send through the secure portal, never by plain email.",
+          "when": [
+            "representative"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "form-8821",
+          "label": "Signed Form 8821, Tax Information Authorization",
+          "detail": "Lets the IRS discuss the application with the appointee; it does not authorize representation. Send through the secure portal, never by plain email.",
+          "when": [
+            "info-only-appointee"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "successor-info",
+          "label": "Information about the predecessor organization and the transfer",
+          "detail": "Form 1023 Part II, line 5 and Schedule G, Successors to Other Organizations.",
+          "when": [
+            "successor"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "schedule-e-info",
+          "label": "Information for Schedule E (effective date of exemption)",
+          "detail": "Form 1023 Part VIII and Schedule E, for applications filed more than 27 months after formation or for reinstatement after automatic revocation under section 6033(j)(1).",
+          "when": [
+            "late-filing"
+          ],
+          "basis": "i1023"
+        },
+        {
+          "id": "expedite-request",
+          "label": "Expedite request",
+          "detail": "Optional item on the IRS list of attachments.",
+          "when": [
+            "expedite"
+          ],
+          "basis": "irs-attach"
+        },
+        {
+          "id": "supplemental",
+          "label": "Supplemental responses or other supporting information that will not fit in the form's text fields",
+          "detail": "Optional. Put the organization's name and EIN on each page and identify the Part and line number. All attachments are combined into one PDF, which cannot exceed 15MB.",
+          "when": [],
+          "basis": "i1023"
+        }
+      ]
+    }
+  ]
+}

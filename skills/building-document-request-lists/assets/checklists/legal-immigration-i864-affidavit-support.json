@@ -1,0 +1,254 @@
+{
+  "id": "legal-immigration-i864-affidavit-support",
+  "title": "Affidavit of Support (Form I-864): sponsor documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "Use when a petitioning, joint or substitute sponsor must complete Form I-864 for a family-based (or certain employment-based) immigrant; use the I-485 family or I-130 lists for the immigrant's own application.",
+  "note": "Based on the USCIS Form I-864 page and its Checklist of Required Initial Evidence (last reviewed/updated 09/04/2026) and the Form I-864 Instructions (edition 08/24/26, the only edition USCIS accepts from Oct. 1, 2026). The 08/24/26 edition adds a consumer-report privacy release, so a sponsor with a credit freeze should be ready to lift it. It does not calculate whether the sponsor meets the poverty-guideline threshold (Form I-864P) or cover Department of State consular filing steps.",
+  "sources": {
+    "i864-page": {
+      "name": "USCIS, I-864, Affidavit of Support Under Section 213A of the INA, form page with Checklist of Required Initial Evidence (for informational purposes only), Last Reviewed/Updated 09/04/2026",
+      "url": "https://www.uscis.gov/i-864",
+      "retrieved": "2026-11-26"
+    },
+    "i864-instr": {
+      "name": "USCIS, Instructions for Affidavit of Support Under Section 213A of the INA, Form I-864, edition 08/24/26 (expires 10/31/2027)",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-864instr.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "self-employed": "Is the sponsor self-employed?",
+    "not-required-to-file": "Was the sponsor not required to file a federal income tax return for the most recent tax year?",
+    "unfiled-return": "Was the sponsor required to file a federal return for a year being used but did not file it?",
+    "extra-income-evidence": "Does the sponsor want to add extra income evidence (up to three years of returns, recent pay stubs, an employer letter, or proof of alimony, child support, dividend or interest income) to help qualify?",
+    "status-proof": "Is the sponsor a joint sponsor, a substitute sponsor, or the relative of an employment-based immigrant (rather than a petitioner who already proved status with the I-130 or similar petition)?",
+    "substitute-sponsor": "Is the sponsor a substitute sponsor because the original I-130 petitioner died after approval?",
+    "military": "Is the petitioning sponsor on active duty in the U.S. armed forces or Coast Guard and sponsoring a spouse or child?",
+    "domicile-abroad": "Does the sponsor live or get mail outside the United States while claiming U.S. domicile?",
+    "household-income": "Is the sponsor counting income of household members or dependents to qualify?",
+    "immigrant-income": "Is the sponsor counting the intending immigrant's own income?",
+    "assets": "Is the sponsor using assets (their own, a household member's, or the immigrant's) to make up an income shortfall?",
+    "home-equity": "Is the sponsor counting the net value of a home as an asset?",
+    "multiple-immigrants": "Is the sponsor covering more than one intending immigrant on the same affidavit?",
+    "guardian": "Is a legal guardian signing for the sponsor?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Sponsor identity and status",
+      "items": [
+        {
+          "id": "ssn",
+          "label": "Sponsor's Social Security number",
+          "detail": "Required (Part 2, Item 8); one of the fields the lockbox checks before accepting the form. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i864-page"
+        },
+        {
+          "id": "citizen-status-proof",
+          "label": "Proof of U.S. citizenship, U.S. nationality, or permanent residence",
+          "detail": "Citizen or national: copy of birth certificate, certificate of naturalization, certificate of citizenship, consular report of birth abroad, or the biographic page of the U.S. passport. Permanent resident: copy of both sides of the green card, or of an unexpired temporary I-551 stamp in a foreign passport or on Form I-94. Part 2, Item 9. Send through the secure portal, never by plain email.",
+          "when": ["status-proof"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "military-proof",
+          "label": "Proof of active-duty military status",
+          "detail": "Lets the petitioning sponsor qualify at 100 percent of the poverty guidelines instead of 125 percent. Part 2, Item 12. Does not apply to joint or substitute sponsors.",
+          "when": ["military"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "domicile-evidence",
+          "label": "Written explanation and documents showing the sponsor's U.S. domicile",
+          "detail": "Part 2, Item 5. Examples: qualifying employment abroad; or proof the stay abroad is temporary such as U.S. voting record, U.S. state or local tax payments, U.S. property, U.S. bank or investment accounts, or a permanent U.S. mailing address; or evidence of intent to re-establish domicile by the immigrant's admission. Send through the secure portal, never by plain email.",
+          "when": ["domicile-abroad"],
+          "basis": "i864-instr"
+        }
+      ]
+    },
+    {
+      "name": "Sponsor income and taxes",
+      "items": [
+        {
+          "id": "tax-return",
+          "label": "Federal income tax return (or IRS transcript) for the most recent tax year",
+          "detail": "Most recent year counting from the date the I-864 is signed. A plain IRS transcript or a photocopy is fine; no IRS certification needed. Do not send state returns. Part 6, Items 15-19. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "w2-1099",
+          "label": "All W-2s and 1099s that go with the return",
+          "detail": "Required when sending a photocopy of the return. Not needed with an IRS transcript unless the sponsor filed jointly and is qualifying on their own income only. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "schedules",
+          "label": "Every Form 1040 schedule filed with the return, including Schedule C, D, E or F",
+          "detail": "Self-employed sponsors must include the schedule that shows business income.",
+          "when": ["self-employed"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "not-required-explanation",
+          "label": "Written explanation of why no federal return was required",
+          "detail": "If income was too low, a typed or printed explanation. For any other reason, the explanation plus evidence of the exemption and how it applies. Living outside the U.S. does not exempt citizens or permanent residents.",
+          "when": ["not-required-to-file"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "late-return",
+          "label": "IRS transcript or copy of each late-filed return",
+          "detail": "All late returns must first be filed with the IRS.",
+          "when": ["unfiled-return"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "three-years",
+          "label": "Federal returns or transcripts for the three most recent tax years",
+          "detail": "Optional, if they help show the sponsor can maintain sufficient income. IRS Form 4506-T can be used to request transcripts. Send through the secure portal, never by plain email.",
+          "when": ["extra-income-evidence"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "employer-letter",
+          "label": "Recent letter from the employer stating annual salary",
+          "detail": "Showing the employer's address and telephone number. Optional. Part 6, Item 7.",
+          "when": ["extra-income-evidence"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "pay-stubs",
+          "label": "Pay stubs for the most recent six months",
+          "detail": "Optional. Send through the secure portal, never by plain email.",
+          "when": ["extra-income-evidence"],
+          "basis": "i864-page"
+        },
+        {
+          "id": "other-income",
+          "label": "Proof of alimony, child support, dividend, interest or other income being claimed",
+          "detail": "Optional. Means-tested public benefits cannot be counted as income. Part 6, Item 7.",
+          "when": ["extra-income-evidence"],
+          "basis": "i864-instr"
+        }
+      ]
+    },
+    {
+      "name": "Household members and the immigrant's income",
+      "items": [
+        {
+          "id": "i864a",
+          "label": "Form I-864A, Contract Between Sponsor and Household Member, for each person whose income is counted",
+          "detail": "Each must be over 18. The intending immigrant completes I-864A only if a spouse and/or children are immigrating with them.",
+          "when": ["household-income"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "household-residency",
+          "label": "Proof each household member lives with the sponsor and how they are related",
+          "detail": "Needed for members who are not intending immigrants and are not listed as dependents on the sponsor's most recent federal return.",
+          "when": ["household-income"],
+          "basis": "i864-page"
+        },
+        {
+          "id": "household-tax-returns",
+          "label": "Each household member's federal tax return for the most recent tax year, with W-2s and 1099s",
+          "detail": "Or evidence they were not required to file. Three most recent years may be sent if it helps. Send through the secure portal, never by plain email.",
+          "when": ["household-income"],
+          "basis": "i864-page"
+        },
+        {
+          "id": "immigrant-income-continues",
+          "label": "Proof the intending immigrant's income will continue from the same source after getting a green card",
+          "detail": "If the immigrant is not the sponsor's spouse, also evidence that the immigrant lives in the sponsor's residence. Part 6, Items 8-14.",
+          "when": ["immigrant-income"],
+          "basis": "i864-instr"
+        }
+      ]
+    },
+    {
+      "name": "Assets",
+      "items": [
+        {
+          "id": "asset-docs",
+          "label": "Documents for each asset showing location, ownership, date acquired and value",
+          "detail": "Only assets convertible to cash within one year without considerable hardship or loss. Include a description, proof of ownership and the basis for the net cash value. Part 7, Items 1-4. Send through the secure portal, never by plain email.",
+          "when": ["assets"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "liens",
+          "label": "Evidence of any liens or debts against those assets",
+          "detail": "",
+          "when": ["assets"],
+          "basis": "i864-page"
+        },
+        {
+          "id": "household-assets",
+          "label": "Form I-864A with evidence of assets for each household member whose assets are used",
+          "detail": "Spouse, adult son or daughter, parent, or sibling who lives with the sponsor. Part 7, Item 5.",
+          "when": ["assets"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "immigrant-assets",
+          "label": "Evidence of the intending immigrant's assets, if counted",
+          "detail": "May be used wherever the immigrant lives; no I-864A needed. Part 7, Items 6-9.",
+          "when": ["assets"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "home-docs",
+          "label": "Proof of home ownership, a recent appraisal by a licensed appraiser, and statements for every loan or lien on the home",
+          "detail": "Net value = appraised value minus all mortgages, trust deeds and other liens.",
+          "when": ["home-equity"],
+          "basis": "i864-instr"
+        }
+      ]
+    },
+    {
+      "name": "Special cases",
+      "items": [
+        {
+          "id": "substitute-relationship",
+          "label": "Proof of the substitute sponsor's family relationship to the intending immigrant",
+          "detail": "Qualifying relationships are listed in the instructions under What Is a Substitute Sponsor?",
+          "when": ["substitute-sponsor"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "i130-approval",
+          "label": "Copy of the Form I-130 approval notice",
+          "detail": "Filed by the beneficiary with a typed or printed statement explaining why the revoked I-130 should be reinstated after the petitioner's death.",
+          "when": ["substitute-sponsor"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "photocopies",
+          "label": "Photocopies of the signed I-864 for each additional immigrant on the same affidavit",
+          "detail": "For dependents immigrating with the principal or within six months. Supporting documents do not need to be copied for them.",
+          "when": ["multiple-immigrants"],
+          "basis": "i864-instr"
+        },
+        {
+          "id": "guardian-docs",
+          "label": "Guardian's proof of appointment and the court or agency order allowing use of the sponsor's income and assets",
+          "detail": "Proof of appointment as guardian of the estate, plus the order specifically allowing the guardian to make the sponsor's income and assets available.",
+          "when": ["guardian"],
+          "basis": "i864-page"
+        },
+        {
+          "id": "translations",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "With the translator's certification that it is complete and accurate and that they are competent to translate.",
+          "when": ["foreign-language"],
+          "basis": "i864-page"
+        }
+      ]
+    }
+  ]
+}

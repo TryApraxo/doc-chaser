@@ -1,0 +1,274 @@
+{
+  "id": "mortgage-fha-203k",
+  "title": "FHA 203(k) rehabilitation loan: added documents",
+  "industry": "mortgage",
+  "jurisdiction": "US federal",
+  "variant_of": "mortgage-needs-list",
+  "use_when": "Use when an FHA loan will also pay for repairs or renovation under Section 203(k); add this list to mortgage-fha, which still covers the borrower's identity, income and assets.",
+  "note": "Items follow HUD Handbook 4000.1 (issued August 12, 2026), section II.A.8.a on the 203(k) Rehabilitation Mortgage Insurance Program, plus HUD's 203(k) program page for the completion steps. It covers only the 203(k) additions, not the standard FHA borrower documents, and it does not decide whether a repair is eligible or which 203(k) type fits. Lender overlays and local permit rules add conditions.",
+  "sources": {
+    "hud-4000-1": {
+      "name": "HUD, FHA Single Family Housing Policy Handbook 4000.1, issued August 12, 2026 (section II.A.8.a 203(k) Rehabilitation Mortgage Insurance Program, headed 11/10/2026; pages marked Last Revised 8/12/2026)",
+      "url": "https://www.hud.gov/sites/default/files/Housing/documents/40001-hsgh-Update-18.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "hud-203k-page": {
+      "name": "HUD, 203(k) Rehabilitation Mortgage Insurance Program Types (web page; no review date shown)",
+      "url": "https://www.hud.gov/hud-partners/single-family-203k",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "standard": "Is this a Standard 203(k), which needs a 203(k) Consultant?",
+    "limited": "Is this a Limited 203(k) for minor, nonstructural repairs?",
+    "purchase": "Is the borrower buying the home with this loan?",
+    "hud-reo": "Is the home a HUD-owned (REO) property?",
+    "refinance": "Is the loan refinancing a home the borrower already owns?",
+    "completion-unclear": "Is it unclear whether the home was finished at least one year before the FHA case number was assigned?",
+    "self-help": "Will the borrower act as the general contractor or do some of the work themselves?",
+    "feasibility": "Was a feasibility study done to see whether the project is financially feasible?",
+    "limited-upfront": "On a Limited 203(k), will a contractor be paid part of the cost before work begins?",
+    "change-order": "Does the work change from the approved Work Write-Up or work plan during the rehabilitation?",
+    "extension": "Will the work run past the completion date in the Rehabilitation Loan Agreement?"
+  },
+  "sections": [
+    {
+      "name": "Program forms and the purchase or payoff",
+      "items": [
+        {
+          "id": "hud-92700a",
+          "label": "Signed 203(k) Borrower's Acknowledgement",
+          "detail": "Form HUD-92700-A. Handbook II.A.8.a.iv and xiv(A)(4).",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "identity-of-interest",
+          "label": "Signed identity-of-interest certification from each borrower",
+          "detail": "Handbook II.A.8.a.xiv(A)(1)(a). States whether you have an identity of interest with the seller, that you have none with the 203(k) Consultant and no conflict of interest with any other party, and whether you will occupy the home.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "sales-contract",
+          "label": "Sales contract showing you applied for 203(k) financing",
+          "detail": "Handbook II.A.8.a.vi(H)(4) and vii(H)(3). The contract must say it is contingent on mortgage approval and on your acceptance of any additional required improvements the lender sets.",
+          "when": ["purchase"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "hud-9548",
+          "label": "HUD sales contract with the 203(k) box checked",
+          "detail": "Form HUD-9548, Sales Contract Property Disposition Program: the first block on Line 4 and the applicable 203(k) block must be checked. Handbook II.A.8.a.vi(H)(4).",
+          "when": ["hud-reo"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "payoff",
+          "label": "Payoff statement for the existing mortgage",
+          "detail": "Handbook II.A.8.a.x(B). Send through the secure portal, never by plain email.",
+          "when": ["refinance"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "certificate-of-occupancy",
+          "label": "Copy of the home's certificate of occupancy or equivalent",
+          "detail": "Handbook II.A.8.a.iii: the home must have been completed at least one year before the case number assignment date.",
+          "when": ["completion-unclear"],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Standard 203(k): consultant and work write-up",
+      "items": [
+        {
+          "id": "consultant-agreement",
+          "label": "Signed agreement with your 203(k) Consultant listing services and fees",
+          "detail": "Handbook II.A.8.a.xiv(B)(3). It must disclose that the Consultant's inspection is not a home inspection, as described in form HUD-92564-CN.",
+          "when": ["standard"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "work-write-up",
+          "label": "Consultant's final Work Write-Up and Cost Estimate",
+          "detail": "Handbook II.A.8.a.xiv(B)(1). Lists every Work Item, including required repairs and your elective items, with the cost of each broken down by labor and materials.",
+          "when": ["standard"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "architectural-exhibits",
+          "label": "Plans and other architectural exhibits the Consultant requires, including any engineering and termite reports",
+          "detail": "Handbook II.A.8.a.vi(H)(3), xiv(B)(2) and the Consultant's certification in xiv(A)(1)(b).",
+          "when": ["standard"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "consultant-certification",
+          "label": "Consultant's signed certification",
+          "detail": "Handbook II.A.8.a.xiv(A)(1)(b): signed after preparing the Work Write-Up and Cost Estimate, covering the property inspection and the absence of any identity or conflict of interest.",
+          "when": ["standard"],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Limited 203(k): work plan and bids",
+      "items": [
+        {
+          "id": "work-plan",
+          "label": "Work plan describing the repairs or improvements",
+          "detail": "Handbook II.A.8.a.vii(C) and vii(H)(1). There is no required format; you may write it yourself or have a contractor or 203(k) Consultant help.",
+          "when": ["limited"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "contractor-proposal",
+          "label": "Written proposal and cost estimate from a contractor for each specialized repair",
+          "detail": "Handbook II.A.8.a.vii(H)(2). The proposal must show which Work Items need permits and state that the repairs are nonstructural; the estimate must give the cost of each Work Item split into labor and materials. The lender may ask for additional estimates.",
+          "when": ["limited"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "final-contractor-estimate",
+          "label": "Contractor's final itemized estimate for all Work Items",
+          "detail": "Handbook II.A.8.a.xiv(C).",
+          "when": ["limited"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "upfront-statement",
+          "label": "Statement from the contractor explaining the payment needed before work begins",
+          "detail": "Handbook II.A.8.a.xv(A)(2)(b): up to 50 percent of estimated materials and labor may be paid at closing only when the contractor cannot defer payment until completion or the payment covers materials bought before construction.",
+          "when": ["limited-upfront"],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Contractors",
+      "items": [
+        {
+          "id": "contractor-credentials",
+          "label": "Each contractor's credentials, work experience, client references, and license and bonding where required",
+          "detail": "Handbook II.A.8.a.vi(H)(1) and vii(C). For a Limited 203(k) the Handbook says the borrower provides the contractors' credentials and bids to the lender.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "contractor-bids",
+          "label": "Contractor bids",
+          "detail": "HUD's 203(k) process steps: the work write-up and bids are provided to the lender.",
+          "when": ["standard"],
+          "basis": "hud-203k-page"
+        },
+        {
+          "id": "contractor-agreement",
+          "label": "Signed agreement with the general contractor, or with each contractor if there is no general contractor",
+          "detail": "Handbook II.A.8.a.xiv(A)(6). The contractor must agree in writing to do the work for the Cost Estimate amount and within the allotted time.",
+          "when": [],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Doing your own work",
+      "items": [
+        {
+          "id": "self-help-qualification",
+          "label": "Proof you are a licensed general contractor, or records of rehabilitation projects you have completed",
+          "detail": "Handbook II.A.8.a.xiv(A)(2).",
+          "when": ["self-help"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "self-help-agreement",
+          "label": "Signed Rehabilitation Self-Help Agreement",
+          "detail": "Handbook II.A.8.a.xiv(A)(2).",
+          "when": ["self-help"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "self-help-estimates",
+          "label": "Cost estimates for each Work Item you will do, split into labor and materials",
+          "detail": "Handbook II.A.8.a.vii(C) and xiv(A)(2). On a Limited 203(k) the estimate must come from a contractor other than you. Only the cost of materials is reimbursed.",
+          "when": ["self-help"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "self-help-records",
+          "label": "Paid receipts for materials and lien waivers from any subcontractors",
+          "detail": "Handbook II.A.8.a.xiv(A)(2): you must keep complete records of the actual cost of the rehabilitation.",
+          "when": ["self-help"],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "Other studies",
+      "items": [
+        {
+          "id": "feasibility-study",
+          "label": "Copy of the feasibility study",
+          "detail": "Handbook II.A.8.a.xiv(A)(5).",
+          "when": ["feasibility"],
+          "basis": "hud-4000-1"
+        }
+      ]
+    },
+    {
+      "name": "During and after the work",
+      "items": [
+        {
+          "id": "permits",
+          "label": "Building permits for the work",
+          "detail": "Handbook II.A.8.a.xiv(A)(2) and xv(A)(2): permits must be obtained before work begins.",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "draw-request",
+          "label": "Signed draw request for each release of escrow funds",
+          "detail": "Form HUD-9746-A, Draw Request Section 203(k), from the 203(k) Consultant, or from the borrower when there is no Consultant, signed by the borrower, the contractor and any Consultant. Handbook II.A.8.a.xviii(C)(1)(a).",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "lien-waivers",
+          "label": "Lien waivers, or partial conditional lien waivers, with each draw",
+          "detail": "Handbook II.A.8.a.xviii(C)(1).",
+          "when": [],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "change-order",
+          "label": "Change order request approved before the changed work starts",
+          "detail": "Form HUD-92577, Request for Acceptance of Changes in Approved Drawings and Specifications, from the Consultant or inspector. Handbook II.A.8.a.xviii(B)(2).",
+          "when": ["change-order"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "extension-request",
+          "label": "Explanation for the delay and a new estimated completion date",
+          "detail": "Handbook II.A.8.a.xvii(B)(1). The explanation may come from the borrower, contractor or Consultant; the mortgage must be current or in compliance with any forbearance.",
+          "when": ["extension"],
+          "basis": "hud-4000-1"
+        },
+        {
+          "id": "release-letter",
+          "label": "Your release letter stating all work is complete",
+          "detail": "HUD's 203(k) process steps.",
+          "when": [],
+          "basis": "hud-203k-page"
+        },
+        {
+          "id": "final-occupancy",
+          "label": "Certificate of occupancy or building permit close-out approval, if applicable",
+          "detail": "HUD's 203(k) process steps say the Consultant obtains it before remaining escrow funds are released.",
+          "when": [],
+          "basis": "hud-203k-page"
+        }
+      ]
+    }
+  ]
+}

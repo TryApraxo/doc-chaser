@@ -1,0 +1,256 @@
+{
+  "id": "tax-irs-collection-433b",
+  "title": "IRS collection financial statement (Form 433-B) for a business",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-irs-resolution",
+  "use_when": "Use when a corporation, partnership or LLC that owes the IRS must complete Form 433-B; use the Form 433-A list for an individual or sole proprietor, and the offer in compromise list for Form 433-B (OIC).",
+  "note": "Built from Form 433-B (Rev. 6-2026). The form asks for copies of applicable documents in Section 3; the rest of the documents below are the verification the IRS says it may ask for after review. It does not cover the owners' personal statements (Form 433-A), state tax agencies, or which collection alternative the business qualifies for.",
+  "sources": {
+    "f433b": {
+      "name": "IRS Form 433-B, Collection Information Statement for Businesses (Rev. 6-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f433b.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "ecommerce": "Does the business make internet sales or accept credit cards or other electronic payments?",
+    "payroll-provider": "Does the business use a payroll service provider or reporting agent?",
+    "lawsuit": "Is the business a party to a lawsuit?",
+    "bankruptcy": "Has the business ever filed bankruptcy?",
+    "related-loans": "Do any officers, partners, employees or other related parties owe money to the business?",
+    "transfers": "In the last 10 years, did the business transfer any asset for less than full value?",
+    "affiliates": "Does the business have subsidiaries, a parent company or other business affiliations?",
+    "income-change": "Does the business expect its income to go up or down?",
+    "federal-contractor": "Is the business a federal government contractor?",
+    "safe": "Does the business have a safe on its premises or a safe deposit box?",
+    "digital-assets": "Does the business own any cryptocurrency, NFTs, smart contracts or other digital assets?",
+    "real-property": "Does the business own, lease or rent any real property or land contracts?",
+    "vehicles": "Does the business own or lease vehicles, boats, trailers or mobile homes?"
+  },
+  "sections": [
+    {
+      "name": "Business and people",
+      "items": [
+        {
+          "id": "business-info",
+          "label": "Business name, addresses, county, phone, EIN, entity type, date established and website",
+          "detail": "Form 433-B lines 1a-2c and 1f. For an LLC, include the number of members. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "payroll-info",
+          "label": "Number of employees, monthly gross payroll, tax deposit frequency and whether the business uses EFTPS",
+          "detail": "Form 433-B lines 3a-3d.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "processors",
+          "label": "Payment processors and credit card merchant accounts, with account numbers and issuing banks",
+          "detail": "Form 433-B lines 4-6c. Send through the secure portal, never by plain email.",
+          "when": ["ecommerce"],
+          "basis": "f433b"
+        },
+        {
+          "id": "owners",
+          "label": "For each partner, officer, LLC member and major shareholder: name, title, home address, phones, taxpayer identification number, ownership percentage, annual salary or draw, and whether responsible for depositing payroll taxes",
+          "detail": "Form 433-B Section 2, lines 7a-7d. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433b"
+        }
+      ]
+    },
+    {
+      "name": "Other financial information",
+      "items": [
+        {
+          "id": "payroll-provider",
+          "label": "Payroll service provider or reporting agent name, address and effective dates",
+          "detail": "Form 433-B line 8 (Section 3: attach copies of all applicable documents).",
+          "when": ["payroll-provider"],
+          "basis": "f433b"
+        },
+        {
+          "id": "lawsuit",
+          "label": "Lawsuit details and documents: court location, representation, docket or case number, amount, expected completion date and subject",
+          "detail": "Form 433-B line 9 (Section 3: attach copies of all applicable documents).",
+          "when": ["lawsuit"],
+          "basis": "f433b"
+        },
+        {
+          "id": "bankruptcy",
+          "label": "Bankruptcy documents: filing, dismissal and discharge dates, petition number and district",
+          "detail": "Form 433-B line 10 (Section 3: attach copies of all applicable documents).",
+          "when": ["bankruptcy"],
+          "basis": "f433b"
+        },
+        {
+          "id": "related-loans",
+          "label": "Loans to related parties: name, address, loan date, current balance, payment date and amount",
+          "detail": "Form 433-B line 11 (Section 3: attach copies of all applicable documents).",
+          "when": ["related-loans"],
+          "basis": "f433b"
+        },
+        {
+          "id": "transfers",
+          "label": "Assets transferred for less than full value in the last 10 years: value, date and recipient",
+          "detail": "Form 433-B line 12 (Section 3: attach copies of all applicable documents).",
+          "when": ["transfers"],
+          "basis": "f433b"
+        },
+        {
+          "id": "affiliates",
+          "label": "Names, addresses and EINs of related businesses",
+          "detail": "Form 433-B line 13.",
+          "when": ["affiliates"],
+          "basis": "f433b"
+        },
+        {
+          "id": "income-change",
+          "label": "Explanation of the expected income increase or decrease, how much and when",
+          "detail": "Form 433-B line 14.",
+          "when": ["income-change"],
+          "basis": "f433b"
+        },
+        {
+          "id": "federal-contracts",
+          "label": "Federal government contracts",
+          "detail": "Form 433-B line 15 says to include federal contracts with accounts and notes receivable on line 18.",
+          "when": ["federal-contractor"],
+          "basis": "f433b"
+        }
+      ]
+    },
+    {
+      "name": "Assets and liabilities",
+      "items": [
+        {
+          "id": "cash",
+          "label": "Cash on hand not in a bank",
+          "detail": "Form 433-B line 16a.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "safe",
+          "label": "Safe and safe deposit box details, with a list of contents and their value",
+          "detail": "Form 433-B line 16b: location, box number and value; attach list of contents.",
+          "when": ["safe"],
+          "basis": "f433b"
+        },
+        {
+          "id": "bank-accounts",
+          "label": "List of every business bank account, with institution, account number and current balance",
+          "detail": "Form 433-B line 17: checking, savings, money market, online and mobile (e.g., PayPal) accounts and stored value cards. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "bank-statements",
+          "label": "Bank and investment statements",
+          "detail": "Listed in the verification note after the Form 433-B signature line. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "receivables",
+          "label": "Accounts and notes receivable, including e-payment receivables, factoring, contracts and government grants",
+          "detail": "Form 433-B line 18: status, date due, invoice or contract number and amount due; list contracts awarded but not started.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "investments",
+          "label": "Investments with current value, any loan balance and whether used as loan collateral",
+          "detail": "Form 433-B line 19.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "digital-assets",
+          "label": "List of digital assets with units, location, account number, U.S. dollar value and any loan, plus a statement of each virtual currency's public key",
+          "detail": "Form 433-B line 20, including the names of everyone with access to the private keys or wallets. Send through the secure portal, never by plain email.",
+          "when": ["digital-assets"],
+          "basis": "f433b"
+        },
+        {
+          "id": "credit",
+          "label": "Lines of credit and credit cards: credit limit, amount owed and available credit",
+          "detail": "Form 433-B line 21. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "real-property",
+          "label": "Real property and land contracts: description, location, purchase or lease date, fair market value, loan balance, monthly payment and lender, lessor or landlord",
+          "detail": "Form 433-B line 22.",
+          "when": ["real-property"],
+          "basis": "f433b"
+        },
+        {
+          "id": "vehicles",
+          "label": "Vehicles: year, make and model, mileage, plate number, VIN, value, loan balance, monthly payment and lender or lessor",
+          "detail": "Form 433-B line 23.",
+          "when": ["vehicles"],
+          "basis": "f433b"
+        },
+        {
+          "id": "equipment",
+          "label": "Machinery, equipment, inventory and intangible assets (licenses, patents, domain names, trademarks, software, goodwill) with values and loans",
+          "detail": "Form 433-B line 24.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "liabilities",
+          "label": "Other business liabilities, notes and judgments: creditor, secured or unsecured, balance, final payment date and payment amount",
+          "detail": "Form 433-B line 25.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "loan-statements",
+          "label": "Loan statements and financing statements",
+          "detail": "Listed in the verification note after the Form 433-B signature line.",
+          "when": [],
+          "basis": "f433b"
+        }
+      ]
+    },
+    {
+      "name": "Monthly income and expenses",
+      "items": [
+        {
+          "id": "profit-loss",
+          "label": "Profit and loss statement for the prior 3, 6, 9 or 12 months",
+          "detail": "Form 433-B Section 5 uses that period to find average monthly income and expenses (lines 26-50); profit and loss statements are listed in the verification note.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "tax-returns",
+          "label": "Copies of previously filed business income tax returns",
+          "detail": "Listed in the verification note after the Form 433-B signature line.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "recurring-bills",
+          "label": "Bills or statements for recurring expenses: rent, utilities, insurance, supplies, vehicle costs and current taxes",
+          "detail": "Form 433-B lines 37-47; bills or statements for recurring expenses are listed in the verification note.",
+          "when": [],
+          "basis": "f433b"
+        },
+        {
+          "id": "signer",
+          "label": "Name and title of the officer, partner or LLC member who will sign",
+          "detail": "Form 433-B certification.",
+          "when": [],
+          "basis": "f433b"
+        }
+      ]
+    }
+  ]
+}

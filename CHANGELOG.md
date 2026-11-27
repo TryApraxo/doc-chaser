@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.6.0 (2026-11-26)
+
+- 26 new request-list templates, every item citing an official source read on 2026-11-26:
+  - Tax: estate tax (706), 1099 filing season (with the $2,000 threshold for 2026 payments), research credit (6765), FBAR and Form 8938, and FIRPTA (8288-B).
+  - IRS collection and relief: Forms 433-A, 433-B and 433-F, offer in compromise, and innocent spouse relief.
+  - Nonprofit and retirement plans: 501(c)(3) application (1023) and VCP submission (8950).
+  - Mortgage: FHA 203(k), condo project documents, and buyer closing.
+  - Immigration: I-751, I-864 and I-765.
+  - Employment: EEOC charge.
+  - Benefits and aid: HealthCare.gov data matching, FAFSA verification, VA disability, VA pension, and VA survivors.
+  - Disaster: FEMA Individual Assistance and NFIP flood claim.
+- `docs/template-backlog.md`: 170 proposed templates graded by source strength, with the demand signal from Content Snare, TaxDome, Karbon, Financial Cents, AICPA, Harvey, Clio and others.
+- `building-document-request-lists`: index, sources and description updated.
+- Two new eval cases.
+
 ## 0.5.0 (2026-11-12)
 
 - 31 new request-list templates, each a variant for a different client condition, with every item citing an official source: individual tax (basic, self-employed, rental), ITIN, IRS credit proof (three), business records (two), payroll (employee, contractor, employer), mortgage (conventional salaried, self-employed, rental income, other income, FHA, VA, hardship), SBA (7(a), two disaster loans, bank account), immigration (four), bankruptcy (chapter 7 and 13) and Social Security disability (adult and child).
