@@ -1,0 +1,124 @@
+{
+  "id": "disaster-fema-individual-assistance",
+  "title": "FEMA disaster assistance for individuals: information and documents",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "disaster-assistance",
+  "use_when": "Use when a household is applying to FEMA for Individual Assistance after a declared disaster, or must prove occupancy or ownership afterward; for SBA disaster home loans also use sba-disaster-loan-home, and for an NFIP flood claim use insurance-nfip-flood-claim.",
+  "note": "Built from the DisasterAssistance.gov Disaster Survivor Application Checklist (last updated 04/20/2026) and FEMA's page on verifying home ownership or occupancy (last updated June 26, 2026). It does not decide eligibility or award amounts, and documents FEMA asks for in a specific letter or for a specific disaster may differ.",
+  "sources": {
+    "da-checklist": {
+      "name": "DisasterAssistance.gov, Disaster Survivor Application Checklist (Last Updated: 04/20/2026)",
+      "url": "https://www.disasterassistance.gov/get-assistance/application-checklist",
+      "retrieved": "2026-11-26"
+    },
+    "fema-verify": {
+      "name": "FEMA, Verifying Home Ownership or Occupancy (page last updated June 26, 2026)",
+      "url": "https://www.fema.gov/assistance/individual/after-applying/verifying-home-ownership-occupancy",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "direct-deposit": "Does the household want any award paid by direct deposit?",
+    "occupancy-check": "Has FEMA asked the household to prove it lived in the damaged home?",
+    "ownership-check": "Has FEMA asked the household to prove it owns the damaged home?",
+    "no-documents": "Does the household have none of the listed occupancy or ownership documents, and does it live in a mobile home, travel trailer, insular area, island or tribal land, or an inherited home?"
+  },
+  "sections": [
+    {
+      "name": "To apply",
+      "items": [
+        {
+          "id": "ssn",
+          "label": "Social Security number of the applicant, another adult, or a minor child in the household",
+          "detail": "Application checklist: that person must also be a U.S. citizen, non-citizen national, or qualified alien. Anyone without a number is sent to the Social Security Number and Card page first. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "da-checklist"
+        },
+        {
+          "id": "insurance-types",
+          "label": "Types of insurance coverage the household has (homeowners, flood, auto, mobile home)",
+          "detail": "",
+          "when": [],
+          "basis": "da-checklist"
+        },
+        {
+          "id": "damage-description",
+          "label": "Description of the damage, the type of disaster, and the type of home or vehicle",
+          "detail": "For example flood, hurricane or earthquake; condo, mobile home or house; car or truck.",
+          "when": [],
+          "basis": "da-checklist"
+        },
+        {
+          "id": "household-income",
+          "label": "Total annual household income before taxes at the time of the disaster",
+          "detail": "",
+          "when": [],
+          "basis": "da-checklist"
+        },
+        {
+          "id": "addresses",
+          "label": "Address of the damaged property, plus a current address, phone number and email",
+          "detail": "",
+          "when": [],
+          "basis": "da-checklist"
+        },
+        {
+          "id": "bank-details",
+          "label": "Bank name, account type, routing number and account number",
+          "detail": "Optional, for direct deposit. Send through the secure portal, never by plain email.",
+          "when": [
+            "direct-deposit"
+          ],
+          "basis": "da-checklist"
+        }
+      ]
+    },
+    {
+      "name": "Proof of occupancy (one document)",
+      "items": [
+        {
+          "id": "occupancy-doc",
+          "label": "One document showing the household lived at the damaged home",
+          "detail": "Any one of: lease, housing agreement or rent receipts; utility bill; employer statement such as a pay stub; bank or credit card statement; motor vehicle registration; affidavit of residency or other court document; document from a public official, medical provider or social service organization; local school documents showing the child's damaged address and the applicant's or co-applicant's name; a post-disaster letter from the mobile home park owner or manager confirming occupancy. Most documents should be dated within 1 year before the disaster and/or within the 18-month period of assistance. Send through the secure portal, never by plain email.",
+          "when": [
+            "occupancy-check"
+          ],
+          "basis": "fema-verify"
+        },
+        {
+          "id": "occupancy-id",
+          "label": "Driver's license, state ID or voter registration card showing the damaged address",
+          "detail": "Accepted as the one occupancy document. Must be dated before the disaster and not expired when sent to FEMA. Send through the secure portal, never by plain email.",
+          "when": [
+            "occupancy-check"
+          ],
+          "basis": "fema-verify"
+        }
+      ]
+    },
+    {
+      "name": "Proof of ownership (one document)",
+      "items": [
+        {
+          "id": "ownership-doc",
+          "label": "One document showing the household owns the damaged home",
+          "detail": "Any one of: deed or official record; mortgage documents; homeowners insurance documents; property tax receipt or bill; manufactured home certificate or title; home purchase contract such as a bill of sale or land installment contract; a will, or an heirship affidavit with the death certificate, naming the applicant as heir; receipts for major repairs or maintenance dated within 5 years before the disaster; court documents; a post-disaster letter from the mobile home park owner or manager, or a public official. Most documents should be dated within 1 year before the disaster and/or within the 18-month period of assistance. Send through the secure portal, never by plain email.",
+          "when": [
+            "ownership-check"
+          ],
+          "basis": "fema-verify"
+        },
+        {
+          "id": "self-declaration",
+          "label": "Signed self-declarative statement, as a last resort",
+          "detail": "Must include the address, how long it was the primary residence, the applicant's name and signature, a good-faith-effort declaration, why documents could not be obtained, and a penalty-of-perjury declaration in FEMA's wording. For heirship, also the decedent's death certificate and a statement that the applicant is the nearest relative in the line of succession.",
+          "when": [
+            "no-documents"
+          ],
+          "basis": "fema-verify"
+        }
+      ]
+    }
+  ]
+}

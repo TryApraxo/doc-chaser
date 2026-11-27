@@ -1,0 +1,287 @@
+{
+  "id": "tax-irs-innocent-spouse-8857",
+  "title": "Innocent spouse relief request (Form 8857) documents",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-irs-resolution",
+  "use_when": "Use when a client wants relief from tax on a joint return (or community income) that they believe only their spouse or former spouse should owe; injured spouse refund claims use Form 8379 instead.",
+  "note": "Built from Form 8857 (Rev. June 2021), the Instructions for Form 8857 (Rev. June 2021) and Publication 971 (December 2021), the current revisions. It does not decide which type of relief applies or whether the client qualifies, and the IRS must notify the other spouse that the request was filed.",
+  "sources": {
+    "f8857": {
+      "name": "IRS Form 8857, Request for Innocent Spouse Relief (Rev. June 2021)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8857.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "i8857": {
+      "name": "IRS Instructions for Form 8857 (Rev. June 2021)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8857.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "p971": {
+      "name": "IRS Publication 971, Innocent Spouse Relief (Rev. December 2021)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p971.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "widowed": "Is the other spouse deceased?",
+    "separated": "Is the client legally separated from the other spouse?",
+    "divorced": "Is the client divorced from the other spouse?",
+    "living-apart": "Are the client and the other spouse married but living apart?",
+    "health": "Did the client have a mental or physical health problem when the returns were filed, or do they have one now?",
+    "abuse": "Was the client or a family member a victim of abuse or domestic violence by the other spouse?",
+    "asset-transfer": "Did the other spouse transfer any money or property to the client?",
+    "refund": "Does the client want a refund of tax they already paid with their own money?",
+    "injured-spouse": "Did the IRS use a joint refund to pay the other spouse's past-due federal tax, state tax, child or spousal support, or federal nontax debt such as a student loan?",
+    "representative": "Will an attorney, CPA or enrolled agent represent the client?"
+  },
+  "sections": [
+    {
+      "name": "The request",
+      "items": [
+        {
+          "id": "form-8857",
+          "label": "Signed and dated Form 8857",
+          "detail": "Instructions for Form 8857: if the form is not signed, the IRS cannot consider the request and will return it. Keep a copy for your records.",
+          "when": [],
+          "basis": "i8857"
+        },
+        {
+          "id": "tax-years",
+          "label": "Tax years for which relief is requested",
+          "detail": "Form 8857 line 3: enter the year of the joint liability, not the year of any refund that was taken.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "client-info",
+          "label": "Client's current name, Social Security number or ITIN, mailing address with county, and best or safest daytime phone number",
+          "detail": "Form 8857 line 5. If the name differs from the one on the return, give the former name too (instructions for line 5). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i8857"
+        },
+        {
+          "id": "spouse-info",
+          "label": "Current name of the person the client was married to at the end of those years, and their Social Security number and home address if known",
+          "detail": "Form 8857 line 6. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "form-8379",
+          "label": "Form 8379, Injured Spouse Allocation",
+          "detail": "Instructions for Form 8857 line 2: injured spouse relief cannot be requested on Form 8857; file Form 8379, and both forms if both apply.",
+          "when": [
+            "injured-spouse"
+          ],
+          "basis": "i8857"
+        },
+        {
+          "id": "form-2848",
+          "label": "Form 2848, Power of Attorney and Declaration of Representative",
+          "detail": "Instructions for Form 8857, Representation.",
+          "when": [
+            "representative"
+          ],
+          "basis": "i8857"
+        }
+      ]
+    },
+    {
+      "name": "Marital status documents",
+      "items": [
+        {
+          "id": "death-cert",
+          "label": "Photocopy of the death certificate and the will, if there is one",
+          "detail": "Form 8857 line 7, widowed. Send through the secure portal, never by plain email.",
+          "when": [
+            "widowed"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "separation-agreement",
+          "label": "Photocopy of the entire separation agreement",
+          "detail": "Form 8857 line 7, legally separated. Send through the secure portal, never by plain email.",
+          "when": [
+            "separated"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "divorce-decree",
+          "label": "Photocopy of the entire divorce decree",
+          "detail": "Form 8857 line 7, divorced. The form notes that a decree saying the former spouse must pay all taxes does not necessarily mean the client qualifies. Send through the secure portal, never by plain email.",
+          "when": [
+            "divorced"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "living-apart-date",
+          "label": "Date the client and spouse began living apart",
+          "detail": "Form 8857 line 7, married and living apart.",
+          "when": [
+            "living-apart"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "allocation-records",
+          "label": "Records showing which spouse each disputed income, deduction or credit item belongs to",
+          "detail": "Publication 971, Separation of Liability Relief, Burden of proof: you must establish the basis for allocating the erroneous items.",
+          "when": [
+            "widowed",
+            "separated",
+            "divorced",
+            "living-apart"
+          ],
+          "basis": "p971"
+        }
+      ]
+    },
+    {
+      "name": "Background and involvement",
+      "items": [
+        {
+          "id": "education",
+          "label": "Highest education completed when the returns were filed, and any college-level business or tax courses",
+          "detail": "Form 8857 line 8.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "health",
+          "label": "Statement explaining the health problem and when it started, with photocopies of medical bills or a doctor's report or letter",
+          "detail": "Form 8857 line 9. Send through the secure portal, never by plain email.",
+          "when": [
+            "health"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "involvement",
+          "label": "Written account of the client's role in preparing the returns, what they knew about the spouse's income, missing or incorrect items, how a balance due would be paid, financial problems, and household finances and accounts",
+          "detail": "Form 8857 lines 11-17. Attach more pages if needed, with name and SSN at the top of each page (instructions, Specific Instructions).",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "large-purchases",
+          "label": "List of large purchases and expenses in the relief years, with types, amounts and years",
+          "detail": "Form 8857 line 18: e.g., trips, home improvements, private schooling, vehicles, appliances, jewelry.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "transfers",
+          "label": "List of assets the spouse transferred to the client, with transfer dates, fair market value, any debt on them, and why they were transferred",
+          "detail": "Form 8857 line 19; explain what happened to any assets the client no longer has.",
+          "when": [
+            "asset-transfer"
+          ],
+          "basis": "f8857"
+        }
+      ]
+    },
+    {
+      "name": "Current finances",
+      "items": [
+        {
+          "id": "assets",
+          "label": "Cash on hand and in bank accounts, and each item of property with its fair market value and any loan balance",
+          "detail": "Form 8857 line 20: real estate, vehicles, stocks, bonds and other property. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "household",
+          "label": "Number of people the client supports, and average monthly household income and expenses",
+          "detail": "Form 8857 lines 21-22. Include support from family or friends as gifts.",
+          "when": [],
+          "basis": "f8857"
+        },
+        {
+          "id": "payment-proof",
+          "label": "Proof the client paid the tax with their own money, such as a bank statement or canceled check",
+          "detail": "Instructions for Form 8857 line 25, Proof Required; Publication 971. No proof is needed if the IRS took the client's individual refund to pay the joint tax. Send through the secure portal, never by plain email.",
+          "when": [
+            "refund"
+          ],
+          "basis": "i8857"
+        }
+      ]
+    },
+    {
+      "name": "Abuse or domestic violence",
+      "items": [
+        {
+          "id": "abuse-statement",
+          "label": "Written statement describing the abuse, when it began, how it affected the client and family, and how it affected their ability to question the return or payment",
+          "detail": "Form 8857 line 23b. The IRS will not disclose the client's current name, address, phone numbers or employer.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "protection-order",
+          "label": "Protection or restraining order",
+          "detail": "Form 8857 Part V documentation examples. Send through the secure portal, never by plain email.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "police-reports",
+          "label": "Police reports",
+          "detail": "Form 8857 Part V documentation examples. Send through the secure portal, never by plain email.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "medical-records",
+          "label": "Medical records, including therapist or counselor records, and a doctor's report or letter",
+          "detail": "Form 8857 Part V documentation examples. Send through the secure portal, never by plain email.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "injury-photos",
+          "label": "Injury photographs",
+          "detail": "Form 8857 Part V documentation examples. Send through the secure portal, never by plain email.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        },
+        {
+          "id": "witness-statement",
+          "label": "Statement from someone who was a victim of or witnessed the abuse or its results",
+          "detail": "Form 8857 Part V documentation examples.",
+          "when": [
+            "abuse"
+          ],
+          "basis": "f8857"
+        }
+      ]
+    },
+    {
+      "name": "Anything else",
+      "items": [
+        {
+          "id": "other-support",
+          "label": "Complete copies of any other documents that support the request",
+          "detail": "Form 8857, Important Things You Should Know and line 24. If the client later asks the Tax Court to review, it may only consider information given to the IRS before its final determination (with limited exceptions), so send everything up front. Write the client's name and SSN at the top of each document.",
+          "when": [],
+          "basis": "f8857"
+        }
+      ]
+    }
+  ]
+}

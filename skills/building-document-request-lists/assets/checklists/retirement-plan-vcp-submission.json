@@ -1,0 +1,246 @@
+{
+  "id": "retirement-plan-vcp-submission",
+  "title": "Retirement plan correction (IRS VCP submission): documents needed from the plan sponsor",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "retirement-plan-correction",
+  "use_when": "Use when a plan sponsor is filing a Voluntary Correction Program (VCP) submission with the IRS on Form 8950 to correct a retirement plan failure.",
+  "note": "Built from Rev. Proc. 2021-30 (EPCRS) sections 11.04 and 11.11, the Instructions for Form 8950 (Rev. January 2022) and the IRS page on VCP submission documents. It does not decide which failures exist, whether self-correction (SCP) is available, the correction method, or the user fee amount, and it does not cover Department of Labor programs.",
+  "sources": {
+    "rp-2021-30": {
+      "name": "IRS, Rev. Proc. 2021-30, Employee Plans Compliance Resolution System (2021-31 I.R.B. 172)",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-21-30.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "i8950": {
+      "name": "IRS, Instructions for Form 8950, Application for Voluntary Correction Program (VCP) (Rev. January 2022)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8950.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "irs-vcp-docs": {
+      "name": "IRS, Correcting plan errors - fill in VCP submission documents (page last reviewed or updated 13-Nov-2026)",
+      "url": "https://www.irs.gov/retirement-plans/correcting-plan-errors-fill-in-vcp-submission-documents",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "representative": "Will the firm or another representative sign and file the submission for the plan sponsor?",
+    "copies-to-other": "Should IRS correspondence also be mailed to someone other than the sponsor or its representative?",
+    "preapproved-doc-failure": "Is the submission limited to plan document failures for a pre-approved plan that uses an adoption agreement?",
+    "sep-simple": "Is the plan a SEP or SIMPLE IRA plan?",
+    "plan-loans": "Do the failures involve participant loans?",
+    "excise-relief": "Is the sponsor asking for relief from excise taxes (sections 4972, 4973, 4974 or 4979) or the 10% additional tax under section 72(t)?",
+    "transferred-assets": "Did a failure relate to assets transferred from another plan before the transfer?",
+    "plan-403b": "Is the plan a 403(b) plan?",
+    "orphan-plan": "Is this an orphan plan whose sponsor no longer exists, cannot be located, or cannot maintain the plan?",
+    "has-irs-letter": "Does the plan have an IRS opinion, advisory or determination letter?",
+    "adp-failure": "Is one of the failures an ADP test failure?"
+  },
+  "sections": [
+    {
+      "name": "Plan and sponsor details",
+      "items": [
+        {
+          "id": "sponsor-details",
+          "label": "Plan sponsor's name, address, phone and fax number as shown on the latest Form 5500",
+          "detail": "Form 8950 lines 1a–1k. Should be the same information used on the filed Form 5500, 5500-SF or 5500-EZ.",
+          "when": [],
+          "basis": "i8950"
+        },
+        {
+          "id": "sponsor-ein",
+          "label": "Plan sponsor's EIN (the one used on Form 5500), not an SSN or trust EIN",
+          "detail": "Form 8950 instructions. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i8950"
+        },
+        {
+          "id": "business-code",
+          "label": "Most recently filed Form 5500 series return for the plan",
+          "detail": "Form 8950 line 1l: the six-digit business code can be copied from it.",
+          "when": [],
+          "basis": "i8950"
+        },
+        {
+          "id": "plan-document",
+          "label": "Copy of the entire plan document, or the relevant portions",
+          "detail": "Rev. Proc. 2021-30 section 11.04(8). Relevant portions include the provisions tied to the failure (for example eligibility, allocation and cash or deferred provisions, the adoption agreement if any, and applicable definitions).",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "adoption-agreement",
+          "label": "Signed and dated adoption agreement for the pre-approved plan",
+          "detail": "Rev. Proc. 2021-30 section 11.04(8): for submissions limited to plan document failures under a pre-approved plan, this is all that is needed instead of the entire plan document.",
+          "when": [
+            "preapproved-doc-failure"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "sep-simple-doc",
+          "label": "The entire SEP or SIMPLE IRA plan document",
+          "detail": "Rev. Proc. 2021-30 section 11.04(8).",
+          "when": [
+            "sep-simple"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "irs-letter",
+          "label": "Copy of the plan's IRS opinion, advisory or determination letter",
+          "detail": "Rev. Proc. 2021-30 section 11.11(8).",
+          "when": [
+            "has-irs-letter"
+          ],
+          "basis": "rp-2021-30"
+        }
+      ]
+    },
+    {
+      "name": "Facts about the failures",
+      "items": [
+        {
+          "id": "failure-description",
+          "label": "Description of each failure, the years it happened (including closed years), and the number of employees affected",
+          "detail": "Rev. Proc. 2021-30 section 11.04(1).",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "how-why",
+          "label": "Explanation of how and why the failures happened, and the administrative procedures in place at the time",
+          "detail": "Rev. Proc. 2021-30 section 11.04(2).",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "correction-info",
+          "label": "Information to support the correction: employees affected, expected cost of correction, years involved, and the calculations or assumptions used",
+          "detail": "Rev. Proc. 2021-30 section 11.04(3). Numbers may be approximated if the exact figure is not known at the time of the request.",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "participant-data",
+          "label": "Data needed for calculations for each affected employee, or a representative sample",
+          "detail": "Rev. Proc. 2021-30 section 11.04(5): sample calculations must demonstrate each aspect of the correction method, plus the earnings or actuarial adjustment method under section 11.04(4). Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "adp-results",
+          "label": "ADP test results before and after correction",
+          "detail": "Rev. Proc. 2021-30 section 11.04(5) example.",
+          "when": [
+            "adp-failure"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "former-employees",
+          "label": "How former employees and beneficiaries will be located and notified, or confirmation that none were affected",
+          "detail": "Rev. Proc. 2021-30 section 11.04(6).",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "new-procedures",
+          "label": "Description of the procedures put in place so the failures do not happen again",
+          "detail": "Rev. Proc. 2021-30 section 11.04(7).",
+          "when": [],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "loan-relief",
+          "label": "Decision on whether to ask that corrected participant loans not be treated as deemed distributions (or be reported in the year of correction)",
+          "detail": "Rev. Proc. 2021-30 section 11.04(10). Form 14568-E (Schedule 5) covers plan loan failures.",
+          "when": [
+            "plan-loans"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "excise-relief-request",
+          "label": "Facts supporting the request for excise tax or additional tax relief",
+          "detail": "Rev. Proc. 2021-30 section 11.04(9).",
+          "when": [
+            "excise-relief"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "transfer-transaction",
+          "label": "Description of the transaction, including the dates of the employer change and the plan transfer",
+          "detail": "Rev. Proc. 2021-30 section 11.04(11).",
+          "when": [
+            "transferred-assets"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "403b-statement",
+          "label": "Statement that all other entities involved with the plan were contacted and will cooperate, and the type of employer",
+          "detail": "Rev. Proc. 2021-30 section 11.04(12), for example confirming cooperation from the insurance company or custodian holding plan assets.",
+          "when": [
+            "plan-403b"
+          ],
+          "basis": "rp-2021-30"
+        }
+      ]
+    },
+    {
+      "name": "Signatures and authorizations",
+      "items": [
+        {
+          "id": "perjury-declaration",
+          "label": "Penalty of perjury declaration signed and dated by the plan sponsor",
+          "detail": "Rev. Proc. 2021-30 section 11.04(16) and Form 8950 instructions. Required when a representative signs and files; it cannot be signed by the sponsor's representative.",
+          "when": [
+            "representative"
+          ],
+          "basis": "rp-2021-30"
+        },
+        {
+          "id": "form-2848",
+          "label": "Signed Form 2848, Power of Attorney, with the VCP wording on lines 3 and 5a",
+          "detail": "Form 8950 instructions: line 3 description \"Voluntary Correction Program submission per Rev. Proc. 2021-30\", Tax Form Number 8950; line 5a other acts \"The signing and filing of the Form 8950 and accompanying documents as part of a VCP submission\". Send through the secure portal, never by plain email.",
+          "when": [
+            "representative"
+          ],
+          "basis": "i8950"
+        },
+        {
+          "id": "form-8821",
+          "label": "Signed Form 8821, Tax Information Authorization, for the person to receive copies of IRS correspondence",
+          "detail": "Form 8950 line 2a instructions. The person on Form 8821 is not a representative. Send through the secure portal, never by plain email.",
+          "when": [
+            "copies-to-other"
+          ],
+          "basis": "i8950"
+        },
+        {
+          "id": "orphan-eligible-party",
+          "label": "Court order or other documents showing the applicant is an eligible party for the orphan plan",
+          "detail": "Form 8950 instructions and Rev. Proc. 2021-30 section 11.04(14), with a letter stating the submission concerns an orphan plan.",
+          "when": [
+            "orphan-plan"
+          ],
+          "basis": "i8950"
+        }
+      ]
+    },
+    {
+      "name": "Model forms the firm may prepare",
+      "items": [
+        {
+          "id": "form-14568",
+          "label": "Information for Form 14568, Model VCP Compliance Statement, and any applicable schedules (Forms 14568-A through 14568-I)",
+          "detail": "The IRS page encourages the model forms and says not to modify their format and content; schedules cover, for example, 403(b) document failures, nonamender failures, SEPs, SIMPLE IRAs, plan loans, employer eligibility, excess deferrals, late required minimum distributions and plan amendment corrections.",
+          "when": [],
+          "basis": "irs-vcp-docs"
+        }
+      ]
+    }
+  ]
+}

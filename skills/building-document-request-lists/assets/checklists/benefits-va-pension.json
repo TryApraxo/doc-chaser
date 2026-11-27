@@ -1,0 +1,177 @@
+{
+  "id": "benefits-va-pension",
+  "title": "VA Veterans Pension application: information and evidence",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "benefits-va",
+  "use_when": "Use when a wartime Veteran is applying for the needs-based VA Veterans Pension (with or without Aid and Attendance or Housebound); use benefits-va-disability-compensation for service-connected compensation and benefits-va-survivors-dic for survivors.",
+  "note": "Built from the VA.gov pages How to apply for a VA pension as a Veteran (last updated November 9, 2026) and the Veterans Pension section of Evidence to support VA pension, DIC, or accrued benefits claims (last updated September 22, 2026). The official evidence requirements are in VA Form 21P-527EZ, which was not loaded; income and net worth limits and eligibility are not decided by this list.",
+  "sources": {
+    "va-pension-apply": {
+      "name": "U.S. Department of Veterans Affairs, How to apply for a VA pension as a Veteran (Last updated: November 9, 2026)",
+      "url": "https://www.va.gov/pension/how-to-apply/",
+      "retrieved": "2026-11-26"
+    },
+    "va-pension-evidence": {
+      "name": "U.S. Department of Veterans Affairs, Evidence to support VA pension, DIC, or accrued benefits claims (Last updated: September 22, 2026)",
+      "url": "https://www.va.gov/resources/evidence-to-support-va-pension-dic-or-accrued-benefits-claims/",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "paper-filing": "Will the application be filed on the PDF or paper form rather than online?",
+    "married": "Is the Veteran currently married?",
+    "under-65": "Is the Veteran under age 65?",
+    "aid-attendance": "Is the Veteran claiming extra pension for Aid and Attendance or being housebound?",
+    "care-facility": "Is the Veteran in an assisted living facility or a nursing home?",
+    "disabled-child": "Is the Veteran claiming pension for a child who became permanently disabled before age 18?"
+  },
+  "sections": [
+    {
+      "name": "Application",
+      "items": [
+        {
+          "id": "form-527ez",
+          "label": "Application for Pension",
+          "detail": "VA Form 21P-527EZ, uploaded through QuickSubmit, mailed to Department of Veterans Affairs, Pension Intake Center, PO Box 5365, Janesville, WI 53547-5365, or taken to a regional office. Send through the secure portal, never by plain email.",
+          "when": ["paper-filing"],
+          "basis": "va-pension-apply"
+        }
+      ]
+    },
+    {
+      "name": "About the Veteran and family",
+      "items": [
+        {
+          "id": "ssn",
+          "label": "Social Security number",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "va-file-number",
+          "label": "VA file number, if the Veteran has one",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "military-history",
+          "label": "Military history",
+          "detail": "If records were destroyed in the 1973 NPRC fire, VA can help reconstruct them.",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "dd214",
+          "label": "DD214 or other separation documents",
+          "detail": "Submit or give VA permission to gather. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-pension-evidence"
+        },
+        {
+          "id": "marital-history",
+          "label": "Marital history",
+          "detail": "",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "spouse-marital-history",
+          "label": "Spouse's marital history",
+          "detail": "",
+          "when": ["married"],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "work-history",
+          "label": "Work history",
+          "detail": "",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "dependents",
+          "label": "Information about dependents",
+          "detail": "VA may ask for additional forms about dependents after the application.",
+          "when": [],
+          "basis": "va-pension-apply"
+        }
+      ]
+    },
+    {
+      "name": "Household finances",
+      "items": [
+        {
+          "id": "income",
+          "label": "Household's gross monthly income",
+          "detail": "Family net worth and yearly income must meet limits set by Congress.",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "assets",
+          "label": "Value of the household's assets",
+          "detail": "",
+          "when": [],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "medical-expenses",
+          "label": "Unreimbursed medical expenses",
+          "detail": "",
+          "when": [],
+          "basis": "va-pension-apply"
+        }
+      ]
+    },
+    {
+      "name": "Medical evidence",
+      "items": [
+        {
+          "id": "service-treatment",
+          "label": "Service treatment records",
+          "detail": "Submit or give VA permission to gather. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-pension-evidence"
+        },
+        {
+          "id": "medical-evidence",
+          "label": "Medical evidence related to the illness or injury",
+          "detail": "Like doctor's reports, X-rays, and medical test results. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "va-pension-evidence"
+        },
+        {
+          "id": "medical-records-under-65",
+          "label": "Copy of the Veteran's medical records",
+          "detail": "Required if under age 65. Evidence of permanent and total disability can include a nursing home stay for long-term care, receiving Social Security disability benefits, or being unemployable because of a lifelong disability. Send through the secure portal, never by plain email.",
+          "when": ["under-65"],
+          "basis": "va-pension-apply"
+        },
+        {
+          "id": "form-2680",
+          "label": "Examination for Housebound Status or Permanent Need for Regular Aid and Attendance",
+          "detail": "VA Form 21-2680. Send through the secure portal, never by plain email.",
+          "when": ["aid-attendance"],
+          "basis": "va-pension-evidence"
+        },
+        {
+          "id": "form-0779",
+          "label": "Request for Nursing Home Information in Connection with Claim for Aid and Attendance",
+          "detail": "VA Form 21-0779, for someone in an assisted living facility or nursing home.",
+          "when": ["care-facility"],
+          "basis": "va-pension-evidence"
+        },
+        {
+          "id": "child-medical",
+          "label": "All private medical records for the child's disabilities",
+          "detail": "Must show the child became permanently disabled and unable to support themselves before turning 18. Send through the secure portal, never by plain email.",
+          "when": ["disabled-child"],
+          "basis": "va-pension-evidence"
+        }
+      ]
+    }
+  ]
+}

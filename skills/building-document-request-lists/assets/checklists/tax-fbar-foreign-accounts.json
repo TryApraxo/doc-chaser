@@ -1,0 +1,183 @@
+{
+  "id": "tax-fbar-foreign-accounts",
+  "title": "Foreign accounts report (FBAR) and Form 8938: account details to collect",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-foreign-reporting",
+  "use_when": "Use when a U.S. client has foreign bank, securities or other financial accounts or assets to report on FinCEN Form 114 and/or Form 8938; use tax-firpta-8288b when a foreign person is selling U.S. real estate.",
+  "note": "Built from FinCEN's FBAR line item filing instructions (BSA E-Filing requirements for FinCEN Form 114, January 2017 v1.4), the IRS FBAR page and the IRS Instructions for Form 8938 (Rev. November 2021, still current per the IRS Form 8938 page). Whether the client meets either filing threshold is not decided by this list, and Forms 3520, 5471, 8621 and 8865 are not covered.",
+  "sources": {
+    "fincen-fbar": {
+      "name": "FinCEN, BSA Electronic Filing Requirements for Report of Foreign Bank and Financial Accounts (FinCEN Form 114), FBAR line item filing instructions (Release date January 2017, v1.4)",
+      "url": "https://www.fincen.gov/system/files/shared/FBAR%20Line%20Item%20Filing%20Instructions.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "irs-fbar": {
+      "name": "IRS, Report of Foreign Bank and Financial Accounts (FBAR) (page last reviewed or updated 30-Jul-2026)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar",
+      "retrieved": "2026-11-26"
+    },
+    "i8938": {
+      "name": "IRS, Instructions for Form 8938, Statement of Specified Foreign Financial Assets (Rev. November 2021)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8938.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "joint-accounts": "Is any foreign account owned jointly with another person?",
+    "spouse-joint-fbar": "Will spouses file one FBAR covering accounts they own jointly?",
+    "signature-only": "Does the client have signature authority over a foreign account they do not own (for example an employer's account)?",
+    "no-us-tin": "Does the filer lack a U.S. taxpayer identification number?",
+    "form-8938": "Is the client filing Form 8938 with the income tax return?",
+    "foreign-securities": "Does the client hold foreign stock, bonds or interests in foreign entities outside a financial account?",
+    "third-party-preparer": "Will the firm file the FBAR for the client as a third-party preparer?"
+  },
+  "sections": [
+    {
+      "name": "About the filer",
+      "items": [
+        {
+          "id": "filer-tin",
+          "label": "Filer's Social Security number, ITIN or EIN",
+          "detail": "FBAR Part I, item 3. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "foreign-id",
+          "label": "Foreign identification (type, number and issuing country), such as a passport",
+          "detail": "FBAR Part I, item 4, completed only if the filer has no U.S. TIN. Send through the secure portal, never by plain email.",
+          "when": ["no-us-tin"],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "form-114a",
+          "label": "Signed FinCEN Form 114a, Record of Authorization to Electronically File FBARs",
+          "detail": "Kept with the filer's records, not sent to FinCEN. Required for a third-party preparer, and signed by both spouses when one FBAR covers jointly owned accounts.",
+          "when": ["third-party-preparer", "spouse-joint-fbar"],
+          "basis": "fincen-fbar"
+        }
+      ]
+    },
+    {
+      "name": "For each foreign account",
+      "items": [
+        {
+          "id": "account-statements",
+          "label": "Statements for the calendar year for each foreign account",
+          "detail": "The IRS FBAR page says bank statements can serve as the required records if they show the account name, number, institution name and address, type and maximum value; keep them 5 years from the FBAR due date. Form 8938 also lets the filer rely on periodic statements for maximum value. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "irs-fbar"
+        },
+        {
+          "id": "max-value",
+          "label": "Highest balance of each account during the year, in the account's currency",
+          "detail": "FBAR item 15, converted to U.S. dollars at the Treasury year-end rate; if the value cannot be determined, item 15a. Form 8938 line 23 (deposit and custodial accounts) or line 32 (other assets).",
+          "when": [],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "account-type",
+          "label": "Type of each account: bank, securities or other (describe)",
+          "detail": "FBAR item 16. Form 8938 line 20 asks whether a deposit account or a custodial account.",
+          "when": [],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "institution-name",
+          "label": "Full name of the financial institution holding each account",
+          "detail": "FBAR item 17; Form 8938 line 26a.",
+          "when": [],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "account-number",
+          "label": "Account number or other designation used by the institution",
+          "detail": "FBAR item 18; Form 8938 line 21. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "institution-address",
+          "label": "Mailing address of the financial institution (street, city, state or province, postal code, country)",
+          "detail": "FBAR items 19-23; Form 8938 lines 27 and 28.",
+          "when": [],
+          "basis": "fincen-fbar"
+        }
+      ]
+    },
+    {
+      "name": "Joint accounts and signature authority",
+      "items": [
+        {
+          "id": "joint-owner-count",
+          "label": "Number of joint owners on each jointly owned account, not counting the filer",
+          "detail": "FBAR Part III, item 24; an estimate is acceptable if the exact number is not known.",
+          "when": ["joint-accounts"],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "joint-owner-info",
+          "label": "Principal joint owner's name, address and taxpayer identification number, if known",
+          "detail": "FBAR Part III, items 25-33. If the filer's spouse is a joint owner, the spouse is the principal joint owner. Send through the secure portal, never by plain email.",
+          "when": ["joint-accounts"],
+          "basis": "fincen-fbar"
+        },
+        {
+          "id": "account-owner-info",
+          "label": "Name, address and identifying number of the owner of each account the filer can sign on but does not own",
+          "detail": "FBAR Part IV, items 34-42, plus the account details in items 15-23. Send through the secure portal, never by plain email.",
+          "when": ["signature-only"],
+          "basis": "fincen-fbar"
+        }
+      ]
+    },
+    {
+      "name": "Additional Form 8938 details",
+      "items": [
+        {
+          "id": "open-close-dates",
+          "label": "Whether each account or asset was opened, closed, acquired or disposed of during the year, and the dates",
+          "detail": "Form 8938 line 22 (accounts) and line 31 (other assets).",
+          "when": ["form-8938"],
+          "basis": "i8938"
+        },
+        {
+          "id": "exchange-rate",
+          "label": "Currency of each account or asset and the exchange rate used, with its source if not the Treasury rate",
+          "detail": "Form 8938 lines 24-25 and 33-34; the rate on the last day of the tax year is used even for accounts closed earlier.",
+          "when": ["form-8938"],
+          "basis": "i8938"
+        },
+        {
+          "id": "giin",
+          "label": "Global Intermediary Identification Number (GIIN) of the institution, if the institution provided one",
+          "detail": "Form 8938 line 26b; may be left blank without penalty.",
+          "when": ["form-8938"],
+          "basis": "i8938"
+        },
+        {
+          "id": "foreign-asset-description",
+          "label": "Description of each foreign stock, bond or entity interest (class or issue), the issuer's name and address, and identifying number",
+          "detail": "Form 8938 Part VI, lines 29, 30 and 35-36.",
+          "when": ["foreign-securities"],
+          "basis": "i8938"
+        },
+        {
+          "id": "income-from-assets",
+          "label": "Interest, dividends, royalties, other income, gains or losses, deductions and credits from the foreign accounts and assets",
+          "detail": "Form 8938 Part III, with the form or schedule where each item is reported.",
+          "when": ["form-8938"],
+          "basis": "i8938"
+        },
+        {
+          "id": "other-forms-filed",
+          "label": "Copies of any Forms 3520, 3520-A, 5471, 8621 or 8865 filed for the same year",
+          "detail": "Form 8938 Part IV: assets reported on these forms may be excepted, but the number of forms filed is entered.",
+          "when": ["form-8938"],
+          "basis": "i8938"
+        }
+      ]
+    }
+  ]
+}

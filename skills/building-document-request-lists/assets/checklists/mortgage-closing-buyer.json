@@ -1,0 +1,237 @@
+{
+  "id": "mortgage-closing-buyer",
+  "title": "Homebuyer closing checklist",
+  "industry": "mortgage",
+  "jurisdiction": "US federal",
+  "variant_of": "mortgage-closing",
+  "use_when": "Use when a homebuyer with an approved mortgage is getting ready for the closing table; use the program needs list (for example mortgage-fha or mortgage-conventional-salaried) for the documents the lender underwrites with.",
+  "note": "Items follow the CFPB mortgage closing checklist PDF and the CFPB Buying a House closing pages, Closing Disclosure explainer, Ask CFPB answer 1907 and closing-scam blog post. It covers what the buyer gathers, reviews and brings; it does not cover state closing practices, the seller's documents, or refinance-only items such as the right to cancel.",
+  "sources": {
+    "cfpb-checklist": {
+      "name": "CFPB, Your mortgage closing checklist (PDF; no edition date shown)",
+      "url": "https://files.consumerfinance.gov/f/documents/cfpb_buying-a-house_mortgage-closing_checklist.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-submit": {
+      "name": "CFPB, Buying a house: Submit documents and answer requests from the lender (page last modified Dec. 12, 2024)",
+      "url": "https://www.consumerfinance.gov/owning-a-home/close/submit-documents-and-answer-requests-from-the-lender/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-insurance": {
+      "name": "CFPB, Buying a house: Shop for homeowner's insurance (page last modified Dec. 12, 2024)",
+      "url": "https://www.consumerfinance.gov/owning-a-home/close/shop-for-homeowners-insurance/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-review": {
+      "name": "CFPB, Buying a house: Review documents before closing (page last modified Aug. 21, 2025)",
+      "url": "https://www.consumerfinance.gov/owning-a-home/close/review-documents-before-closing/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-close-deal": {
+      "name": "CFPB, Buying a house: Close the deal (page last modified Aug. 21, 2025)",
+      "url": "https://www.consumerfinance.gov/owning-a-home/close/close-the-deal/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-cd-explainer": {
+      "name": "CFPB, Closing disclosure explainer (page last modified Oct. 10, 2023)",
+      "url": "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-ask-1907": {
+      "name": "CFPB, Ask CFPB: What should I do before, during, and after the mortgage closing process? (last reviewed: JUN 27, 2024)",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-before-during-and-after-the-mortgage-closing-process-en-1907/",
+      "retrieved": "2026-11-26"
+    },
+    "cfpb-scams": {
+      "name": "CFPB blog, Mortgage Closing Scams: How to protect yourself and your closing funds (JUN 03, 2019)",
+      "url": "https://www.consumerfinance.gov/archive/blog/mortgage-closing-scams-how-protect-yourself-and-your-closing-funds/",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "large-deposit": "Have you recently made one or more large deposits into your bank account?",
+    "other-income": "Do you rely on regular income from a non-employment source such as child support, alimony or rental income?",
+    "flood-risk": "Is flooding a risk for the home you are buying?",
+    "condo": "Are you buying a condo or co-op unit?",
+    "co-borrower": "Is someone borrowing with you or co-signing the loan?"
+  },
+  "sections": [
+    {
+      "name": "Last lender requests",
+      "items": [
+        {
+          "id": "lender-requests",
+          "label": "Any additional documents your lender asks for",
+          "detail": "Send copies and keep your originals; include every page of multi-page documents, even pages marked intentionally left blank. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "cfpb-submit"
+        },
+        {
+          "id": "large-deposit-source",
+          "label": "Documents showing where each recent large deposit came from",
+          "detail": "Requirements vary by lender; ask which documents they need. Send through the secure portal, never by plain email.",
+          "when": ["large-deposit"],
+          "basis": "cfpb-submit"
+        },
+        {
+          "id": "other-income-proof",
+          "label": "Proof that the non-employment income will continue at the same level",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": ["other-income"],
+          "basis": "cfpb-submit"
+        }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "items": [
+        {
+          "id": "insurance-quotes",
+          "label": "Written homeowner's insurance quotes",
+          "detail": "Share the quotes you are considering with your loan officer and ask whether they meet the lender's requirements.",
+          "when": [],
+          "basis": "cfpb-insurance"
+        },
+        {
+          "id": "insurance-final",
+          "label": "Final information on the homeowner's insurance policy you chose",
+          "detail": "Send it to your loan officer.",
+          "when": [],
+          "basis": "cfpb-insurance"
+        },
+        {
+          "id": "flood-insurance",
+          "label": "Separate flood insurance policy",
+          "detail": "Homeowner's insurance typically does not cover flood damage.",
+          "when": ["flood-risk"],
+          "basis": "cfpb-insurance"
+        },
+        {
+          "id": "unit-insurance",
+          "label": "Your own insurance policy for the unit",
+          "detail": "The association's master insurance usually covers only the common areas.",
+          "when": ["condo"],
+          "basis": "cfpb-insurance"
+        }
+      ]
+    },
+    {
+      "name": "Documents to review before closing",
+      "items": [
+        {
+          "id": "closing-disclosure",
+          "label": "Your Closing Disclosure",
+          "detail": "By law you must receive it three business days before closing. Ask your lender or closing agent at least a week ahead how it will be sent. Bring it to closing to compare with the final documents.",
+          "when": [],
+          "basis": "cfpb-review"
+        },
+        {
+          "id": "loan-estimate",
+          "label": "Your most recent Loan Estimate",
+          "detail": "Compare loan terms, loan amount, monthly payment, closing costs and cash to close against the Closing Disclosure.",
+          "when": [],
+          "basis": "cfpb-cd-explainer"
+        },
+        {
+          "id": "advance-documents",
+          "label": "Advance copies of the promissory note, mortgage (security instrument or deed of trust) and deed",
+          "detail": "Ask the lender or closing agent to send them at the same time as the Closing Disclosure.",
+          "when": [],
+          "basis": "cfpb-review"
+        },
+        {
+          "id": "escrow-disclosure",
+          "label": "Initial escrow disclosure",
+          "detail": "Listed among the documents to review before closing.",
+          "when": [],
+          "basis": "cfpb-ask-1907"
+        },
+        {
+          "id": "purchase-contract",
+          "label": "Your purchase contract",
+          "detail": "Know what it says before closing, including any seller credits or repairs agreed with the seller.",
+          "when": [],
+          "basis": "cfpb-close-deal"
+        },
+        {
+          "id": "closing-details",
+          "label": "Name, phone number and role of the person conducting your closing, with the date, time and address",
+          "detail": "Checklist step 1: title agent, escrow agent, closing attorney or other.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        }
+      ]
+    },
+    {
+      "name": "Funds to close",
+      "items": [
+        {
+          "id": "amount-due",
+          "label": "The amount you need to pay at closing and the form of payment required",
+          "detail": "Checklist step 2: ask the person conducting the closing about how much you will pay and whether by cashier's check or wire transfer.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        },
+        {
+          "id": "trusted-contacts",
+          "label": "Names and primary phone numbers of two trusted people who can confirm payment instructions",
+          "detail": "Checklist step 4: for example your real estate agent and settlement agent. Bring the list to closing.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        },
+        {
+          "id": "verified-wire",
+          "label": "Wire instructions confirmed by phone or in person with a trusted contact",
+          "detail": "Verify the account name and number using the phone number you agreed on earlier; never follow instructions or links in an email. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "cfpb-scams"
+        },
+        {
+          "id": "funds",
+          "label": "Cashier's check or proof of wire transfer for the exact amount needed to close",
+          "detail": "Checklist, At closing.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        },
+        {
+          "id": "checkbook",
+          "label": "Your checkbook, in case of last-minute changes",
+          "detail": "Checklist, At closing.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        }
+      ]
+    },
+    {
+      "name": "At the closing table",
+      "items": [
+        {
+          "id": "photo-id",
+          "label": "Driver's license or other ID",
+          "detail": "Checklist, At closing. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        },
+        {
+          "id": "co-borrower",
+          "label": "Your co-borrower or co-signer, present at closing",
+          "detail": "Checklist, At closing.",
+          "when": ["co-borrower"],
+          "basis": "cfpb-checklist"
+        }
+      ]
+    },
+    {
+      "name": "After closing",
+      "items": [
+        {
+          "id": "closing-packet",
+          "label": "The complete closing packet, saved exactly as received",
+          "detail": "Checklist, After closing: check it includes the Closing Disclosure, promissory note, mortgage (security instrument or deed of trust) and deed.",
+          "when": [],
+          "basis": "cfpb-checklist"
+        }
+      ]
+    }
+  ]
+}

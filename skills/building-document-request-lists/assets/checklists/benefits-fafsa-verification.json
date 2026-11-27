@@ -1,0 +1,204 @@
+{
+  "id": "benefits-fafsa-verification",
+  "title": "FAFSA verification (2026–27): documents the school may ask for",
+  "industry": "benefits",
+  "jurisdiction": "US federal",
+  "variant_of": "student-aid",
+  "use_when": "Use when a student's 2026–27 FAFSA form has been selected for verification (group V1, V4 or V5) and the family needs to gather what the school's financial aid office asks for.",
+  "note": "Built from the 2026–2027 Federal Student Aid Handbook, Application and Verification Guide, Chapter 4 (Verification, Updates, and Corrections). Group V1 verifies income and family size, V4 verifies identity only, and V5 verifies both; 2026–27 verification uses 2024 tax information. Schools may verify extra items, set their own deadlines and use their own forms, which this list does not cover.",
+  "sources": {
+    "avg-ch4": {
+      "name": "U.S. Department of Education, 2026–2027 Federal Student Aid Handbook, Application and Verification Guide, Chapter 4: Verification, Updates, and Corrections (web page; no review date shown)",
+      "url": "https://fsapartners.ed.gov/knowledge-center/fsa-handbook/2026-2027/application-and-verification-guide/ch4-verification-updates-and-corrections",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "not-transferred": "Is the student in group V1 or V5, and was any tax filer's 2024 IRS information not transferred directly into the FAFSA form (or was it changed)?",
+    "rollover": "Is the student in group V1 or V5, and did any tax filer roll over an IRA or pension distribution in 2024?",
+    "non-filer": "Is the student in group V1 or V5, and was the student, spouse or a parent not required to file a 2024 income tax return?",
+    "family-size": "Is the student in group V1 or V5, and was family size not transferred from the IRS or changed on the FAFSA form?",
+    "identity-group": "Was the student placed in verification group V4 or V5?",
+    "remote-id": "Has the school decided the student cannot come in person to show ID?",
+    "incarcerated": "Is the student confined or incarcerated?",
+    "no-w2": "Is a needed Form W-2 missing?",
+    "joint-split": "Did the student or parents file a 2024 joint return and have since separated, divorced, remarried or been widowed?",
+    "extension": "Did a tax filer get an IRS filing extension beyond the automatic six months for 2024?",
+    "military-no-file": "Has a tax filer not filed or requested an extension because of active duty or qualifying National Guard duty?",
+    "amended": "Did a tax filer file an amended 2024 return (Form 1040X) or have the return changed by the IRS?",
+    "id-theft": "Is a tax filer a victim of IRS tax-related identity theft?",
+    "no-copy-kept": "Did a tax filer not keep a copy of the 2024 tax information, and can the IRS not locate it?",
+    "non-irs-return": "Did a tax filer file a 2024 return with a U.S. territory, commonwealth or foreign government instead of the IRS?"
+  },
+  "sections": [
+    {
+      "name": "Income for tax filers (groups V1 and V5)",
+      "items": [
+        {
+          "id": "tax-transcript-or-return",
+          "label": "2024 IRS tax return transcript, or a signed copy of the 2024 tax return with all schedules",
+          "detail": "For each tax filer (student, spouse, parent, parent's spouse or partner, as applicable). Not needed for items transferred directly from the IRS and unchanged. The transcript must be obtained at no cost from the IRS; a record of account transcript is also acceptable. A copy of the return must be signed by the filer (or one filer of a joint return), or carry the paid preparer's name and PTIN, SSN or EIN; a signature on Form 8879 does not count. Send through the secure portal, never by plain email.",
+          "when": [
+            "not-transferred"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "rollover-statement",
+          "label": "Signed statement confirming the rollover amount",
+          "detail": "Required even when the IRS data transferred. May also be a notation of \"rollover\" beside the item on the transcript or return, signed and dated by the filer.",
+          "when": [
+            "rollover"
+          ],
+          "basis": "avg-ch4"
+        }
+      ]
+    },
+    {
+      "name": "Income for non-filers (groups V1 and V5)",
+      "items": [
+        {
+          "id": "nonfiler-statement",
+          "label": "Signed and dated statement that the person was not required to file a 2024 return, listing the sources and amounts of earnings and other income",
+          "detail": "For each non-filer. People without an SSN, ITIN or EIN must also state that. Except for dependent students, people who would file with a tax authority other than the IRS also need verification of non-filing dated on or after October 1, 2025. A student may sign for a non-filing spouse.",
+          "when": [
+            "non-filer"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "nonfiler-w2s",
+          "label": "Copy of each 2024 Form W-2 (or equivalent) for every job",
+          "detail": "Plus a signed statement of any income earned from work not shown on W-2s. Send through the secure portal, never by plain email.",
+          "when": [
+            "non-filer"
+          ],
+          "basis": "avg-ch4"
+        }
+      ]
+    },
+    {
+      "name": "Family size (groups V1 and V5)",
+      "items": [
+        {
+          "id": "family-size-statement",
+          "label": "Signed statement listing each family member's name, age and relationship to the student for 2026–27",
+          "detail": "Signed by the student and, for a dependent student, by one parent. Some family sizes do not need verifying (for example a dependent student with a family of two and a single parent).",
+          "when": [
+            "family-size"
+          ],
+          "basis": "avg-ch4"
+        }
+      ]
+    },
+    {
+      "name": "Identity (groups V4 and V5)",
+      "items": [
+        {
+          "id": "photo-id",
+          "label": "Valid, unexpired government-issued photo ID shown in person to the school",
+          "detail": "For example a U.S. passport, driver's license or other state-issued ID. A state university or college ID or a military ID is not acceptable. The student may instead be verified by a provider meeting NIST Identity Assurance Level 2, with confirmation sent directly to the school. Send through the secure portal, never by plain email.",
+          "when": [
+            "identity-group"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "notarized-id",
+          "label": "Copy of the ID presented in person to a notary, with a signed notary statement, or the ID shown on a video call with the school",
+          "detail": "Only when the school decides the student cannot appear in person. Online notary services are not accepted. Send through the secure portal, never by plain email.",
+          "when": [
+            "remote-id"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "facility-id",
+          "label": "Correctional facility ID or official facility record with the student's identifying information and photo",
+          "detail": "A confined or incarcerated student in group V1 does not complete verification; in V4 or V5 only identity is verified. Send through the secure portal, never by plain email.",
+          "when": [
+            "incarcerated"
+          ],
+          "basis": "avg-ch4"
+        }
+      ]
+    },
+    {
+      "name": "Special situations",
+      "items": [
+        {
+          "id": "replacement-w2",
+          "label": "Replacement W-2 from the employer, or an IRS W-2 transcript",
+          "detail": "If neither can be obtained in time, the school may accept a signed statement of the amount and source of the income and why the W-2 is not available. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-w2"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "joint-split-docs",
+          "label": "2024 tax transcript or return copy, plus a copy of each 2024 W-2",
+          "detail": "Used by the school to separate the individual's income and tax from the joint return. If a W-2 is unavailable or the filer is self-employed, the school may accept a signed statement of 2024 AGI and U.S. taxes paid. Send through the secure portal, never by plain email.",
+          "when": [
+            "joint-split"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "extension-docs",
+          "label": "Copy of the IRS approval of the extension beyond six months, a signed statement of 2024 income sources and amounts, and each 2024 W-2",
+          "detail": "If self-employed, the statement must show estimated AGI and U.S. income tax paid. The school may require final income information after the return is filed. Send through the secure portal, never by plain email.",
+          "when": [
+            "extension"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "military-statement",
+          "label": "Statement certifying no return or extension was filed because of active duty or qualifying National Guard service",
+          "detail": "",
+          "when": [
+            "military-no-file"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "amended-docs",
+          "label": "Signed copy of the filed Form 1040X, plus the 2024 tax transcript or a signed copy of the original 2024 Form 1040 and schedules",
+          "detail": "A transcript alone is not enough because it does not reflect changes. If the IRS changed the return without a 1040X, include the IRS documentation of the changes. Send through the secure portal, never by plain email.",
+          "when": [
+            "amended"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "id-theft-docs",
+          "label": "Signed copy of the 2024 return and schedules, plus IRS letter 4674C or a signed, dated statement of the identity theft",
+          "detail": "The statement must say the filer was a victim of IRS tax-related identity theft and the IRS is aware of it. Send through the secure portal, never by plain email.",
+          "when": [
+            "id-theft"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "no-copy-docs",
+          "label": "Signed statement that no copy was kept, documentation from the tax authority that it cannot locate the information, and each 2024 W-2",
+          "detail": "If self-employed, a signed statement of AGI and taxes paid instead of W-2s. Send through the secure portal, never by plain email.",
+          "when": [
+            "no-copy-kept"
+          ],
+          "basis": "avg-ch4"
+        },
+        {
+          "id": "non-irs-return-docs",
+          "label": "2024 tax transcript from the territory, commonwealth or foreign tax authority, or a signed copy of that return",
+          "detail": "The school converts amounts to U.S. dollars as appropriate. Send through the secure portal, never by plain email.",
+          "when": [
+            "non-irs-return"
+          ],
+          "basis": "avg-ch4"
+        }
+      ]
+    }
+  ]
+}

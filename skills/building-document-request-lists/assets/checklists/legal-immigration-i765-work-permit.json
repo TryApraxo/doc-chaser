@@ -1,0 +1,246 @@
+{
+  "id": "legal-immigration-i765-work-permit",
+  "title": "Work permit application (Form I-765): documents needed",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-immigration",
+  "use_when": "Use when the client is applying for an initial, renewal or replacement Employment Authorization Document on Form I-765 under (c)(9), (c)(8), (a)(12)/(c)(19), (c)(33), (c)(3) or (c)(26); use the I-485 family list for the green card application itself.",
+  "note": "Based on the Form I-765 Instructions (edition 08/21/25), which USCIS says on the form page (last reviewed/updated 11/24/2026) it continues to accept after the Nov. 16, 2026 court order, while not accepting the 09/15/26 edition until further notice. Only the six listed eligibility categories are covered; the list does not decide eligibility, the asylum EAD clock, or filing deadlines, and TPS, DACA and OPT filings also follow the I-821, I-821D and DSO/SEVIS steps.",
+  "sources": {
+    "i765-instr": {
+      "name": "USCIS, Instructions for Application for Employment Authorization, Form I-765, edition 08/21/25 (expires 08/31/2027)",
+      "url": "https://www.uscis.gov/sites/default/files/document/forms/i-765instr.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "i765-page": {
+      "name": "USCIS, I-765, Application for Employment Authorization, form page, Last Reviewed/Updated 11/24/2026",
+      "url": "https://www.uscis.gov/i-765",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "first-ead": "Is this the client's first EAD (never issued one before)?",
+    "prior-ead": "Has the client been issued an EAD before?",
+    "c9": "Is the client applying under (c)(9) because a Form I-485 adjustment application is pending?",
+    "c8": "Is the client applying under (c)(8) because an asylum application (Form I-589) is pending?",
+    "tps": "Is the client applying under (a)(12) or (c)(19) as a TPS applicant or beneficiary?",
+    "daca": "Is the client applying under (c)(33) with a DACA request (Form I-821D)?",
+    "opt": "Is the client an F-1 student applying for pre- or post-completion OPT under (c)(3)(A) or (c)(3)(B)?",
+    "stem-opt": "Is the client an F-1 student applying for the 24-month STEM OPT extension under (c)(3)(C)?",
+    "h4": "Is the client the H-4 spouse of an H-1B worker applying under (c)(26)?",
+    "arrests": "Has the client (a (c)(8) applicant) ever been arrested for or convicted of any crime?",
+    "foreign-language": "Are any documents in a language other than English?"
+  },
+  "sections": [
+    {
+      "name": "Everyone",
+      "items": [
+        {
+          "id": "photos",
+          "label": "Two identical color passport-style photos taken recently",
+          "detail": "2 by 2 inches, full face, white to off-white background, thin glossy paper, unmounted and unretouched; head 1 to 1 3/8 inches; name and A-Number lightly printed on the back. Required Documentation, 3.C.",
+          "when": [],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "i94-passport",
+          "label": "Copy of your I-94 arrival record, passport, or other travel document",
+          "detail": "At least one of: Form I-94 (front and back), printout of the electronic I-94 from cbp.gov/i94, passport, or other travel document. Not required for (c)(9) applicants. Required Documentation, 3.A. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "prior-ead-copy",
+          "label": "Copy of your last work permit (front and back)",
+          "detail": "Required Documentation, 3.B. Send through the secure portal, never by plain email.",
+          "when": ["prior-ead"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "photo-id",
+          "label": "Copy of a government-issued photo ID",
+          "detail": "Such as a passport showing picture, name and date of birth; a birth certificate with photo ID; a foreign consular visa; or a national ID with photo and/or fingerprint. Must clearly show facial features and biographic details. (c)(33) applicants need nothing beyond the identity documents filed with Form I-821D. Required Documentation, 3.B. Send through the secure portal, never by plain email.",
+          "when": ["first-ead"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "translations",
+          "label": "Full English translation of every foreign-language document",
+          "detail": "With the translator's certification that it is complete and accurate and that they are competent to translate.",
+          "when": ["foreign-language"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "Pending green card application (c)(9)",
+      "items": [
+        {
+          "id": "i485-receipt",
+          "label": "Copy of the Form I-485 receipt notice, or other proof the I-485 is pending",
+          "detail": "Not needed if the I-765 is filed together with the I-485. If the I-485 is before an immigration court (EOIR), proof the client is in proceedings, that the I-485 was properly filed with the court, and that it remains pending. Asylees and refugees file under (a)(5) or (a)(3), not (c)(9).",
+          "when": ["c9"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "Pending asylum application (c)(8)",
+      "items": [
+        {
+          "id": "asylum-filed-uscis",
+          "label": "Proof the asylum application was filed with USCIS",
+          "detail": "Copy of the USCIS Acknowledgement of Receipt and the Asylum Interview Notice (scheduling, rescheduling or cancelling), the Form I-797C biometrics appointment notice, or other evidence of filing. Special Filing Instructions (c)(8), item 4.A.",
+          "when": ["c8"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "asylum-filed-eoir",
+          "label": "Proof the asylum application was lodged or filed with the immigration court, if filed there",
+          "detail": "Copy of the acknowledgement of receipt or other available evidence. Item 4.B. If an immigration judge denied asylum after the 180-day clock ran: evidence of a timely, still-pending BIA appeal (and court of appeals petition, if any). If remanded: the BIA remand order and evidence the claim is still under review. Items 4.C-4.D.",
+          "when": ["c8"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "recommended-approval",
+          "label": "Recommended Approval notice from the asylum office, if received",
+          "detail": "Lets the client file immediately without waiting 150 days.",
+          "when": ["c8"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "c8-criminal-records",
+          "label": "Certified copies of all arrest reports, court dispositions and sentencing documents",
+          "detail": "Required for initial and renewal (c)(8) applications; include information on every conviction. Special Filing Instructions (c)(8), item 4.E.",
+          "when": ["arrests"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "Temporary Protected Status (a)(12) or (c)(19)",
+      "items": [
+        {
+          "id": "i821",
+          "label": "Form I-821, or proof USCIS received or approved the initial or re-registration I-821",
+          "detail": "Follow the most recent TPS Federal Register notice for the client's country.",
+          "when": ["tps"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "tps-identity",
+          "label": "Evidence of nationality and identity as the Form I-821 instructions require",
+          "detail": "Send through the secure portal, never by plain email.",
+          "when": ["tps"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "tps-court-order",
+          "label": "Immigration judge or BIA order granting TPS, if TPS was granted in court",
+          "detail": "For a first EAD or first re-registration; for example the I-821 the judge or BIA approved.",
+          "when": ["tps"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "tps-reregistration",
+          "label": "For re-registration: a letter saying the filing is for TPS re-registration and a copy of the last TPS document",
+          "detail": "Copy front and back of the last available TPS document (for example an EAD, I-94, passport, travel document, or I-797 notice). For a lost, stolen or damaged TPS EAD: the TPS approval notice, or the prior I-797 for the I-821 if still pending. Send through the secure portal, never by plain email.",
+          "when": ["tps"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "DACA (c)(33)",
+      "items": [
+        {
+          "id": "i821d",
+          "label": "Form I-821D, Consideration of Deferred Action for Childhood Arrivals, filed together",
+          "detail": "",
+          "when": ["daca"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "i765ws",
+          "label": "Form I-765WS worksheet showing income, expenses and assets",
+          "detail": "Shows economic necessity to work. Supporting evidence is optional; other household members' finances are not needed. Send through the secure portal, never by plain email.",
+          "when": ["daca"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "F-1 student OPT (c)(3)",
+      "items": [
+        {
+          "id": "i20",
+          "label": "Form I-20 endorsed by the school's DSO",
+          "detail": "Required for pre-completion OPT (c)(3)(A). For post-completion and STEM OPT the DSO must enter the recommendation in SEVIS first; file within 30 days (post-completion) or 60 days (STEM) of that recommendation.",
+          "when": ["opt", "stem-opt"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "enrollment-proof",
+          "label": "Proof of full-time enrollment for one full academic year at an SEVP-approved school",
+          "detail": "For pre-completion OPT (c)(3)(A).",
+          "when": ["opt"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "sevis-history",
+          "label": "All previously used SEVIS numbers and proof of any earlier CPT or OPT, with the academic level of each",
+          "detail": "For (c)(3)(A) and (c)(3)(B); post-completion applicants list these in Part 6.",
+          "when": ["opt"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "stem-degree",
+          "label": "Evidence the degree is on the STEM Designated Degree Program List",
+          "detail": "If based on a previously earned STEM degree, also a copy of that degree and evidence the school is currently accredited by the Department of Education and SEVP-certified.",
+          "when": ["stem-opt"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "everify-employer",
+          "label": "STEM employer's name as listed in E-Verify and its E-Verify company ID number",
+          "detail": "Or E-Verify Client Company ID. Also degree level and major. Part 2, Items 28.a-28.c.",
+          "when": ["stem-opt"],
+          "basis": "i765-instr"
+        }
+      ]
+    },
+    {
+      "name": "H-4 spouse of an H-1B worker (c)(26)",
+      "items": [
+        {
+          "id": "h4-status",
+          "label": "Proof of current H-4 status",
+          "detail": "Copy of the current I-797 for Form I-539, or the I-94 showing H-4 admission or most recent approved extension.",
+          "when": ["h4"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "marriage-cert",
+          "label": "Copy of the marriage certificate",
+          "detail": "If unavailable, USCIS will consider secondary evidence of the relationship.",
+          "when": ["h4"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "h1b-basis",
+          "label": "Spouse's I-140 approval notice, or proof the spouse got an AC21 106(a)/(b) extension",
+          "detail": "Approved I-140: copy of the spouse's I-797 for Form I-140. AC21: copies of the spouse's passports, prior I-94s, and current and prior I-797s for Form I-129, plus evidence of the basis for the extension. Send through the secure portal, never by plain email.",
+          "when": ["h4"],
+          "basis": "i765-instr"
+        },
+        {
+          "id": "i129-receipt",
+          "label": "Receipt number of the spouse's most recent Form I-129 notice (I-797)",
+          "detail": "Part 2, Item 29.",
+          "when": ["h4"],
+          "basis": "i765-instr"
+        }
+      ]
+    }
+  ]
+}

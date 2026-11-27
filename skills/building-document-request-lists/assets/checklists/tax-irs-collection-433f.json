@@ -1,0 +1,231 @@
+{
+  "id": "tax-irs-collection-433f",
+  "title": "IRS collection financial statement (Form 433-F)",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-irs-resolution",
+  "use_when": "Use when the IRS has asked an individual wage earner or self-employed person for the shorter Form 433-F, often with an installment agreement request; use the Form 433-A list when the full 433-A is required and the Form 433-B list for a corporation, partnership or LLC.",
+  "note": "Built from Form 433-F (Rev. 7-2024) and the instructions printed on the form. Most documents are the proof the IRS says it may request after review. It does not cover state tax agencies, the IRS allowable-expense standards themselves, or whether the client qualifies for an installment agreement.",
+  "sources": {
+    "f433f": {
+      "name": "IRS Form 433-F, Collection Information Statement, with instructions (Rev. 7-2024)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f433f.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "spouse": "Is the client married, with a spouse included on the statement?",
+    "wage-earner": "Does the client or spouse earn wages from an employer?",
+    "self-employed": "Does the client or spouse have self-employment income, including online sales?",
+    "rental": "Does the client receive rental income?",
+    "digital-assets": "Does the client own cryptocurrency or other digital assets?",
+    "real-estate": "Does the client own or are they buying a home or other real estate?",
+    "installment": "Is the client asking for an installment agreement?",
+    "court-ordered": "Does the client pay court-ordered child support, alimony or other payments?",
+    "state-tax": "Does the client owe delinquent state or local taxes?",
+    "student-loans": "Does the client pay federally guaranteed student loans for their own post-secondary education?",
+    "high-expenses": "Will the client claim expenses above the IRS allowable standards?"
+  },
+  "sections": [
+    {
+      "name": "About the client",
+      "items": [
+        {
+          "id": "identity",
+          "label": "Names, address, county, phone numbers and Social Security number or ITIN for the client and spouse",
+          "detail": "Form 433-F page 1 heading. Check the box if the address differs from the last return filed. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "spouse-signature",
+          "label": "Spouse's signature on the statement",
+          "detail": "Form 433-F page 2 signature lines.",
+          "when": ["spouse"],
+          "basis": "f433f"
+        },
+        {
+          "id": "household",
+          "label": "Number of people in the household who can be claimed on this year's return, under 65 and 65 and over",
+          "detail": "Form 433-F page 1.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "form-9465",
+          "label": "Form 9465, Installment Agreement Request",
+          "detail": "The Form 433-F instructions say to submit Form 9465 along with Form 433-F when requesting an installment agreement.",
+          "when": ["installment"],
+          "basis": "f433f"
+        }
+      ]
+    },
+    {
+      "name": "Accounts and assets",
+      "items": [
+        {
+          "id": "bank-accounts",
+          "label": "List of all bank accounts, with institution, account number, type and current balance",
+          "detail": "Form 433-F Section A: checking, online, mobile (e.g., PayPal), savings and money market accounts, including business accounts. The instructions say to list all accounts even with no balance. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "bank-statements",
+          "label": "Bank and investment statements",
+          "detail": "Form 433-F instructions, Section H: documentation the IRS may ask for includes bank and investment statements. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "investments",
+          "label": "List of investments and retirement accounts with current value",
+          "detail": "Form 433-F Section A: CDs, trusts, IRAs, Keogh, SEP, 401(k) and profit sharing plans, mutual funds, stocks, bonds and commodities. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "digital-assets",
+          "label": "Digital assets: type, wallet or exchange, email used to set it up, location, amount and U.S. dollar value",
+          "detail": "Form 433-F Section A, Digital Assets.",
+          "when": ["digital-assets"],
+          "basis": "f433f"
+        },
+        {
+          "id": "real-estate",
+          "label": "Real estate details: description, location, county, monthly payment, purchase and refinance year and amount, current value and balance owed",
+          "detail": "Form 433-F Section B: include insurance and taxes if they are part of the monthly payment.",
+          "when": ["real-estate"],
+          "basis": "f433f"
+        },
+        {
+          "id": "other-assets",
+          "label": "Vehicles, boats, RVs, whole life insurance policies and other valuable assets: description, monthly payment, year purchased, final payment, value and balance owed",
+          "detail": "Form 433-F Section C. Write \"lease\" for leased vehicles; include business tools, equipment, inventory and intangible assets if applicable.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "credit-cards",
+          "label": "All credit cards and lines of credit: credit limit, balance owed and minimum monthly payment",
+          "detail": "Form 433-F Section D: list them even if there is no balance.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "loan-statements",
+          "label": "Loan statements",
+          "detail": "Form 433-F instructions, Section H: documentation the IRS may ask for includes loan statements.",
+          "when": [],
+          "basis": "f433f"
+        }
+      ]
+    },
+    {
+      "name": "Business information",
+      "items": [
+        {
+          "id": "business-id",
+          "label": "Business name, EIN, type of business and number of employees",
+          "detail": "Form 433-F page 1. Send through the secure portal, never by plain email.",
+          "when": ["self-employed"],
+          "basis": "f433f"
+        },
+        {
+          "id": "receivables",
+          "label": "Accounts receivable owed to the client or the business, including government grants and contracts",
+          "detail": "Form 433-F Section E1.",
+          "when": ["self-employed"],
+          "basis": "f433f"
+        },
+        {
+          "id": "merchant-accounts",
+          "label": "Credit card merchant accounts and digital asset wallets or exchanges used to take payments",
+          "detail": "Form 433-F Section E2: card type, issuing bank and merchant account number. Send through the secure portal, never by plain email.",
+          "when": ["self-employed"],
+          "basis": "f433f"
+        },
+        {
+          "id": "profit-loss",
+          "label": "Copy of Schedule C or current-year profit and loss statement",
+          "detail": "Form 433-F Section G and its instructions: net self-employment income should relate to Schedule C or the current-year profit and loss statement.",
+          "when": ["self-employed"],
+          "basis": "f433f"
+        }
+      ]
+    },
+    {
+      "name": "Income",
+      "items": [
+        {
+          "id": "pay-stub",
+          "label": "Current pay stub from each employer",
+          "detail": "Form 433-F Section F: if a copy of the current pay stub is attached, the employment section does not need to be completed. Otherwise give employer name and address, pay frequency, gross pay and taxes per period, and time with employer. Send through the secure portal, never by plain email.",
+          "when": ["wage-earner"],
+          "basis": "f433f"
+        },
+        {
+          "id": "non-wage-income",
+          "label": "Monthly non-wage income: alimony, child support, interest and dividends, unemployment, Social Security, pension and other income",
+          "detail": "Form 433-F Section G. Other income includes K-1 distributions, agricultural subsidies, gambling income, oil credits and rent subsidies.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "rental-pl",
+          "label": "Current-year profit and loss statement for rental income",
+          "detail": "Form 433-F Section G: for rental income, list the amount after expenses and attach a copy of the current-year profit and loss statement; the instructions say the figure should relate to Schedule E, without depreciation.",
+          "when": ["rental"],
+          "basis": "f433f"
+        }
+      ]
+    },
+    {
+      "name": "Monthly living expenses",
+      "items": [
+        {
+          "id": "expenses",
+          "label": "Monthly amounts for food and personal care, transportation, housing and utilities, medical costs, child care, estimated taxes, term life insurance, retirement contributions and union dues",
+          "detail": "Form 433-F Section H. Convert bills paid other than monthly as the instructions show (quarterly divide by 3; weekly multiply by 4.3; biweekly by 2.17; semimonthly by 2).",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "recurring-bills",
+          "label": "Bills for recurring expenses",
+          "detail": "Form 433-F instructions, Section H: documentation the IRS may ask for includes bills for recurring expenses.",
+          "when": [],
+          "basis": "f433f"
+        },
+        {
+          "id": "above-standard",
+          "label": "Proof of expenses above the IRS allowable standards",
+          "detail": "Form 433-F instructions, Section H: substantiation may be required for any expenses over the standard once the financial analysis is completed.",
+          "when": ["high-expenses"],
+          "basis": "f433f"
+        },
+        {
+          "id": "court-order",
+          "label": "Court order pages showing the amount ordered and the signatures, plus proof the payments are being made",
+          "detail": "Form 433-F instructions, Court Ordered Payments: acceptable proof is copies of cancelled checks or of bank or pay statements. Send through the secure portal, never by plain email.",
+          "when": ["court-ordered"],
+          "basis": "f433f"
+        },
+        {
+          "id": "state-tax",
+          "label": "Statement showing the delinquent state or local tax owed, and any monthly payment agreement",
+          "detail": "Form 433-F instructions, Delinquent State & Local Taxes.",
+          "when": ["state-tax"],
+          "basis": "f433f"
+        },
+        {
+          "id": "student-loans",
+          "label": "Proof of student loan balance and payments",
+          "detail": "Form 433-F instructions, Student Loans: minimum payments may be allowed if the loans are guaranteed by the federal government.",
+          "when": ["student-loans"],
+          "basis": "f433f"
+        }
+      ]
+    }
+  ]
+}

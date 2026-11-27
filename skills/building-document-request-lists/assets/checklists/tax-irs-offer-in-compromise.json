@@ -1,0 +1,248 @@
+{
+  "id": "tax-irs-offer-in-compromise",
+  "title": "IRS offer in compromise application documents",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-irs-resolution",
+  "use_when": "Use when a client wants to settle an IRS tax debt for less than the full amount through an offer in compromise (Form 656, or Form 656-L for doubt as to liability); use the Form 433-A, 433-B or 433-F lists when the IRS only wants a collection information statement.",
+  "note": "Built from the Form 656-B booklet (Rev. 4-2026), which contains Form 656, Form 433-A (OIC) and Form 433-B (OIC) with their attachment lists and the application checklist, and from Form 656-L (Rev. 7-2026) for doubt-as-to-liability offers. It does not decide whether the client is eligible, what amount to offer, or whether they meet the low-income guidelines; the IRS verifies that.",
+  "sources": {
+    "f656b": {
+      "name": "IRS Form 656-B, Offer in Compromise booklet, including Form 656, Form 433-A (OIC) and Form 433-B (OIC) (Rev. 4-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f656b.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "f656l": {
+      "name": "IRS Form 656-L, Offer in Compromise (Doubt as to Liability) (Rev. 7-2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f656l.pdf",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "individual": "Is the offer for tax the client owes personally (including as a sole proprietor or for a Trust Fund Recovery Penalty), based on inability to pay or hardship?",
+    "business": "Is the offer for a corporation, partnership or LLC, based on inability to pay or hardship?",
+    "doubt-liability": "Does the client dispute that they owe all or part of the tax, rather than agreeing they owe it but cannot pay?",
+    "sole-proprietor": "Does the individual operate a business as a sole proprietor?",
+    "business-interest": "Does the individual or spouse have an interest in a business entity other than a sole proprietorship?",
+    "low-income": "Does the individual believe they meet the Low-Income Certification guidelines on Form 656?",
+    "special-circumstances": "Is the client offering less than the calculated amount, or asking for effective tax administration relief, because of special circumstances?",
+    "recent-return": "Did the client file a tax return within the last 10 weeks?",
+    "representative": "Will an attorney, CPA, enrolled agent or other third party represent the client or receive their confidential information?",
+    "estate": "Is the offer being made for the estate of a deceased individual?",
+    "trust": "Is the client a beneficiary, trustee, fiduciary or contributor of a trust, or are funds held in trust for them by a third party?",
+    "court-ordered": "Is the client claiming child support or alimony payments as a monthly expense?",
+    "state-tax": "Does the client owe delinquent state or local taxes?",
+    "receivables": "Is the client or business owed money on accounts or notes receivable?",
+    "digital-assets": "Does the client or business hold any digital assets?",
+    "loans": "Does the client or business have mortgages, vehicle loans or other loans, or assets pledged as loan collateral?"
+  },
+  "sections": [
+    {
+      "name": "Application forms and payments",
+      "items": [
+        {
+          "id": "form-656",
+          "label": "Completed and signed current Form 656",
+          "detail": "Form 656-B, How to Apply. Joint and separate debts of spouses, or individual and business debts, each need their own Form 656 package.",
+          "when": ["individual", "business"],
+          "basis": "f656b"
+        },
+        {
+          "id": "form-433a-oic",
+          "label": "Completed and signed Form 433-A (OIC)",
+          "detail": "Form 656-B Step 2: for individual wage earners, sole proprietors, and those submitting an offer for a deceased individual's estate. Send through the secure portal, never by plain email.",
+          "when": ["individual"],
+          "basis": "f656b"
+        },
+        {
+          "id": "form-433b-oic",
+          "label": "Completed and signed Form 433-B (OIC)",
+          "detail": "Form 656-B Step 3: for a corporation, partnership or LLC; the Form 433-A (OIC) attachment list also requires Form 433-B if the individual or spouse has an interest in a business entity other than a sole proprietorship. Send through the secure portal, never by plain email.",
+          "when": ["business", "business-interest"],
+          "basis": "f656b"
+        },
+        {
+          "id": "application-fee",
+          "label": "$205 application fee",
+          "detail": "Form 656-B, Paying for Your Offer. Pay through EFTPS or the Individual Online Account, or by a separate check or money order payable to \"United States Treasury.\" Waived for individuals who meet the Low-Income Certification guidelines.",
+          "when": ["individual", "business"],
+          "basis": "f656b"
+        },
+        {
+          "id": "initial-payment",
+          "label": "Initial offer payment for the chosen payment option",
+          "detail": "Form 656-B: lump sum offers send 20% of the offer amount; periodic payment offers send the first proposed monthly payment and keep paying monthly while the offer is evaluated. Not sent if the individual meets the Low-Income Certification guidelines.",
+          "when": ["individual", "business"],
+          "basis": "f656b"
+        },
+        {
+          "id": "low-income",
+          "label": "Household size and either adjusted gross income from the most recently filed Form 1040 or household gross monthly income",
+          "detail": "Form 656 Low-Income Certification (individuals and sole proprietors only): the client checks one box certifying that AGI, or household gross monthly income x 12, is at or below the chart amount for family size and location. If they qualify, send no fee or payments.",
+          "when": ["low-income"],
+          "basis": "f656b"
+        },
+        {
+          "id": "recent-return",
+          "label": "Complete copy of any tax return filed within 10 weeks of the offer",
+          "detail": "Form 656-B, Application Checklist. Send through the secure portal, never by plain email.",
+          "when": ["recent-return"],
+          "basis": "f656b"
+        },
+        {
+          "id": "special-circumstances",
+          "label": "Detailed explanation of the special circumstances and documents supporting it",
+          "detail": "Form 656 Section 3 (Reason for Offer) and the attachment lists on Forms 433-A (OIC) and 433-B (OIC).",
+          "when": ["special-circumstances"],
+          "basis": "f656b"
+        },
+        {
+          "id": "estate-authority",
+          "label": "Letters testamentary or other proof of who is authorized to act for the estate",
+          "detail": "Form 656-B, Application Checklist.",
+          "when": ["estate"],
+          "basis": "f656b"
+        },
+        {
+          "id": "form-2848",
+          "label": "Signed Form 2848 (representation) or Form 8821 (information only), listing all years in the offer and the current tax year",
+          "detail": "Form 656-B Application Checklist and Form 656 Section 9; a copy of a previously filed form may be attached. Form 656-L also asks for Form 2848 or 8821 unless one is on file.",
+          "when": ["representative"],
+          "basis": "f656b"
+        }
+      ]
+    },
+    {
+      "name": "Attachments for Form 433-A (OIC)",
+      "items": [
+        {
+          "id": "pay-stubs",
+          "label": "Most recent pay stub or earnings statement from each employer",
+          "detail": "Form 433-A (OIC) attachment list. Copies only; do not send originals. Send through the secure portal, never by plain email.",
+          "when": ["individual"],
+          "basis": "f656b"
+        },
+        {
+          "id": "other-income",
+          "label": "Most recent statement for every other income source: pensions, Social Security, rental income, interest and dividends, child support or alimony orders, royalties, gig and digital-platform income, recurring capital gains",
+          "detail": "Form 433-A (OIC) attachment list, including income from a related partnership, corporation, LLC or LLP.",
+          "when": ["individual"],
+          "basis": "f656b"
+        },
+        {
+          "id": "personal-bank",
+          "label": "Complete personal bank statements for the three most recent months",
+          "detail": "Form 433-A (OIC) attachment list. Send through the secure portal, never by plain email.",
+          "when": ["individual"],
+          "basis": "f656b"
+        },
+        {
+          "id": "sole-prop-bank",
+          "label": "Six most recent complete statements for each business bank account",
+          "detail": "Form 433-A (OIC) attachment list: required if you operate a business. Send through the secure portal, never by plain email.",
+          "when": ["sole-proprietor"],
+          "basis": "f656b"
+        },
+        {
+          "id": "investment-statements",
+          "label": "Most recent statement for each investment and retirement account",
+          "detail": "Form 433-A (OIC) attachment list. Send through the secure portal, never by plain email.",
+          "when": ["individual"],
+          "basis": "f656b"
+        },
+        {
+          "id": "trust-docs",
+          "label": "Copies of trust documents",
+          "detail": "Form 433-A (OIC) attachment list, per Section 9 (Other Information).",
+          "when": ["trust"],
+          "basis": "f656b"
+        },
+        {
+          "id": "court-orders",
+          "label": "Court orders for child support or alimony claimed as a monthly expense",
+          "detail": "Form 433-A (OIC) attachment list.",
+          "when": ["court-ordered"],
+          "basis": "f656b"
+        },
+        {
+          "id": "state-tax",
+          "label": "Proof of the delinquent state or local tax owed and the monthly payment",
+          "detail": "Form 433-A (OIC) attachment list.",
+          "when": ["state-tax"],
+          "basis": "f656b"
+        }
+      ]
+    },
+    {
+      "name": "Attachments for Form 433-B (OIC)",
+      "items": [
+        {
+          "id": "business-pl",
+          "label": "Current profit and loss statement covering at least the most recent 6 to 12 months",
+          "detail": "Form 433-B (OIC) attachment list, if appropriate.",
+          "when": ["business"],
+          "basis": "f656b"
+        },
+        {
+          "id": "business-bank",
+          "label": "Six most recent complete statements for each business bank account and three most recent statements for each investment account",
+          "detail": "Form 433-B (OIC) attachment list. Send through the secure portal, never by plain email.",
+          "when": ["business"],
+          "basis": "f656b"
+        }
+      ]
+    },
+    {
+      "name": "Attachments for either statement",
+      "items": [
+        {
+          "id": "loan-statements",
+          "label": "Most recent lender statements for mortgages, second mortgages, vehicle and other loans, showing monthly payments, payoffs and balances",
+          "detail": "Attachment lists on Forms 433-A (OIC) and 433-B (OIC); the business list also asks for statements on loans where an asset is used as collateral.",
+          "when": ["loans"],
+          "basis": "f656b"
+        },
+        {
+          "id": "receivables",
+          "label": "List or most recent statement of accounts and notes receivable",
+          "detail": "Attachment lists on Forms 433-A (OIC) and 433-B (OIC).",
+          "when": ["receivables"],
+          "basis": "f656b"
+        },
+        {
+          "id": "digital-assets",
+          "label": "Documents and records showing currently held digital assets",
+          "detail": "Attachment lists on Forms 433-A (OIC) and 433-B (OIC). Send through the secure portal, never by plain email.",
+          "when": ["digital-assets"],
+          "basis": "f656b"
+        }
+      ]
+    },
+    {
+      "name": "Doubt as to liability offer (Form 656-L)",
+      "items": [
+        {
+          "id": "form-656l",
+          "label": "Completed and signed Form 656-L with an offer of $1.00 or more",
+          "detail": "Form 656-B says to use Form 656-L for doubt as to liability and not to submit it at the same time as a Form 656 offer. Form 656-L: no application fee or payment is required; do not send payments.",
+          "when": ["doubt-liability"],
+          "basis": "f656l"
+        },
+        {
+          "id": "datl-statement",
+          "label": "Written statement explaining why all or part of the tax debt is incorrect",
+          "detail": "Form 656-L, What documentation or support is needed, and Section 5 (Explanation of Circumstances). Put the name and SSN, EIN or ITIN on every added sheet.",
+          "when": ["doubt-liability"],
+          "basis": "f656l"
+        },
+        {
+          "id": "datl-evidence",
+          "label": "Supporting documents or evidence showing why the tax is wrong",
+          "detail": "Form 656-L: without the explanation and supporting documentation the offer is returned. If books and records cannot be reconstructed, an explanation establishing reasonable doubt is required. Send through the secure portal, never by plain email.",
+          "when": ["doubt-liability"],
+          "basis": "f656l"
+        }
+      ]
+    }
+  ]
+}

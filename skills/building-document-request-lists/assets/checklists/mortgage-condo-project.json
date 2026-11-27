@@ -1,0 +1,293 @@
+{
+  "id": "mortgage-condo-project",
+  "title": "Condo project documents from the HOA",
+  "industry": "mortgage",
+  "jurisdiction": "US federal",
+  "variant_of": "mortgage-project-review",
+  "use_when": "Use when a conventional loan is secured by a unit in a condominium project and the project needs review: these items are collected from the HOA or its management company, alongside the borrower's own needs list (for example mortgage-conventional-salaried).",
+  "note": "Items follow the Fannie Mae Selling Guide project-standards topics B4-2.1-01, B4-2.1-03, B4-2.2-01 and B4-2.2-02 and insurance topics B7-3-07, B7-4-01 and B7-4-02 (dated 08/05/2026, except B4-2.1-03 dated 11/04/2026), plus Freddie Mac's Condominium Unit Mortgage FAQ. Form 1076 / Form 476 itself could not be downloaded, so its individual questions are not itemized. It does not cover co-op or PUD projects, FHA or VA condo approval, state condo law, or the eligibility decision itself.",
+  "sources": {
+    "fnma-b4-2.1-01": {
+      "name": "Fannie Mae Selling Guide, B4-2.1-01, General Information on Project Standards (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-2.1-01/general-information-project-standards",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b4-2.1-03": {
+      "name": "Fannie Mae Selling Guide, B4-2.1-03, Ineligible Projects (11/04/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-2.1-03/ineligible-projects",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b4-2.2-01": {
+      "name": "Fannie Mae Selling Guide, B4-2.2-01, Full Review Process (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-2.2-01/full-review-process",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b4-2.2-02": {
+      "name": "Fannie Mae Selling Guide, B4-2.2-02, Full Review: Additional Eligibility Requirements for Units in New and Newly Converted Condo Projects (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b4-2.2-02/full-review-additional-eligibility-requirements-units-new-and-newly-converted-condo-projects",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b7-3-07": {
+      "name": "Fannie Mae Selling Guide, B7-3-07, Evidence of Property Insurance (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b7-3-07/evidence-property-insurance",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b7-4-01": {
+      "name": "Fannie Mae Selling Guide, B7-4-01, General Liability Insurance Requirements for Project Developments (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b7-4-01/general-liability-insurance-requirements-project-developments",
+      "retrieved": "2026-11-26"
+    },
+    "fnma-b7-4-02": {
+      "name": "Fannie Mae Selling Guide, B7-4-02, Fidelity/Crime Insurance Requirements for Project Developments (08/05/2026)",
+      "url": "https://selling-guide.fanniemae.com/sel/b7-4-02/fidelitycrime-insurance-requirements-project-developments",
+      "retrieved": "2026-11-26"
+    },
+    "fhlmc-condo-faq": {
+      "name": "Freddie Mac, Condominium Unit Mortgage FAQ (web page; no review date shown)",
+      "url": "https://sf.freddiemac.com/faqs/condominium-unit-mortgage-faq",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "new-project": "Is the project new or newly converted (under 90% of units sold, not fully complete, subject to more phasing, or still under developer control)?",
+    "not-complete": "Is the project, or the unit's legal phase, only substantially complete rather than 100% complete?",
+    "master-association": "Is the project part of a larger development where owners pay more than $50 a month to a separate master association?",
+    "conversion": "Was the project converted to a condo within the past three years?",
+    "reserve-study": "Will a reserve study be used instead of the 10% budget reserve test?",
+    "shared-amenities": "Does the HOA share amenities with another association?",
+    "not-metered": "Are the units not separately metered for utilities?",
+    "special-assessment": "Does the project have a current or planned special assessment?",
+    "inspection": "Was a structural or mechanical inspection of the project completed in the past three years?",
+    "mandatory-inspection": "Is the project subject to a state, county or local mandatory structural safety inspection or recertification?",
+    "litigation": "Is the HOA a party to a pending lawsuit, the developer a party to a lawsuit about the project's safety, structure, habitability or use, or the HOA in arbitration or mediation likely to become a lawsuit?",
+    "over-20-units": "Does the project have more than 20 units?"
+  },
+  "sections": [
+    {
+      "name": "Questionnaire and legal documents",
+      "items": [
+        {
+          "id": "questionnaire",
+          "label": "Completed Condominium Project Questionnaire",
+          "detail": "Fannie Mae Form 1076 (Freddie Mac Form 476) or a substantially similar form. B4-2.1-01 says the form is optional but lenders are encouraged to use it and keep it in the loan file.",
+          "when": [],
+          "basis": "fnma-b4-2.1-01"
+        },
+        {
+          "id": "questionnaire-addendum",
+          "label": "Questionnaire addendum on deferred maintenance and special assessments",
+          "detail": "The Freddie Mac FAQ says an addendum to Form 476, effective December 15, 2023, captures this information. If a questionnaire leaves these questions unanswered or marked unknown, more documentation is needed.",
+          "when": [],
+          "basis": "fhlmc-condo-faq"
+        },
+        {
+          "id": "legal-documents",
+          "label": "Recorded legal documents that set up the project: declaration of condominium, covenants, conditions and restrictions, or similar",
+          "detail": "B4-2.1-01, Project Documentation.",
+          "when": [],
+          "basis": "fnma-b4-2.1-01"
+        },
+        {
+          "id": "hoa-tin",
+          "label": "HOA's federal tax identification number",
+          "detail": "B4-2.1-01 encourages lenders to include the HOA's IRS tax identification number in the loan file. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "fnma-b4-2.1-01"
+        }
+      ]
+    },
+    {
+      "name": "HOA finances",
+      "items": [
+        {
+          "id": "budget",
+          "label": "Current HOA projected budget showing the replacement reserve allocation",
+          "detail": "B4-2.2-01: replacement reserves must be at least 10% of the budget, measured against annual budgeted assessment income.",
+          "when": [],
+          "basis": "fnma-b4-2.2-01"
+        },
+        {
+          "id": "financial-statements",
+          "label": "HOA financial statements",
+          "detail": "B4-2.1-01, Project Documentation. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "fnma-b4-2.1-01"
+        },
+        {
+          "id": "delinquencies",
+          "label": "Number of units 60 or more days past due on HOA fees, and on each special assessment",
+          "detail": "B4-2.2-01: no more than 15% of total units may be 60 days or more past due.",
+          "when": [],
+          "basis": "fnma-b4-2.2-01"
+        },
+        {
+          "id": "reserve-study",
+          "label": "Copy of the most recent reserve study or reserve study update",
+          "detail": "B4-2.2-01: completed within three years of the date the lender approves the project.",
+          "when": ["reserve-study"],
+          "basis": "fnma-b4-2.2-01"
+        },
+        {
+          "id": "shared-amenities-agreement",
+          "label": "Agreement governing the shared amenities between the associations",
+          "detail": "B4-2.2-01.",
+          "when": ["shared-amenities"],
+          "basis": "fnma-b4-2.2-01"
+        },
+        {
+          "id": "utility-funding",
+          "label": "Budget lines showing funding for utility payments",
+          "detail": "B4-2.2-01.",
+          "when": ["not-metered"],
+          "basis": "fnma-b4-2.2-01"
+        }
+      ]
+    },
+    {
+      "name": "Condition of the buildings",
+      "items": [
+        {
+          "id": "special-assessment-details",
+          "label": "For each special assessment: its purpose, approval date and whether it is planned or underway, original amount and amount still to collect, and expected payoff date",
+          "detail": "B4-2.1-03, Special Assessments.",
+          "when": ["special-assessment"],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "assessment-list",
+          "label": "List of special assessments from the HOA or management company",
+          "detail": "B4-2.1-03, Documentation.",
+          "when": [],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "repair-list",
+          "label": "List of necessary repairs from the HOA or management company",
+          "detail": "B4-2.1-03, Documentation.",
+          "when": [],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "board-minutes",
+          "label": "HOA board meeting minutes",
+          "detail": "B4-2.1-03, Documentation. The Guide sets no look-back period; the lender decides which minutes it needs.",
+          "when": [],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "inspection-reports",
+          "label": "Complete copy of every structural or mechanical inspection report from the past three years",
+          "detail": "B4-2.1-03, Inspection Reports: completed within 3 years of the lender's project review date. The Freddie Mac FAQ says this means any such report, not just mandatory inspections.",
+          "when": ["inspection"],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "repair-engineer-report",
+          "label": "Engineer's report or similar showing that critical repairs found by an inspection were completed",
+          "detail": "B4-2.1-03, Inspection Reports.",
+          "when": ["inspection"],
+          "basis": "fnma-b4-2.1-03"
+        },
+        {
+          "id": "recertification-letter",
+          "label": "Letter from the local jurisdiction confirming the project passed its required inspection or recertification",
+          "detail": "Freddie Mac FAQ: the recertification must be complete, with evidence the project passed all required inspections.",
+          "when": ["mandatory-inspection"],
+          "basis": "fhlmc-condo-faq"
+        },
+        {
+          "id": "conversion-report",
+          "label": "Architect's or engineer's report obtained for the conversion",
+          "detail": "B4-2.2-01: it must comment favorably on structural integrity and the condition and remaining useful life of major components.",
+          "when": ["conversion"],
+          "basis": "fnma-b4-2.2-01"
+        }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "items": [
+        {
+          "id": "master-policy",
+          "label": "Current master property insurance policy, or a certificate showing the unit is covered under it",
+          "detail": "B7-3-07. A certificate must be signed by the insurer and include everything needed to check the coverage.",
+          "when": [],
+          "basis": "fnma-b7-3-07"
+        },
+        {
+          "id": "liability-policy",
+          "label": "HOA general liability insurance policy for the entire project",
+          "detail": "B7-4-01: required for all condo projects except those qualifying for a waiver of project review.",
+          "when": [],
+          "basis": "fnma-b7-4-01"
+        },
+        {
+          "id": "fidelity-policy",
+          "label": "Fidelity/crime insurance policy naming the HOA as insured and covering the management agent",
+          "detail": "B7-4-02. Required unless the project qualifies for a waiver of project review, has 20 or fewer units, or would need $5,000 or less of coverage.",
+          "when": ["over-20-units"],
+          "basis": "fnma-b7-4-02"
+        },
+        {
+          "id": "financial-controls",
+          "label": "Information on the HOA's financial controls: separate operating and reserve accounts, management company records and authority, and board signatures on reserve checks",
+          "detail": "B7-4-02, Determining the Required Coverage Amount, from the project legal documents or another acceptable source.",
+          "when": ["over-20-units"],
+          "basis": "fnma-b7-4-02"
+        }
+      ]
+    },
+    {
+      "name": "Litigation",
+      "items": [
+        {
+          "id": "litigation-documents",
+          "label": "Documents describing the lawsuit or pre-litigation matter, such as the complaint and any insurer agreement to provide the defense",
+          "detail": "B4-2.1-03, Litigation or Pre-litigation Activity: the lender must obtain documentation supporting any finding that the litigation is minor.",
+          "when": ["litigation"],
+          "basis": "fnma-b4-2.1-03"
+        }
+      ]
+    },
+    {
+      "name": "New or newly converted projects",
+      "items": [
+        {
+          "id": "certificate-of-occupancy",
+          "label": "Certificate of occupancy or similar document for the project or the unit's phase",
+          "detail": "B4-2.2-02, definition of substantially complete.",
+          "when": ["new-project"],
+          "basis": "fnma-b4-2.2-02"
+        },
+        {
+          "id": "presales",
+          "label": "Count of units sold or under contract to owner-occupants or second-home buyers",
+          "detail": "B4-2.2-02: at least 50% of the units in the project or subject legal phase, counted with all prior phases.",
+          "when": ["new-project"],
+          "basis": "fnma-b4-2.2-02"
+        },
+        {
+          "id": "development-plan",
+          "label": "Overall development plan for the project",
+          "detail": "B4-2.2-02: reviewed for consistency of future and existing improvements, time limits for expansion, and reciprocal easements between phases.",
+          "when": ["new-project"],
+          "basis": "fnma-b4-2.2-02"
+        },
+        {
+          "id": "master-plan",
+          "label": "Overall development plan for the master association",
+          "detail": "B4-2.2-02.",
+          "when": ["master-association"],
+          "basis": "fnma-b4-2.2-02"
+        },
+        {
+          "id": "completion-assurance",
+          "label": "Completion assurance for unfinished facilities and common elements, and assurances against construction and structural defects",
+          "detail": "B4-2.2-02: cash deposits, letters of credit, assignments of certificates of deposit, or other assets easily converted to cash. Defect assurances must cover each unit for one year from its settlement and common facilities for one year after units holding 60% of HOA votes have transferred.",
+          "when": ["not-complete"],
+          "basis": "fnma-b4-2.2-02"
+        }
+      ]
+    }
+  ]
+}

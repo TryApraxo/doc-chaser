@@ -1,0 +1,208 @@
+{
+  "id": "tax-rd-credit-6765",
+  "title": "Research credit (Form 6765): records to collect",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-business-credits",
+  "use_when": "Use when the firm is claiming the credit for increasing research activities on Form 6765, on an original return or on an amended return or AAR claiming a refund.",
+  "note": "Built from the IRS Instructions for Form 6765 (Rev. December 2025, for the January 2025 form) and the IRS research credit claims FAQ for amended returns. Section G business-component detail is optional for tax years beginning before 2026 and required after 2025 unless an exception applies. It does not decide whether activities meet the four-part test, and does not cover state research credits or the section 174A deduction election.",
+  "sources": {
+    "i6765": {
+      "name": "IRS, Instructions for Form 6765, Credit for Increasing Research Activities (Rev. December 2025)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i6765.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "irs-claims-faq": {
+      "name": "IRS, Research credit claims (Section 41) on amended returns frequently asked questions (page last reviewed or updated 01-Oct-2026)",
+      "url": "https://www.irs.gov/businesses/corporations/research-credit-claims-section-41-on-amended-returns-frequently-asked-questions",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "section-g": "Is Section G being completed (required for tax years beginning after 2025 unless the business is a qualified small business taking the payroll credit, or has QREs of $1.5 million or less and average gross receipts of $50 million or less on an original return)?",
+    "regular-credit": "Is the business figuring the regular credit rather than the alternative simplified credit?",
+    "asc": "Is the business using the alternative simplified credit?",
+    "basic-research": "Did the corporation pay a university or other qualified organization for basic research under a written contract?",
+    "controlled-group": "Is the business a member of a controlled group or under common control with other businesses?",
+    "payroll-election": "Is the business a qualified small business electing to use part of the credit against payroll tax?",
+    "amended-claim": "Is the credit being claimed or increased on an amended return or administrative adjustment request?",
+    "sampling": "Were qualified research expenses figured using statistical sampling?",
+    "asc-730": "Does the business follow the ASC 730 Directive (assets of $10 million or more with certified audited GAAP statements)?"
+  },
+  "sections": [
+    {
+      "name": "Qualified research expenses",
+      "items": [
+        {
+          "id": "wages",
+          "label": "Wages paid to employees who did, directly supervised, or directly supported the research",
+          "detail": "Section F, line 42; Section G, columns 50 (actual conduct), 51 (first-line supervision) and 52 (direct support). Do not include wages used for the work opportunity credit. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "officer-wages",
+          "label": "Amount of officer wages included in research wages",
+          "detail": "Section E, line 38.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "supplies",
+          "label": "Cost of supplies used in the research",
+          "detail": "Section F, line 43; Section G, column 54.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "computer-rental",
+          "label": "Amounts paid to rent or lease off-site computers used in the research, less any amounts received for similar property",
+          "detail": "Section F, line 44; Section G, column 55. The computers must be off the business's premises and the business must not be the operator or primary user.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "contract-research",
+          "label": "Invoices and contracts for research performed by outside contractors, universities, consortia or federal labs",
+          "detail": "Section F, line 45; Section G, column 56. The percentage counted (100%, 75% or 65%) depends on who did the work; prepaid amounts count in the year the research is performed.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "basic-research",
+          "label": "Written contracts and cash payments for basic research to a qualified organization, and the organization base period amounts for the 3 preceding years",
+          "detail": "Lines 2, 3 and 46.",
+          "when": ["basic-research"],
+          "basis": "i6765"
+        },
+        {
+          "id": "component-count",
+          "label": "Total number of business components (products, processes, software, techniques, formulas or inventions) that generated the expenses",
+          "detail": "Section E, line 37.",
+          "when": [],
+          "basis": "i6765"
+        },
+        {
+          "id": "acquisitions-new-categories",
+          "label": "Details of any acquisition or disposition of a business during the year, and any new or recharacterized categories of expense",
+          "detail": "Section E, lines 39 and 40; new categories must also be adjusted in the base years.",
+          "when": [],
+          "basis": "i6765"
+        }
+      ]
+    },
+    {
+      "name": "Business component detail (Section G)",
+      "items": [
+        {
+          "id": "component-list",
+          "label": "List of business components ranked by expenses, covering at least 80% of total research expenses (no more than 50 components)",
+          "detail": "Section G, column 49(c): name or identifier consistent with the books and records that substantiate the research. Remaining components are reported in aggregate.",
+          "when": ["section-g"],
+          "basis": "i6765"
+        },
+        {
+          "id": "component-entity",
+          "label": "For each component: EIN and principal business activity code of the entity doing the research",
+          "detail": "Section G, columns 49(a) and 49(b).",
+          "when": ["section-g"],
+          "basis": "i6765"
+        },
+        {
+          "id": "component-type",
+          "label": "For each component: whether it is a product, process or other, and for software whether it is internal use, dual function, non-internal use or excepted",
+          "detail": "Section G, columns 49(d) and 49(e).",
+          "when": ["section-g"],
+          "basis": "i6765"
+        },
+        {
+          "id": "component-expenses",
+          "label": "For each component: wages, supplies, computer rental and contract research amounts",
+          "detail": "Section G, columns 50 through 56.",
+          "when": ["section-g"],
+          "basis": "i6765"
+        },
+        {
+          "id": "sampling-plan",
+          "label": "Statistical sampling plan",
+          "detail": "Section G, Statistical Sampling: attach the plan (\"Form6765StatSamplePlan.pdf\"); methodology must comply with Rev. Proc. 2011-42.",
+          "when": ["sampling"],
+          "basis": "i6765"
+        },
+        {
+          "id": "asc-730-appendices",
+          "label": "ASC 730 Directive appendices A through D",
+          "detail": "Line 41 and the ASC 730 single entry in Section G; the appendices may be attached.",
+          "when": ["asc-730"],
+          "basis": "i6765"
+        }
+      ]
+    },
+    {
+      "name": "Base amount figures",
+      "items": [
+        {
+          "id": "gross-receipts-4yr",
+          "label": "Gross receipts, less returns and allowances, for each of the 4 tax years before the credit year",
+          "detail": "Line 7 (regular credit).",
+          "when": ["regular-credit"],
+          "basis": "i6765"
+        },
+        {
+          "id": "fixed-base-history",
+          "label": "Historical research expenses and gross receipts used for the fixed-base percentage",
+          "detail": "Line 6: 1984-1988 figures for an existing company, or the start-up company years set out in the instructions.",
+          "when": ["regular-credit"],
+          "basis": "i6765"
+        },
+        {
+          "id": "qres-3yr",
+          "label": "Qualified research expenses for each of the 3 prior tax years",
+          "detail": "Line 21 (alternative simplified credit); a controlled group enters the group total.",
+          "when": ["asc"],
+          "basis": "i6765"
+        },
+        {
+          "id": "gross-receipts-qsb",
+          "label": "Gross receipts for the current year and the years needed to show no gross receipts before the 5-year period",
+          "detail": "Qualified Small Business (Payroll Tax Credit Election): gross receipts under $5 million and none before the 5-tax-year period; lines 33a to 36.",
+          "when": ["payroll-election"],
+          "basis": "i6765"
+        },
+        {
+          "id": "group-schedule",
+          "label": "For each group member: name, EIN, common parent or designated member, PBA code, and each category of research expenses",
+          "detail": "Item B attachment (\"Form6765ItemBGroupCredit.pdf\"), which also shows each member's share of the credit and the group totals.",
+          "when": ["controlled-group"],
+          "basis": "i6765"
+        }
+      ]
+    },
+    {
+      "name": "Refund claim information",
+      "items": [
+        {
+          "id": "claim-components",
+          "label": "All business components the refund claim relates to for that year",
+          "detail": "IRS FAQ item 1 of the three required items; Form 6765 Section G column 49(f) for amended returns. If a credit study is submitted, identify the exact pages with this information.",
+          "when": ["amended-claim"],
+          "basis": "irs-claims-faq"
+        },
+        {
+          "id": "claim-activities",
+          "label": "For each business component, all research activities performed",
+          "detail": "IRS FAQ item 2 of the three required items.",
+          "when": ["amended-claim"],
+          "basis": "irs-claims-faq"
+        },
+        {
+          "id": "claim-totals",
+          "label": "Total qualified wages, supplies and contract research expenses for the claim year",
+          "detail": "IRS FAQ item 3; may be provided using Form 6765. The IRS may still ask for the names of the people who did the research and the information they sought to discover if the claim is examined.",
+          "when": ["amended-claim"],
+          "basis": "irs-claims-faq"
+        }
+      ]
+    }
+  ]
+}

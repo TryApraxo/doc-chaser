@@ -1,0 +1,223 @@
+{
+  "id": "legal-eeoc-charge",
+  "title": "Before filing an EEOC charge of discrimination: information and documents to gather",
+  "industry": "legal",
+  "jurisdiction": "US federal",
+  "variant_of": "legal-employment",
+  "use_when": "Use when a private-sector, state or local government, union or staffing-agency worker or applicant is preparing an EEOC inquiry, intake interview and charge of employment discrimination; federal employees and applicants follow a different complaint process.",
+  "note": "Built from EEOC's How to File a Charge, Time Limits, and What You Can Expect pages, the EEOC Public Portal User's Guide Vol 2 (February 27, 2019), and the evidence chapter of the EEOC Compliance Manual (CM-602, issued 02-01-1988). EEOC states a charge generally must be filed within 180 calendar days of the discrimination, extended to 300 days where a state or local agency enforces a law against discrimination on the same basis (for age, only a state law and state agency extend it); the deadline applies to each discrete event, and for harassment it runs from the last incident. It does not assess whether the claim is covered or timely, and does not cover state FEPA procedures, Equal Pay Act lawsuits, or the federal-sector process.",
+  "sources": {
+    "eeoc-how-file": {
+      "name": "EEOC, How to File a Charge of Employment Discrimination (web page; no review date shown)",
+      "url": "https://www.eeoc.gov/how-file-charge-employment-discrimination",
+      "retrieved": "2026-11-26"
+    },
+    "eeoc-filing": {
+      "name": "EEOC, Filing A Charge of Discrimination (web page; no review date shown)",
+      "url": "https://www.eeoc.gov/filing-charge-discrimination",
+      "retrieved": "2026-11-26"
+    },
+    "eeoc-time-limits": {
+      "name": "EEOC, Time Limits For Filing A Charge (web page; no review date shown)",
+      "url": "https://www.eeoc.gov/time-limits-filing-charge",
+      "retrieved": "2026-11-26"
+    },
+    "eeoc-after": {
+      "name": "EEOC, What You Can Expect After You File a Charge (web page; no review date shown)",
+      "url": "https://www.eeoc.gov/what-you-can-expect-after-you-file-charge",
+      "retrieved": "2026-11-26"
+    },
+    "portal-v2": {
+      "name": "EEOC, EEOC Public Portal User's Guide, Vol 2 - Submit an Online Inquiry to the EEOC (February 27, 2019)",
+      "url": "https://www.eeoc.gov/sites/default/files/migrated_files/portal/V2-Submit_an_Online_Inquiry_to_EEOC.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "cm-602": {
+      "name": "EEOC, Compliance Manual Section 602, Evidence (Issue Date 02-01-1988)",
+      "url": "https://www.eeoc.gov/laws/guidance/cm-602-evidence",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "several-events": "Did more than one discriminatory event happen (for example a demotion and later a firing)?",
+    "harassment": "Is the client alleging ongoing harassment?",
+    "other-location": "Did the client work at a location other than the employer's main address when the discrimination happened?",
+    "prior-eeoc": "Has the client already filed a charge with the EEOC about this matter?",
+    "prior-agency": "Has the client already filed a complaint about this matter with another agency (for example a state or local fair employment practices agency)?",
+    "attorney": "Is an attorney representing the client?"
+  },
+  "sections": [
+    {
+      "name": "About the client",
+      "items": [
+        {
+          "id": "client-contact",
+          "label": "Your name, address, email and telephone number",
+          "detail": "Listed as required content of a charge letter.",
+          "when": [],
+          "basis": "eeoc-how-file"
+        }
+      ]
+    },
+    {
+      "name": "About the employer",
+      "items": [
+        {
+          "id": "employer-contact",
+          "label": "Name, address, email and telephone number of the employer, employment agency or union",
+          "detail": "The organization the charge is against (the respondent).",
+          "when": [],
+          "basis": "eeoc-how-file"
+        },
+        {
+          "id": "employer-type",
+          "label": "Type of employer",
+          "detail": "The portal first asks for the type: private business or non-profit, union, temp agency or staffing firm, state or local government, or the federal government. Vol 2, Step 2.",
+          "when": [],
+          "basis": "portal-v2"
+        },
+        {
+          "id": "employee-count",
+          "label": "Approximate number of employees at the employer",
+          "detail": "If known. The online inquiry asks the client to pick an approximate range. Vol 2, Step 5.",
+          "when": [],
+          "basis": "eeoc-how-file"
+        },
+        {
+          "id": "work-location",
+          "label": "Address of the location where you worked, if different from the employer's main address",
+          "detail": "Vol 2, Step 11, Respondent/Employer Information.",
+          "when": ["other-location"],
+          "basis": "portal-v2"
+        },
+        {
+          "id": "state",
+          "label": "State where the discrimination happened",
+          "detail": "Used with the date to work out the filing deadline. Vol 2, Step 5, Location.",
+          "when": [],
+          "basis": "portal-v2"
+        }
+      ]
+    },
+    {
+      "name": "What happened",
+      "items": [
+        {
+          "id": "adverse-action",
+          "label": "Short description of each action you believe was discriminatory",
+          "detail": "For example being fired, demoted or harassed.",
+          "when": [],
+          "basis": "eeoc-how-file"
+        },
+        {
+          "id": "dates",
+          "label": "Date the discrimination took place",
+          "detail": "The 180/300-day deadline is counted in calendar days from this date, including weekends and holidays.",
+          "when": [],
+          "basis": "eeoc-time-limits"
+        },
+        {
+          "id": "event-dates",
+          "label": "Separate date for each discriminatory event",
+          "detail": "The deadline usually applies to each event on its own.",
+          "when": ["several-events"],
+          "basis": "eeoc-time-limits"
+        },
+        {
+          "id": "last-harassment",
+          "label": "Date of the last incident of harassment, and a list of the earlier incidents",
+          "detail": "The charge must be filed within 180 or 300 days of the last incident; EEOC looks at all incidents when investigating.",
+          "when": ["harassment"],
+          "basis": "eeoc-time-limits"
+        },
+        {
+          "id": "basis",
+          "label": "Why you believe you were treated this way",
+          "detail": "Race, color, religion, sex (including pregnancy, transgender status and sexual orientation), national origin, age (40 or older), disability, genetic information, or retaliation. Check all that apply.",
+          "when": [],
+          "basis": "eeoc-filing"
+        },
+        {
+          "id": "events-leading-up",
+          "label": "Description of the events leading up to the decision",
+          "detail": "CM-602.6(a)(1), background information.",
+          "when": [],
+          "basis": "cm-602"
+        }
+      ]
+    },
+    {
+      "name": "Your job and the people involved",
+      "items": [
+        {
+          "id": "work-history",
+          "label": "Short summary of your work history with the employer",
+          "detail": "CM-602.6(a)(1).",
+          "when": [],
+          "basis": "cm-602"
+        },
+        {
+          "id": "job-description",
+          "label": "Your job description and a list of your actual duties",
+          "detail": "CM-602.6(a)(1).",
+          "when": [],
+          "basis": "cm-602"
+        },
+        {
+          "id": "decision-makers",
+          "label": "Names and job titles of the employer's people involved in the decision",
+          "detail": "CM-602.6(a)(1).",
+          "when": [],
+          "basis": "cm-602"
+        },
+        {
+          "id": "comparators",
+          "label": "Names of similar co-workers who were treated the same as you, and those treated differently",
+          "detail": "CM-602.6(a)(1).",
+          "when": [],
+          "basis": "cm-602"
+        },
+        {
+          "id": "witnesses",
+          "label": "Names of witnesses who know about what happened",
+          "detail": "EEOC asks the charging party to identify witnesses and evidence, mostly during the intake interview. CM-602.3 and 602.6(c).",
+          "when": [],
+          "basis": "cm-602"
+        }
+      ]
+    },
+    {
+      "name": "Documents",
+      "items": [
+        {
+          "id": "supporting-docs",
+          "label": "Documents that support your charge",
+          "detail": "Can be uploaded through the EEOC Public Portal.",
+          "when": [],
+          "basis": "eeoc-after"
+        },
+        {
+          "id": "prior-eeoc-charge",
+          "label": "Date and charge number of the earlier EEOC charge",
+          "detail": "Vol 2, Step 11, Previous Filing Information (date required).",
+          "when": ["prior-eeoc"],
+          "basis": "portal-v2"
+        },
+        {
+          "id": "prior-agency-complaint",
+          "label": "Name of the other agency, the date filed, and what the complaint was about",
+          "detail": "All three are required. Vol 2, Step 11, Previous Filing Information.",
+          "when": ["prior-agency"],
+          "basis": "portal-v2"
+        },
+        {
+          "id": "representation-letter",
+          "label": "Letter of representation from your attorney",
+          "detail": "Can be uploaded through the EEOC Public Portal.",
+          "when": ["attorney"],
+          "basis": "eeoc-after"
+        }
+      ]
+    }
+  ]
+}

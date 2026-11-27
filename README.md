@@ -22,7 +22,7 @@ Skills for the paperwork side of a professional-services firm: asking clients fo
 
 ## Template library
 
-37 request-list templates and 11 letter, plan and checklist templates. Templates with the same purpose come as variants for different conditions; each skill picks the variant that fits the client. Every template added since 0.5.0 cites the official source for each item, with the edition and the date it was read.
+63 request-list templates and 11 letter, plan and checklist templates. Templates with the same purpose come as variants for different conditions; each skill picks the variant that fits the client. Every template added since 0.5.0 cites the official source for each item, with the edition and the date it was read.
 
 | Purpose | Variants |
 |---|---|
@@ -39,6 +39,15 @@ Skills for the paperwork side of a professional-services firm: asking clients fo
 | Social Security disability | Adult; child |
 | Gift letter | Fannie Mae; Freddie Mac; FHA; VA; Fannie Mae gift of equity |
 | Security plan | Full WISP; sole-practitioner WISP; data-theft response checklist; basic-safeguards checklist |
+| Estate, gift and foreign reporting | Estate tax return (Form 706); FBAR and Form 8938; FIRPTA withholding certificate (Form 8288-B) |
+| Information returns and credits | 1099-NEC/MISC filing season ($2,000 threshold from 2026); research credit (Form 6765) |
+| IRS collection and relief | Form 433-A; Form 433-B; Form 433-F; offer in compromise (Forms 656 and 656-L); innocent spouse relief (Form 8857) |
+| Nonprofit and retirement plans | 501(c)(3) application (Form 1023); Voluntary Correction Program submission (Form 8950) |
+| Mortgage add-ons | FHA 203(k) rehabilitation; condo project documents from the HOA; buyer's closing checklist |
+| Immigration (added) | I-751 removal of conditions; I-864 affidavit of support; I-765 work permit |
+| Employment discrimination | EEOC charge preparation |
+| Benefits and aid | HealthCare.gov data-matching documents; FAFSA verification (2026–27); VA disability compensation; VA pension; VA survivors (DIC, survivors pension, accrued) |
+| Disaster and flood | FEMA Individual Assistance; NFIP flood claim |
 | Notice of incomplete application | Written notice; written notice after an oral request (Regulation B Form C-6) |
 
 The full index, with a "use when" line for each file, is in [template-index.md](skills/building-document-request-lists/references/template-index.md).
@@ -54,6 +63,8 @@ The full index, with a "use when" line for each file, is in [template-index.md](
 - "She uploaded a January pay stub and half a bank statement. What do I still need, and what do I tell her?"
 - "Borrower's mother is wiring $20,000 for the down payment on a primary residence. Draft the gift letter."
 - "New hire starts Monday. What do I collect for payroll and the I-9?"
+- "Client owes the IRS $48,000 and wants to settle. What do we need for the offer in compromise?"
+- "Veteran is filing a disability claim for tinnitus and a knee injury. What evidence should he gather?"
 - "Client is filing chapter 13. What documents do I need from them before the meeting of creditors?"
 - "FHA loan, the borrower's aunt is giving $8,000. Draft the gift letter."
 - "Application came in October 20 and we still have no bank statements. Draft the notice of incompleteness."
@@ -111,9 +122,13 @@ Your conversation with Claude is handled under the terms of the Claude product y
 | Gift letter variants | Freddie Mac Guide 5501.4; HUD Handbook 4000.1; VA Pamphlet 26-7 chapter 4; Fannie Mae B3-4.3-05 |
 | Notice of incomplete application | Regulation B, [12 CFR 1002.9](https://www.consumerfinance.gov/rules-policy/regulations/1002/9/) and Appendix C, Form C-6 |
 | Breach response and basic safeguards | IRS data-theft page and Publication 4557; FTC Data Breach Response guide; 16 CFR 314.4(j) |
+| 0.6.0 tax, IRS collection, nonprofit and retirement plan lists | IRS Instructions for Forms 706 (Rev. July 2026), 1099-MISC/NEC (Rev. December 2026), 6765, 8288-B, 8288, 8938, 8857, 1023, 8950; Publication 1099 (2026); Forms 433-A and 433-B (Rev. 6-2026), 433-F, 656-B booklet (Rev. 4-2026), 656-L; Publications 971 and 1854; Rev. Proc. 2021-30; FinCEN FBAR filing instructions |
+| 0.6.0 mortgage add-ons | HUD Handbook 4000.1 section II.A.8.a (203(k)); Fannie Mae Selling Guide B4-2 and B7 project and insurance topics; Freddie Mac condo FAQ; CFPB closing checklist and Buying a House pages |
+| 0.6.0 immigration and EEOC | USCIS I-751, I-864 (edition 08/24/26) and I-765 instructions and initial-evidence checklists; EEOC charge-filing pages, Public Portal guide and Compliance Manual Section 602 |
+| 0.6.0 benefits and disaster | HealthCare.gov data-matching pages; FSA Handbook 2026–27 Application and Verification Guide ch. 4; VA.gov evidence pages; DisasterAssistance.gov checklist; FEMA occupancy and ownership page; NFIP Claims Checklist for Policyholders; 44 CFR Part 61 App. A(1) |
 | The six original general lists (parts), reminder cadence, document completeness checks | Common practice. No official source; labelled in each file; edit them to fit your firm |
 
-Sources were read on 2026-11-11. Each template file names the exact document, edition and URL for its items. Rules and guides change: check the linked source before relying on a specific requirement. The adaptation of government material is not endorsed by any agency.
+Sources were read on 2026-11-11 (0.5.0) and 2026-11-26 (0.6.0). Each template file names the exact document, edition and URL for its items. Rules and guides change: check the linked source before relying on a specific requirement. The adaptation of government material is not endorsed by any agency.
 
 ## Limits
 

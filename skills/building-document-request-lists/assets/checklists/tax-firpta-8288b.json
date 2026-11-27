@@ -1,0 +1,220 @@
+{
+  "id": "tax-firpta-8288b",
+  "title": "Foreign seller of U.S. real estate: FIRPTA withholding certificate (Form 8288-B)",
+  "industry": "tax",
+  "jurisdiction": "US federal",
+  "variant_of": "tax-foreign-reporting",
+  "use_when": "Use when a foreign person selling a U.S. real property interest applies on Form 8288-B to reduce or eliminate FIRPTA withholding, and the sale is reported on Forms 8288 and 8288-A; use tax-fbar-foreign-accounts for a U.S. person's foreign bank and financial accounts.",
+  "note": "Built from Form 8288-B and its instructions (Rev. December 2025), the Instructions for Form 8288 (Rev. January 2026) and the IRS FIRPTA withholding page. It does not cover applications based on an agreement for payment of tax with security, blanket certificates, partnership-interest withholding under section 1446(f), state withholding, or the seller's Form 1040-NR or 1120-F itself.",
+  "sources": {
+    "f8288b": {
+      "name": "IRS, Form 8288-B, Application for Withholding Certificate for Dispositions by Foreign Persons of U.S. Real Property Interests, with instructions (Rev. December 2025)",
+      "url": "https://www.irs.gov/pub/irs-pdf/f8288b.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "i8288": {
+      "name": "IRS, Instructions for Form 8288, U.S. Withholding Tax Return for Certain Dispositions by Foreign Persons (Rev. January 2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/i8288.pdf",
+      "retrieved": "2026-11-26"
+    },
+    "irs-firpta": {
+      "name": "IRS, FIRPTA withholding (page last reviewed or updated 21-Jul-2026)",
+      "url": "https://www.irs.gov/individuals/international-taxpayers/firpta-withholding",
+      "retrieved": "2026-11-26"
+    }
+  },
+  "situations": {
+    "no-tin": "Does the seller (or any seller) lack a U.S. taxpayer identification number?",
+    "multiple-parties": "Is there more than one seller or more than one buyer?",
+    "exempt-nonrecognition": "Is the application based on the seller being exempt from tax or on a nonrecognition provision?",
+    "max-tax": "Is the application based on a calculation showing the seller's maximum tax is less than the withholding?",
+    "installment": "Is the sale an installment sale?",
+    "mixed-use": "Was the property used for both personal and rental purposes?",
+    "personal-property": "Does the price include furniture or other personal property?",
+    "agent": "Will someone other than the seller sign the application?",
+    "entity-seller": "Is the seller an estate, trust or entity?"
+  },
+  "sections": [
+    {
+      "name": "Parties",
+      "items": [
+        {
+          "id": "seller-info",
+          "label": "Seller's name, street address (not a P.O. box) and U.S. taxpayer identification number",
+          "detail": "Form 8288-B line 1. The instructions say the U.S. TIN of all parties must be on the application. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "buyer-info",
+          "label": "Buyer's name, street address and taxpayer identification number",
+          "detail": "Form 8288-B line 2. Send through the secure portal, never by plain email.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "additional-parties",
+          "label": "Name, address and TIN for each additional seller or buyer, on separate sheets",
+          "detail": "Form 8288-B lines 1 and 2. Send through the secure portal, never by plain email.",
+          "when": ["multiple-parties"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "w7",
+          "label": "Completed Form W-7 (ITIN application) to be sent together with Form 8288-B",
+          "detail": "Form 8288-B instructions, Taxpayer identification number. The IRS FIRPTA page says the ITIN request is processed within 10 days when the W-7 includes the completed Form 8288-B, and an ITIN application filed before a sale contract is signed will be denied. Send through the secure portal, never by plain email.",
+          "when": ["no-tin"],
+          "basis": "irs-firpta"
+        },
+        {
+          "id": "entity-info",
+          "label": "Name and EIN of the estate, trust or entity",
+          "detail": "Form 8288-B lines 4c and 4d. Send through the secure portal, never by plain email.",
+          "when": ["entity-seller"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "closing-agent-address",
+          "label": "Address where the IRS should send the withholding certificate, such as the closing or escrow company",
+          "detail": "Form 8288-B line 5; the IRS FIRPTA page notes sellers living overseas can list the closing company here.",
+          "when": [],
+          "basis": "irs-firpta"
+        },
+        {
+          "id": "poa",
+          "label": "Signed Form 2848 power of attorney for the person signing on the seller's behalf",
+          "detail": "Form 8288-B instructions, Signature.",
+          "when": ["agent"],
+          "basis": "f8288b"
+        }
+      ]
+    },
+    {
+      "name": "The property and the sale",
+      "items": [
+        {
+          "id": "sale-contract",
+          "label": "Signed purchase and sale contract showing the contract price and the scheduled or estimated closing date",
+          "detail": "Form 8288-B lines 6a and 6b. The instructions say an application without a specific or estimated transfer date is not substantially complete and will be rejected.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "property-description",
+          "label": "Property address and description, and its use at the time of sale (rental or commercial, personal, or other)",
+          "detail": "Form 8288-B lines 6c, 6d and 6f.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "mixed-use-explanation",
+          "label": "Explanation of the personal and rental use of the property",
+          "detail": "Form 8288-B line 6d.",
+          "when": ["mixed-use"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "adjusted-basis",
+          "label": "Adjusted basis of the property",
+          "detail": "Form 8288-B line 6e.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "prior-us-returns",
+          "label": "U.S. income tax returns (Form 1040-NR or 1120-F) filed for the property for the 3 preceding tax years, with when and where filed and tax paid each year",
+          "detail": "Form 8288-B line 6g.",
+          "when": [],
+          "basis": "f8288b"
+        },
+        {
+          "id": "seller-notice-to-buyer",
+          "label": "Copy of the seller's written notice to the buyer that a withholding certificate has been applied for",
+          "detail": "Form 8288-B instructions: the notice must be given on or before the day of the transfer.",
+          "when": [],
+          "basis": "f8288b"
+        }
+      ]
+    },
+    {
+      "name": "Support for the reduced withholding",
+      "items": [
+        {
+          "id": "exemption-statement",
+          "label": "Description of the transfer, summary of the law, and the facts supporting exemption or nonrecognition",
+          "detail": "Form 8288-B line 7a, items 1-3.",
+          "when": ["exempt-nonrecognition"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "assessed-value",
+          "label": "Most recent property tax assessed value, or another estimate of fair market value",
+          "detail": "Form 8288-B line 7a, item 5. A nonresident alien or foreign corporation also attaches a statement of adjusted basis immediately before the transfer.",
+          "when": ["exempt-nonrecognition"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "basis-evidence",
+          "label": "Evidence of adjusted basis: purchase closing statement, invoices for improvements, and depreciation schedules",
+          "detail": "Form 8288-B line 7b, item 2. If no depreciation schedules are submitted, a statement of how the property was used and why depreciation was not allowed.",
+          "when": ["max-tax"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "recapture",
+          "label": "Amounts subject to recapture (depreciation, investment credit or other items)",
+          "detail": "Form 8288-B line 7b, item 3.",
+          "when": ["max-tax"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "treaty-evidence",
+          "label": "Evidence of any increase or reduction in tax, including any income tax treaty benefit claimed",
+          "detail": "Form 8288-B line 7b, item 6. The calculation must be supported by a statement signed by the seller under penalties of perjury.",
+          "when": ["max-tax"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "personal-property-list",
+          "label": "List of personal property included in the sale with the value of each item, supported by an independent appraisal",
+          "detail": "Form 8288-B line 7b.",
+          "when": ["personal-property", "max-tax"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "installment-terms",
+          "label": "Installment sale terms: down payment, payment schedule, interest, and any liabilities assumed by the buyer",
+          "detail": "Form 8288-B line 7c and Installment sales: the buyer withholds on the down payment and each later payment under the certificate.",
+          "when": ["installment"],
+          "basis": "f8288b"
+        },
+        {
+          "id": "no-unsatisfied-withholding",
+          "label": "Proof the seller has no unpaid FIRPTA withholding from when they bought the property",
+          "detail": "Form 8288-B line 8 lists acceptable evidence, such as proof of purchase before 1985, a copy of the Form 8288 filed with proof of payment, the prior seller's non-foreign certificate, or a signed statement explaining why no withholding was required.",
+          "when": [],
+          "basis": "f8288b"
+        }
+      ]
+    },
+    {
+      "name": "After closing",
+      "items": [
+        {
+          "id": "withholding-certificate",
+          "label": "Copy of the withholding certificate the IRS issues",
+          "detail": "If the certificate reduces but does not eliminate withholding, the buyer attaches a copy to Form 8288.",
+          "when": [],
+          "basis": "i8288"
+        },
+        {
+          "id": "stamped-8288a",
+          "label": "Stamped Copy B of Form 8288-A received from the IRS",
+          "detail": "Instructions for Form 8288: the seller generally attaches the stamped Copy B to Form 1040-NR or 1120-F or an application for early refund to get credit for the amount withheld. It is not sent if the seller's TIN was missing from Form 8288-A.",
+          "when": [],
+          "basis": "i8288"
+        }
+      ]
+    }
+  ]
+}
